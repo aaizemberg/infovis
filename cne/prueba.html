@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+  <meta charset="utf-8">
+  <title>leyendo el json array</title>
+</head>
+<body>
+
+<script>
+var key = "2ce4c68fc14604cfc6641713d062479044fa33df";
+var url = "http://cne.cloudapi.junar.com/datastreams/invoke/VENTA-NACIO-POR-PRODU-29591?auth_key=" + key + "&output=json_array";
+
+var data;
+
+d3.json(url, function(error, json) {
+  if (error) return console.warn(error);
+  data = json;
+  visualizeit(); 
+});
+
+function visualizeit() {
+  alert("hola mundo");  
+}
+</script>
+  
+</body>
+</html>
