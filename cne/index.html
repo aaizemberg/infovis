@@ -4,8 +4,46 @@
   <meta charset="utf-8">
   <title>prototipos</title>
 </head>
+
 <body>
-  <p><a href="cr/">Combustibles por región</a></p>
-  <p><a href="ie/">Importaciones y Exportaciones</a></p>
+<p><a href="cr/">Combustibles por región</a></p>
+<p><a href="ie/">Importaciones y Exportaciones</a></p>
+  
+<br>
+<p>ventas nacionales por producto y por región</p>
+<div id="year"></div>
+
+<script>
+var pre = "http://cne.opendata.junar.com/datastreams/";
+var post = "/ventas-nacionales-por-producto-y-por-region-en-";
+
+var urls = [
+  {"y":"2006", "url":pre + "91818" + post + "2006" + "/"},
+  {"y":"2007", "url":pre + "91816" + post + "2007" + "/"},
+  {"y":"2008", "url":pre + "91814" + post + "2008" + "/"},
+  {"y":"2009", "url":pre + "91812" + post + "2009" + "/"},
+  {"y":"2010", "url":pre + "91810" + post + "2010" + "/"},
+  {"y":"2011", "url":pre + "91808" + post + "2011" + "/"},
+  {"y":"2012", "url":pre + "91806" + post + "2012" + "/"},
+  {"y":"2013", "url":pre + "91804" + post + "2013" + "/"},
+  {"y":"2014", "url":pre + "91820" + post + "2014" + "/"}
+];
+
+var key = "2ce4c68fc14604cfc6641713d062479044fa33df";
+// 2006
+var url_api = "http://cne.cloudapi.junar.com/datastreams/invoke/VENTA-NACIO-POR-PRODU-29591?auth_key=" + key 
+            + "&output=json_array";
+// 2007 --> ???
+// 2008 --> ???
+// ...
+// 2014 --> ???
+
+// <a href="http://www.w3schools.com">Visit W3Schools</a>
+d3.select("div#year").selectAll("a").data(urls).enter().append("a")
+  .attr("href", function(d,i) {return d.url; }    )
+  .text( function(d,i) { return d.y;}   )
+  .append("br");
+</script>
+
 </body>
 </html>
