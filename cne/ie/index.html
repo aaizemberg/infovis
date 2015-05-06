@@ -1,11 +1,59 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script src="http://d3js.org/d3.v3.min.js"></script>
+  <script src="http://d3js.org/d3.v3.min.js"></script>
   <meta charset="utf-8">
-  <title>Importaciones y Exportaciones</title>
+  <title>Importaciones y Exporaciones</title>
 </head>
 <body>
-
+<h1>Importaciones y exportaciones</h1>
+  
+  <table>
+    <tr>
+      <td>operacion</td>
+      <td>año</td>
+      <td>tipo de combustible</td>
+    </tr>
+    <tr>
+      <td>
+        <select id="op">
+          <option value="imp">Importación</option>
+          <option value="exp">Exportación</option>
+        </select>        
+      </td>
+      <td>
+        <select id="year">
+          <option value="a01">2001</option>
+          <option value="a02">2002</option>
+          <option value="a03">2003</option>
+          <option value="a04">2004</option>
+        </select>        
+      </td>
+      <td>
+        <select id="comb">
+          <option value="nafta">Nafta</option>
+          <option value="kerosene">Kerosene</option>
+          <option value="gasoil">Gasoil</option>
+        </select>        
+      </td>
+    </tr>
+  </table>
+  
+  <!-- 940 px como minimo, entre el mapa y las referencias -->
+  <table width="940px">
+    <tr>
+      <td width="840px" >
+        <div id="mapa">
+          <p>mapa mapa mapa</p>
+        </div>
+      </td>
+      <td width="100px" align="right">
+        <div id="ref">
+          <p>tablita </p>
+        </div>
+      </td>
+    </tr>
+  </table>
+  
 </body>
 </html>
