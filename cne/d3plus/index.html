@@ -7,15 +7,15 @@
 <div id="viz"></div>
 <script> 
 var data = [
-    {"año": 2006, "name":"gasolina", "value": 100},
-    {"año": 2006, "name":"diesel", "value": 48},
-    {"año": 2006, "name":"kerosene", "value": 50},
-    {"año": 2007, "name":"gasolina", "value": 130},
-    {"año": 2007, "name":"diesel", "value": 56},
-    {"año": 2007, "name":"kerosene", "value": 80},
-    {"año": 2008, "name":"gasolina", "value": 125},
-    {"año": 2008, "name":"diesel", "value": 36},
-    {"año": 2008, "name":"kerosene", "value": 74},
+    {"año": 2006, "name":"gasolina", "m3": 100},
+    {"año": 2006, "name":"diesel", "m3": 48},
+    {"año": 2006, "name":"kerosene", "m3": 50},
+    {"año": 2007, "name":"gasolina", "m3": 130},
+    {"año": 2007, "name":"diesel", "m3": 56},
+    {"año": 2007, "name":"kerosene", "m3": 80},
+    {"año": 2008, "name":"gasolina", "m3": 125},
+    {"año": 2008, "name":"diesel", "m3": 36},
+    {"año": 2008, "name":"kerosene", "m3": 74},
 
   ];
 
@@ -24,7 +24,7 @@ var data = [
     .data(data)
     .type("bar")
     .id("name")
-    .y({"stacked": true, "value": "value"})
+    .y({"stacked": true, "value": "m3"})
     .x("año")
     .time("año")
     .draw();
