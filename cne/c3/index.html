@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link href="c3.min.css" rel="stylesheet" type="text/css">
+  <link href="http://aaizemberg.github.io/infovis/cne/c3/c3.min.css" rel="stylesheet" type="text/css">
   <script src="http://d3js.org/d3.v3.min.js"></script>
-  <script src="c3.min.js"></script>
+  <script src="http://aaizemberg.github.io/infovis/cne/c3/c3.min.js"></script>
   <meta charset="utf-8">
   <title>hola</title>
 </head>
@@ -14,14 +14,16 @@
 <script>
 var chart = c3.generate({
     data: {
+        x: 'x',
         columns: [
-            ['data1', 10, 10, 10, 10, 10, 10],
-            ['data2', 10, 10, 10, 10, 10, 10],
-            ['data3', 10, 10, 10, 10, 10, 10]
+            ['x', '2010', '2011', '2012', '2013', '2014', '2015'],
+            ['Gasolina', 10, 10, 10, 10, 10, 10],
+            ['Diesel', 10, 10, 10, 10, 10, 10],
+            ['Kerosene', 10, 10, 10, 10, 10, 10]
         ],
         type: 'bar',
         groups: [
-            ['data1', 'data2', 'data3']
+            ['Gasolina', 'Diesel', 'Kerosene']
         ]
     },
     grid: {
