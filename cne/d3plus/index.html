@@ -1,0 +1,31 @@
+<!doctype html>
+<meta charset="utf-8">
+ 
+<script src="http://www.d3plus.org/js/d3.js"></script>
+<script src="http://www.d3plus.org/js/d3plus.js"></script>
+ 
+<div id="viz"></div>
+<script> 
+var data = [
+    {"año": 2006, "name":"gasolina", "value": 100},
+    {"año": 2006, "name":"diesel", "value": 48},
+    {"año": 2006, "name":"kerosene", "value": 50},
+    {"año": 2007, "name":"gasolina", "value": 130},
+    {"año": 2007, "name":"diesel", "value": 56},
+    {"año": 2007, "name":"kerosene", "value": 80},
+    {"año": 2008, "name":"gasolina", "value": 125},
+    {"año": 2008, "name":"diesel", "value": 36},
+    {"año": 2008, "name":"kerosene", "value": 74},
+
+  ];
+
+  var visualization = d3plus.viz()
+    .container("#viz")
+    .data(data)
+    .type("bar")
+    .id("name")
+    .y({"stacked": true, "value": "value"})
+    .x("año")
+    .time("año")
+    .draw();
+</script>  
