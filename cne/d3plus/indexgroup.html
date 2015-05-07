@@ -1,0 +1,39 @@
+<!doctype html>
+<meta charset="utf-8">
+ 
+<script src="http://www.d3plus.org/js/d3.js"></script>
+<script src="http://www.d3plus.org/js/d3plus.js"></script>
+ 
+<div id="viz"></div>
+<script> 
+var data = [
+    {"año": 2006, "name":"gasolina", "region":"reg1", "m3": 100},
+    {"año": 2006, "name":"gasolina", "region":"reg2", "m3": 23},
+    {"año": 2006, "name":"diesel", "region":"reg1", "m3": 48},
+    {"año": 2006, "name":"diesel", "region":"reg2", "m3": 18},
+    {"año": 2006, "name":"kerosene", "region":"reg1", "m3": 50},
+    {"año": 2006, "name":"kerosene", "region":"reg2", "m3": 10},
+    {"año": 2007, "name":"gasolina", "region":"reg1", "m3": 130},
+    {"año": 2007, "name":"gasolina", "region":"reg2", "m3": 30},  
+    {"año": 2007, "name":"diesel", "region":"reg1", "m3": 56},
+    {"año": 2007, "name":"diesel", "region":"reg2", "m3": 26},
+    {"año": 2007, "name":"kerosene", "region":"reg1", "m3": 80},
+    {"año": 2007, "name":"kerosene", "region":"reg2", "m3": 40},
+    {"año": 2008, "name":"gasolina", "region":"reg1", "m3": 125},
+    {"año": 2008, "name":"gasolina", "region":"reg2", "m3": 85},
+    {"año": 2008, "name":"diesel", "region":"reg1", "m3": 36},
+    {"año": 2008, "name":"diesel", "region":"reg2", "m3": 16},
+    {"año": 2008, "name":"kerosene", "region":"reg1", "m3": 74},
+    {"año": 2008, "name":"kerosene", "region":"reg2", "m3": 52},
+];
+
+  var visualization = d3plus.viz()
+    .container("#viz")
+    .data(data)
+    .type("bar")
+   .id(["name","region"])
+    .y({"stacked": true, "value": "m3"})
+    .x("año")
+    .time("año")
+    .draw();
+</script>  
