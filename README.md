@@ -13,3 +13,20 @@ http://cne.opendata.junar.com/datastreams/91808/ventas-nacionales-por-producto-y
 http://cne.opendata.junar.com/datastreams/91806/ventas-nacionales-por-producto-y-por-region-en-2012/
 http://cne.opendata.junar.com/datastreams/91804/ventas-nacionales-por-producto-y-por-region-en-2013/
 http://cne.opendata.junar.com/datastreams/91820/ventas-nacionales-por-producto-y-por-region-en-2014/
+
+|Región|
+|------|
+|I de Tarapacá|
+|II de Antofagasta|
+|III de Atacama|
+|IV de Coquimbo|
+|V de Valparaíso|
+|VI del Libertador General Bernardo O'Higgins|
+|VII del Maule|
+|VIII del Biobío|
+|IX de la Araucanía|
+|X de Los Lagos|
+|XI de Aysén del GeneralCarlos Ibáñez del Campo|
+|XII de Magallanes y de la Antártica Chilena|
+|Metropolitana de Santiago|
+
