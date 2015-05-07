@@ -1,0 +1,26 @@
+<!doctype html>
+<meta charset="utf-8">
+
+<script src="http://www.d3plus.org/js/d3.js"></script>
+<script src="http://www.d3plus.org/js/d3plus.js"></script>
+
+<div id="viz"></div>
+<script>
+
+  d3.tsv("datos.tsv", function(error, datos) {
+    if (error) return console.error(error);
+    make_viz(datos);
+  });
+
+function make_viz(data){
+  var visualization = d3plus.viz()
+    .container("#viz")
+    .data(data)
+    .type("bar")
+    .id("name")
+    .id(["combustible","region"])
+    .y({"stacked": true, "value": "m3"})
+    .x("anio")
+    .time("anio")
+    .draw();
+</script>
