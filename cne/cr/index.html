@@ -1,11 +1,166 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script src="http://d3js.org/d3.v3.min.js"></script>
+  <!-- bootstrap 2.3.2 -->
+  <script src="https://code.jquery.com/jquery.min.js"></script>
+  <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+
+<style>
+  body {
+    padding-top: 10px;
+    padding-left: 10px;
+  }
+  @media (max-width: 980px) {
+    body {
+      padding-top: 0;
+    }
+  }
+</style>
+
+  <!-- d3.js -->
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+
   <meta charset="utf-8">
   <title>Combustibles por región</title>
+
 </head>
 <body>
+
+<h1>Combustibles por Región</h1>
+
+  <table>
+    <tr>
+      <td>Región:</td>
+      <td>Tipo de combustible:</td>
+    </tr>
+    <tr>
+      <td>
+        <select id="region" class="input-xlarge">
+          <option value="CL" selected="selected">Todo el país</option>
+          <option value="CL-TA">I de Tarapacá</option>
+          <option value="CL-AN">II de Antofagasta</option>
+          <option value="CL-AT">III de Atacama</option>
+          <option value="CL-CO">IV de Coquimbo</option>
+          <option value="CL-VS">V de Valparaíso</option>
+          <option value="CL-LI">VI del Libertador General Bernardo O"Higgins</option>
+          <option value="CL-ML">VII del Maule</option>
+          <option value="CL-BI">VIII del Biobío</option>
+          <option value="CL-AR">IX de la Araucanía</option>
+          <option value="CL-LL">X de Los Lagos</option>
+          <option value="CL-AI">XI de Aysén del General Carlos Ibáñez del Campo</option>
+          <option value="CL-MA">XII de Magallanes y de la Antártica Chilena</option>
+          <option value="CL-LR">XIV de los Ríos</option>
+          <option value="CL-AP">XV Arica y Parinacota</option>
+          <option value="CL-RM">Metropolitana de Santiago</option>
+        </select>
+      </td>
+      <td>
+        <select id="combustible" class="input-xlarge"> <!-- class="input-small|input-medium|input-large|input-xlarge|input-xxlarge" -->
+          <option value="combustibles" selected="selected">Todos</option>
+          <option value="GASOLINA_81">GASOLINA_81</option>
+          <option value="GASOLINA_93_SP">GASOLINA_93_SP</option>
+          <option value="GASOLINA_95_SP">GASOLINA_95_SP</option>
+          <option value="GASOLINA_97_SP">GASOLINA_97_SP</option>
+          <option value="GASOLINA_AVIACION_1000130">GASOLINA_AVIACION_1000130</option>
+          <option value="KEROSENE_AVIACION">KEROSENE_AVIACION</option>
+          <option value="KEROSENE_DOMESTICO">KEROSENE_DOMESTICO</option>
+          <option value="P_COMBUSTIBLE_180">P_COMBUSTIBLE_180</option>
+          <option value="P_COMBUSTIBLE_5">P_COMBUSTIBLE_5</option>
+          <option value="P_COMBUSTIBLE_6">P_COMBUSTIBLE_6</option>
+          <option value="P_DIESEL">P_DIESEL</option>
+          <option value="P_DIESEL_A1">P_DIESEL_A1</option>
+          <option value="P_DIESEL_B">P_DIESEL_B</option>
+          <option value="P_DIESEL_B1">P_DIESEL_B1</option>
+          <option value="P_DIESEL_B2">P_DIESEL_B2</option>
+          <option value="P_DIESEL_INVERNAL">P_DIESEL_INVERNAL</option>
+        </select>
+      </td>
+    </tr>
+  </table>
+
+  <hr>
+
+  <table width="100%" border="0">
+    <tr id="tbl_titulos">
+      <td colspan="2" width="66%"><h4 id="titulo_variable">Venta de combustibles en Chile</h4></td>
+      <td id="titulo_variacion" width="33%"><h4>Variación:</h4></td>
+    </tr>
+
+    <tr>
+      <td id="mapa_barras">
+        <div id="mapa"><img src="mapa.png" alt="mapa"></div>
+      </td>
+      <td><img src="barras_fake.png" alt="mapa" border=0></td>
+
+      <td valign="top" id="comparativo">
+
+        <div id="A1vsA2">
+          <select id="y1" class="input-small">
+			<option value="y2006">2006</option>
+			<option value="y2007">2007</option>
+			<option value="y2008">2008</option>
+			<option value="y2009">2009</option>
+			<option value="y2010">2010</option>
+			<option value="y2011">2011</option>
+			<option value="y2012">2012</option>
+			<option selected="selected" value="y2013">2013</option>
+			<option value="y2014">2014</option>
+          </select>
+          vs
+          <select id="y2" class="input-small">
+			<option value="y2006">2006</option>
+			<option value="y2007">2007</option>
+			<option value="y2008">2008</option>
+			<option value="y2009">2009</option>
+			<option value="y2010">2010</option>
+			<option value="y2011">2011</option>
+			<option value="y2012">2012</option>
+			<option value="y2013">2013</option>
+			<option selected="selected" value="y2014">2014</option>
+          </select>
+        </div>
+
+		<p>aca viene la tabla comparativa</p>
+
+      </td>
+
+    </tr>
+
+    </tr>
+  </table>
+
+<script>
+var regiones = {
+  "CL": "Chile",
+  "CL-AI": "XI de Aysén del General Carlos Ibáñez del Campo",
+  "CL-AN": "II de Antofagasta",
+  "CL-AP": "XV Arica y Parinacota",
+  "CL-AR": "IX de la Araucanía",
+  "CL-AT": "III de Atacama",
+  "CL-BI": "VIII del Biobío",
+  "CL-CO": "IV de Coquimbo",
+  "CL-LI": "VI del Libertador General Bernardo O'Higgins",
+  "CL-LL": "X de Los Lagos",
+  "CL-LR": "XIV de los Ríos",
+  "CL-MA": "XII de Magallanes y de la Antártica Chilena",
+  "CL-ML": "VII del Maule",
+  "CL-RM": "Metropolitana de Santiago",
+  "CL-TA": "I de Tarapacá",
+  "CL-VS": "V de Valparaíso"
+};
+
+  d3.select("select#region").on("change", function() {
+    var str = "Venta de " + d3.select("#combustible").node().value + " en " + regiones[d3.select("#region").node().value];
+    d3.select("#titulo_variable").text( str );
+  });
+
+  d3.select("select#combustible").on("change", function() {
+    var str = "Venta de " + d3.select("#combustible").node().value + " en " + regiones[d3.select("#region").node().value];
+    d3.select("#titulo_variable").text( str );
+  });
+
+</script>
 
 </body>
 </html>
