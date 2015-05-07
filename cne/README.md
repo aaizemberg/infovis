@@ -30,36 +30,36 @@ http://cne.opendata.junar.com/datastreams/91820/ventas-nacionales-por-producto-y
 |XII de Magallanes y de la Antártica Chilena|
 |Metropolitana de Santiago|
 
-Regiones 2006 y 2007 (#13 regiones)
---------------------------------
-Primera
-Segunda
-Tercera
-Cuarta
-Quinta
-Sexta
-Séptima
-Octava
-Novena
-Décima
-Undécima
-Duodécima
-Región Metropolitana
+|Regiones 2006 y 2007 (#13 regiones)|
+|--------------------------------|
+|Primera|
+|Segunda|
+|Tercera|
+|Cuarta|
+|Quinta|
+|Sexta|
+|Séptima|
+|Octava|
+|Novena|
+|Décima|
+|Undécima|
+|Duodécima|
+|Región Metropolitana|
 
-Regiones 2008 al 2014 (#15 regiones)
---------------------------------
-Arica y Parinacota
-Tarapaca
-Antofagasta
-Atacama
-Coquimbo
-Valparaíso
-Libertador Bernardo OHiggins
-Maule
-Biobío
-La Araucanía
-Region de los Rios
-Los Lagos
-Aisén del General Carlos Ibáñez del Campo
-Magallanes y de la Antártica Chilena
-Metropolitana
+|Regiones 2008 al 2014 (#15 regiones)|
+|--------------------------------|
+|Arica y Parinacota|
+|Tarapaca|
+|Antofagasta|
+|Atacama|
+|Coquimbo|
+|Valparaíso|
+|Libertador Bernardo OHiggins|
+|Maule|
+|Biobío|
+|La Araucanía|
+|Region de los Rios|
+|Los Lagos|
+|Aisén del General Carlos Ibáñez del Campo|
+|Magallanes y de la Antártica Chilena|
+|Metropolitana|
