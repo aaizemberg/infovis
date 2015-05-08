@@ -7,33 +7,32 @@
 <div id="viz"></div>
 <script>
 
-//  d3.tsv("datos.tsv", function(error, datos) {
+  d3.tsv("datos.tsv", function(error, datos) {
 //  d3.tsv("minidata.tsv", function(error, datos) {
-//    if (error) return console.error(error);
-//    make_viz(datos);
-//  });
+    if (error) return console.error(error);
+    make_viz(datos);
+  });
 
-//function make_viz(data){
+function make_viz(data){
 
-var data = [{"anio":2006,"combustible":"GASOLINA_97_SP","region":"I","m3":28825},
-{"anio":2006,"combustible":"GASOLINA_97_SP","region":"II","m3":33195},
-{"anio":2006,"combustible":"GASOLINA_97_SP","region":"III","m3":13887},
-{"anio":2006,"combustible":"pepe","region":"III","m3":13887},
-{"anio":2006,"combustible":"KEROSENE_AVIACION","region":"I","m3":44735},
-{"anio":2006,"combustible":"KEROSENE_AVIACION","region":"II","m3":40785},
-{"anio":2006,"combustible":"KEROSENE_AVIACION","region":"III","m3":2723},
-{"anio":2006,"combustible":"P_COMBUSTIBLE_180","region":"I","m3":15221},
-{"anio":2006,"combustible":"P_COMBUSTIBLE_180","region":"II","m3":42164},
-{"anio":2006,"combustible":"P_COMBUSTIBLE_180","region":"III","m3":113388},
-{"anio":2007,"combustible":"GASOLINA_97_SP","region":"I","m3":28395},
-{"anio":2007,"combustible":"GASOLINA_97_SP","region":"II","m3":36605},
-{"anio":2007,"combustible":"GASOLINA_97_SP","region":"III","m3":15024},
-{"anio":2007,"combustible":"KEROSENE_AVIACION","region":"I","m3":50019},
-{"anio":2007,"combustible":"KEROSENE_AVIACION","region":"II","m3":44745},
-{"anio":2007,"combustible":"KEROSENE_AVIACION","region":"III","m3":5744},
-{"anio":2007,"combustible":"P_COMBUSTIBLE_180","region":"I","m3":26046},
-{"anio":2007,"combustible":"P_COMBUSTIBLE_180","region":"II","m3":29645},
-{"anio":2007,"combustible":"P_COMBUSTIBLE_180","region":"III","m3":258630}];
+//var data = [{"anio":2006,"combustible":"GASOLINA_97_SP","region":"I","m3":28825},
+//{"anio":2006,"combustible":"GASOLINA_97_SP","region":"II","m3":33195},
+//{"anio":2006,"combustible":"GASOLINA_97_SP","region":"III","m3":13887},
+//{"anio":2006,"combustible":"KEROSENE_AVIACION","region":"I","m3":44735},
+//{"anio":2006,"combustible":"KEROSENE_AVIACION","region":"II","m3":40785},
+//{"anio":2006,"combustible":"KEROSENE_AVIACION","region":"III","m3":2723},
+//{"anio":2006,"combustible":"P_COMBUSTIBLE_180","region":"I","m3":15221},
+//{"anio":2006,"combustible":"P_COMBUSTIBLE_180","region":"II","m3":42164},
+//{"anio":2006,"combustible":"P_COMBUSTIBLE_180","region":"III","m3":113388},
+//{"anio":2007,"combustible":"GASOLINA_97_SP","region":"I","m3":28395},
+//{"anio":2007,"combustible":"GASOLINA_97_SP","region":"II","m3":36605},
+//{"anio":2007,"combustible":"GASOLINA_97_SP","region":"III","m3":15024},
+//{"anio":2007,"combustible":"KEROSENE_AVIACION","region":"I","m3":50019},
+//{"anio":2007,"combustible":"KEROSENE_AVIACION","region":"II","m3":44745},
+//{"anio":2007,"combustible":"KEROSENE_AVIACION","region":"III","m3":5744},
+//{"anio":2007,"combustible":"P_COMBUSTIBLE_180","region":"I","m3":26046},
+//{"anio":2007,"combustible":"P_COMBUSTIBLE_180","region":"II","m3":29645},
+//{"anio":2007,"combustible":"P_COMBUSTIBLE_180","region":"III","m3":258630}];
 
   var visualization = d3plus.viz()
     .container("#viz")
