@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="http://aaizemberg.github.io/infovis/cne/c3/c3.min.css" rel="stylesheet" type="text/css">
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <script src="http://aaizemberg.github.io/infovis/cne/c3/c3.min.js"></script>
+  <script src="lodash.min.js"></script>
+
+  <meta charset="utf-8">
+  <title>leyendo un json</title>
+</head>
+<body>
+
+<div id="chart"></div>
+
+<script>
+
+var datos;
+var col = [];
+
+d3.json("datos.json", function(error, json) {
+  if (error) return console.warn(error);
+  datos = json;
+  viz();
+});
+
+function viz() {
+
+// metros cubicos x año (segun un combustible dado)
+//
+function m3xa(cc) {
+  var ccc = _.filter(datos, function(n) { return n.combustible == cc; });
+
+  var agrupado_c = _.groupBy(ccc, function(u) {
+    return u.year;
+  });
+
+  var sumado = _.mapValues(agrupado_c, function(g) {
+    return _.sum(_.pluck(g, "m3"));
+  });
+
+  return sumado;
+}
+
+var años = _.uniq(_.map(datos, 'year'));
+var combustibles = _.uniq(_.map(datos, 'combustible'));
+
+var ejeX;
+ejeX = _.uniq(_.map(datos, 'year'));
+ejeX.unshift("x");
+
+col[0] = ejeX;
+for (var i = 0; i < combustibles.length; i++) {
+  var ceros = Array.apply(null, new Array(años.length)).map(Number.prototype.valueOf,0);
+
+  var sumados = m3xa(combustibles[i]);
+
+  for (var j = 0; j < años.length; j++) {
+    if(sumados[años[j]]){
+      ceros[j] = sumados[años[j]];
+    }
+  }
+  col[i+1] = ceros;
+  col[i+1].unshift(combustibles[i]);
+}
+
+	var chart = c3.generate({
+		data: {
+			x: 'x',
+			columns: col,
+			type: 'bar',
+			groups: [
+				combustibles
+			]
+		},
+		grid: {
+			y: {
+				lines: [{value:0}]
+			}
+		},
+		tooltip: {
+		        grouped: false
+        }
+	});
+
+	/**
+	d3.select("body").selectAll("p").data(datos).enter().append("p")
+	  .text( function(d,i) { return d.combustible + " " + d.m3; } );
+	**/
+}
+
+</script>
+
+</body>
+</html>

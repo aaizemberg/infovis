@@ -21,6 +21,14 @@
   <!-- d3.js -->
   <script src="http://d3js.org/d3.v3.min.js"></script>
 
+  <!-- c3.js -->
+  <link href="c3.min.css" rel="stylesheet" type="text/css">
+  <script src="c3.min.js"></script>
+
+<!-- <script src="https://raw.githubusercontent.com/lodash/lodash/3.8.0/lodash.min.js"></script> -->
+  <script src="lodash.min.js"></script>
+
+
   <meta charset="utf-8">
   <title>Combustibles por región</title>
 
@@ -88,12 +96,13 @@
     </tr>
 
     <tr>
-      <td id="mapa_barras">
+      <td width="10%" id="mapa_barras">
         <div id="mapa"><img src="mapa.png" alt="mapa"></div>
       </td>
-      <td><img src="barras_fake.png" alt="mapa" border=0></td>
+<!--  <td><img src="barras_fake.png" alt="mapa" border=0></td> -->
+      <td width="56%"><div id="chart"></div></td>
 
-      <td valign="top" id="comparativo">
+      <td width="33%" valign="top" id="comparativo">
 
         <div id="A1vsA2">
           <select id="y1" class="input-small">
@@ -159,6 +168,81 @@ var regiones = {
     var str = "Venta de " + d3.select("#combustible").node().value + " en " + regiones[d3.select("#region").node().value];
     d3.select("#titulo_variable").text( str );
   });
+
+  var datos;
+  var col = [];
+
+  d3.json("datos.json", function(error, json) {
+    if (error) return console.warn(error);
+    datos = json;
+    viz();
+  });
+
+  function viz() {
+
+  // metros cubicos x año (segun un combustible dado)
+  //
+  function m3xa(cc) {
+    var ccc = _.filter(datos, function(n) { return n.combustible == cc; });
+
+    var agrupado_c = _.groupBy(ccc, function(u) {
+      return u.year;
+    });
+
+    var sumado = _.mapValues(agrupado_c, function(g) {
+      return _.sum(_.pluck(g, "m3"));
+    });
+
+    return sumado;
+  }
+
+  var años = _.uniq(_.map(datos, 'year'));
+  var combustibles = _.uniq(_.map(datos, 'combustible'));
+
+  var ejeX;
+  ejeX = _.uniq(_.map(datos, 'year'));
+  ejeX.unshift("x");
+
+  col[0] = ejeX;
+  for (var i = 0; i < combustibles.length; i++) {
+    var ceros = Array.apply(null, new Array(años.length)).map(Number.prototype.valueOf,0);
+
+    var sumados = m3xa(combustibles[i]);
+
+    for (var j = 0; j < años.length; j++) {
+      if(sumados[años[j]]){
+        ceros[j] = sumados[años[j]];
+      }
+    }
+    col[i+1] = ceros;
+    col[i+1].unshift(combustibles[i]);
+  }
+
+  	var chart = c3.generate({
+  		data: {
+  			x: 'x',
+  			columns: col,
+  			type: 'bar',
+  			groups: [
+  				combustibles
+  			]
+  		},
+  		grid: {
+  			y: {
+  				lines: [{value:0}]
+  			}
+  		},
+		size: {
+		  height: 425
+		},
+		tooltip: {
+  		        grouped: false
+          }
+  	});
+
+
+  }
+
 
 </script>
 
