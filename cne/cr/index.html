@@ -159,14 +159,21 @@ var regiones = {
   "CL-VS": "V de Valparaíso"
 };
 
+  var region_sel ="CL";
+  var combustible_sel="combustibles";
+
   d3.select("select#region").on("change", function() {
     var str = "Venta de " + d3.select("#combustible").node().value + " en " + regiones[d3.select("#region").node().value];
     d3.select("#titulo_variable").text( str );
+    region_sel = d3.select("#region").node().value;
+    update_viz();
   });
 
   d3.select("select#combustible").on("change", function() {
     var str = "Venta de " + d3.select("#combustible").node().value + " en " + regiones[d3.select("#region").node().value];
     d3.select("#titulo_variable").text( str );
+    combustible_sel= d3.select("#combustible").node().value;
+    update_viz();
   });
 
   var datos;
@@ -243,6 +250,85 @@ var regiones = {
 
   }
 
+
+
+function update_viz() {
+
+  // metros cubicos x año (segun un combustible dado)
+  //
+  function m3xa(cc,rr) {
+    if ( rr == "CL" ) {
+      var ccc = _.filter(datos, function(n) { return n.combustible == cc; });
+    }
+    else {
+      var rrr = _.filter(datos, function(n) { return n.region == rr; });
+      var ccc = _.filter(rrr, function(n) { return n.combustible == cc; });
+    }
+
+    var agrupado_c = _.groupBy(ccc, function(u) {
+      return u.year;
+    });
+
+    var sumado = _.mapValues(agrupado_c, function(g) {
+      return _.sum(_.pluck(g, "m3"));
+    });
+
+    return sumado;
+  }
+
+  var años = _.uniq(_.map(datos, 'year'));
+
+  var combustibles;
+  if (combustible_sel == "combustibles") {
+  	combustibles = _.uniq(_.map(datos, 'combustible'));
+  } else {
+   	combustibles = [combustible_sel];
+  }
+
+  var ejeX;
+  ejeX = _.uniq(_.map(datos, 'year'));
+  ejeX.unshift("x");
+
+  col = [];
+  col[0] = ejeX;
+  for (var i = 0; i < combustibles.length; i++) {
+    var ceros = Array.apply(null, new Array(años.length)).map(Number.prototype.valueOf,0);
+
+    var sumados = m3xa(combustibles[i] , region_sel );
+
+    for (var j = 0; j < años.length; j++) {
+      if(sumados[años[j]]){
+        ceros[j] = sumados[años[j]];
+      }
+    }
+    col[i+1] = ceros;
+    col[i+1].unshift(combustibles[i]);
+  }
+
+  	var chart = c3.generate({
+  		data: {
+  			x: 'x',
+  			columns: col,
+  			type: 'bar',
+  			groups: [
+  				combustibles
+  			]
+  		},
+  		grid: {
+  			y: {
+  				lines: [{value:0}]
+  			}
+  		},
+		size: {
+		  height: 425
+		},
+		tooltip: {
+  		        grouped: false
+          }
+  	});
+
+
+  }
 
 </script>
 
