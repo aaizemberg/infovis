@@ -178,7 +178,6 @@ var regiones = {
 
   var datos;
   var col = [];
-  var años;
 
   d3.json("datos.json", function(error, json) {
     if (error) return console.warn(error);
@@ -212,7 +211,7 @@ function update_viz() {
     return sumado;
   }
 
-// var años = _.uniq(_.map(datos, 'year'));
+  var años = _.uniq(_.map(datos, 'year'));
 
   var combustibles;
   if (combustible_sel == "combustibles") {
@@ -221,9 +220,8 @@ function update_viz() {
    	combustibles = [combustible_sel];
   }
 
-  años = _.uniq(_.map(datos, 'year'));
   var ejeX;
-  ejeX = años;
+  ejeX = _.uniq(_.map(datos, 'year'));
   ejeX.unshift("x");
 
   col = [];
