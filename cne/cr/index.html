@@ -182,7 +182,7 @@ var regiones = {
   d3.json("datos.json", function(error, json) {
     if (error) return console.warn(error);
     datos = json;
-    viz();
+    update_viz();
   });
 
   function viz() {
@@ -255,7 +255,7 @@ var regiones = {
 
 function update_viz() {
 
-  // metros cubicos x año (segun un combustible dado)
+  // metros cubicos x año (segun un combustible (cc) y una region (rr) dada)
   //
   function m3xa(cc,rr) {
     if ( rr == "CL" ) {
@@ -315,6 +315,8 @@ function update_viz() {
   				combustibles
   			]
   		},
+  		axis: { y: { label: 'm3' } },
+
   		grid: {
   			y: {
   				lines: [{value:0}]
