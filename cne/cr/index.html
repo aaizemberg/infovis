@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <!-- bootstrap 2.3.2 -->
-  <script src="https://code.jquery.com/jquery.min.js"></script>
-  <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" type="text/css" />
-  <script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
 
+<script src="https://code.jquery.com/jquery.min.js"></script>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <style>
   body {
     padding-top: 10px;
@@ -34,7 +40,6 @@
 
 </head>
 <body>
-
 <h1>Combustibles por Región</h1>
 
   <table>
@@ -44,7 +49,7 @@
     </tr>
     <tr>
       <td>
-        <select id="region" class="input-xlarge">
+        <select id="region" class="form-control">
           <option value="CL" selected="selected">Todo el país</option>
           <option value="CL-TA">I de Tarapacá</option>
           <option value="CL-AN">II de Antofagasta</option>
@@ -64,7 +69,7 @@
         </select>
       </td>
       <td>
-        <select id="combustible" class="input-xlarge"> <!-- class="input-small|input-medium|input-large|input-xlarge|input-xxlarge" -->
+        <select id="combustible" class="form-control"> <!-- class="input-small|input-medium|input-large|input-xlarge|input-xxlarge" -->
           <option value="combustibles" selected="selected">Todos</option>
           <option value="GASOLINA_81">GASOLINA_81</option>
           <option value="GASOLINA_93_SP">GASOLINA_93_SP</option>
@@ -105,31 +110,33 @@
       <td width="33%" valign="top" id="comparativo">
 
         <div id="A1vsA2">
-          <select id="y1" class="input-small">
-			<option value="y2006">2006</option>
-			<option value="y2007">2007</option>
-			<option value="y2008">2008</option>
-			<option value="y2009">2009</option>
-			<option value="y2010">2010</option>
-			<option value="y2011">2011</option>
-			<option value="y2012">2012</option>
-			<option selected="selected" value="y2013">2013</option>
-			<option value="y2014">2014</option>
+          <select id="y1" >
+			<option value="2006">2006</option>
+			<option value="2007">2007</option>
+			<option value="2008">2008</option>
+			<option value="2009">2009</option>
+			<option value="2010">2010</option>
+			<option value="2011">2011</option>
+			<option value="2012">2012</option>
+			<option selected="selected" value="2013">2013</option>
+			<option value="2014">2014</option>
           </select>
           vs
-          <select id="y2" class="input-small">
-			<option value="y2006">2006</option>
-			<option value="y2007">2007</option>
-			<option value="y2008">2008</option>
-			<option value="y2009">2009</option>
-			<option value="y2010">2010</option>
-			<option value="y2011">2011</option>
-			<option value="y2012">2012</option>
-			<option value="y2013">2013</option>
-			<option selected="selected" value="y2014">2014</option>
+          <select id="y2">
+			<option value="2006">2006</option>
+			<option value="2007">2007</option>
+			<option value="2008">2008</option>
+			<option value="2009">2009</option>
+			<option value="2010">2010</option>
+			<option value="2011">2011</option>
+			<option value="2012">2012</option>
+			<option value="2013">2013</option>
+			<option selected="selected" value="2014">2014</option>
           </select>
         </div>
-	  <table id="tbl" border="1"></table>
+        <div id="comp">
+	  		<table id="tbl"></table>
+	  	</div>
       </td>
 
     </tr>
@@ -159,12 +166,15 @@ var regiones = {
 
   var region_sel ="CL";
   var combustible_sel="combustibles";
+  var y1_sel = 2013;
+  var y2_sel = 2014;
 
   d3.select("select#region").on("change", function() {
     var str = "Venta de " + d3.select("#combustible").node().value + " en " + regiones[d3.select("#region").node().value];
     d3.select("#titulo_variable").text( str );
     region_sel = d3.select("#region").node().value;
     update_viz();
+    tabla_comp();
   });
 
   d3.select("select#combustible").on("change", function() {
@@ -172,7 +182,21 @@ var regiones = {
     d3.select("#titulo_variable").text( str );
     combustible_sel= d3.select("#combustible").node().value;
     update_viz();
+    // tabla_comp(); Siempre mostramos todos los combustibles
   });
+
+  d3.select("select#y1").on("change", function() {
+    y1_sel = d3.select("#y1").node().value;
+    //update_viz();
+    tabla_comp();
+  });
+
+  d3.select("select#y2").on("change", function() {
+    y2_sel = d3.select("#y2").node().value;
+    //update_viz();
+    tabla_comp();
+  });
+
 
   var datos;
   var col = [];
@@ -181,6 +205,7 @@ var regiones = {
     if (error) return console.warn(error);
     datos = json;
     update_viz();
+    tabla_comp();
   });
 
 
@@ -263,7 +288,102 @@ function update_viz() {
 
 
   }
+/***********************/
+function datos_comp(aa,cc,rr) {
+// var años = [2013,2014];
+//  var aaa = _.filter(datos, function(n) { return aa.indexOf(n.year) > -1; });
 
+//  var aa=2013
+  var aaa = _.filter(datos, function(n) { return n.year == aa; });
+
+
+  var ccc = _.filter(aaa, function(n) { return cc.indexOf(n.combustible) > -1; });
+  var rrr;
+
+  if ( rr == "CL" ) {
+    rrr = ccc;
+  } else {
+    rrr = _.filter(ccc, function(n) { return n.region == rr; });
+  }
+
+ // console.log(rrr);
+
+
+  var agrupado_c = _.groupBy(rrr, function(u) {
+      return u.combustible;
+    });
+
+  // console.log(agrupado_c);
+
+  var sumado = _.mapValues(agrupado_c, function(g) {
+      return _.sum(_.pluck(g, "m3"));
+    });
+
+  return sumado;
+}
+
+function fila(tbl, nombre,v1,v2) {
+  var tr = tbl.append("tr");
+  tr.append("td").text(nombre);
+  tr.append("td").style("text-align","right").text((v1>0 ? v1.toLocaleString() : ""));
+  tr.append("td").style("text-align","right").text((v2>0 ? v2.toLocaleString() : ""));
+  if (v1>0 && v2>0) {
+
+    var vr =Math.round((v1-v2)/v1*100);
+    var ico = (vr>0 ? "triangle-top" : (vr<0 ? "triangle-bottom" : "minus"));
+    var color = (vr>0 ? "green" : (vr<0 ? "red" : "grey"));
+
+    tr.append("td").style("text-align","right").text(vr + "%").append("span").attr("class","glyphicon glyphicon-"+ico).style("color",color);
+
+    tr.append("td").style("text-align","right").style("color",(v1-v2 < 0 ? "red" : "black")).text((v1-v2).toLocaleString());
+  } else {
+    tr.append("td").style("text-align","right").text("");
+    tr.append("td").style("text-align","right").text("");
+  }
+}
+
+function tabla_comp() {
+  combustibles = _.uniq(_.map(datos, 'combustible'));
+
+  var datos_tabla_a1 = datos_comp(y1_sel,combustibles, region_sel );
+  var datos_tabla_a2 = datos_comp(y2_sel,combustibles, region_sel );
+
+
+  d3.select("table#tbl").data([]).exit().remove();
+  d3.select("div#comp").append("table").attr("id","tbl").attr("class","table table-condensed");
+  var tabla = d3.select("table#tbl");
+
+  var th = tabla.append("tr");
+// titulos
+  th.append("th").text("combustible");
+  th.append("th").text(y1_sel);
+  th.append("th").text(y2_sel);
+  th.append("th").text("Var %");
+  th.append("th").text("Var m3");
+
+  fila(tabla,"Gasolina 81", datos_tabla_a1.GASOLINA_81, datos_tabla_a2.GASOLINA_81);
+  fila(tabla,'gasolina_93', datos_tabla_a1.GASOLINA_93, datos_tabla_a2.GASOLINA_93);
+  fila(tabla,'gasolina_93_sp', datos_tabla_a1.GASOLINA_93_SP, datos_tabla_a2.GASOLINA_93_SP);
+  fila(tabla,'gasolina_95_sp', datos_tabla_a1.GASOLINA_95_SP, datos_tabla_a2.GASOLINA_95_SP);
+  fila(tabla,'gasolina_97_sp', datos_tabla_a1.GASOLINA_97_SP, datos_tabla_a2.GASOLINA_97_SP);
+  fila(tabla,'gasolina_aviacion_1000130', datos_tabla_a1.GASOLINA_AVIACION_1000130, datos_tabla_a2.GASOLINA_AVIACION_1000130);
+  fila(tabla,'kerosene_aviacion', datos_tabla_a1.KEROSENE_AVIACION, datos_tabla_a2.KEROSENE_AVIACION);
+  fila(tabla,'kerosene_domestico', datos_tabla_a1.KEROSENE_DOMESTICO, datos_tabla_a2.KEROSENE_DOMESTICO);
+  fila(tabla,'p_combustible_180', datos_tabla_a1.P_COMBUSTIBLE_180, datos_tabla_a2.P_COMBUSTIBLE_180);
+  fila(tabla,'p_combustible_5', datos_tabla_a1.P_COMBUSTIBLE_5, datos_tabla_a2.P_COMBUSTIBLE_5);
+  fila(tabla,'p_combustible_6', datos_tabla_a1.P_COMBUSTIBLE_6, datos_tabla_a2.P_COMBUSTIBLE_6);
+  fila(tabla,'p_diesel', datos_tabla_a1.P_DIESEL, datos_tabla_a2.P_DIESEL);
+  fila(tabla,'p_diesel_a1', datos_tabla_a1.P_DIESEL_A1, datos_tabla_a2.P_DIESEL_A1);
+  fila(tabla,'p_diesel_a2', datos_tabla_a1.P_DIESEL_A2, datos_tabla_a2.P_DIESEL_A2);
+  fila(tabla,'p_diesel_b', datos_tabla_a1.P_DIESEL_B, datos_tabla_a2.P_DIESEL_B);
+  fila(tabla,'p_diesel_invernal', datos_tabla_a1.P_DIESEL_INVERNAL, datos_tabla_a2.P_DIESEL_INVERNAL);
+  fila(tabla,'p_diesel_b1', datos_tabla_a1.P_DIESEL_B1, datos_tabla_a2.P_DIESEL_B1);
+  fila(tabla,'p_diesel_b2', datos_tabla_a1.P_DIESEL_B2, datos_tabla_a2.P_DIESEL_B2);
+
+
+
+}
+/*****************************/
 </script>
 
 </body>
