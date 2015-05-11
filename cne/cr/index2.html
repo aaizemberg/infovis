@@ -270,7 +270,15 @@ function update_viz() {
   				combustibles
   			]
   		},
-//		axis: { y: { label: 'm3' } },
+  		axis : {
+        		y : {
+            			tick: {
+                			format: d3.format(",")
+//              			format: function (d) { return "$" + d; }
+            			},
+            			label: 'm3'
+		    	}
+    		},
 		color: {
       			pattern: ["#A9A9A9","#fcae91","#fb6a4a","#de2d26","#a50f15","#a1d99b","#31a354","#deebf7","#9ecae1","#3182bd","#f2f0f7","#dadaeb","#bcbddc","#9e9ac8","#807dba","#6a51a3","#4a1486"]
     		},
