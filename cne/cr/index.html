@@ -14,13 +14,17 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <style>
   body {
-    padding-top: 10px;
-    padding-left: 10px;
+    padding-top: 1px;
+    padding-left: 1px;
   }
   @media (max-width: 980px) {
     body {
-      padding-top: 0;
+      padding-top: 1;
     }
+  }
+  .container {width:100%;max-width:none;padding:20;}
+  table {
+  	font-size: small;
   }
 </style>
 
@@ -40,15 +44,13 @@
 
 </head>
 <body>
+
+<div class="container">
+
 <h1>Combustibles por Región</h1>
 
-  <table>
-    <tr>
-      <td>Región:</td>
-      <td>Tipo de combustible:</td>
-    </tr>
-    <tr>
-      <td>
+ <div class="row">
+    <div class="col-md-4">
         <select id="region" class="form-control">
           <option value="CL" selected="selected">Todo el país</option>
           <option value="CL-TA">I de Tarapacá</option>
@@ -67,8 +69,8 @@
           <option value="CL-AP">XV Arica y Parinacota</option>
           <option value="CL-RM">Metropolitana de Santiago</option>
         </select>
-      </td>
-      <td>
+      </div>
+      <div class="col-md-3">
         <select id="combustible" class="form-control"> <!-- class="input-small|input-medium|input-large|input-xlarge|input-xxlarge" -->
           <option value="combustibles" selected="selected">Todos</option>
           <option value="GASOLINA_81">GASOLINA_81</option>
@@ -88,26 +90,25 @@
           <option value="P_DIESEL_B2">P_DIESEL_B2</option>
           <option value="P_DIESEL_INVERNAL">P_DIESEL_INVERNAL</option>
         </select>
-      </td>
-    </tr>
-  </table>
+      </div>
+	<div class="col-md-5"></div>
+	</div>
 
   <hr>
 
-  <table width="100%" border="0">
-    <tr id="tbl_titulos">
-      <td colspan="2" width="66%"><h4 id="titulo_variable">Venta de combustibles en Chile</h4></td>
-      <td id="titulo_variacion" width="33%"><h4>Variación:</h4></td>
-    </tr>
+<!--
+    <div class="row">
+    	<div class="col-md-8"><h4 id="titulo_variable">Venta de combustibles en Chile</h4></div>
+    	<div class="col-md-4"><h4>Variación</h4></div>
+    </div>
+-->
+    <div class="row">
+      <div class="col-md-1" id="mapa_barras">
+        	<img src="mapa.png" alt="mapa">
+      </div>
+      <div class="col-md-7" id="chart"></div>
 
-    <tr>
-      <td width="10%" id="mapa_barras">
-        <div id="mapa"><img src="mapa.png" alt="mapa"></div>
-      </td>
-<!--  <td><img src="barras_fake.png" alt="mapa" border=0></td> -->
-      <td width="56%"><div id="chart"></div></td>
-
-      <td width="33%" valign="top" id="comparativo">
+      <div class="col-md-4" valign="top" id="comparativo">
 
         <div id="A1vsA2">
           <select id="y1" >
@@ -135,14 +136,12 @@
           </select>
         </div>
         <div id="comp">
-	  		<table id="tbl"></table>
-	  	</div>
-      </td>
+	  <table id="tbl"></table>
+	</div>
+     </div>
+    </div>
+  </div>
 
-    </tr>
-
-    </tr>
-  </table>
 
 <script>
 var regiones = {
@@ -281,7 +280,6 @@ function update_viz() {
             			label: 'm3'
 		    	}
     		},
-//		axis: { y: { label: 'm3' } },
 		color: {
       			pattern: ["#A9A9A9","#fcae91","#fb6a4a","#de2d26","#a50f15","#a1d99b","#31a354","#deebf7","#9ecae1","#3182bd","#f2f0f7","#dadaeb","#bcbddc","#9e9ac8","#807dba","#6a51a3","#4a1486"]
     		},
@@ -330,23 +328,28 @@ function datos_comp(aa,cc,rr) {
 }
 
 function fila(tbl, nombre,v1,v2) {
-  var tr = tbl.append("tr");
-  tr.append("td").text(nombre);
-  tr.append("td").style("text-align","right").text((v1>0 ? v1.toLocaleString() : ""));
-  tr.append("td").style("text-align","right").text((v2>0 ? v2.toLocaleString() : ""));
-  if (v1>0 && v2>0) {
 
-    var vr =Math.round((v1-v2)/v1*100);
-    var ico = (vr>0 ? "triangle-top" : (vr<0 ? "triangle-bottom" : "minus"));
-    var color = (vr>0 ? "green" : (vr<0 ? "red" : "grey"));
+	if (v1>0 || v2>0) {
 
-    tr.append("td").style("text-align","right").text(vr + "%").append("span").attr("class","glyphicon glyphicon-"+ico).style("color",color);
+	  var tr = tbl.append("tr");
 
-    tr.append("td").style("text-align","right").style("color",(v1-v2 < 0 ? "red" : "black")).text((v1-v2).toLocaleString());
-  } else {
-    tr.append("td").style("text-align","right").text("");
-    tr.append("td").style("text-align","right").text("");
-  }
+	  tr.append("td").text(nombre);
+	  tr.append("td").style("text-align","right").text((v1>0 ? v1.toLocaleString() : ""));
+	  tr.append("td").style("text-align","right").text((v2>0 ? v2.toLocaleString() : ""));
+	  if (v1>0 && v2>0) {
+
+		var vr =Math.round((v1-v2)/v1*100);
+		var ico = (vr>0 ? "triangle-top" : (vr<0 ? "triangle-bottom" : "minus"));
+		var color = (vr>0 ? "green" : (vr<0 ? "red" : "grey"));
+
+		tr.append("td").style("text-align","right").text(vr + "%").append("span").attr("class","glyphicon glyphicon-"+ico).style("color",color);
+
+		tr.append("td").style("text-align","right").style("color",(v1-v2 < 0 ? "red" : "black")).text((v1-v2).toLocaleString());
+	  } else {
+		tr.append("td").style("text-align","right").text("");
+		tr.append("td").style("text-align","right").text("");
+	  }
+	}
 }
 
 function tabla_comp() {
@@ -360,7 +363,9 @@ function tabla_comp() {
   d3.select("div#comp").append("table").attr("id","tbl").attr("class","table table-condensed");
   var tabla = d3.select("table#tbl");
 
-  var th = tabla.append("tr");
+  var thead = tabla.append("thead");
+  var th = thead.append("tr");
+
 // titulos
   th.append("th").text("combustible");
   th.append("th").text(y1_sel);
@@ -368,28 +373,29 @@ function tabla_comp() {
   th.append("th").text("Var %");
   th.append("th").text("Var m3");
 
-  fila(tabla,"Gasolina 81", datos_tabla_a1.GASOLINA_81, datos_tabla_a2.GASOLINA_81);
-  fila(tabla,'gasolina_93', datos_tabla_a1.GASOLINA_93, datos_tabla_a2.GASOLINA_93);
-  fila(tabla,'gasolina_93_sp', datos_tabla_a1.GASOLINA_93_SP, datos_tabla_a2.GASOLINA_93_SP);
-  fila(tabla,'gasolina_95_sp', datos_tabla_a1.GASOLINA_95_SP, datos_tabla_a2.GASOLINA_95_SP);
-  fila(tabla,'gasolina_97_sp', datos_tabla_a1.GASOLINA_97_SP, datos_tabla_a2.GASOLINA_97_SP);
-  fila(tabla,'gasolina_aviacion_1000130', datos_tabla_a1.GASOLINA_AVIACION_1000130, datos_tabla_a2.GASOLINA_AVIACION_1000130);
-  fila(tabla,'kerosene_aviacion', datos_tabla_a1.KEROSENE_AVIACION, datos_tabla_a2.KEROSENE_AVIACION);
-  fila(tabla,'kerosene_domestico', datos_tabla_a1.KEROSENE_DOMESTICO, datos_tabla_a2.KEROSENE_DOMESTICO);
-  fila(tabla,'p_combustible_180', datos_tabla_a1.P_COMBUSTIBLE_180, datos_tabla_a2.P_COMBUSTIBLE_180);
-  fila(tabla,'p_combustible_5', datos_tabla_a1.P_COMBUSTIBLE_5, datos_tabla_a2.P_COMBUSTIBLE_5);
-  fila(tabla,'p_combustible_6', datos_tabla_a1.P_COMBUSTIBLE_6, datos_tabla_a2.P_COMBUSTIBLE_6);
-  fila(tabla,'p_diesel', datos_tabla_a1.P_DIESEL, datos_tabla_a2.P_DIESEL);
-  fila(tabla,'p_diesel_a1', datos_tabla_a1.P_DIESEL_A1, datos_tabla_a2.P_DIESEL_A1);
-  fila(tabla,'p_diesel_a2', datos_tabla_a1.P_DIESEL_A2, datos_tabla_a2.P_DIESEL_A2);
-  fila(tabla,'p_diesel_b', datos_tabla_a1.P_DIESEL_B, datos_tabla_a2.P_DIESEL_B);
-  fila(tabla,'p_diesel_invernal', datos_tabla_a1.P_DIESEL_INVERNAL, datos_tabla_a2.P_DIESEL_INVERNAL);
-  fila(tabla,'p_diesel_b1', datos_tabla_a1.P_DIESEL_B1, datos_tabla_a2.P_DIESEL_B1);
-  fila(tabla,'p_diesel_b2', datos_tabla_a1.P_DIESEL_B2, datos_tabla_a2.P_DIESEL_B2);
+  var tbody = tabla.append("tbody");
+  fila(tbody,"gasolina_81", datos_tabla_a1.GASOLINA_81, datos_tabla_a2.GASOLINA_81);
+  fila(tbody,'gasolina_93', datos_tabla_a1.GASOLINA_93, datos_tabla_a2.GASOLINA_93);
+  fila(tbody,'gasolina_93_sp', datos_tabla_a1.GASOLINA_93_SP, datos_tabla_a2.GASOLINA_93_SP);
+  fila(tbody,'gasolina_95_sp', datos_tabla_a1.GASOLINA_95_SP, datos_tabla_a2.GASOLINA_95_SP);
+  fila(tbody,'gasolina_97_sp', datos_tabla_a1.GASOLINA_97_SP, datos_tabla_a2.GASOLINA_97_SP);
+  fila(tbody,'gasolina_aviacion_1000130', datos_tabla_a1.GASOLINA_AVIACION_1000130, datos_tabla_a2.GASOLINA_AVIACION_1000130);
+  fila(tbody,'kerosene_aviacion', datos_tabla_a1.KEROSENE_AVIACION, datos_tabla_a2.KEROSENE_AVIACION);
+  fila(tbody,'kerosene_domestico', datos_tabla_a1.KEROSENE_DOMESTICO, datos_tabla_a2.KEROSENE_DOMESTICO);
+  fila(tbody,'p_combustible_180', datos_tabla_a1.P_COMBUSTIBLE_180, datos_tabla_a2.P_COMBUSTIBLE_180);
+  fila(tbody,'p_combustible_5', datos_tabla_a1.P_COMBUSTIBLE_5, datos_tabla_a2.P_COMBUSTIBLE_5);
+  fila(tbody,'p_combustible_6', datos_tabla_a1.P_COMBUSTIBLE_6, datos_tabla_a2.P_COMBUSTIBLE_6);
+  fila(tbody,'p_diesel', datos_tabla_a1.P_DIESEL, datos_tabla_a2.P_DIESEL);
+  fila(tbody,'p_diesel_a1', datos_tabla_a1.P_DIESEL_A1, datos_tabla_a2.P_DIESEL_A1);
+  fila(tbody,'p_diesel_a2', datos_tabla_a1.P_DIESEL_A2, datos_tabla_a2.P_DIESEL_A2);
+  fila(tbody,'p_diesel_b', datos_tabla_a1.P_DIESEL_B, datos_tabla_a2.P_DIESEL_B);
+  fila(tbody,'p_diesel_invernal', datos_tabla_a1.P_DIESEL_INVERNAL, datos_tabla_a2.P_DIESEL_INVERNAL);
+  fila(tbody,'p_diesel_b1', datos_tabla_a1.P_DIESEL_B1, datos_tabla_a2.P_DIESEL_B1);
+  fila(tbody,'p_diesel_b2', datos_tabla_a1.P_DIESEL_B2, datos_tabla_a2.P_DIESEL_B2);
 
 }
 
 </script>
-
+</div>
 </body>
 </html>
