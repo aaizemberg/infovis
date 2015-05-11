@@ -50,7 +50,7 @@
 <h1>Combustibles por Región</h1>
 
  <div class="row">
-    <div class="col-md-3">
+    <div class="col-md-4">
         <select id="region" class="form-control">
           <option value="CL" selected="selected">Todo el país</option>
           <option value="CL-TA">I de Tarapacá</option>
@@ -70,7 +70,7 @@
           <option value="CL-RM">Metropolitana de Santiago</option>
         </select>
       </div>
-      <div class="col-md-2">
+      <div class="col-md-3">
         <select id="combustible" class="form-control"> <!-- class="input-small|input-medium|input-large|input-xlarge|input-xxlarge" -->
           <option value="combustibles" selected="selected">Todos</option>
           <option value="GASOLINA_81">GASOLINA_81</option>
@@ -91,7 +91,7 @@
           <option value="P_DIESEL_INVERNAL">P_DIESEL_INVERNAL</option>
         </select>
       </div>
-	<div class="col-md-7"></div>
+	<div class="col-md-5"></div>
 	</div>
 
   <hr>
@@ -333,24 +333,26 @@ function datos_comp(aa,cc,rr) {
 
 function fila(tbl, nombre,v1,v2) {
 
-  var tr = tbl.append("tr");
+	if (v1>0 || v2>0) {
+	  var tr = tbl.append("tr");
 
-  tr.append("td").text(nombre);
-  tr.append("td").style("text-align","right").text((v1>0 ? v1.toLocaleString() : ""));
-  tr.append("td").style("text-align","right").text((v2>0 ? v2.toLocaleString() : ""));
-  if (v1>0 && v2>0) {
+	  tr.append("td").text(nombre);
+	  tr.append("td").style("text-align","right").text((v1>0 ? v1.toLocaleString() : ""));
+	  tr.append("td").style("text-align","right").text((v2>0 ? v2.toLocaleString() : ""));
+	  if (v1>0 && v2>0) {
 
-    var vr =Math.round((v1-v2)/v1*100);
-    var ico = (vr>0 ? "triangle-top" : (vr<0 ? "triangle-bottom" : "minus"));
-    var color = (vr>0 ? "green" : (vr<0 ? "red" : "grey"));
+		var vr =Math.round((v1-v2)/v1*100);
+		var ico = (vr>0 ? "triangle-top" : (vr<0 ? "triangle-bottom" : "minus"));
+		var color = (vr>0 ? "green" : (vr<0 ? "red" : "grey"));
 
-    tr.append("td").style("text-align","right").text(vr + "%").append("span").attr("class","glyphicon glyphicon-"+ico).style("color",color);
+		tr.append("td").style("text-align","right").text(vr + "%").append("span").attr("class","glyphicon glyphicon-"+ico).style("color",color);
 
-    tr.append("td").style("text-align","right").style("color",(v1-v2 < 0 ? "red" : "black")).text((v1-v2).toLocaleString());
-  } else {
-    tr.append("td").style("text-align","right").text("");
-    tr.append("td").style("text-align","right").text("");
-  }
+		tr.append("td").style("text-align","right").style("color",(v1-v2 < 0 ? "red" : "black")).text((v1-v2).toLocaleString());
+	  } else {
+		tr.append("td").style("text-align","right").text("");
+		tr.append("td").style("text-align","right").text("");
+	  }
+	}
 }
 
 function tabla_comp() {
