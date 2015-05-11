@@ -300,10 +300,10 @@ function update_viz() {
 
 
   }
-/***********************/
+
 function datos_comp(aa,cc,rr) {
 // var años = [2013,2014];
-//  var aaa = _.filter(datos, function(n) { return aa.indexOf(n.year) > -1; });
+// var aaa = _.filter(datos, function(n) { return aa.indexOf(n.year) > -1; });
 
 //  var aa=2013
   var aaa = _.filter(datos, function(n) { return n.year == aa; });
@@ -318,14 +318,9 @@ function datos_comp(aa,cc,rr) {
     rrr = _.filter(ccc, function(n) { return n.region == rr; });
   }
 
- // console.log(rrr);
-
-
   var agrupado_c = _.groupBy(rrr, function(u) {
       return u.combustible;
     });
-
-  // console.log(agrupado_c);
 
   var sumado = _.mapValues(agrupado_c, function(g) {
       return _.sum(_.pluck(g, "m3"));
@@ -392,10 +387,8 @@ function tabla_comp() {
   fila(tabla,'p_diesel_b1', datos_tabla_a1.P_DIESEL_B1, datos_tabla_a2.P_DIESEL_B1);
   fila(tabla,'p_diesel_b2', datos_tabla_a1.P_DIESEL_B2, datos_tabla_a2.P_DIESEL_B2);
 
-
-
 }
-/*****************************/
+
 </script>
 
 </body>
