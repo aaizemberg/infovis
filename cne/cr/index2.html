@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script src="https://code.jquery.com/jquery.min.js"></script>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<style>
+  body {
+    padding-top: 1px;
+    padding-left: 1px;
+  }
+  @media (max-width: 980px) {
+    body {
+      padding-top: 1;
+    }
+  }
+  .container {width:100%;max-width:none;padding:0;}
+</style>
+
+  <!-- d3.js -->
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+
+  <!-- c3.js -->
+  <link href="c3.min.css" rel="stylesheet" type="text/css">
+  <script src="c3.min.js"></script>
+
+<!-- <script src="https://raw.githubusercontent.com/lodash/lodash/3.8.0/lodash.min.js"></script> -->
+  <script src="lodash.min.js"></script>
+
+
+  <meta charset="utf-8">
+  <title>Combustibles por región</title>
+
+</head>
+<body>
+<div class="container">
+<h1>Combustibles por Región</h1>
+
+ <div class="row">
+    <div class="col-md-3">
+        <select id="region" class="form-control">
+          <option value="CL" selected="selected">Todo el país</option>
+          <option value="CL-TA">I de Tarapacá</option>
+          <option value="CL-AN">II de Antofagasta</option>
+          <option value="CL-AT">III de Atacama</option>
+          <option value="CL-CO">IV de Coquimbo</option>
+          <option value="CL-VS">V de Valparaíso</option>
+          <option value="CL-LI">VI del Libertador General Bernardo O"Higgins</option>
+          <option value="CL-ML">VII del Maule</option>
+          <option value="CL-BI">VIII del Biobío</option>
+          <option value="CL-AR">IX de la Araucanía</option>
+          <option value="CL-LL">X de Los Lagos</option>
+          <option value="CL-AI">XI de Aysén del General Carlos Ibáñez del Campo</option>
+          <option value="CL-MA">XII de Magallanes y de la Antártica Chilena</option>
+          <option value="CL-LR">XIV de los Ríos</option>
+          <option value="CL-AP">XV Arica y Parinacota</option>
+          <option value="CL-RM">Metropolitana de Santiago</option>
+        </select>
+      </div>
+      <div class="col-md-2">
+        <select id="combustible" class="form-control"> <!-- class="input-small|input-medium|input-large|input-xlarge|input-xxlarge" -->
+          <option value="combustibles" selected="selected">Todos</option>
+          <option value="GASOLINA_81">GASOLINA_81</option>
+          <option value="GASOLINA_93_SP">GASOLINA_93_SP</option>
+          <option value="GASOLINA_95_SP">GASOLINA_95_SP</option>
+          <option value="GASOLINA_97_SP">GASOLINA_97_SP</option>
+          <option value="GASOLINA_AVIACION_1000130">GASOLINA_AVIACION_1000130</option>
+          <option value="KEROSENE_AVIACION">KEROSENE_AVIACION</option>
+          <option value="KEROSENE_DOMESTICO">KEROSENE_DOMESTICO</option>
+          <option value="P_COMBUSTIBLE_180">P_COMBUSTIBLE_180</option>
+          <option value="P_COMBUSTIBLE_5">P_COMBUSTIBLE_5</option>
+          <option value="P_COMBUSTIBLE_6">P_COMBUSTIBLE_6</option>
+          <option value="P_DIESEL">P_DIESEL</option>
+          <option value="P_DIESEL_A1">P_DIESEL_A1</option>
+          <option value="P_DIESEL_B">P_DIESEL_B</option>
+          <option value="P_DIESEL_B1">P_DIESEL_B1</option>
+          <option value="P_DIESEL_B2">P_DIESEL_B2</option>
+          <option value="P_DIESEL_INVERNAL">P_DIESEL_INVERNAL</option>
+        </select>
+      </div>
+	<div class="col-md-7"></div>
+	</div>
+ </div>
+
+  <hr>
+
+
+  <div class="container">
+    <div class="row">
+    	<div class="col-md-8"><h4 id="titulo_variable">Venta de combustibles en Chile</h4></div>
+    	<div class="col-md-4"><h4>Variación</h4></div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-1" id="mapa_barras">
+        	<img src="mapa.png" alt="mapa">
+      </div>
+      <div class="col-md-7" id="chart"></div>
+
+      <div class="col-md-4" valign="top" id="comparativo">
+
+        <div id="A1vsA2">
+          <select id="y1" >
+			<option value="2006">2006</option>
+			<option value="2007">2007</option>
+			<option value="2008">2008</option>
+			<option value="2009">2009</option>
+			<option value="2010">2010</option>
+			<option value="2011">2011</option>
+			<option value="2012">2012</option>
+			<option selected="selected" value="2013">2013</option>
+			<option value="2014">2014</option>
+          </select>
+          vs
+          <select id="y2">
+			<option value="2006">2006</option>
+			<option value="2007">2007</option>
+			<option value="2008">2008</option>
+			<option value="2009">2009</option>
+			<option value="2010">2010</option>
+			<option value="2011">2011</option>
+			<option value="2012">2012</option>
+			<option value="2013">2013</option>
+			<option selected="selected" value="2014">2014</option>
+          </select>
+        </div>
+        <div id="comp">
+	  		<table id="tbl"></table>
+	  	</div>
+     </div>
+
+    </div>
+
+  </div>
+
+
+<script>
+var regiones = {
+  "CL": "Chile",
+  "CL-AI": "XI de Aysén del General Carlos Ibáñez del Campo",
+  "CL-AN": "II de Antofagasta",
+  "CL-AP": "XV Arica y Parinacota",
+  "CL-AR": "IX de la Araucanía",
+  "CL-AT": "III de Atacama",
+  "CL-BI": "VIII del Biobío",
+  "CL-CO": "IV de Coquimbo",
+  "CL-LI": "VI del Libertador General Bernardo O'Higgins",
+  "CL-LL": "X de Los Lagos",
+  "CL-LR": "XIV de los Ríos",
+  "CL-MA": "XII de Magallanes y de la Antártica Chilena",
+  "CL-ML": "VII del Maule",
+  "CL-RM": "Metropolitana de Santiago",
+  "CL-TA": "I de Tarapacá",
+  "CL-VS": "V de Valparaíso"
+};
+
+  var region_sel ="CL";
+  var combustible_sel="combustibles";
+  var y1_sel = 2013;
+  var y2_sel = 2014;
+
+  d3.select("select#region").on("change", function() {
+    var str = "Venta de " + d3.select("#combustible").node().value + " en " + regiones[d3.select("#region").node().value];
+    d3.select("#titulo_variable").text( str );
+    region_sel = d3.select("#region").node().value;
+    update_viz();
+    tabla_comp();
+  });
+
+  d3.select("select#combustible").on("change", function() {
+    var str = "Venta de " + d3.select("#combustible").node().value + " en " + regiones[d3.select("#region").node().value];
+    d3.select("#titulo_variable").text( str );
+    combustible_sel= d3.select("#combustible").node().value;
+    update_viz();
+    // tabla_comp(); Siempre mostramos todos los combustibles
+  });
+
+  d3.select("select#y1").on("change", function() {
+    y1_sel = d3.select("#y1").node().value;
+    //update_viz();
+    tabla_comp();
+  });
+
+  d3.select("select#y2").on("change", function() {
+    y2_sel = d3.select("#y2").node().value;
+    //update_viz();
+    tabla_comp();
+  });
+
+
+  var datos;
+  var col = [];
+
+  d3.json("datos.json", function(error, json) {
+    if (error) return console.warn(error);
+    datos = json;
+    update_viz();
+    tabla_comp();
+  });
+
+
+function update_viz() {
+
+  // metros cúbicos por año según el combustible (cc) y/o la region (rr)
+  //
+  function m3xa(cc,rr) {
+    if ( rr == "CL" ) {
+      // CL = todo Chile
+      var ccc = _.filter(datos, function(n) { return n.combustible == cc; });
+    }
+    else {
+      var rrr = _.filter(datos, function(n) { return n.region == rr; });
+      var ccc = _.filter(rrr, function(n) { return n.combustible == cc; });
+    }
+
+    var agrupado_c = _.groupBy(ccc, function(u) {
+      return u.year;
+    });
+
+    var sumado = _.mapValues(agrupado_c, function(g) {
+      return _.sum(_.pluck(g, "m3"));
+    });
+
+    return sumado;
+  }
+
+  var años = _.uniq(_.map(datos, 'year'));
+
+  var combustibles;
+  if (combustible_sel == "combustibles") {
+  	combustibles = _.uniq(_.map(datos, 'combustible'));
+  } else {
+   	combustibles = [combustible_sel];
+  }
+
+  var ejeX;
+  ejeX = _.uniq(_.map(datos, 'year'));
+  ejeX.unshift("x");
+
+  col = [];
+  col[0] = ejeX;
+  for (var i = 0; i < combustibles.length; i++) {
+    var ceros = Array.apply(null, new Array(años.length)).map(Number.prototype.valueOf,0);
+
+    var sumados = m3xa(combustibles[i] , region_sel );
+
+    for (var j = 0; j < años.length; j++) {
+      if(sumados[años[j]]){
+        ceros[j] = sumados[años[j]];
+      }
+    }
+    col[i+1] = ceros;
+    col[i+1].unshift(combustibles[i]);
+  }
+
+  	var chart = c3.generate({
+  		data: {
+  			x: 'x',
+  			columns: col,
+  			type: 'bar',
+  			groups: [
+  				combustibles
+  			]
+  		},
+//		axis: { y: { label: 'm3' } },
+		color: {
+      			pattern: ["#A9A9A9","#fcae91","#fb6a4a","#de2d26","#a50f15","#a1d99b","#31a354","#deebf7","#9ecae1","#3182bd","#f2f0f7","#dadaeb","#bcbddc","#9e9ac8","#807dba","#6a51a3","#4a1486"]
+    		},
+  		grid: {
+  			y: {
+  				lines: [{value:0}]
+  			}
+  		},
+		size: {
+		  height: 425
+		},
+		tooltip: {
+  		        grouped: false
+          }
+  	});
+
+
+  }
+/***********************/
+function datos_comp(aa,cc,rr) {
+// var años = [2013,2014];
+//  var aaa = _.filter(datos, function(n) { return aa.indexOf(n.year) > -1; });
+
+//  var aa=2013
+  var aaa = _.filter(datos, function(n) { return n.year == aa; });
+
+
+  var ccc = _.filter(aaa, function(n) { return cc.indexOf(n.combustible) > -1; });
+  var rrr;
+
+  if ( rr == "CL" ) {
+    rrr = ccc;
+  } else {
+    rrr = _.filter(ccc, function(n) { return n.region == rr; });
+  }
+
+ // console.log(rrr);
+
+
+  var agrupado_c = _.groupBy(rrr, function(u) {
+      return u.combustible;
+    });
+
+  // console.log(agrupado_c);
+
+  var sumado = _.mapValues(agrupado_c, function(g) {
+      return _.sum(_.pluck(g, "m3"));
+    });
+
+  return sumado;
+}
+
+function fila(tbl, nombre,v1,v2) {
+  var tr = tbl.append("tr");
+  tr.append("td").text(nombre);
+  tr.append("td").style("text-align","right").text((v1>0 ? v1.toLocaleString() : ""));
+  tr.append("td").style("text-align","right").text((v2>0 ? v2.toLocaleString() : ""));
+  if (v1>0 && v2>0) {
+
+    var vr =Math.round((v1-v2)/v1*100);
+    var ico = (vr>0 ? "triangle-top" : (vr<0 ? "triangle-bottom" : "minus"));
+    var color = (vr>0 ? "green" : (vr<0 ? "red" : "grey"));
+
+    tr.append("td").style("text-align","right").text(vr + "%").append("span").attr("class","glyphicon glyphicon-"+ico).style("color",color);
+
+    tr.append("td").style("text-align","right").style("color",(v1-v2 < 0 ? "red" : "black")).text((v1-v2).toLocaleString());
+  } else {
+    tr.append("td").style("text-align","right").text("");
+    tr.append("td").style("text-align","right").text("");
+  }
+}
+
+function tabla_comp() {
+  combustibles = _.uniq(_.map(datos, 'combustible'));
+
+  var datos_tabla_a1 = datos_comp(y1_sel,combustibles, region_sel );
+  var datos_tabla_a2 = datos_comp(y2_sel,combustibles, region_sel );
+
+
+  d3.select("table#tbl").data([]).exit().remove();
+  d3.select("div#comp").append("table").attr("id","tbl").attr("class","table table-condensed");
+  var tabla = d3.select("table#tbl");
+
+  var th = tabla.append("tr");
+// titulos
+  th.append("th").text("combustible");
+  th.append("th").text(y1_sel);
+  th.append("th").text(y2_sel);
+  th.append("th").text("Var %");
+  th.append("th").text("Var m3");
+
+  fila(tabla,"Gasolina 81", datos_tabla_a1.GASOLINA_81, datos_tabla_a2.GASOLINA_81);
+  fila(tabla,'gasolina_93', datos_tabla_a1.GASOLINA_93, datos_tabla_a2.GASOLINA_93);
+  fila(tabla,'gasolina_93_sp', datos_tabla_a1.GASOLINA_93_SP, datos_tabla_a2.GASOLINA_93_SP);
+  fila(tabla,'gasolina_95_sp', datos_tabla_a1.GASOLINA_95_SP, datos_tabla_a2.GASOLINA_95_SP);
+  fila(tabla,'gasolina_97_sp', datos_tabla_a1.GASOLINA_97_SP, datos_tabla_a2.GASOLINA_97_SP);
+  fila(tabla,'gasolina_aviacion_1000130', datos_tabla_a1.GASOLINA_AVIACION_1000130, datos_tabla_a2.GASOLINA_AVIACION_1000130);
+  fila(tabla,'kerosene_aviacion', datos_tabla_a1.KEROSENE_AVIACION, datos_tabla_a2.KEROSENE_AVIACION);
+  fila(tabla,'kerosene_domestico', datos_tabla_a1.KEROSENE_DOMESTICO, datos_tabla_a2.KEROSENE_DOMESTICO);
+  fila(tabla,'p_combustible_180', datos_tabla_a1.P_COMBUSTIBLE_180, datos_tabla_a2.P_COMBUSTIBLE_180);
+  fila(tabla,'p_combustible_5', datos_tabla_a1.P_COMBUSTIBLE_5, datos_tabla_a2.P_COMBUSTIBLE_5);
+  fila(tabla,'p_combustible_6', datos_tabla_a1.P_COMBUSTIBLE_6, datos_tabla_a2.P_COMBUSTIBLE_6);
+  fila(tabla,'p_diesel', datos_tabla_a1.P_DIESEL, datos_tabla_a2.P_DIESEL);
+  fila(tabla,'p_diesel_a1', datos_tabla_a1.P_DIESEL_A1, datos_tabla_a2.P_DIESEL_A1);
+  fila(tabla,'p_diesel_a2', datos_tabla_a1.P_DIESEL_A2, datos_tabla_a2.P_DIESEL_A2);
+  fila(tabla,'p_diesel_b', datos_tabla_a1.P_DIESEL_B, datos_tabla_a2.P_DIESEL_B);
+  fila(tabla,'p_diesel_invernal', datos_tabla_a1.P_DIESEL_INVERNAL, datos_tabla_a2.P_DIESEL_INVERNAL);
+  fila(tabla,'p_diesel_b1', datos_tabla_a1.P_DIESEL_B1, datos_tabla_a2.P_DIESEL_B1);
+  fila(tabla,'p_diesel_b2', datos_tabla_a1.P_DIESEL_B2, datos_tabla_a2.P_DIESEL_B2);
+
+
+
+}
+/*****************************/
+</script>
+</div>
+</body>
+</html>
