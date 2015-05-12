@@ -32,3 +32,21 @@ http://cne.opendata.junar.com/datastreams/91820/ventas-nacionales-por-producto-y
 |XII de Magallanes y de la Antártica Chilena|Duodécima|Magallanes y de la Antártica Chilena|
 |Metropolitana de Santiago|Región Metropolitana|Metropolitana|
 
+
+Ignacio Sans (https://github.com/dbleyenda)
+
+Andres Vazquez (https://github.com/avdata99)
+
+## Tarapacá
+15	Región de Arica y Parinacota
+
+1	Región de Tarapacá
+
+La región de Tarapacá, se sub-divide y se genera al norte, la Región de Arica y Parinacota (XV = 15)
+
+## Los Lagos
+14	Región de los Ríos
+
+10	Región de los Lagos
+
+La región de los lagos, se sub-divide y al norte, se genera la region de los Ríos (VIV = 14)
