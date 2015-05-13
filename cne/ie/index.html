@@ -1,11 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+<!-- lodash -->
 <script src="https://rawgit.com/lodash/lodash/3.8.0/lodash.min.js"></script>
-<script src="http://d3js.org/d3.v3.min.js"></script>
+
+<!-- bootstrap -->
 <script src="https://code.jquery.com/jquery.min.js"></script>
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+<!-- d3 y topojson -->
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://d3js.org/topojson.v1.min.js"></script>
+
+<!-- datamaps -->
+<script src="datamaps.world.min.js"></script>
+
 <style>
   body {
     padding-top: 1px;
@@ -77,7 +88,8 @@
   <hr>
   <div class="row">
     <div class="col-md-9" id="mapa-mundo">
-      <img height="550" src="mapa-fake.jpg" alt="mapa">
+      <div id="container" style="position: relative; height: 550px;"></div>
+      <!-- <img height="550" src="mapa-fake.jpg" alt="mapa"> -->
     </div>
     <div class="col-md-3" id="tabla-combustible">
       <h5 id="titulo_variable">Combustible importado en 2014 desde todo el mundo hacia Chile</h5>
@@ -85,28 +97,77 @@
     </div>
   </div>
 
-
-
   </div>
 
 <script>
-  var op_sel ="imp";
-  var producto_sel="Combustible";
+  var op_sel = "imp";
+  var producto_sel = "Combustible";
   var year_sel = "2014";
   var pais_sel = "todo el mundo";
 
-
+  mapa();
 
   d3.select("select#op").on("change", function() {
-    var opera= "exportado";
-    if (op =="imp") {
-        opera= "importado";
+    var opera = " exportado";
+    if (op == "imp" ) {
+        opera= " importado";
     }
-    var str = " " + producto_sel + opera + " en " + d3.select("#year").node().value + " desde " + pais_sel + " hacia Chile;
+    var str = " " + producto_sel + opera + " en " + d3.select("#year").node().value + " desde " + pais_sel + " hacia Chile";
     d3.select("#titulo_variable").text( str );
-    viz();
-    tabla();
   });
+
+  function mapa() {
+
+    var mapa = new Datamap({
+      element: document.getElementById('container'),
+      fills: {
+      defaultFill: "#aaa",
+        1: "#f7fcf5",
+        2: "#e5f5e0",
+        3: "#c7e9c0",
+        4: "#a1d99b",
+        5: "#74c476",
+        6: "#41ab5d",
+        7: "#238b45",
+        8: "#006d2c",
+        9: "#00441b"
+      },
+      data: {
+        'ARG': {'fillKey': 9, 'cant': 100},
+        'BRA': {'fillKey': 8, 'cant': 100},
+        'BEL': {'fillKey': 3, 'cant': 100},
+        'CAN': {'fillKey': 4, 'cant': 100},
+        'CHE': {'fillKey': 5, 'cant': 100},
+        'CHN': {'fillKey': 6, 'cant': 100},
+        'DEU': {'fillKey': 7, 'cant': 100},
+        'DNK': {'fillKey': 8, 'cant': 100},
+        'USA': {'fillKey': 9, 'cant': 100},
+        'EGY': {'fillKey': 1, 'cant': 100},
+        'FIN': {'fillKey': 2, 'cant': 100},
+        'FRA': {'fillKey': 3, 'cant': 100},
+        'IDN': {'fillKey': 4, 'cant': 100},
+        'IND': {'fillKey': 5, 'cant': 100},
+        'JPN': {'fillKey': 6, 'cant': 100},
+        'KOR': {'fillKey': 7, 'cant': 100},
+        'NLD': {'fillKey': 8, 'cant': 100},
+        'NZL': {'fillKey': 9, 'cant': 100},
+        'PAK': {'fillKey': 1, 'cant': 100},
+        'SIN': {'fillKey': 2, 'cant': 100},
+        'TWN': {'fillKey': 2, 'cant': 100},
+        'GBR': {'fillKey': 4, 'cant': 100}
+      },
+      done: function(datamap) {
+	              datamap.svg.selectAll('.datamaps-subunit').on('click', function(geography) {
+	                  alert(geography.id + " " + geography.properties.name);
+	              });
+      }
+
+      //
+      // cada pais es dibujado como un PATH SVG con class="datamaps-subunit ARG" con su codigo de tres dígitos.
+      //
+
+    });
+  }
 
  </script>
 
