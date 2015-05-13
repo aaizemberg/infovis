@@ -1,28 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <script src="http://d3js.org/d3.v3.min.js"></script>
-  <meta charset="utf-8">
+<script src="https://rawgit.com/lodash/lodash/3.8.0/lodash.min.js"></script>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="https://code.jquery.com/jquery.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<style>
+  body {
+    padding-top: 1px;
+    padding-left: 1px;
+  }
+  @media (max-width: 980px) {
+    body {
+      padding-top: 1;
+    }
+  }
+  .container {width:100%;max-width:none;padding:20;}
+  table {
+  	font-size: small;
+  }
+</style>  <meta charset="utf-8">
   <title>Importaciones y Exporaciones</title>
 </head>
 <body>
-<h1>Importaciones y exportaciones</h1>
-  
-  <table>
-    <tr>
-      <td>operacion</td>
-      <td>año</td>
-      <td>tipo de combustible</td>
-    </tr>
-    <tr>
-      <td>
-        <select id="op">
+<div class="container">
+  <h1>Importaciones y Exportaciones</h1>
+
+  <div class="row">
+    <div class="col-md-2" >Operacion</div>
+    <div class="col-md-2" >Año</div>
+    <div class="col-md-2" >Combustible</div>
+    <div class="col-md-6"></div>
+  </div>
+  <div class="row">
+    <div class="col-md-2" >
+      <select id="op" class="form-control">
           <option value="imp">Importación</option>
           <option value="exp">Exportación</option>
-        </select>        
-      </td>
-      <td>
-        <select id="year">
+      </select>
+    </div>
+    <div class="col-md-2">
+      <select id="year"  class="form-control">
           <option value='2002'>2002</option>
           <option value='2003'>2003</option>
           <option value='2004'>2004</option>
@@ -37,10 +56,11 @@
           <option value='2013'>2013</option>
           <option value='2014'>2014</option>
           <option value='2015'>2015</option>
-        </select>        
-      </td>
-      <td>
-        <select id="producto">
+      </select>
+    </div>
+    <div class="col-md-2" >
+      <select id="producto" class="form-control">
+          <option value='Todos'>Todos</option>
           <option value='Carbón'>Carbón</option>
           <option value='Crudo'>Crudo</option>
           <option value='Diesel'>Diesel</option>
@@ -50,26 +70,24 @@
           <option value='Gasolina'>Gasolina</option>
           <option value='IFO'>IFO</option>
           <option value='Kerosene'>Kerosene</option>
-        </select>        
-      </td>
-    </tr>
-  </table>
-  
-  <!-- 940 px como minimo, entre el mapa y las referencias -->
-  <table width="940px">
-    <tr>
-      <td width="840px" >
-        <div id="mapa">
-          <p>mapa mapa mapa</p>
-        </div>
-      </td>
-      <td width="100px" align="right">
-        <div id="ref">
-          <p>tablita </p>
-        </div>
-      </td>
-    </tr>
-  </table>
-  
+      </select>
+    </div>
+    <div class="col-md-6"></div>
+    </div>
+  <hr>
+  <div class="row">
+    <div class="col-md-9" id="mapa-mundo">
+      <img height="550" src="mapa-fake.jpg" alt="mapa">
+    </div>
+    <div class="col-md-3" id="tabla-combustible">
+      <h5 id="titulo_variable">Combustible importado en 2014 desde todo el mundo hacia Chile</h5>
+      <img src="tabla-fake.jpg" alt="tabla">
+    </div>
+  </div>
+
+
+
+  </div>
+
 </body>
 </html>
