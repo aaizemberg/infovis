@@ -1,906 +1,906 @@
-operacion	year	producto	pais	pais3	ton
-E	2002	Diesel	Argentina	ARG	3920,33077
-E	2002	Diesel	Bolivia	BOL	16443,67286
-E	2002	Diesel	España	ARG	253,5
-E	2002	Diesel	Japón	ITA	0,002
-E	2002	Diesel	Perú	MYS	65786,373
-E	2002	Diesel	Territorios Británicos en América	CHE	291,525
-E	2002	Fuel Oil 6	Estados Unidos	ARG	57405,65
-E	2002	Fuel Oil 6	Panamá	MYS	16356,41248
-E	2002	Gas Natural	Territorios Británicos en América	CHE	7,75
-E	2002	GLP	Ecuador	ARG	32205
-E	2002	GLP	Perú	MYS	1500
-E	2002	Kerosene	Bolivia	BOL	2643,08098
-E	2002	Kerosene	Perú	MYS	2374,92
-E	2003	Diesel	Argentina	ARG	66965,11372
-E	2003	Diesel	Bolivia	BOL	67968,011
-E	2003	Diesel	Colombia	COL	21038,347
-E	2003	Diesel	Ecuador	ARG	13408,308
-E	2003	Diesel	España	ARG	245,05
-E	2003	Diesel	Estados Unidos	ARG	76514,605
-E	2003	Diesel	Guatemala	FRA	17893
-E	2003	Diesel	Japón	ITA	211,25
-E	2003	Diesel	Panamá	MYS	29397,91
-E	2003	Diesel	Perú	MYS	97337,025
-E	2003	Diesel	Territorios Británicos en América	CHE	591,5
-E	2003	Fuel Oil 6	Estados Unidos	ARG	356479,66
-E	2003	Fuel Oil 6	Panamá	MYS	79771,004
-E	2003	Fuel Oil 6	Perú	MYS	639
-E	2003	Gas Natural	Argentina	ARG	198,9069
-E	2003	Gas Natural	Territorios Británicos en América	CHE	35,043
-E	2003	GLP	Brasil	ARG	9441,497
-E	2003	GLP	Ecuador	ARG	123316,8
-E	2003	GLP	Perú	MYS	18211,875
-E	2003	IFO	Perú	MYS	261,267
-E	2003	Kerosene	Bolivia	BOL	331,926
-E	2003	Kerosene	Panamá	MYS	1769,594
-E	2003	Kerosene	Perú	MYS	3832,851
-E	2004	Diesel	Argentina	ARG	43356,2124800001
-E	2004	Diesel	Bolivia	BOL	32948,092
-E	2004	Diesel	Corea del Sur	ARG	442
-E	2004	Diesel	Estados Unidos	ARG	41162,017
-E	2004	Diesel	Japón	ITA	84,5
-E	2004	Diesel	Perú	MYS	25165,818
-E	2004	Diesel	Rusia	RUS	146,142
-E	2004	Diesel	Uruguay	CHE	169
-E	2004	Fuel Oil 6	Estados Unidos	ARG	336863,592
-E	2004	Fuel Oil 6	Panamá	MYS	145216,609
-E	2004	Fuel Oil 6	Perú	MYS	4254,502
-E	2004	Fuel Oil 6	Venezuela	VEN	1,8
-E	2004	Gas Natural	Argentina	ARG	174,7067
-E	2004	Gas Natural	Territorios Británicos en América	CHE	9,972
-E	2004	GLP	Argentina	ARG	132
-E	2004	GLP	Ecuador	ARG	127223,3
-E	2004	GLP	El Salvador	ARG	5205,192
-E	2004	GLP	Estados Unidos	ARG	11426,843
-E	2004	GLP	Panamá	MYS	1490,473
-E	2004	GLP	Paraguay	MYS	16,173
-E	2004	GLP	Perú	MYS	5248,76
-E	2004	GLP	República Dominicana	MYS	4802,429
-E	2004	GLP	Territorios Británicos en América	CHE	19,119
-E	2004	IFO	Perú	MYS	4,9545
-E	2005	Diesel	Argentina	ARG	47573,00083
-E	2005	Diesel	Bolivia	BOL	76668,0378
-E	2005	Diesel	Estados Unidos	ARG	22283,825
-E	2005	Diesel	Perú	MYS	81605,21
-E	2005	Fuel Oil 6	Argentina	ARG	101489,799
-E	2005	Fuel Oil 6	Estados Unidos	ARG	487891,379
-E	2005	Fuel Oil 6	Perú	MYS	1356
-E	2005	Gas Natural	Alemania	DEU	0,006
-E	2005	GLP	Argentina	ARG	110,9
-E	2005	GLP	Bolivia	BOL	0,007
-E	2005	GLP	Ecuador	ARG	112489,861
-E	2005	GLP	El Salvador	ARG	2199,2
-E	2005	GLP	Estados Unidos	ARG	9821,509
-E	2005	GLP	Perú	MYS	1500
-E	2005	GLP	Territorios Británicos en América	CHE	33,802
-E	2005	IFO	Estados Unidos	ARG	35412,521
-E	2005	IFO	Perú	MYS	437,129
-E	2006	Carbón	Brasil	ARG	25,008
-E	2006	Diesel	Argentina	ARG	86345,91135
-E	2006	Diesel	Bolivia	BOL	83078,04627
-E	2006	Diesel	Corea del Sur	ARG	426
-E	2006	Diesel	Estados Unidos	ARG	39760,686
-E	2006	Diesel	Paraguay	MYS	3,654
-E	2006	Diesel	Perú	MYS	245684,656
-E	2006	Diesel	Territorios Británicos en América	CHE	0,01
-E	2006	Fuel Oil 6	Argentina	ARG	53186,588
-E	2006	Fuel Oil 6	Estados Unidos	ARG	402533,559
-E	2006	Fuel Oil 6	Guatemala	FRA	48597,7
-E	2006	Fuel Oil 6	Panamá	MYS	45353,906
-E	2006	Fuel Oil 6	Sin descripción	RUS	85995,215
-E	2006	Gasolina	Perú	MYS	2,80038
-E	2006	GLP	Brasil	ARG	8,295
-E	2006	GLP	Ecuador	ARG	107646,871
-E	2006	GLP	El Salvador	ARG	9532,345
-E	2006	GLP	España	ARG	31,701
-E	2006	GLP	Estados Unidos	ARG	103,4
-E	2006	GLP	Japón	ITA	8916,31
-E	2006	GLP	Perú	MYS	1779,3
-E	2006	GLP	Territorios Británicos en América	CHE	23,56
-E	2006	IFO	Estados Unidos	ARG	11116,2
-E	2006	IFO	Perú	MYS	3,17347
-E	2006	Kerosene	Argentina	ARG	405,9
-E	2006	Kerosene	Corea del Sur	ARG	3,86
-E	2007	Carbón	Argentina	ARG	196,24
-E	2007	Diesel	Argentina	ARG	44068,23863
-E	2007	Diesel	Bolivia	BOL	65983,21619
-E	2007	Diesel	Perú	MYS	117369,659
-E	2007	Fuel Oil 6	Estados Unidos	ARG	157120,291
-E	2007	Gas Natural	Bolivia	BOL	7,63
-E	2007	GLP	Argentina	ARG	4,433
-E	2007	GLP	Ecuador	ARG	106815,666
-E	2007	GLP	El Salvador	ARG	7768,5
-E	2007	GLP	Ghana	FRA	0,509
-E	2007	GLP	Perú	MYS	1,57824
-E	2007	GLP	Territorios Británicos en América	CHE	29,184
-E	2007	GLP	Uruguay	CHE	106,235
-E	2007	Kerosene	Argentina	ARG	333,4
-E	2008	Carbón	Argentina	ARG	28
-E	2008	Carbón	Estados Unidos	ARG	0,00177
-E	2008	Diesel	Argentina	ARG	71726,59756
-E	2008	Diesel	Bolivia	BOL	123145,20571
-E	2008	Diesel	Colombia	COL	33281,5
-E	2008	Diesel	Perú	MYS	107156,559
-E	2008	GLP	Argentina	ARG	0,02
-E	2008	GLP	Benin	ARG	21,238
-E	2008	GLP	Bolivia	BOL	0,112
-E	2008	GLP	Corea del Sur	ARG	1,058
-E	2008	GLP	Ecuador	ARG	56272,506
-E	2008	GLP	Perú	MYS	1,3585
-E	2008	GLP	Territorios Británicos en América	CHE	36,425
-E	2008	IFO	Bolivia	BOL	4680,10676
-E	2008	IFO	Suiza	CHE	0,00035
-E	2009	Carbón	China	ARG	44997,31
-E	2009	Carbón	Japón	ITA	42840,2
-E	2009	Diesel	Alemania	DEU	0,0262
-E	2009	Diesel	Argentina	ARG	2863
-E	2009	Diesel	Bolivia	BOL	79993,55825
-E	2009	Diesel	Estados Unidos	ARG	0,001
-E	2009	Diesel	Perú	MYS	141861,46
-E	2009	Diesel	Territorios Británicos en América	CHE	0,012
-E	2009	Fuel Oil 6	Estados Unidos	ARG	29326,281
-E	2009	Fuel Oil 6	Panamá	MYS	35828,2
-E	2009	Gasolina	Bolivia	BOL	1551,23
-E	2009	GLP	Argentina	ARG	0,075
-E	2009	GLP	Benin	ARG	8,434
-E	2009	GLP	Ecuador	ARG	29217,142
-E	2009	GLP	Territorios Británicos en América	CHE	30,20951
-E	2009	GLP	Uruguay	CHE	5892,196
-E	2009	IFO	Estados Unidos	ARG	17035,245
-E	2010	Carbón	China	ARG	43011,71
-E	2010	Carbón	Italia	ITA	22350,29
-E	2010	Diesel	Argentina	ARG	3627,804
-E	2010	Diesel	Bolivia	BOL	39724,4788
-E	2010	Diesel	Perú	MYS	45121,168
-E	2010	Gasolina	Bolivia	BOL	3618,24
-E	2010	GLP	Argentina	ARG	1058,26
-E	2010	GLP	Brasil	ARG	14,361
-E	2010	GLP	Ecuador	ARG	17029,339
-E	2010	GLP	Territorios Británicos en América	CHE	24,04
-E	2010	IFO	Brasil	ARG	40
-E	2010	IFO	Colombia	COL	9,955
-E	2011	Carbón	Argentina	ARG	1870,122
-E	2011	Carbón	Bélgica	ARG	41301,01
-E	2011	Carbón	Holanda	GNQ	42334,4
-E	2011	Carbón	Japón	ITA	42496,53
-E	2011	Diesel	Argentina	ARG	3695
-E	2011	Diesel	Bolivia	BOL	38034,55993
-E	2011	Diesel	Perú	MYS	55155,154
-E	2011	Fuel Oil 6	Ecuador	ARG	39557,5
-E	2011	Gasolina	Bolivia	BOL	686,63
-E	2011	Gasolina	Perú	MYS	47,85
-E	2011	GLP	Argentina	ARG	0,45
-E	2011	IFO	Ecuador	ARG	17700,8
-E	2011	IFO	Estados Unidos	ARG	17464,8
-E	2012	Carbón	Holanda	GNQ	44996,58
-E	2012	Carbón	India	GNQ	45002,53
-E	2012	Diesel	Argentina	ARG	3315,588
-E	2012	Diesel	Bolivia	BOL	63966,80662
-E	2012	Fuel Oil 6	Malasia	MYS	90179,76
-E	2012	Fuel Oil 6	Panamá	MYS	53408,89
-E	2012	Gasolina	Bolivia	BOL	44336,10188
-E	2012	Gasolina	Perú	MYS	6827,38
-E	2012	GLP	Brasil	ARG	183,9538
-E	2012	GLP	Corea del Sur	ARG	8,76
-E	2012	GLP	Ecuador	ARG	1792,758
-E	2012	GLP	Territorios Británicos en América	CHE	6,5
-E	2012	IFO	Panamá	MYS	8783,636
-E	2013	Carbón	China	ARG	147656,7
-E	2013	Carbón	Holanda	GNQ	78353,3
-E	2013	Carbón	India	GNQ	1031786,87
-E	2013	Carbón	Inglaterra	GBR	78014,13
-E	2013	Carbón	Polonia	MYS	79304,87
-E	2013	Diesel	Argentina	ARG	1063,822
-E	2013	Diesel	Bolivia	BOL	75102,76679
-E	2013	Diesel	Panamá	MYS	1478,602
-E	2013	Diesel	Paraguay	MYS	1477,56
-E	2013	Diesel	Perú	MYS	15076,3
-E	2013	Fuel Oil 6	Sin descripción	RUS	66283,123
-E	2013	Fuel Oil 6	Singapur	RUS	71169,221
-E	2013	Gasolina	Bolivia	BOL	38796,56342
-E	2013	Gasolina	Paraguay	MYS	786,753
-E	2013	GLP	Bolivia	BOL	0,02371
-E	2013	GLP	Brasil	ARG	30637,949
-E	2013	GLP	Estados Unidos	ARG	0,04044
-E	2013	GLP	Ghana	FRA	3487,394
-E	2013	GLP	Guinea Ecuatorial	GNQ	8653,704
-E	2013	GLP	República Dominicana	MYS	8965,281
-E	2013	GLP	Territorios Británicos en América	CHE	5,4
-E	2013	IFO	Estados Unidos	ARG	0,00238
-E	2013	IFO	Sin descripción	RUS	30742,753
-E	2013	IFO	Singapur	RUS	22875,783
-E	2013	Kerosene	Bolivia	BOL	16,8
-E	2013	Kerosene	Perú	MYS	5599,888
-E	2014	Carbón	España	ARG	193410,26
-E	2014	Carbón	Holanda	GNQ	226516,88
-E	2014	Carbón	India	GNQ	1220526,618
-E	2014	Carbón	Polonia	MYS	108964,695
-E	2014	Diesel	Bolivia	BOL	73059,61728
-E	2014	Diesel	Estados Unidos	ARG	0,00012
-E	2014	Diesel	Perú	MYS	579,244
-E	2014	Fuel Oil 6	Panamá	MYS	69885,294
-E	2014	Fuel Oil 6	Sin descripción	RUS	19839,359
-E	2014	Gasolina	Bolivia	BOL	43180,35858
-E	2014	GLP	Brasil	ARG	18601,839
-E	2014	GLP	Francia	FRA	10573,62
-E	2014	GLP	Uruguay	CHE	5982,692
-E	2014	IFO	Panamá	MYS	56532,025
-E	2014	IFO	Sin descripción	RUS	15234,801
-E	2014	Kerosene	Bolivia	BOL	1,467
-E	2015	Carbón	Holanda	GNQ	109640,765
-E	2015	Carbón	India	GNQ	432066,444
-E	2015	Diesel	Bolivia	BOL	7187,50599
-E	2015	Gasolina	Bolivia	BOL	2291,37156
-E	2015	GLP	Ghana	FRA	16030,329
-E	2015	IFO	Bolivia	BOL	7,6
-I	2002	Carbón	Argentina	ARG	10050,749441
-I	2002	Carbón	Australia	AUS	502742,988
-I	2002	Carbón	Canadá	CAN	186197,9
-I	2002	Carbón	Colombia	COL	123447
-I	2002	Carbón	Estados Unidos	USA	37653,86
-I	2002	Carbón	Indonesia	IND	87100,36
-I	2002	Carbón	Nueva Zelandia	NZL	41338,3
-I	2002	Crudo	Argentina	ARG	2289446,0653049
-I	2002	Crudo	Brasil	BRA	277995,126
-I	2002	Crudo	Malasia	MYS	25612,61
-I	2002	Crudo	Nigeria	NGA	263646,644
-I	2002	Crudo	Perú	PER	116152,885
-I	2002	Crudo	Venezuela	VEN	68758,149
-I	2002	Diesel	Argentina	ARG	45839,28772
-I	2002	Diesel	Corea del Norte	PRK	129,84
-I	2002	Diesel	Corea del Sur	KOR	73254,24526
-I	2002	Diesel	Estados Unidos	USA	39039,9259
-I	2002	Diesel	Rusia	RUS	32293,363
-I	2002	Fuel Oil 6	Estados Unidos	USA	0,0036288
-I	2002	Gas Natural	Argentina	ARG	1053271,2453938
-I	2002	Gasolina	Estados Unidos	USA	0,0238
-I	2002	Gasolina	Inglaterra	GBR	0,02
-I	2002	GLP	Argentina	ARG	157636,1363
-I	2002	GLP	Bolivia	BOL	3005,5
-I	2002	GLP	Brasil	BRA	20019,598
-I	2002	GLP	Corea del Sur	KOR	9,4692615
-I	2002	GLP	Ecuador	ECU	3329,667
-I	2002	GLP	Estados Unidos	USA	0,010462
-I	2002	GLP	Italia	ITA	15,1164
-I	2002	GLP	Suecia	SWE	0,03
-I	2002	IFO	Colombia	COL	25159,647
-I	2002	IFO	Estados Unidos	USA	0,004615
-I	2002	IFO	Perú	PER	6000
-I	2002	Kerosene	Colombia	COL	6106,505
-I	2002	Kerosene	Estados Unidos	USA	0,06726
-I	2002	Kerosene	México	MEX	15578,931
-I	2002	Kerosene	Panamá	PAN	0,720554
-I	2003	Carbón	Argentina	ARG	44099,3860469
-I	2003	Carbón	Australia	AUS	836009,613
-I	2003	Carbón	Canadá	CAN	510250,56
-I	2003	Carbón	Colombia	COL	516079,8116
-I	2003	Carbón	Estados Unidos	USA	328733,3
-I	2003	Carbón	Indonesia	IND	201175,31
-I	2003	Carbón	Nueva Zelandia	NZL	92873,86
-I	2003	Crudo	Angola	AGO	262238
-I	2003	Crudo	Argentina	ARG	5743048,48683081
-I	2003	Crudo	Bolivia	BOL	33531,8
-I	2003	Crudo	Brasil	BRA	799984,588
-I	2003	Crudo	Canadá	CAN	0,04
-I	2003	Crudo	Estados Unidos	USA	0,9533
-I	2003	Crudo	Gabón	GAB	129345,484
-I	2003	Crudo	Malasia	MYS	79046,5
-I	2003	Crudo	Nigeria	NGA	452035,199
-I	2003	Crudo	Perú	PER	783281,535
-I	2003	Crudo	Territorios Holandeses en América		21447,277
-I	2003	Crudo	Uruguay	URY	84,1
-I	2003	Crudo	Venezuela	VEN	182162,281
-I	2003	Diesel	Argentina	ARG	127869,05539
-I	2003	Diesel	Canadá	CAN	1,7
-I	2003	Diesel	Chile	CHL	1087,2166
-I	2003	Diesel	Corea del Sur	KOR	248288,30743
-I	2003	Diesel	Ecuador	ECU	6
-I	2003	Diesel	Estados Unidos	USA	68316,02491
-I	2003	Diesel	Estonia	EST	21926,3
-I	2003	Diesel	Holanda	NLD	7698,61657
-I	2003	Diesel	Panamá	PAN	10
-I	2003	Diesel	Taiwán	TWN	70737,642
-I	2003	Diesel	Territorios Holandeses en América		39177,368
-I	2003	Diesel	Venezuela	VEN	37103,832
-I	2003	Gas Natural	Argentina	ARG	3075734,5331599
-I	2003	Gas Natural	Estados Unidos	USA	0,00496
-I	2003	Gas Natural	Inglaterra	GBR	0,05915
-I	2003	Gasolina	Argentina	ARG	0,012
-I	2003	Gasolina	Estados Unidos	USA	0,0571504
-I	2003	Gasolina	Perú	PER	0,0050769
-I	2003	GLP	Argentina	ARG	446033,9552
-I	2003	GLP	Bolivia	BOL	855,477
-I	2003	GLP	Corea del Sur	KOR	15,431
-I	2003	GLP	Ecuador	ECU	11455,086
-I	2003	GLP	Estados Unidos	USA	1,8597593
-I	2003	GLP	Italia	ITA	40,963582
-I	2003	GLP	Turquía	TUR	0,016923
-I	2003	IFO	Estados Unidos	USA	0,1368644
-I	2003	IFO	Perú	PER	73546,483
-I	2003	Kerosene	Estados Unidos	USA	0,066148
-I	2003	Kerosene	Japón	JPN	0,199796
-I	2003	Kerosene	México	MEX	1,138917
-I	2003	Kerosene	Territorios Holandeses en América		15841,2
-I	2004	Carbón	Argentina	ARG	103943,13
-I	2004	Carbón	Australia	AUS	1225723,35986
-I	2004	Carbón	Canadá	CAN	335933,6
-I	2004	Carbón	Colombia	COL	721662,06902
-I	2004	Carbón	Estados Unidos	USA	1083801,9088
-I	2004	Carbón	Indonesia	IND	922505,93
-I	2004	Carbón	Nueva Zelandia	NZL	73538,97195
-I	2004	Crudo	Angola	AGO	1274277,434
-I	2004	Crudo	Argentina	ARG	4130609,0520811
-I	2004	Crudo	Brasil	BRA	1199021,855
-I	2004	Crudo	Costa de Marfil	CIV	137384,801
-I	2004	Crudo	Ecuador	ECU	224266,838
-I	2004	Crudo	Estados Unidos	USA	0,2180461
-I	2004	Crudo	Gabón	GAB	251095,441
-I	2004	Crudo	Nigeria	NGA	1192890,243
-I	2004	Crudo	Perú	PER	751109,92
-I	2004	Crudo	Sudáfrica	ZAF	0,0492308
-I	2004	Crudo	Venezuela	VEN	103417,072
-I	2004	Diesel	Alemania	DEU	1,032
-I	2004	Diesel	Argentina	ARG	216669,87708
-I	2004	Diesel	Canadá	CAN	12668,2077
-I	2004	Diesel	Corea del Sur	KOR	110386,848
-I	2004	Diesel	Estados Unidos	USA	570954,317061
-I	2004	Diesel	México	MEX	29006,9
-I	2004	Diesel	Territorios Holandeses en América		22975,318
-I	2004	Diesel	Venezuela	VEN	91869,0296
-I	2004	Fuel Oil 6	Estados Unidos	USA	0,0105
-I	2004	Gas Natural	Argentina	ARG	3850470,0059814
-I	2004	Gas Natural	Perú	PER	67,58
-I	2004	Gasolina	Argentina	ARG	0,03
-I	2004	Gasolina	Estados Unidos	USA	0,0698538
-I	2004	GLP	Alemania	DEU	0,0007692
-I	2004	GLP	Argentina	ARG	497376,123
-I	2004	GLP	Bolivia	BOL	1509,426
-I	2004	GLP	Corea del Sur	KOR	16,1682962
-I	2004	GLP	Estados Unidos	USA	1,2289923
-I	2004	GLP	Inglaterra	GBR	14058,287385
-I	2004	GLP	Italia	ITA	80,4487446
-I	2004	GLP	Noruega	NOR	18842,705
-I	2004	IFO	Alemania	DEU	0,234
-I	2004	IFO	Argentina	ARG	12,71
-I	2004	IFO	Brasil	BRA	0,0125077
-I	2004	IFO	Estados Unidos	USA	0,0031752
-I	2004	IFO	Inglaterra	GBR	0,012
-I	2004	Kerosene	Argentina	ARG	5996,798
-I	2004	Kerosene	Brasil	BRA	0,01777
-I	2004	Kerosene	Estados Unidos	USA	27102,1070202
-I	2005	Carbón	Argentina	ARG	40973,47241
-I	2005	Carbón	Australia	AUS	715976,792
-I	2005	Carbón	Canadá	CAN	399020
-I	2005	Carbón	Colombia	COL	485325,2708846
-I	2005	Carbón	Estados Unidos	USA	789889,5836
-I	2005	Carbón	Indonesia	IND	1012994,62
-I	2005	Carbón	Nueva Zelandia	NZL	169226,128
-I	2005	Crudo	Angola	AGO	2089750,374
-I	2005	Crudo	Argentina	ARG	3091946,6330201
-I	2005	Crudo	Brasil	BRA	1045826,768
-I	2005	Crudo	Colombia	COL	211295,351
-I	2005	Crudo	Ecuador	ECU	116379,905
-I	2005	Crudo	Estados Unidos	USA	0,0015385
-I	2005	Crudo	Gabón	GAB	1621,485
-I	2005	Crudo	Malasia	MYS	79096,1
-I	2005	Crudo	Nigeria	NGA	610607,342
-I	2005	Crudo	Perú	PER	329428,228
-I	2005	Diesel	Argentina	ARG	22308,26499
-I	2005	Diesel	Canadá	CAN	34776,49116
-I	2005	Diesel	Corea del Sur	KOR	215988,604
-I	2005	Diesel	Estados Unidos	USA	1061836,81651
-I	2005	Diesel	Inglaterra	GBR	0,278
-I	2005	Diesel	Territorios Holandeses en América		244,531
-I	2005	Diesel	Venezuela	VEN	32035,564
-I	2005	Fuel Oil 6	Estados Unidos	USA	112083,969
-I	2005	Gas Natural	Argentina	ARG	2661185,9529263
-I	2005	Gas Natural	Perú	PER	39,589
-I	2005	Gasolina	Brasil	BRA	0,045
-I	2005	Gasolina	Estados Unidos	USA	0,0274769
-I	2005	GLP	Argentina	ARG	425650,245
-I	2005	GLP	Corea del Sur	KOR	25,382289
-I	2005	GLP	Estados Unidos	USA	3,951059
-I	2005	GLP	Italia	ITA	7,87968
-I	2005	GLP	Nigeria	NGA	21334,058
-I	2005	GLP	Perú	PER	15978,702
-I	2005	IFO	Brasil	BRA	0,0308
-I	2005	IFO	Estados Unidos	USA	0,1188781
-I	2005	Kerosene	Alemania	DEU	0,109112
-I	2005	Kerosene	Estados Unidos	USA	65958,36821
-I	2006	Carbón	Argentina	ARG	104987,074
-I	2006	Carbón	Australia	AUS	1313873,0110692
-I	2006	Carbón	Canadá	CAN	652495,1721877
-I	2006	Carbón	Colombia	COL	268069,86
-I	2006	Carbón	Estados Unidos	USA	337612,28
-I	2006	Carbón	Indonesia	IND	1381886,166
-I	2006	Carbón	México	MEX	21,56
-I	2006	Carbón	Nueva Zelandia	NZL	356078,4325
-I	2006	Crudo	Angola	AGO	2450757,47
-I	2006	Crudo	Argentina	ARG	1317341,380268
-I	2006	Crudo	Bolivia	BOL	35602,503
-I	2006	Crudo	Brasil	BRA	2364252,813
-I	2006	Crudo	Colombia	COL	97576,601
-I	2006	Crudo	Congo	COG	240632,863
-I	2006	Crudo	Ecuador	ECU	1120042,115
-I	2006	Crudo	Estados Unidos	USA	0,0098308
-I	2006	Crudo	Gabón	GAB	131032,9
-I	2006	Crudo	Nigeria	NGA	460158,938
-I	2006	Crudo	Perú	PER	750888,5179231
-I	2006	Crudo	Tailandia	THA	79296,159
-I	2006	Diesel	Alemania	DEU	2,22
-I	2006	Diesel	Argentina	ARG	1915,718
-I	2006	Diesel	Canadá	CAN	3464,191
-I	2006	Diesel	Corea del Sur	KOR	624113,25534
-I	2006	Diesel	Estados Unidos	USA	1026566,81466
-I	2006	Diesel	Holanda	NLD	59274,157
-I	2006	Diesel	Japón	JPN	32650,326
-I	2006	Diesel	Venezuela	VEN	95380,317
-I	2006	Gas Natural	Argentina	ARG	2599221,4613354
-I	2006	Gas Natural	Estados Unidos	USA	0,0315385
-I	2006	Gasolina	Estados Unidos	USA	0,0642615
-I	2006	GLP	Argentina	ARG	524883,499
-I	2006	GLP	China	CHN	11,841
-I	2006	GLP	Corea del Sur	KOR	7,5138462
-I	2006	GLP	Ecuador	ECU	6509,3
-I	2006	GLP	Emiratos Árabes Unidos	ARE	21092,018
-I	2006	GLP	Estados Unidos	USA	3,0251356
-I	2006	GLP	Holanda	NLD	0,0015
-I	2006	GLP	Inglaterra	GBR	0,0027408
-I	2006	GLP	Italia	ITA	35,88817
-I	2006	GLP	Perú	PER	22128,386
-I	2006	IFO	Alemania	DEU	0,0477538
-I	2006	IFO	Estados Unidos	USA	0,0101538
-I	2006	IFO	Perú	PER	9160,868
-I	2006	Kerosene	Alemania	DEU	0,091559
-I	2006	Kerosene	Argentina	ARG	26539,4629354
-I	2006	Kerosene	Brasil	BRA	0,5
-I	2006	Kerosene	Estados Unidos	USA	62778,3860063
-I	2007	Carbón	Argentina	ARG	55185,046
-I	2007	Carbón	Australia	AUS	1266651,44528
-I	2007	Carbón	Canadá	CAN	700909,7
-I	2007	Carbón	Colombia	COL	1979603,328643
-I	2007	Carbón	España	ESP	14,4
-I	2007	Carbón	Estados Unidos	USA	526628,111
-I	2007	Carbón	Indonesia	IND	1566852,287
-I	2007	Carbón	Nueva Zelandia	NZL	174820,08
-I	2007	Crudo	Angola	AGO	1520958,001457
-I	2007	Crudo	Argentina	ARG	324454,3965326
-I	2007	Crudo	Brasil	BRA	3166514,345559
-I	2007	Crudo	Colombia	COL	663111,578692
-I	2007	Crudo	Ecuador	ECU	1378315,212222
-I	2007	Crudo	Estados Unidos	USA	0,0027
-I	2007	Crudo	Nigeria	NGA	472307,076728
-I	2007	Crudo	Perú	PER	984803,72608
-I	2007	Crudo	Tailandia	THA	166141,4886685
-I	2007	Crudo	Turquía	TUR	1421023,8161187
-I	2007	Diesel	Alemania	DEU	5,092
-I	2007	Diesel	Bélgica	BEL	40659,409
-I	2007	Diesel	Canadá	CAN	291803,726
-I	2007	Diesel	Chile	CHL	5,3846154
-I	2007	Diesel	Corea del Sur	KOR	2299945,69084
-I	2007	Diesel	Estados Unidos	USA	1765051,955409
-I	2007	Diesel	Holanda	NLD	38798,056
-I	2007	Diesel	Japón	JPN	247714,412396
-I	2007	Diesel	Perú	PER	33,29
-I	2007	Diesel	Singapur	SGP	110154,691
-I	2007	Fuel Oil 6	Estados Unidos	USA	136020,224
-I	2007	Fuel Oil 6	Perú	PER	54686,68148
-I	2007	Gas Natural	Argentina	ARG	1856441,2039993
-I	2007	Gas Natural	China	CHN	0,03785
-I	2007	Gas Natural	Inglaterra	GBR	0,0169231
-I	2007	Gasolina	Dinamarca	DNK	0,08439
-I	2007	Gasolina	Estados Unidos	USA	164,8853124
-I	2007	GLP	Angola	AGO	39303,805
-I	2007	GLP	Arabia Saudita	SAU	45146,925
-I	2007	GLP	Argentina	ARG	687079,068
-I	2007	GLP	Catar	QAT	33288,321
-I	2007	GLP	Corea del Sur	KOR	50,8000008
-I	2007	GLP	Ecuador	ECU	16445,1411
-I	2007	GLP	Estados Unidos	USA	27126,9505691
-I	2007	GLP	Grecia	GRC	9,8076923
-I	2007	GLP	Inglaterra	GBR	33836,151
-I	2007	GLP	Italia	ITA	26,58816
-I	2007	GLP	Noruega	NOR	8519,829
-I	2007	GLP	Venezuela	VEN	84028,73
-I	2007	IFO	Alemania	DEU	0,03526
-I	2007	IFO	Brasil	BRA	0,0026231
-I	2007	IFO	Estados Unidos	USA	0,0062
-I	2007	IFO	Perú	PER	0,0030769
-I	2007	Kerosene	Alemania	DEU	0,202873
-I	2007	Kerosene	Argentina	ARG	40157,416
-I	2007	Kerosene	Brasil	BRA	0,54
-I	2007	Kerosene	Colombia	COL	45294,444
-I	2007	Kerosene	Corea del Sur	KOR	129606
-I	2007	Kerosene	Estados Unidos	USA	46153,81667
-I	2007	Kerosene	Japón	JPN	23903,225
-I	2007	Kerosene	Sin descripción		0,064811
-I	2008	Carbón	Argentina	ARG	55486,485
-I	2008	Carbón	Australia	AUS	605830,24
-I	2008	Carbón	Canadá	CAN	369549,05
-I	2008	Carbón	Colombia	COL	4185864,081589
-I	2008	Carbón	Estados Unidos	USA	1268972,6255
-I	2008	Carbón	Indonesia	IND	497880,8
-I	2008	Carbón	Nueva Zelandia	NZL	95344
-I	2008	Crudo	Angola	AGO	2067548,318584
-I	2008	Crudo	Argentina	ARG	371728,626012
-I	2008	Crudo	Brasil	BRA	2577318,1727441
-I	2008	Crudo	Colombia	COL	1655302,811687
-I	2008	Crudo	Ecuador	ECU	2263492,223818
-I	2008	Crudo	Perú	PER	284217,495557
-I	2008	Crudo	Tailandia	THA	30974,4
-I	2008	Crudo	Turquía	TUR	844181,363009
-I	2008	Diesel	Alemania	DEU	9,3057
-I	2008	Diesel	Argentina	ARG	0,11
-I	2008	Diesel	Brasil	BRA	16,066
-I	2008	Diesel	Canadá	CAN	19796,1
-I	2008	Diesel	Corea del Sur	KOR	1400040,609424
-I	2008	Diesel	Ecuador	ECU	0,026
-I	2008	Diesel	Estados Unidos	USA	2894625,7055366
-I	2008	Diesel	Holanda	NLD	9,125
-I	2008	Diesel	Japón	JPN	709503,67615
-I	2008	Diesel	México	MEX	9,925
-I	2008	Diesel	Perú	PER	26336,271098
-I	2008	Fuel Oil 6	Argentina	ARG	87877,798
-I	2008	Fuel Oil 6	Canadá	CAN	127904,180234
-I	2008	Fuel Oil 6	Estados Unidos	USA	293963,729711
-I	2008	Fuel Oil 6	Perú	PER	122500,269863
-I	2008	Gas Natural	Argentina	ARG	903738,9651765
-I	2008	Gasolina	China	CHN	0,0006132
-I	2008	Gasolina	Estados Unidos	USA	2002,6623468
-I	2008	Gasolina	Holanda	NLD	0,0105
-I	2008	GLP	Alemania	DEU	0,005
-I	2008	GLP	Arabia Saudita	SAU	53078,916
-I	2008	GLP	Argentina	ARG	766342,34764
-I	2008	GLP	Bolivia	BOL	0,00125
-I	2008	GLP	Catar	QAT	58499,88
-I	2008	GLP	Corea del Sur	KOR	25,6182847
-I	2008	GLP	Ecuador	ECU	15894,4
-I	2008	GLP	Estados Unidos	USA	11045,0063659
-I	2008	GLP	Grecia	GRC	42,75
-I	2008	GLP	Inglaterra	GBR	33474,785
-I	2008	GLP	Italia	ITA	7,8396
-I	2008	GLP	Noruega	NOR	31342,897
-I	2008	IFO	Estados Unidos	USA	0,0903105
-I	2008	IFO	Panamá	PAN	586,94
-I	2008	IFO	Perú	PER	43281,564935
-I	2008	IFO	Venezuela	VEN	460,02
-I	2008	Kerosene	Alemania	DEU	0,079024
-I	2008	Kerosene	Brasil	BRA	0,54
-I	2008	Kerosene	Canadá	CAN	18741
-I	2008	Kerosene	Corea del Sur	KOR	42516,325
-I	2008	Kerosene	Estados Unidos	USA	74728,5590031
-I	2008	Kerosene	India	IND	0,009
-I	2008	Kerosene	Japón	JPN	138346,096
-I	2008	Kerosene	Singapur	SGP	69949,1
-I	2009	Carbón	Argentina	ARG	57657,864
-I	2009	Carbón	Australia	AUS	519977,94
-I	2009	Carbón	Brasil	BRA	1
-I	2009	Carbón	Canadá	CAN	256761,7
-I	2009	Carbón	China	CHN	0,0006154
-I	2009	Carbón	Colombia	COL	3746461,155859
-I	2009	Carbón	Estados Unidos	USA	1059818,92
-I	2009	Carbón	Indonesia	IND	584177,7
-I	2009	Carbón	Nueva Zelandia	NZL	45320
-I	2009	Crudo	Angola	AGO	142656,259698
-I	2009	Crudo	Argentina	ARG	2366588,8602716
-I	2009	Crudo	Brasil	BRA	1551469,76389
-I	2009	Crudo	Colombia	COL	1547035,957492
-I	2009	Crudo	Ecuador	ECU	1855781,226599
-I	2009	Crudo	Estados Unidos	USA	0,004
-I	2009	Crudo	Indonesia	IND	73998,238723
-I	2009	Crudo	Inglaterra	GBR	1403131,532269
-I	2009	Crudo	Malasia	MYS	63962,487242
-I	2009	Crudo	Perú	PER	227543,963228
-I	2009	Crudo	Vietnam	VNM	156621,251134
-I	2009	Diesel	Alemania	DEU	0,854
-I	2009	Diesel	Brasil	BRA	24,152
-I	2009	Diesel	Canadá	CAN	96502,807422
-I	2009	Diesel	Corea del Sur	KOR	1196290,90848
-I	2009	Diesel	España	ESP	9,451
-I	2009	Diesel	Estados Unidos	USA	2437519,8068943
-I	2009	Diesel	Holanda	NLD	0,005
-I	2009	Diesel	Japón	JPN	463591,472444
-I	2009	Fuel Oil 6	Estados Unidos	USA	67839,89
-I	2009	Fuel Oil 6	Perú	PER	38014,2
-I	2009	Gas Natural	Argentina	ARG	840789,057860001
-I	2009	Gas Natural	Catar	QAT	53751,3005
-I	2009	Gas Natural	Estados Unidos	USA	0,9675
-I	2009	Gas Natural	Guinea Ecuatorial	GNQ	236593,210905
-I	2009	Gas Natural	Trinidad y Tobago	TTO	99743,942541
-I	2009	Gasolina	Estados Unidos	USA	2,5403843
-I	2009	Gasolina	Holanda	NLD	0,0503123
-I	2009	GLP	Argentina	ARG	683489,6088
-I	2009	GLP	Corea del Sur	KOR	31,362
-I	2009	GLP	Estados Unidos	USA	66891,7621018
-I	2009	GLP	Grecia	GRC	33,96
-I	2009	GLP	Guinea Ecuatorial	GNQ	132807,598
-I	2009	GLP	Nigeria	NGA	21959,115
-I	2009	GLP	Perú	PER	13796,346
-I	2009	IFO	Ecuador	ECU	33138,4
-I	2009	IFO	Estados Unidos	USA	325859,9520871
-I	2009	IFO	Perú	PER	10976,577
-I	2009	Kerosene	Alemania	DEU	0,029271
-I	2009	Kerosene	Estados Unidos	USA	112630,6113985
-I	2009	Kerosene	Japón	JPN	30077,3544
-I	2010	Carbón	Argentina	ARG	18024,2
-I	2010	Carbón	Australia	AUS	990668,02
-I	2010	Carbón	Canadá	CAN	217133,37
-I	2010	Carbón	Colombia	COL	3643051,483
-I	2010	Carbón	Estados Unidos	USA	1904353,23
-I	2010	Carbón	Indonesia	IND	697734,7
-I	2010	Crudo	Argentina	ARG	1894638,820038
-I	2010	Crudo	Brasil	BRA	2536997,413012
-I	2010	Crudo	Colombia	COL	1219585,216782
-I	2010	Crudo	Ecuador	ECU	1125033,644359
-I	2010	Crudo	Estados Unidos	USA	0,02155
-I	2010	Crudo	Inglaterra	GBR	970597,679204
-I	2010	Crudo	Perú	PER	235799,03006
-I	2010	Diesel	Alemania	DEU	13,105
-I	2010	Diesel	Corea del Sur	KOR	1560673,450999
-I	2010	Diesel	Estados Unidos	USA	1667743,7307028
-I	2010	Diesel	Holanda	NLD	133,675
-I	2010	Diesel	Japón	JPN	1248744,56012
-I	2010	Diesel	Panamá	PAN	23,6
-I	2010	Gas Natural	Argelia	DZA	117501,63067
-I	2010	Gas Natural	Argentina	ARG	380173,1025
-I	2010	Gas Natural	Catar	QAT	179824,43378
-I	2010	Gas Natural	Egipto	EGY	264257,43608
-I	2010	Gas Natural	Guinea	GIN	796104,66267
-I	2010	Gas Natural	Guinea Ecuatorial	GNQ	122639,05853
-I	2010	Gas Natural	Sin descripción		129074,48629
-I	2010	Gas Natural	Trinidad y Tobago	TTO	461135,84756
-I	2010	Gasolina	Estados Unidos	USA	12233,2293129
-I	2010	Gasolina	Holanda	NLD	0,0038475
-I	2010	Gasolina	Japón	JPN	25,125
-I	2010	GLP	Argentina	ARG	602338,1981
-I	2010	GLP	China	CHN	0,4
-I	2010	GLP	Corea del Sur	KOR	50,666148
-I	2010	GLP	Estados Unidos	USA	149994,6507686
-I	2010	GLP	Grecia	GRC	51,3
-I	2010	GLP	Noruega	NOR	46234,4
-I	2010	GLP	Taiwán	TWN	0,0224
-I	2010	IFO	Brasil	BRA	0,093357
-I	2010	IFO	Ecuador	ECU	32830,139559
-I	2010	IFO	Estados Unidos	USA	397500,317542
-I	2010	Kerosene	Alemania	DEU	0,0064846
-I	2010	Kerosene	Corea del Sur	KOR	126216,9
-I	2010	Kerosene	Estados Unidos	USA	61311,0538646
-I	2010	Kerosene	Japón	JPN	98488,804
-I	2010	Kerosene	Sin descripción		0,00329
-I	2011	Carbón	Argentina	ARG	2972,8928
-I	2011	Carbón	Australia	AUS	1025958,17488
-I	2011	Carbón	Canadá	CAN	257699,183
-I	2011	Carbón	Colombia	COL	3910080,3572708
-I	2011	Carbón	Estados Unidos	USA	3566674,8568
-I	2011	Carbón	Indonesia	IND	403073,72
-I	2011	Crudo	Argentina	ARG	824989,74258
-I	2011	Crudo	Bolivia	BOL	37298
-I	2011	Crudo	Brasil	BRA	3698314,643526
-I	2011	Crudo	Colombia	COL	1555674,920089
-I	2011	Crudo	Ecuador	ECU	1509107,072827
-I	2011	Crudo	Estados Unidos	USA	0,0103924
-I	2011	Crudo	Inglaterra	GBR	695895,435
-I	2011	Crudo	Nueva Zelandia	NZL	0,0153846
-I	2011	Crudo	Perú	PER	346872,670001
-I	2011	Diesel	Alemania	DEU	4,4389846
-I	2011	Diesel	Canadá	CAN	41680,8
-I	2011	Diesel	Corea del Sur	KOR	211365,698
-I	2011	Diesel	Estados Unidos	USA	3492127,8171339
-I	2011	Diesel	Japón	JPN	397001,445495
-I	2011	Gas Natural	Argentina	ARG	208873,66435
-I	2011	Gas Natural	Catar	QAT	426473,95073
-I	2011	Gas Natural	Egipto	EGY	78132,89064
-I	2011	Gas Natural	Estados Unidos	USA	54247,3089177
-I	2011	Gas Natural	Guinea	GIN	929444,98044
-I	2011	Gas Natural	Indonesia	IND	59056,62641
-I	2011	Gas Natural	Inglaterra	GBR	0,00014
-I	2011	Gas Natural	Sin descripción		327946,15216
-I	2011	Gas Natural	Trinidad y Tobago	TTO	851911,87508
-I	2011	Gasolina	Bolivia	BOL	0,0084615
-I	2011	Gasolina	Estados Unidos	USA	32528,9661447
-I	2011	Gasolina	Holanda	NLD	0,0192308
-I	2011	Gasolina	Inglaterra	GBR	0,004
-I	2011	Gasolina	Japón	JPN	63828,275
-I	2011	Gasolina	México	MEX	0,004615
-I	2011	GLP	Alemania	DEU	0,01296
-I	2011	GLP	Argentina	ARG	488989,0086
-I	2011	GLP	Austria	AUT	0,0023077
-I	2011	GLP	China	CHN	0,174
-I	2011	GLP	Corea del Sur	KOR	57,509568
-I	2011	GLP	Estados Unidos	USA	297488,0201633
-I	2011	GLP	Grecia	GRC	25,855
-I	2011	GLP	Holanda	NLD	0,0018
-I	2011	IFO	Brasil	BRA	0,1851627
-I	2011	IFO	Estados Unidos	USA	407589,59342
-I	2011	IFO	Perú	PER	121450,438
-I	2011	Kerosene	Alemania	DEU	0,0245269
-I	2011	Kerosene	Corea del Sur	KOR	39763,308
-I	2011	Kerosene	Estados Unidos	USA	38140,4437461
-I	2011	Kerosene	Japón	JPN	124616,3718615
-I	2012	Carbón	Argentina	ARG	77355,045
-I	2012	Carbón	Australia	AUS	623912,138
-I	2012	Carbón	Canadá	CAN	264464,5938462
-I	2012	Carbón	Colombia	COL	5058343,219
-I	2012	Carbón	Estados Unidos	USA	4195076,9548476
-I	2012	Carbón	Indonesia	IND	159686,8
-I	2012	Carbón	Inglaterra	GBR	0,00444
-I	2012	Crudo	Argentina	ARG	1509494,1492206
-I	2012	Crudo	Bolivia	BOL	103953,072258
-I	2012	Crudo	Brasil	BRA	1752471,6626
-I	2012	Crudo	Canadá	CAN	104586,969786
-I	2012	Crudo	Colombia	COL	1424058,162857
-I	2012	Crudo	Dinamarca	DNK	0,0042308
-I	2012	Crudo	Ecuador	ECU	2721573,799654
-I	2012	Crudo	Estados Unidos	USA	0,0193447
-I	2012	Crudo	Inglaterra	GBR	276361,489
-I	2012	Crudo	Perú	PER	405581,305999
-I	2012	Diesel	Alemania	DEU	2,064
-I	2012	Diesel	Corea del Sur	KOR	44961,16945
-I	2012	Diesel	Ecuador	ECU	21,2
-I	2012	Diesel	Estados Unidos	USA	4318829,983634
-I	2012	Diesel	Japón	JPN	98411,29463
-I	2012	Diesel	Noruega	NOR	15,96
-I	2012	Diesel	Panamá	PAN	29,695
-I	2012	Fuel Oil 6	Estados Unidos	USA	29367,5183359
-I	2012	Fuel Oil 6	Perú	PER	55624,842
-I	2012	Gas Natural	Argentina	ARG	33534,342
-I	2012	Gas Natural	Egipto	EGY	152016,91231
-I	2012	Gas Natural	Guinea	GIN	248681,37458
-I	2012	Gas Natural	Noruega	NOR	53835,14823
-I	2012	Gas Natural	Sin descripción		227828,4763
-I	2012	Gas Natural	Trinidad y Tobago	TTO	2003426,16369
-I	2012	Gasolina	Alemania	DEU	5,168
-I	2012	Gasolina	Canadá	CAN	36037,491
-I	2012	Gasolina	China	CHN	1272,92
-I	2012	Gasolina	España	ESP	37198,6
-I	2012	Gasolina	Estados Unidos	USA	398094,77295
-I	2012	Gasolina	Holanda	NLD	70060,2235385
-I	2012	Gasolina	Inglaterra	GBR	37265
-I	2012	Gasolina	Japón	JPN	30296,239
-I	2012	GLP	Alemania	DEU	0,0135308
-I	2012	GLP	Argentina	ARG	294942,7367
-I	2012	GLP	China	CHN	4,9745455
-I	2012	GLP	Corea del Sur	KOR	76,075828
-I	2012	GLP	Estados Unidos	USA	477152,018438
-I	2012	GLP	Grecia	GRC	26,265
-I	2012	GLP	Perú	PER	378,69
-I	2012	GLP	Sin descripción		0,2740385
-I	2012	IFO	Brasil	BRA	0,2116451
-I	2012	IFO	Canadá	CAN	393,74
-I	2012	IFO	Estados Unidos	USA	217449,9138363
-I	2012	IFO	Perú	PER	104184,77142
-I	2012	Kerosene	Alemania	DEU	0,04734
-I	2012	Kerosene	Brasil	BRA	0,07575
-I	2012	Kerosene	Corea del Sur	KOR	36909,77
-I	2012	Kerosene	Estados Unidos	USA	121852,7191546
-I	2012	Kerosene	Japón	JPN	118718,79
-I	2013	Carbón	Argentina	ARG	27148,56
-I	2013	Carbón	Australia	AUS	945799,492
-I	2013	Carbón	Canadá	CAN	315305,0340539
-I	2013	Carbón	Colombia	COL	7321842,23692381
-I	2013	Carbón	Estados Unidos	USA	2719228,31902
-I	2013	Crudo	Argentina	ARG	860914,666
-I	2013	Crudo	Australia	AUS	72089,695
-I	2013	Crudo	Brasil	BRA	2034985,116
-I	2013	Crudo	Canadá	CAN	811334,999
-I	2013	Crudo	Colombia	COL	721528,58
-I	2013	Crudo	Ecuador	ECU	3190269,399
-I	2013	Crudo	Estados Unidos	USA	0,0147653
-I	2013	Crudo	Inglaterra	GBR	970606,001
-I	2013	Crudo	Nueva Zelandia	NZL	0,02
-I	2013	Crudo	Perú	PER	244901,807
-I	2013	Crudo	Trinidad y Tobago	TTO	48223,274
-I	2013	Diesel	Alemania	DEU	1,376
-I	2013	Diesel	China	CHN	596,454
-I	2013	Diesel	Corea del Sur	KOR	31111,749
-I	2013	Diesel	Estados Unidos	USA	4288710,57247
-I	2013	Diesel	Perú	PER	0,00423
-I	2013	Fuel Oil 6	Estados Unidos	USA	49927,6351539
-I	2013	Fuel Oil 6	Perú	PER	17075,956
-I	2013	Gas Natural	Alemania	DEU	1,901
-I	2013	Gas Natural	Argentina	ARG	18756,24
-I	2013	Gas Natural	Catar	QAT	120837,71856
-I	2013	Gas Natural	Sin descripción		285292,49442
-I	2013	Gas Natural	Trinidad y Tobago	TTO	2206727,3966
-I	2013	Gasolina	Alemania	DEU	5,031
-I	2013	Gasolina	Brasil	BRA	0,06
-I	2013	Gasolina	Corea del Sur	KOR	18510,696
-I	2013	Gasolina	Estados Unidos	USA	226224,4262993
-I	2013	Gasolina	Holanda	NLD	189300,0156154
-I	2013	Gasolina	Japón	JPN	75808,345
-I	2013	GLP	Alemania	DEU	0,00526
-I	2013	GLP	Argentina	ARG	353663,387
-I	2013	GLP	China	CHN	0,2435
-I	2013	GLP	Corea del Sur	KOR	81,5592
-I	2013	GLP	España	ESP	0,01767
-I	2013	GLP	Estados Unidos	USA	677417,1897425
-I	2013	GLP	Grecia	GRC	73,0512
-I	2013	GLP	Italia	ITA	0,6
-I	2013	GLP	Perú	PER	11642,18
-I	2013	GLP	Zofri Arica		1003,99
-I	2013	IFO	Canadá	CAN	259
-I	2013	IFO	Estados Unidos	USA	0,0434307
-I	2013	IFO	Perú	PER	25458,46858
-I	2013	Kerosene	Alemania	DEU	0,6064554
-I	2013	Kerosene	Canadá	CAN	0,1109385
-I	2013	Kerosene	Corea del Sur	KOR	148489,89801
-I	2013	Kerosene	Dinamarca	DNK	0,0008011
-I	2013	Kerosene	Estados Unidos	USA	156819,8500776
-I	2013	Kerosene	India	IND	16,8
-I	2014	Carbón	Australia	AUS	866672,23522
-I	2014	Carbón	Canadá	CAN	229882,5
-I	2014	Carbón	China	CHN	0,0076385
-I	2014	Carbón	Colombia	COL	6112181,151447
-I	2014	Carbón	Estados Unidos	USA	2907388,7029
-I	2014	Carbón	Nueva Zelandia	NZL	63685,4
-I	2014	Crudo	Angola	AGO	509358,866
-I	2014	Crudo	Argentina	ARG	101718,5699423
-I	2014	Crudo	Brasil	BRA	3741289,626
-I	2014	Crudo	Canadá	CAN	400046,752
-I	2014	Crudo	Colombia	COL	132032,789
-I	2014	Crudo	Ecuador	ECU	3533523,371
-I	2014	Crudo	Estados Unidos	USA	0,2251539
-I	2014	Crudo	Inglaterra	GBR	275629,923
-I	2014	Crudo	Perú	PER	180840,867
-I	2014	Diesel	Alemania	DEU	1,72
-I	2014	Diesel	Bélgica	BEL	0,0012699
-I	2014	Diesel	Brasil	BRA	47,5
-I	2014	Diesel	Corea del Sur	KOR	29069,787
-I	2014	Diesel	Estados Unidos	USA	4274462,7077054
-I	2014	Diesel	Japón	JPN	74275,03517
-I	2014	Diesel	Panamá	PAN	31,7465385
-I	2014	Gas Natural	Argentina	ARG	5105,025
-I	2014	Gas Natural	Catar	QAT	55793,88816
-I	2014	Gas Natural	España	ESP	0,1
-I	2014	Gas Natural	Estados Unidos	USA	55768,0117931
-I	2014	Gas Natural	Guinea Ecuatorial	GNQ	57859,05063
-I	2014	Gas Natural	Noruega	NOR	35887,52842
-I	2014	Gas Natural	Trinidad y Tobago	TTO	2473230,57622
-I	2014	Gasolina	Alemania	DEU	0,3
-I	2014	Gasolina	España	ESP	6,0620154
-I	2014	Gasolina	Estados Unidos	USA	393573,6206171
-I	2014	Gasolina	Estonia	EST	0,005
-I	2014	Gasolina	Finlandia	FIN	37311,313
-I	2014	Gasolina	Holanda	NLD	76160,002
-I	2014	Gasolina	Japón	JPN	100470,576
-I	2014	GLP	Alemania	DEU	0,04029
-I	2014	GLP	Argentina	ARG	257057,328
-I	2014	GLP	China	CHN	0,2
-I	2014	GLP	Corea del Sur	KOR	53,920384
-I	2014	GLP	España	ESP	0,3030769
-I	2014	GLP	Estados Unidos	USA	678465,2009047
-I	2014	GLP	Francia	FRA	0,0048
-I	2014	GLP	Grecia	GRC	40,9032
-I	2014	GLP	Perú	PER	31875,4410000001
-I	2014	GLP	Zofri Arica		1135,15
-I	2014	IFO	Alemania	DEU	0,85717
-I	2014	IFO	Brasil	BRA	0,3416
-I	2014	IFO	Estados Unidos	USA	1,5620831
-I	2014	IFO	Holanda	NLD	0,0104616
-I	2014	Kerosene	Alemania	DEU	13,8618931
-I	2014	Kerosene	Brasil	BRA	0,10048
-I	2014	Kerosene	Canadá	CAN	0,3333923
-I	2014	Kerosene	Estados Unidos	USA	117811,795828
-I	2014	Kerosene	Inglaterra	GBR	0,0003692
-I	2014	Kerosene	Japón	JPN	69001,778
-I	2015	Carbón	Australia	AUS	118821,74
-I	2015	Carbón	Canadá	CAN	42501,6
-I	2015	Carbón	Colombia	COL	359283,12
-I	2015	Carbón	Estados Unidos	USA	180035,371
-I	2015	Carbón	Nueva Zelandia	NZL	50644
-I	2015	Crudo	Argentina	ARG	4897,3931
-I	2015	Crudo	Brasil	BRA	426879,399
-I	2015	Crudo	Ecuador	ECU	249423,354
-I	2015	Crudo	Estados Unidos	USA	18055,753
-I	2015	Diesel	Estados Unidos	USA	399290,81378
-I	2015	Gas Natural	Noruega	NOR	14956,37135
-I	2015	Gas Natural	Trinidad y Tobago	TTO	117339,96518
-I	2015	Gasolina	Estados Unidos	USA	85237,74441
-I	2015	GLP	Argentina	ARG	43967,244
-I	2015	GLP	Corea del Sur	KOR	29,98761
-I	2015	GLP	Estados Unidos	USA	41912,427
-I	2015	GLP	Perú	PER	1068,68
-I	2015	GLP	Zofri Arica		112,4
-I	2015	Kerosene	Alemania	DEU	11,76376
-I	2015	Kerosene	Estados Unidos	USA	24448,04328
+operacion	year	producto	pais	pais3	ton	ton_punto
+E	2002	Diesel	Argentina	ARG	3920,33077	3920.33077
+E	2002	Diesel	Bolivia	BOL	16443,67286	16443.67286
+E	2002	Diesel	España	ARG	253,5	253.5
+E	2002	Diesel	Japón	ITA	0,002	0.002
+E	2002	Diesel	Perú	MYS	65786,373	65786.373
+E	2002	Diesel	Territorios Británicos en América	CHE	291,525	291.525
+E	2002	Fuel Oil 6	Estados Unidos	ARG	57405,65	57405.65
+E	2002	Fuel Oil 6	Panamá	MYS	16356,41248	16356.41248
+E	2002	Gas Natural	Territorios Británicos en América	CHE	7,75	7.75
+E	2002	GLP	Ecuador	ARG	32205	32205
+E	2002	GLP	Perú	MYS	1500	1500
+E	2002	Kerosene	Bolivia	BOL	2643,08098	2643.08098
+E	2002	Kerosene	Perú	MYS	2374,92	2374.92
+E	2003	Diesel	Argentina	ARG	66965,11372	66965.11372
+E	2003	Diesel	Bolivia	BOL	67968,011	67968.011
+E	2003	Diesel	Colombia	COL	21038,347	21038.347
+E	2003	Diesel	Ecuador	ARG	13408,308	13408.308
+E	2003	Diesel	España	ARG	245,05	245.05
+E	2003	Diesel	Estados Unidos	ARG	76514,605	76514.605
+E	2003	Diesel	Guatemala	FRA	17893	17893
+E	2003	Diesel	Japón	ITA	211,25	211.25
+E	2003	Diesel	Panamá	MYS	29397,91	29397.91
+E	2003	Diesel	Perú	MYS	97337,025	97337.025
+E	2003	Diesel	Territorios Británicos en América	CHE	591,5	591.5
+E	2003	Fuel Oil 6	Estados Unidos	ARG	356479,66	356479.66
+E	2003	Fuel Oil 6	Panamá	MYS	79771,004	79771.004
+E	2003	Fuel Oil 6	Perú	MYS	639	639
+E	2003	Gas Natural	Argentina	ARG	198,9069	198.9069
+E	2003	Gas Natural	Territorios Británicos en América	CHE	35,043	35.043
+E	2003	GLP	Brasil	ARG	9441,497	9441.497
+E	2003	GLP	Ecuador	ARG	123316,8	123316.8
+E	2003	GLP	Perú	MYS	18211,875	18211.875
+E	2003	IFO	Perú	MYS	261,267	261.267
+E	2003	Kerosene	Bolivia	BOL	331,926	331.926
+E	2003	Kerosene	Panamá	MYS	1769,594	1769.594
+E	2003	Kerosene	Perú	MYS	3832,851	3832.851
+E	2004	Diesel	Argentina	ARG	43356,2124800001	43356.2124800001
+E	2004	Diesel	Bolivia	BOL	32948,092	32948.092
+E	2004	Diesel	Corea del Sur	ARG	442	442
+E	2004	Diesel	Estados Unidos	ARG	41162,017	41162.017
+E	2004	Diesel	Japón	ITA	84,5	84.5
+E	2004	Diesel	Perú	MYS	25165,818	25165.818
+E	2004	Diesel	Rusia	RUS	146,142	146.142
+E	2004	Diesel	Uruguay	CHE	169	169
+E	2004	Fuel Oil 6	Estados Unidos	ARG	336863,592	336863.592
+E	2004	Fuel Oil 6	Panamá	MYS	145216,609	145216.609
+E	2004	Fuel Oil 6	Perú	MYS	4254,502	4254.502
+E	2004	Fuel Oil 6	Venezuela	VEN	1,8	1.8
+E	2004	Gas Natural	Argentina	ARG	174,7067	174.7067
+E	2004	Gas Natural	Territorios Británicos en América	CHE	9,972	9.972
+E	2004	GLP	Argentina	ARG	132	132
+E	2004	GLP	Ecuador	ARG	127223,3	127223.3
+E	2004	GLP	El Salvador	ARG	5205,192	5205.192
+E	2004	GLP	Estados Unidos	ARG	11426,843	11426.843
+E	2004	GLP	Panamá	MYS	1490,473	1490.473
+E	2004	GLP	Paraguay	MYS	16,173	16.173
+E	2004	GLP	Perú	MYS	5248,76	5248.76
+E	2004	GLP	República Dominicana	MYS	4802,429	4802.429
+E	2004	GLP	Territorios Británicos en América	CHE	19,119	19.119
+E	2004	IFO	Perú	MYS	4,9545	4.9545
+E	2005	Diesel	Argentina	ARG	47573,00083	47573.00083
+E	2005	Diesel	Bolivia	BOL	76668,0378	76668.0378
+E	2005	Diesel	Estados Unidos	ARG	22283,825	22283.825
+E	2005	Diesel	Perú	MYS	81605,21	81605.21
+E	2005	Fuel Oil 6	Argentina	ARG	101489,799	101489.799
+E	2005	Fuel Oil 6	Estados Unidos	ARG	487891,379	487891.379
+E	2005	Fuel Oil 6	Perú	MYS	1356	1356
+E	2005	Gas Natural	Alemania	DEU	0,006	0.006
+E	2005	GLP	Argentina	ARG	110,9	110.9
+E	2005	GLP	Bolivia	BOL	0,007	0.007
+E	2005	GLP	Ecuador	ARG	112489,861	112489.861
+E	2005	GLP	El Salvador	ARG	2199,2	2199.2
+E	2005	GLP	Estados Unidos	ARG	9821,509	9821.509
+E	2005	GLP	Perú	MYS	1500	1500
+E	2005	GLP	Territorios Británicos en América	CHE	33,802	33.802
+E	2005	IFO	Estados Unidos	ARG	35412,521	35412.521
+E	2005	IFO	Perú	MYS	437,129	437.129
+E	2006	Carbón	Brasil	ARG	25,008	25.008
+E	2006	Diesel	Argentina	ARG	86345,91135	86345.91135
+E	2006	Diesel	Bolivia	BOL	83078,04627	83078.04627
+E	2006	Diesel	Corea del Sur	ARG	426	426
+E	2006	Diesel	Estados Unidos	ARG	39760,686	39760.686
+E	2006	Diesel	Paraguay	MYS	3,654	3.654
+E	2006	Diesel	Perú	MYS	245684,656	245684.656
+E	2006	Diesel	Territorios Británicos en América	CHE	0,01	0.01
+E	2006	Fuel Oil 6	Argentina	ARG	53186,588	53186.588
+E	2006	Fuel Oil 6	Estados Unidos	ARG	402533,559	402533.559
+E	2006	Fuel Oil 6	Guatemala	FRA	48597,7	48597.7
+E	2006	Fuel Oil 6	Panamá	MYS	45353,906	45353.906
+E	2006	Fuel Oil 6	Sin descripción	RUS	85995,215	85995.215
+E	2006	Gasolina	Perú	MYS	2,80038	2.80038
+E	2006	GLP	Brasil	ARG	8,295	8.295
+E	2006	GLP	Ecuador	ARG	107646,871	107646.871
+E	2006	GLP	El Salvador	ARG	9532,345	9532.345
+E	2006	GLP	España	ARG	31,701	31.701
+E	2006	GLP	Estados Unidos	ARG	103,4	103.4
+E	2006	GLP	Japón	ITA	8916,31	8916.31
+E	2006	GLP	Perú	MYS	1779,3	1779.3
+E	2006	GLP	Territorios Británicos en América	CHE	23,56	23.56
+E	2006	IFO	Estados Unidos	ARG	11116,2	11116.2
+E	2006	IFO	Perú	MYS	3,17347	3.17347
+E	2006	Kerosene	Argentina	ARG	405,9	405.9
+E	2006	Kerosene	Corea del Sur	ARG	3,86	3.86
+E	2007	Carbón	Argentina	ARG	196,24	196.24
+E	2007	Diesel	Argentina	ARG	44068,23863	44068.23863
+E	2007	Diesel	Bolivia	BOL	65983,21619	65983.21619
+E	2007	Diesel	Perú	MYS	117369,659	117369.659
+E	2007	Fuel Oil 6	Estados Unidos	ARG	157120,291	157120.291
+E	2007	Gas Natural	Bolivia	BOL	7,63	7.63
+E	2007	GLP	Argentina	ARG	4,433	4.433
+E	2007	GLP	Ecuador	ARG	106815,666	106815.666
+E	2007	GLP	El Salvador	ARG	7768,5	7768.5
+E	2007	GLP	Ghana	FRA	0,509	0.509
+E	2007	GLP	Perú	MYS	1,57824	1.57824
+E	2007	GLP	Territorios Británicos en América	CHE	29,184	29.184
+E	2007	GLP	Uruguay	CHE	106,235	106.235
+E	2007	Kerosene	Argentina	ARG	333,4	333.4
+E	2008	Carbón	Argentina	ARG	28	28
+E	2008	Carbón	Estados Unidos	ARG	0,00177	0.00177
+E	2008	Diesel	Argentina	ARG	71726,59756	71726.59756
+E	2008	Diesel	Bolivia	BOL	123145,20571	123145.20571
+E	2008	Diesel	Colombia	COL	33281,5	33281.5
+E	2008	Diesel	Perú	MYS	107156,559	107156.559
+E	2008	GLP	Argentina	ARG	0,02	0.02
+E	2008	GLP	Benin	ARG	21,238	21.238
+E	2008	GLP	Bolivia	BOL	0,112	0.112
+E	2008	GLP	Corea del Sur	ARG	1,058	1.058
+E	2008	GLP	Ecuador	ARG	56272,506	56272.506
+E	2008	GLP	Perú	MYS	1,3585	1.3585
+E	2008	GLP	Territorios Británicos en América	CHE	36,425	36.425
+E	2008	IFO	Bolivia	BOL	4680,10676	4680.10676
+E	2008	IFO	Suiza	CHE	0,00035	0.00035
+E	2009	Carbón	China	ARG	44997,31	44997.31
+E	2009	Carbón	Japón	ITA	42840,2	42840.2
+E	2009	Diesel	Alemania	DEU	0,0262	0.0262
+E	2009	Diesel	Argentina	ARG	2863	2863
+E	2009	Diesel	Bolivia	BOL	79993,55825	79993.55825
+E	2009	Diesel	Estados Unidos	ARG	0,001	0.001
+E	2009	Diesel	Perú	MYS	141861,46	141861.46
+E	2009	Diesel	Territorios Británicos en América	CHE	0,012	0.012
+E	2009	Fuel Oil 6	Estados Unidos	ARG	29326,281	29326.281
+E	2009	Fuel Oil 6	Panamá	MYS	35828,2	35828.2
+E	2009	Gasolina	Bolivia	BOL	1551,23	1551.23
+E	2009	GLP	Argentina	ARG	0,075	0.075
+E	2009	GLP	Benin	ARG	8,434	8.434
+E	2009	GLP	Ecuador	ARG	29217,142	29217.142
+E	2009	GLP	Territorios Británicos en América	CHE	30,20951	30.20951
+E	2009	GLP	Uruguay	CHE	5892,196	5892.196
+E	2009	IFO	Estados Unidos	ARG	17035,245	17035.245
+E	2010	Carbón	China	ARG	43011,71	43011.71
+E	2010	Carbón	Italia	ITA	22350,29	22350.29
+E	2010	Diesel	Argentina	ARG	3627,804	3627.804
+E	2010	Diesel	Bolivia	BOL	39724,4788	39724.4788
+E	2010	Diesel	Perú	MYS	45121,168	45121.168
+E	2010	Gasolina	Bolivia	BOL	3618,24	3618.24
+E	2010	GLP	Argentina	ARG	1058,26	1058.26
+E	2010	GLP	Brasil	ARG	14,361	14.361
+E	2010	GLP	Ecuador	ARG	17029,339	17029.339
+E	2010	GLP	Territorios Británicos en América	CHE	24,04	24.04
+E	2010	IFO	Brasil	ARG	40	40
+E	2010	IFO	Colombia	COL	9,955	9.955
+E	2011	Carbón	Argentina	ARG	1870,122	1870.122
+E	2011	Carbón	Bélgica	ARG	41301,01	41301.01
+E	2011	Carbón	Holanda	GNQ	42334,4	42334.4
+E	2011	Carbón	Japón	ITA	42496,53	42496.53
+E	2011	Diesel	Argentina	ARG	3695	3695
+E	2011	Diesel	Bolivia	BOL	38034,55993	38034.55993
+E	2011	Diesel	Perú	MYS	55155,154	55155.154
+E	2011	Fuel Oil 6	Ecuador	ARG	39557,5	39557.5
+E	2011	Gasolina	Bolivia	BOL	686,63	686.63
+E	2011	Gasolina	Perú	MYS	47,85	47.85
+E	2011	GLP	Argentina	ARG	0,45	0.45
+E	2011	IFO	Ecuador	ARG	17700,8	17700.8
+E	2011	IFO	Estados Unidos	ARG	17464,8	17464.8
+E	2012	Carbón	Holanda	GNQ	44996,58	44996.58
+E	2012	Carbón	India	GNQ	45002,53	45002.53
+E	2012	Diesel	Argentina	ARG	3315,588	3315.588
+E	2012	Diesel	Bolivia	BOL	63966,80662	63966.80662
+E	2012	Fuel Oil 6	Malasia	MYS	90179,76	90179.76
+E	2012	Fuel Oil 6	Panamá	MYS	53408,89	53408.89
+E	2012	Gasolina	Bolivia	BOL	44336,10188	44336.10188
+E	2012	Gasolina	Perú	MYS	6827,38	6827.38
+E	2012	GLP	Brasil	ARG	183,9538	183.9538
+E	2012	GLP	Corea del Sur	ARG	8,76	8.76
+E	2012	GLP	Ecuador	ARG	1792,758	1792.758
+E	2012	GLP	Territorios Británicos en América	CHE	6,5	6.5
+E	2012	IFO	Panamá	MYS	8783,636	8783.636
+E	2013	Carbón	China	ARG	147656,7	147656.7
+E	2013	Carbón	Holanda	GNQ	78353,3	78353.3
+E	2013	Carbón	India	GNQ	1031786,87	1031786.87
+E	2013	Carbón	Inglaterra	GBR	78014,13	78014.13
+E	2013	Carbón	Polonia	MYS	79304,87	79304.87
+E	2013	Diesel	Argentina	ARG	1063,822	1063.822
+E	2013	Diesel	Bolivia	BOL	75102,76679	75102.76679
+E	2013	Diesel	Panamá	MYS	1478,602	1478.602
+E	2013	Diesel	Paraguay	MYS	1477,56	1477.56
+E	2013	Diesel	Perú	MYS	15076,3	15076.3
+E	2013	Fuel Oil 6	Sin descripción	RUS	66283,123	66283.123
+E	2013	Fuel Oil 6	Singapur	RUS	71169,221	71169.221
+E	2013	Gasolina	Bolivia	BOL	38796,56342	38796.56342
+E	2013	Gasolina	Paraguay	MYS	786,753	786.753
+E	2013	GLP	Bolivia	BOL	0,02371	0.02371
+E	2013	GLP	Brasil	ARG	30637,949	30637.949
+E	2013	GLP	Estados Unidos	ARG	0,04044	0.04044
+E	2013	GLP	Ghana	FRA	3487,394	3487.394
+E	2013	GLP	Guinea Ecuatorial	GNQ	8653,704	8653.704
+E	2013	GLP	República Dominicana	MYS	8965,281	8965.281
+E	2013	GLP	Territorios Británicos en América	CHE	5,4	5.4
+E	2013	IFO	Estados Unidos	ARG	0,00238	0.00238
+E	2013	IFO	Sin descripción	RUS	30742,753	30742.753
+E	2013	IFO	Singapur	RUS	22875,783	22875.783
+E	2013	Kerosene	Bolivia	BOL	16,8	16.8
+E	2013	Kerosene	Perú	MYS	5599,888	5599.888
+E	2014	Carbón	España	ARG	193410,26	193410.26
+E	2014	Carbón	Holanda	GNQ	226516,88	226516.88
+E	2014	Carbón	India	GNQ	1220526,618	1220526.618
+E	2014	Carbón	Polonia	MYS	108964,695	108964.695
+E	2014	Diesel	Bolivia	BOL	73059,61728	73059.61728
+E	2014	Diesel	Estados Unidos	ARG	0,00012	0.00012
+E	2014	Diesel	Perú	MYS	579,244	579.244
+E	2014	Fuel Oil 6	Panamá	MYS	69885,294	69885.294
+E	2014	Fuel Oil 6	Sin descripción	RUS	19839,359	19839.359
+E	2014	Gasolina	Bolivia	BOL	43180,35858	43180.35858
+E	2014	GLP	Brasil	ARG	18601,839	18601.839
+E	2014	GLP	Francia	FRA	10573,62	10573.62
+E	2014	GLP	Uruguay	CHE	5982,692	5982.692
+E	2014	IFO	Panamá	MYS	56532,025	56532.025
+E	2014	IFO	Sin descripción	RUS	15234,801	15234.801
+E	2014	Kerosene	Bolivia	BOL	1,467	1.467
+E	2015	Carbón	Holanda	GNQ	109640,765	109640.765
+E	2015	Carbón	India	GNQ	432066,444	432066.444
+E	2015	Diesel	Bolivia	BOL	7187,50599	7187.50599
+E	2015	Gasolina	Bolivia	BOL	2291,37156	2291.37156
+E	2015	GLP	Ghana	FRA	16030,329	16030.329
+E	2015	IFO	Bolivia	BOL	7,6	7.6
+I	2002	Carbón	Argentina	ARG	10050,749441	10050.749441
+I	2002	Carbón	Australia	AUS	502742,988	502742.988
+I	2002	Carbón	Canadá	CAN	186197,9	186197.9
+I	2002	Carbón	Colombia	COL	123447	123447
+I	2002	Carbón	Estados Unidos	USA	37653,86	37653.86
+I	2002	Carbón	Indonesia	IND	87100,36	87100.36
+I	2002	Carbón	Nueva Zelandia	NZL	41338,3	41338.3
+I	2002	Crudo	Argentina	ARG	2289446,0653049	2289446.0653049
+I	2002	Crudo	Brasil	BRA	277995,126	277995.126
+I	2002	Crudo	Malasia	MYS	25612,61	25612.61
+I	2002	Crudo	Nigeria	NGA	263646,644	263646.644
+I	2002	Crudo	Perú	PER	116152,885	116152.885
+I	2002	Crudo	Venezuela	VEN	68758,149	68758.149
+I	2002	Diesel	Argentina	ARG	45839,28772	45839.28772
+I	2002	Diesel	Corea del Norte	PRK	129,84	129.84
+I	2002	Diesel	Corea del Sur	KOR	73254,24526	73254.24526
+I	2002	Diesel	Estados Unidos	USA	39039,9259	39039.9259
+I	2002	Diesel	Rusia	RUS	32293,363	32293.363
+I	2002	Fuel Oil 6	Estados Unidos	USA	0,0036288	0.0036288
+I	2002	Gas Natural	Argentina	ARG	1053271,2453938	1053271.2453938
+I	2002	Gasolina	Estados Unidos	USA	0,0238	0.0238
+I	2002	Gasolina	Inglaterra	GBR	0,02	0.02
+I	2002	GLP	Argentina	ARG	157636,1363	157636.1363
+I	2002	GLP	Bolivia	BOL	3005,5	3005.5
+I	2002	GLP	Brasil	BRA	20019,598	20019.598
+I	2002	GLP	Corea del Sur	KOR	9,4692615	9.4692615
+I	2002	GLP	Ecuador	ECU	3329,667	3329.667
+I	2002	GLP	Estados Unidos	USA	0,010462	0.010462
+I	2002	GLP	Italia	ITA	15,1164	15.1164
+I	2002	GLP	Suecia	SWE	0,03	0.03
+I	2002	IFO	Colombia	COL	25159,647	25159.647
+I	2002	IFO	Estados Unidos	USA	0,004615	0.004615
+I	2002	IFO	Perú	PER	6000	6000
+I	2002	Kerosene	Colombia	COL	6106,505	6106.505
+I	2002	Kerosene	Estados Unidos	USA	0,06726	0.06726
+I	2002	Kerosene	México	MEX	15578,931	15578.931
+I	2002	Kerosene	Panamá	PAN	0,720554	0.720554
+I	2003	Carbón	Argentina	ARG	44099,3860469	44099.3860469
+I	2003	Carbón	Australia	AUS	836009,613	836009.613
+I	2003	Carbón	Canadá	CAN	510250,56	510250.56
+I	2003	Carbón	Colombia	COL	516079,8116	516079.8116
+I	2003	Carbón	Estados Unidos	USA	328733,3	328733.3
+I	2003	Carbón	Indonesia	IND	201175,31	201175.31
+I	2003	Carbón	Nueva Zelandia	NZL	92873,86	92873.86
+I	2003	Crudo	Angola	AGO	262238	262238
+I	2003	Crudo	Argentina	ARG	5743048,48683081	5743048.48683081
+I	2003	Crudo	Bolivia	BOL	33531,8	33531.8
+I	2003	Crudo	Brasil	BRA	799984,588	799984.588
+I	2003	Crudo	Canadá	CAN	0,04	0.04
+I	2003	Crudo	Estados Unidos	USA	0,9533	0.9533
+I	2003	Crudo	Gabón	GAB	129345,484	129345.484
+I	2003	Crudo	Malasia	MYS	79046,5	79046.5
+I	2003	Crudo	Nigeria	NGA	452035,199	452035.199
+I	2003	Crudo	Perú	PER	783281,535	783281.535
+I	2003	Crudo	Territorios Holandeses en América		21447,277	21447.277
+I	2003	Crudo	Uruguay	URY	84,1	84.1
+I	2003	Crudo	Venezuela	VEN	182162,281	182162.281
+I	2003	Diesel	Argentina	ARG	127869,05539	127869.05539
+I	2003	Diesel	Canadá	CAN	1,7	1.7
+I	2003	Diesel	Chile	CHL	1087,2166	1087.2166
+I	2003	Diesel	Corea del Sur	KOR	248288,30743	248288.30743
+I	2003	Diesel	Ecuador	ECU	6	6
+I	2003	Diesel	Estados Unidos	USA	68316,02491	68316.02491
+I	2003	Diesel	Estonia	EST	21926,3	21926.3
+I	2003	Diesel	Holanda	NLD	7698,61657	7698.61657
+I	2003	Diesel	Panamá	PAN	10	10
+I	2003	Diesel	Taiwán	TWN	70737,642	70737.642
+I	2003	Diesel	Territorios Holandeses en América		39177,368	39177.368
+I	2003	Diesel	Venezuela	VEN	37103,832	37103.832
+I	2003	Gas Natural	Argentina	ARG	3075734,5331599	3075734.5331599
+I	2003	Gas Natural	Estados Unidos	USA	0,00496	0.00496
+I	2003	Gas Natural	Inglaterra	GBR	0,05915	0.05915
+I	2003	Gasolina	Argentina	ARG	0,012	0.012
+I	2003	Gasolina	Estados Unidos	USA	0,0571504	0.0571504
+I	2003	Gasolina	Perú	PER	0,0050769	0.0050769
+I	2003	GLP	Argentina	ARG	446033,9552	446033.9552
+I	2003	GLP	Bolivia	BOL	855,477	855.477
+I	2003	GLP	Corea del Sur	KOR	15,431	15.431
+I	2003	GLP	Ecuador	ECU	11455,086	11455.086
+I	2003	GLP	Estados Unidos	USA	1,8597593	1.8597593
+I	2003	GLP	Italia	ITA	40,963582	40.963582
+I	2003	GLP	Turquía	TUR	0,016923	0.016923
+I	2003	IFO	Estados Unidos	USA	0,1368644	0.1368644
+I	2003	IFO	Perú	PER	73546,483	73546.483
+I	2003	Kerosene	Estados Unidos	USA	0,066148	0.066148
+I	2003	Kerosene	Japón	JPN	0,199796	0.199796
+I	2003	Kerosene	México	MEX	1,138917	1.138917
+I	2003	Kerosene	Territorios Holandeses en América		15841,2	15841.2
+I	2004	Carbón	Argentina	ARG	103943,13	103943.13
+I	2004	Carbón	Australia	AUS	1225723,35986	1225723.35986
+I	2004	Carbón	Canadá	CAN	335933,6	335933.6
+I	2004	Carbón	Colombia	COL	721662,06902	721662.06902
+I	2004	Carbón	Estados Unidos	USA	1083801,9088	1083801.9088
+I	2004	Carbón	Indonesia	IND	922505,93	922505.93
+I	2004	Carbón	Nueva Zelandia	NZL	73538,97195	73538.97195
+I	2004	Crudo	Angola	AGO	1274277,434	1274277.434
+I	2004	Crudo	Argentina	ARG	4130609,0520811	4130609.0520811
+I	2004	Crudo	Brasil	BRA	1199021,855	1199021.855
+I	2004	Crudo	Costa de Marfil	CIV	137384,801	137384.801
+I	2004	Crudo	Ecuador	ECU	224266,838	224266.838
+I	2004	Crudo	Estados Unidos	USA	0,2180461	0.2180461
+I	2004	Crudo	Gabón	GAB	251095,441	251095.441
+I	2004	Crudo	Nigeria	NGA	1192890,243	1192890.243
+I	2004	Crudo	Perú	PER	751109,92	751109.92
+I	2004	Crudo	Sudáfrica	ZAF	0,0492308	0.0492308
+I	2004	Crudo	Venezuela	VEN	103417,072	103417.072
+I	2004	Diesel	Alemania	DEU	1,032	1.032
+I	2004	Diesel	Argentina	ARG	216669,87708	216669.87708
+I	2004	Diesel	Canadá	CAN	12668,2077	12668.2077
+I	2004	Diesel	Corea del Sur	KOR	110386,848	110386.848
+I	2004	Diesel	Estados Unidos	USA	570954,317061	570954.317061
+I	2004	Diesel	México	MEX	29006,9	29006.9
+I	2004	Diesel	Territorios Holandeses en América		22975,318	22975.318
+I	2004	Diesel	Venezuela	VEN	91869,0296	91869.0296
+I	2004	Fuel Oil 6	Estados Unidos	USA	0,0105	0.0105
+I	2004	Gas Natural	Argentina	ARG	3850470,0059814	3850470.0059814
+I	2004	Gas Natural	Perú	PER	67,58	67.58
+I	2004	Gasolina	Argentina	ARG	0,03	0.03
+I	2004	Gasolina	Estados Unidos	USA	0,0698538	0.0698538
+I	2004	GLP	Alemania	DEU	0,0007692	0.0007692
+I	2004	GLP	Argentina	ARG	497376,123	497376.123
+I	2004	GLP	Bolivia	BOL	1509,426	1509.426
+I	2004	GLP	Corea del Sur	KOR	16,1682962	16.1682962
+I	2004	GLP	Estados Unidos	USA	1,2289923	1.2289923
+I	2004	GLP	Inglaterra	GBR	14058,287385	14058.287385
+I	2004	GLP	Italia	ITA	80,4487446	80.4487446
+I	2004	GLP	Noruega	NOR	18842,705	18842.705
+I	2004	IFO	Alemania	DEU	0,234	0.234
+I	2004	IFO	Argentina	ARG	12,71	12.71
+I	2004	IFO	Brasil	BRA	0,0125077	0.0125077
+I	2004	IFO	Estados Unidos	USA	0,0031752	0.0031752
+I	2004	IFO	Inglaterra	GBR	0,012	0.012
+I	2004	Kerosene	Argentina	ARG	5996,798	5996.798
+I	2004	Kerosene	Brasil	BRA	0,01777	0.01777
+I	2004	Kerosene	Estados Unidos	USA	27102,1070202	27102.1070202
+I	2005	Carbón	Argentina	ARG	40973,47241	40973.47241
+I	2005	Carbón	Australia	AUS	715976,792	715976.792
+I	2005	Carbón	Canadá	CAN	399020	399020
+I	2005	Carbón	Colombia	COL	485325,2708846	485325.2708846
+I	2005	Carbón	Estados Unidos	USA	789889,5836	789889.5836
+I	2005	Carbón	Indonesia	IND	1012994,62	1012994.62
+I	2005	Carbón	Nueva Zelandia	NZL	169226,128	169226.128
+I	2005	Crudo	Angola	AGO	2089750,374	2089750.374
+I	2005	Crudo	Argentina	ARG	3091946,6330201	3091946.6330201
+I	2005	Crudo	Brasil	BRA	1045826,768	1045826.768
+I	2005	Crudo	Colombia	COL	211295,351	211295.351
+I	2005	Crudo	Ecuador	ECU	116379,905	116379.905
+I	2005	Crudo	Estados Unidos	USA	0,0015385	0.0015385
+I	2005	Crudo	Gabón	GAB	1621,485	1621.485
+I	2005	Crudo	Malasia	MYS	79096,1	79096.1
+I	2005	Crudo	Nigeria	NGA	610607,342	610607.342
+I	2005	Crudo	Perú	PER	329428,228	329428.228
+I	2005	Diesel	Argentina	ARG	22308,26499	22308.26499
+I	2005	Diesel	Canadá	CAN	34776,49116	34776.49116
+I	2005	Diesel	Corea del Sur	KOR	215988,604	215988.604
+I	2005	Diesel	Estados Unidos	USA	1061836,81651	1061836.81651
+I	2005	Diesel	Inglaterra	GBR	0,278	0.278
+I	2005	Diesel	Territorios Holandeses en América		244,531	244.531
+I	2005	Diesel	Venezuela	VEN	32035,564	32035.564
+I	2005	Fuel Oil 6	Estados Unidos	USA	112083,969	112083.969
+I	2005	Gas Natural	Argentina	ARG	2661185,9529263	2661185.9529263
+I	2005	Gas Natural	Perú	PER	39,589	39.589
+I	2005	Gasolina	Brasil	BRA	0,045	0.045
+I	2005	Gasolina	Estados Unidos	USA	0,0274769	0.0274769
+I	2005	GLP	Argentina	ARG	425650,245	425650.245
+I	2005	GLP	Corea del Sur	KOR	25,382289	25.382289
+I	2005	GLP	Estados Unidos	USA	3,951059	3.951059
+I	2005	GLP	Italia	ITA	7,87968	7.87968
+I	2005	GLP	Nigeria	NGA	21334,058	21334.058
+I	2005	GLP	Perú	PER	15978,702	15978.702
+I	2005	IFO	Brasil	BRA	0,0308	0.0308
+I	2005	IFO	Estados Unidos	USA	0,1188781	0.1188781
+I	2005	Kerosene	Alemania	DEU	0,109112	0.109112
+I	2005	Kerosene	Estados Unidos	USA	65958,36821	65958.36821
+I	2006	Carbón	Argentina	ARG	104987,074	104987.074
+I	2006	Carbón	Australia	AUS	1313873,0110692	1313873.0110692
+I	2006	Carbón	Canadá	CAN	652495,1721877	652495.1721877
+I	2006	Carbón	Colombia	COL	268069,86	268069.86
+I	2006	Carbón	Estados Unidos	USA	337612,28	337612.28
+I	2006	Carbón	Indonesia	IND	1381886,166	1381886.166
+I	2006	Carbón	México	MEX	21,56	21.56
+I	2006	Carbón	Nueva Zelandia	NZL	356078,4325	356078.4325
+I	2006	Crudo	Angola	AGO	2450757,47	2450757.47
+I	2006	Crudo	Argentina	ARG	1317341,380268	1317341.380268
+I	2006	Crudo	Bolivia	BOL	35602,503	35602.503
+I	2006	Crudo	Brasil	BRA	2364252,813	2364252.813
+I	2006	Crudo	Colombia	COL	97576,601	97576.601
+I	2006	Crudo	Congo	COG	240632,863	240632.863
+I	2006	Crudo	Ecuador	ECU	1120042,115	1120042.115
+I	2006	Crudo	Estados Unidos	USA	0,0098308	0.0098308
+I	2006	Crudo	Gabón	GAB	131032,9	131032.9
+I	2006	Crudo	Nigeria	NGA	460158,938	460158.938
+I	2006	Crudo	Perú	PER	750888,5179231	750888.5179231
+I	2006	Crudo	Tailandia	THA	79296,159	79296.159
+I	2006	Diesel	Alemania	DEU	2,22	2.22
+I	2006	Diesel	Argentina	ARG	1915,718	1915.718
+I	2006	Diesel	Canadá	CAN	3464,191	3464.191
+I	2006	Diesel	Corea del Sur	KOR	624113,25534	624113.25534
+I	2006	Diesel	Estados Unidos	USA	1026566,81466	1026566.81466
+I	2006	Diesel	Holanda	NLD	59274,157	59274.157
+I	2006	Diesel	Japón	JPN	32650,326	32650.326
+I	2006	Diesel	Venezuela	VEN	95380,317	95380.317
+I	2006	Gas Natural	Argentina	ARG	2599221,4613354	2599221.4613354
+I	2006	Gas Natural	Estados Unidos	USA	0,0315385	0.0315385
+I	2006	Gasolina	Estados Unidos	USA	0,0642615	0.0642615
+I	2006	GLP	Argentina	ARG	524883,499	524883.499
+I	2006	GLP	China	CHN	11,841	11.841
+I	2006	GLP	Corea del Sur	KOR	7,5138462	7.5138462
+I	2006	GLP	Ecuador	ECU	6509,3	6509.3
+I	2006	GLP	Emiratos Árabes Unidos	ARE	21092,018	21092.018
+I	2006	GLP	Estados Unidos	USA	3,0251356	3.0251356
+I	2006	GLP	Holanda	NLD	0,0015	0.0015
+I	2006	GLP	Inglaterra	GBR	0,0027408	0.0027408
+I	2006	GLP	Italia	ITA	35,88817	35.88817
+I	2006	GLP	Perú	PER	22128,386	22128.386
+I	2006	IFO	Alemania	DEU	0,0477538	0.0477538
+I	2006	IFO	Estados Unidos	USA	0,0101538	0.0101538
+I	2006	IFO	Perú	PER	9160,868	9160.868
+I	2006	Kerosene	Alemania	DEU	0,091559	0.091559
+I	2006	Kerosene	Argentina	ARG	26539,4629354	26539.4629354
+I	2006	Kerosene	Brasil	BRA	0,5	0.5
+I	2006	Kerosene	Estados Unidos	USA	62778,3860063	62778.3860063
+I	2007	Carbón	Argentina	ARG	55185,046	55185.046
+I	2007	Carbón	Australia	AUS	1266651,44528	1266651.44528
+I	2007	Carbón	Canadá	CAN	700909,7	700909.7
+I	2007	Carbón	Colombia	COL	1979603,328643	1979603.328643
+I	2007	Carbón	España	ESP	14,4	14.4
+I	2007	Carbón	Estados Unidos	USA	526628,111	526628.111
+I	2007	Carbón	Indonesia	IND	1566852,287	1566852.287
+I	2007	Carbón	Nueva Zelandia	NZL	174820,08	174820.08
+I	2007	Crudo	Angola	AGO	1520958,001457	1520958.001457
+I	2007	Crudo	Argentina	ARG	324454,3965326	324454.3965326
+I	2007	Crudo	Brasil	BRA	3166514,345559	3166514.345559
+I	2007	Crudo	Colombia	COL	663111,578692	663111.578692
+I	2007	Crudo	Ecuador	ECU	1378315,212222	1378315.212222
+I	2007	Crudo	Estados Unidos	USA	0,0027	0.0027
+I	2007	Crudo	Nigeria	NGA	472307,076728	472307.076728
+I	2007	Crudo	Perú	PER	984803,72608	984803.72608
+I	2007	Crudo	Tailandia	THA	166141,4886685	166141.4886685
+I	2007	Crudo	Turquía	TUR	1421023,8161187	1421023.8161187
+I	2007	Diesel	Alemania	DEU	5,092	5.092
+I	2007	Diesel	Bélgica	BEL	40659,409	40659.409
+I	2007	Diesel	Canadá	CAN	291803,726	291803.726
+I	2007	Diesel	Chile	CHL	5,3846154	5.3846154
+I	2007	Diesel	Corea del Sur	KOR	2299945,69084	2299945.69084
+I	2007	Diesel	Estados Unidos	USA	1765051,955409	1765051.955409
+I	2007	Diesel	Holanda	NLD	38798,056	38798.056
+I	2007	Diesel	Japón	JPN	247714,412396	247714.412396
+I	2007	Diesel	Perú	PER	33,29	33.29
+I	2007	Diesel	Singapur	SGP	110154,691	110154.691
+I	2007	Fuel Oil 6	Estados Unidos	USA	136020,224	136020.224
+I	2007	Fuel Oil 6	Perú	PER	54686,68148	54686.68148
+I	2007	Gas Natural	Argentina	ARG	1856441,2039993	1856441.2039993
+I	2007	Gas Natural	China	CHN	0,03785	0.03785
+I	2007	Gas Natural	Inglaterra	GBR	0,0169231	0.0169231
+I	2007	Gasolina	Dinamarca	DNK	0,08439	0.08439
+I	2007	Gasolina	Estados Unidos	USA	164,8853124	164.8853124
+I	2007	GLP	Angola	AGO	39303,805	39303.805
+I	2007	GLP	Arabia Saudita	SAU	45146,925	45146.925
+I	2007	GLP	Argentina	ARG	687079,068	687079.068
+I	2007	GLP	Catar	QAT	33288,321	33288.321
+I	2007	GLP	Corea del Sur	KOR	50,8000008	50.8000008
+I	2007	GLP	Ecuador	ECU	16445,1411	16445.1411
+I	2007	GLP	Estados Unidos	USA	27126,9505691	27126.9505691
+I	2007	GLP	Grecia	GRC	9,8076923	9.8076923
+I	2007	GLP	Inglaterra	GBR	33836,151	33836.151
+I	2007	GLP	Italia	ITA	26,58816	26.58816
+I	2007	GLP	Noruega	NOR	8519,829	8519.829
+I	2007	GLP	Venezuela	VEN	84028,73	84028.73
+I	2007	IFO	Alemania	DEU	0,03526	0.03526
+I	2007	IFO	Brasil	BRA	0,0026231	0.0026231
+I	2007	IFO	Estados Unidos	USA	0,0062	0.0062
+I	2007	IFO	Perú	PER	0,0030769	0.0030769
+I	2007	Kerosene	Alemania	DEU	0,202873	0.202873
+I	2007	Kerosene	Argentina	ARG	40157,416	40157.416
+I	2007	Kerosene	Brasil	BRA	0,54	0.54
+I	2007	Kerosene	Colombia	COL	45294,444	45294.444
+I	2007	Kerosene	Corea del Sur	KOR	129606	129606
+I	2007	Kerosene	Estados Unidos	USA	46153,81667	46153.81667
+I	2007	Kerosene	Japón	JPN	23903,225	23903.225
+I	2007	Kerosene	Sin descripción		0,064811	0.064811
+I	2008	Carbón	Argentina	ARG	55486,485	55486.485
+I	2008	Carbón	Australia	AUS	605830,24	605830.24
+I	2008	Carbón	Canadá	CAN	369549,05	369549.05
+I	2008	Carbón	Colombia	COL	4185864,081589	4185864.081589
+I	2008	Carbón	Estados Unidos	USA	1268972,6255	1268972.6255
+I	2008	Carbón	Indonesia	IND	497880,8	497880.8
+I	2008	Carbón	Nueva Zelandia	NZL	95344	95344
+I	2008	Crudo	Angola	AGO	2067548,318584	2067548.318584
+I	2008	Crudo	Argentina	ARG	371728,626012	371728.626012
+I	2008	Crudo	Brasil	BRA	2577318,1727441	2577318.1727441
+I	2008	Crudo	Colombia	COL	1655302,811687	1655302.811687
+I	2008	Crudo	Ecuador	ECU	2263492,223818	2263492.223818
+I	2008	Crudo	Perú	PER	284217,495557	284217.495557
+I	2008	Crudo	Tailandia	THA	30974,4	30974.4
+I	2008	Crudo	Turquía	TUR	844181,363009	844181.363009
+I	2008	Diesel	Alemania	DEU	9,3057	9.3057
+I	2008	Diesel	Argentina	ARG	0,11	0.11
+I	2008	Diesel	Brasil	BRA	16,066	16.066
+I	2008	Diesel	Canadá	CAN	19796,1	19796.1
+I	2008	Diesel	Corea del Sur	KOR	1400040,609424	1400040.609424
+I	2008	Diesel	Ecuador	ECU	0,026	0.026
+I	2008	Diesel	Estados Unidos	USA	2894625,7055366	2894625.7055366
+I	2008	Diesel	Holanda	NLD	9,125	9.125
+I	2008	Diesel	Japón	JPN	709503,67615	709503.67615
+I	2008	Diesel	México	MEX	9,925	9.925
+I	2008	Diesel	Perú	PER	26336,271098	26336.271098
+I	2008	Fuel Oil 6	Argentina	ARG	87877,798	87877.798
+I	2008	Fuel Oil 6	Canadá	CAN	127904,180234	127904.180234
+I	2008	Fuel Oil 6	Estados Unidos	USA	293963,729711	293963.729711
+I	2008	Fuel Oil 6	Perú	PER	122500,269863	122500.269863
+I	2008	Gas Natural	Argentina	ARG	903738,9651765	903738.9651765
+I	2008	Gasolina	China	CHN	0,0006132	0.0006132
+I	2008	Gasolina	Estados Unidos	USA	2002,6623468	2002.6623468
+I	2008	Gasolina	Holanda	NLD	0,0105	0.0105
+I	2008	GLP	Alemania	DEU	0,005	0.005
+I	2008	GLP	Arabia Saudita	SAU	53078,916	53078.916
+I	2008	GLP	Argentina	ARG	766342,34764	766342.34764
+I	2008	GLP	Bolivia	BOL	0,00125	0.00125
+I	2008	GLP	Catar	QAT	58499,88	58499.88
+I	2008	GLP	Corea del Sur	KOR	25,6182847	25.6182847
+I	2008	GLP	Ecuador	ECU	15894,4	15894.4
+I	2008	GLP	Estados Unidos	USA	11045,0063659	11045.0063659
+I	2008	GLP	Grecia	GRC	42,75	42.75
+I	2008	GLP	Inglaterra	GBR	33474,785	33474.785
+I	2008	GLP	Italia	ITA	7,8396	7.8396
+I	2008	GLP	Noruega	NOR	31342,897	31342.897
+I	2008	IFO	Estados Unidos	USA	0,0903105	0.0903105
+I	2008	IFO	Panamá	PAN	586,94	586.94
+I	2008	IFO	Perú	PER	43281,564935	43281.564935
+I	2008	IFO	Venezuela	VEN	460,02	460.02
+I	2008	Kerosene	Alemania	DEU	0,079024	0.079024
+I	2008	Kerosene	Brasil	BRA	0,54	0.54
+I	2008	Kerosene	Canadá	CAN	18741	18741
+I	2008	Kerosene	Corea del Sur	KOR	42516,325	42516.325
+I	2008	Kerosene	Estados Unidos	USA	74728,5590031	74728.5590031
+I	2008	Kerosene	India	IND	0,009	0.009
+I	2008	Kerosene	Japón	JPN	138346,096	138346.096
+I	2008	Kerosene	Singapur	SGP	69949,1	69949.1
+I	2009	Carbón	Argentina	ARG	57657,864	57657.864
+I	2009	Carbón	Australia	AUS	519977,94	519977.94
+I	2009	Carbón	Brasil	BRA	1	1
+I	2009	Carbón	Canadá	CAN	256761,7	256761.7
+I	2009	Carbón	China	CHN	0,0006154	0.0006154
+I	2009	Carbón	Colombia	COL	3746461,155859	3746461.155859
+I	2009	Carbón	Estados Unidos	USA	1059818,92	1059818.92
+I	2009	Carbón	Indonesia	IND	584177,7	584177.7
+I	2009	Carbón	Nueva Zelandia	NZL	45320	45320
+I	2009	Crudo	Angola	AGO	142656,259698	142656.259698
+I	2009	Crudo	Argentina	ARG	2366588,8602716	2366588.8602716
+I	2009	Crudo	Brasil	BRA	1551469,76389	1551469.76389
+I	2009	Crudo	Colombia	COL	1547035,957492	1547035.957492
+I	2009	Crudo	Ecuador	ECU	1855781,226599	1855781.226599
+I	2009	Crudo	Estados Unidos	USA	0,004	0.004
+I	2009	Crudo	Indonesia	IND	73998,238723	73998.238723
+I	2009	Crudo	Inglaterra	GBR	1403131,532269	1403131.532269
+I	2009	Crudo	Malasia	MYS	63962,487242	63962.487242
+I	2009	Crudo	Perú	PER	227543,963228	227543.963228
+I	2009	Crudo	Vietnam	VNM	156621,251134	156621.251134
+I	2009	Diesel	Alemania	DEU	0,854	0.854
+I	2009	Diesel	Brasil	BRA	24,152	24.152
+I	2009	Diesel	Canadá	CAN	96502,807422	96502.807422
+I	2009	Diesel	Corea del Sur	KOR	1196290,90848	1196290.90848
+I	2009	Diesel	España	ESP	9,451	9.451
+I	2009	Diesel	Estados Unidos	USA	2437519,8068943	2437519.8068943
+I	2009	Diesel	Holanda	NLD	0,005	0.005
+I	2009	Diesel	Japón	JPN	463591,472444	463591.472444
+I	2009	Fuel Oil 6	Estados Unidos	USA	67839,89	67839.89
+I	2009	Fuel Oil 6	Perú	PER	38014,2	38014.2
+I	2009	Gas Natural	Argentina	ARG	840789,057860001	840789.057860001
+I	2009	Gas Natural	Catar	QAT	53751,3005	53751.3005
+I	2009	Gas Natural	Estados Unidos	USA	0,9675	0.9675
+I	2009	Gas Natural	Guinea Ecuatorial	GNQ	236593,210905	236593.210905
+I	2009	Gas Natural	Trinidad y Tobago	TTO	99743,942541	99743.942541
+I	2009	Gasolina	Estados Unidos	USA	2,5403843	2.5403843
+I	2009	Gasolina	Holanda	NLD	0,0503123	0.0503123
+I	2009	GLP	Argentina	ARG	683489,6088	683489.6088
+I	2009	GLP	Corea del Sur	KOR	31,362	31.362
+I	2009	GLP	Estados Unidos	USA	66891,7621018	66891.7621018
+I	2009	GLP	Grecia	GRC	33,96	33.96
+I	2009	GLP	Guinea Ecuatorial	GNQ	132807,598	132807.598
+I	2009	GLP	Nigeria	NGA	21959,115	21959.115
+I	2009	GLP	Perú	PER	13796,346	13796.346
+I	2009	IFO	Ecuador	ECU	33138,4	33138.4
+I	2009	IFO	Estados Unidos	USA	325859,9520871	325859.9520871
+I	2009	IFO	Perú	PER	10976,577	10976.577
+I	2009	Kerosene	Alemania	DEU	0,029271	0.029271
+I	2009	Kerosene	Estados Unidos	USA	112630,6113985	112630.6113985
+I	2009	Kerosene	Japón	JPN	30077,3544	30077.3544
+I	2010	Carbón	Argentina	ARG	18024,2	18024.2
+I	2010	Carbón	Australia	AUS	990668,02	990668.02
+I	2010	Carbón	Canadá	CAN	217133,37	217133.37
+I	2010	Carbón	Colombia	COL	3643051,483	3643051.483
+I	2010	Carbón	Estados Unidos	USA	1904353,23	1904353.23
+I	2010	Carbón	Indonesia	IND	697734,7	697734.7
+I	2010	Crudo	Argentina	ARG	1894638,820038	1894638.820038
+I	2010	Crudo	Brasil	BRA	2536997,413012	2536997.413012
+I	2010	Crudo	Colombia	COL	1219585,216782	1219585.216782
+I	2010	Crudo	Ecuador	ECU	1125033,644359	1125033.644359
+I	2010	Crudo	Estados Unidos	USA	0,02155	0.02155
+I	2010	Crudo	Inglaterra	GBR	970597,679204	970597.679204
+I	2010	Crudo	Perú	PER	235799,03006	235799.03006
+I	2010	Diesel	Alemania	DEU	13,105	13.105
+I	2010	Diesel	Corea del Sur	KOR	1560673,450999	1560673.450999
+I	2010	Diesel	Estados Unidos	USA	1667743,7307028	1667743.7307028
+I	2010	Diesel	Holanda	NLD	133,675	133.675
+I	2010	Diesel	Japón	JPN	1248744,56012	1248744.56012
+I	2010	Diesel	Panamá	PAN	23,6	23.6
+I	2010	Gas Natural	Argelia	DZA	117501,63067	117501.63067
+I	2010	Gas Natural	Argentina	ARG	380173,1025	380173.1025
+I	2010	Gas Natural	Catar	QAT	179824,43378	179824.43378
+I	2010	Gas Natural	Egipto	EGY	264257,43608	264257.43608
+I	2010	Gas Natural	Guinea	GIN	796104,66267	796104.66267
+I	2010	Gas Natural	Guinea Ecuatorial	GNQ	122639,05853	122639.05853
+I	2010	Gas Natural	Sin descripción		129074,48629	129074.48629
+I	2010	Gas Natural	Trinidad y Tobago	TTO	461135,84756	461135.84756
+I	2010	Gasolina	Estados Unidos	USA	12233,2293129	12233.2293129
+I	2010	Gasolina	Holanda	NLD	0,0038475	0.0038475
+I	2010	Gasolina	Japón	JPN	25,125	25.125
+I	2010	GLP	Argentina	ARG	602338,1981	602338.1981
+I	2010	GLP	China	CHN	0,4	0.4
+I	2010	GLP	Corea del Sur	KOR	50,666148	50.666148
+I	2010	GLP	Estados Unidos	USA	149994,6507686	149994.6507686
+I	2010	GLP	Grecia	GRC	51,3	51.3
+I	2010	GLP	Noruega	NOR	46234,4	46234.4
+I	2010	GLP	Taiwán	TWN	0,0224	0.0224
+I	2010	IFO	Brasil	BRA	0,093357	0.093357
+I	2010	IFO	Ecuador	ECU	32830,139559	32830.139559
+I	2010	IFO	Estados Unidos	USA	397500,317542	397500.317542
+I	2010	Kerosene	Alemania	DEU	0,0064846	0.0064846
+I	2010	Kerosene	Corea del Sur	KOR	126216,9	126216.9
+I	2010	Kerosene	Estados Unidos	USA	61311,0538646	61311.0538646
+I	2010	Kerosene	Japón	JPN	98488,804	98488.804
+I	2010	Kerosene	Sin descripción		0,00329	0.00329
+I	2011	Carbón	Argentina	ARG	2972,8928	2972.8928
+I	2011	Carbón	Australia	AUS	1025958,17488	1025958.17488
+I	2011	Carbón	Canadá	CAN	257699,183	257699.183
+I	2011	Carbón	Colombia	COL	3910080,3572708	3910080.3572708
+I	2011	Carbón	Estados Unidos	USA	3566674,8568	3566674.8568
+I	2011	Carbón	Indonesia	IND	403073,72	403073.72
+I	2011	Crudo	Argentina	ARG	824989,74258	824989.74258
+I	2011	Crudo	Bolivia	BOL	37298	37298
+I	2011	Crudo	Brasil	BRA	3698314,643526	3698314.643526
+I	2011	Crudo	Colombia	COL	1555674,920089	1555674.920089
+I	2011	Crudo	Ecuador	ECU	1509107,072827	1509107.072827
+I	2011	Crudo	Estados Unidos	USA	0,0103924	0.0103924
+I	2011	Crudo	Inglaterra	GBR	695895,435	695895.435
+I	2011	Crudo	Nueva Zelandia	NZL	0,0153846	0.0153846
+I	2011	Crudo	Perú	PER	346872,670001	346872.670001
+I	2011	Diesel	Alemania	DEU	4,4389846	4.4389846
+I	2011	Diesel	Canadá	CAN	41680,8	41680.8
+I	2011	Diesel	Corea del Sur	KOR	211365,698	211365.698
+I	2011	Diesel	Estados Unidos	USA	3492127,8171339	3492127.8171339
+I	2011	Diesel	Japón	JPN	397001,445495	397001.445495
+I	2011	Gas Natural	Argentina	ARG	208873,66435	208873.66435
+I	2011	Gas Natural	Catar	QAT	426473,95073	426473.95073
+I	2011	Gas Natural	Egipto	EGY	78132,89064	78132.89064
+I	2011	Gas Natural	Estados Unidos	USA	54247,3089177	54247.3089177
+I	2011	Gas Natural	Guinea	GIN	929444,98044	929444.98044
+I	2011	Gas Natural	Indonesia	IND	59056,62641	59056.62641
+I	2011	Gas Natural	Inglaterra	GBR	0,00014	0.00014
+I	2011	Gas Natural	Sin descripción		327946,15216	327946.15216
+I	2011	Gas Natural	Trinidad y Tobago	TTO	851911,87508	851911.87508
+I	2011	Gasolina	Bolivia	BOL	0,0084615	0.0084615
+I	2011	Gasolina	Estados Unidos	USA	32528,9661447	32528.9661447
+I	2011	Gasolina	Holanda	NLD	0,0192308	0.0192308
+I	2011	Gasolina	Inglaterra	GBR	0,004	0.004
+I	2011	Gasolina	Japón	JPN	63828,275	63828.275
+I	2011	Gasolina	México	MEX	0,004615	0.004615
+I	2011	GLP	Alemania	DEU	0,01296	0.01296
+I	2011	GLP	Argentina	ARG	488989,0086	488989.0086
+I	2011	GLP	Austria	AUT	0,0023077	0.0023077
+I	2011	GLP	China	CHN	0,174	0.174
+I	2011	GLP	Corea del Sur	KOR	57,509568	57.509568
+I	2011	GLP	Estados Unidos	USA	297488,0201633	297488.0201633
+I	2011	GLP	Grecia	GRC	25,855	25.855
+I	2011	GLP	Holanda	NLD	0,0018	0.0018
+I	2011	IFO	Brasil	BRA	0,1851627	0.1851627
+I	2011	IFO	Estados Unidos	USA	407589,59342	407589.59342
+I	2011	IFO	Perú	PER	121450,438	121450.438
+I	2011	Kerosene	Alemania	DEU	0,0245269	0.0245269
+I	2011	Kerosene	Corea del Sur	KOR	39763,308	39763.308
+I	2011	Kerosene	Estados Unidos	USA	38140,4437461	38140.4437461
+I	2011	Kerosene	Japón	JPN	124616,3718615	124616.3718615
+I	2012	Carbón	Argentina	ARG	77355,045	77355.045
+I	2012	Carbón	Australia	AUS	623912,138	623912.138
+I	2012	Carbón	Canadá	CAN	264464,5938462	264464.5938462
+I	2012	Carbón	Colombia	COL	5058343,219	5058343.219
+I	2012	Carbón	Estados Unidos	USA	4195076,9548476	4195076.9548476
+I	2012	Carbón	Indonesia	IND	159686,8	159686.8
+I	2012	Carbón	Inglaterra	GBR	0,00444	0.00444
+I	2012	Crudo	Argentina	ARG	1509494,1492206	1509494.1492206
+I	2012	Crudo	Bolivia	BOL	103953,072258	103953.072258
+I	2012	Crudo	Brasil	BRA	1752471,6626	1752471.6626
+I	2012	Crudo	Canadá	CAN	104586,969786	104586.969786
+I	2012	Crudo	Colombia	COL	1424058,162857	1424058.162857
+I	2012	Crudo	Dinamarca	DNK	0,0042308	0.0042308
+I	2012	Crudo	Ecuador	ECU	2721573,799654	2721573.799654
+I	2012	Crudo	Estados Unidos	USA	0,0193447	0.0193447
+I	2012	Crudo	Inglaterra	GBR	276361,489	276361.489
+I	2012	Crudo	Perú	PER	405581,305999	405581.305999
+I	2012	Diesel	Alemania	DEU	2,064	2.064
+I	2012	Diesel	Corea del Sur	KOR	44961,16945	44961.16945
+I	2012	Diesel	Ecuador	ECU	21,2	21.2
+I	2012	Diesel	Estados Unidos	USA	4318829,983634	4318829.983634
+I	2012	Diesel	Japón	JPN	98411,29463	98411.29463
+I	2012	Diesel	Noruega	NOR	15,96	15.96
+I	2012	Diesel	Panamá	PAN	29,695	29.695
+I	2012	Fuel Oil 6	Estados Unidos	USA	29367,5183359	29367.5183359
+I	2012	Fuel Oil 6	Perú	PER	55624,842	55624.842
+I	2012	Gas Natural	Argentina	ARG	33534,342	33534.342
+I	2012	Gas Natural	Egipto	EGY	152016,91231	152016.91231
+I	2012	Gas Natural	Guinea	GIN	248681,37458	248681.37458
+I	2012	Gas Natural	Noruega	NOR	53835,14823	53835.14823
+I	2012	Gas Natural	Sin descripción		227828,4763	227828.4763
+I	2012	Gas Natural	Trinidad y Tobago	TTO	2003426,16369	2003426.16369
+I	2012	Gasolina	Alemania	DEU	5,168	5.168
+I	2012	Gasolina	Canadá	CAN	36037,491	36037.491
+I	2012	Gasolina	China	CHN	1272,92	1272.92
+I	2012	Gasolina	España	ESP	37198,6	37198.6
+I	2012	Gasolina	Estados Unidos	USA	398094,77295	398094.77295
+I	2012	Gasolina	Holanda	NLD	70060,2235385	70060.2235385
+I	2012	Gasolina	Inglaterra	GBR	37265	37265
+I	2012	Gasolina	Japón	JPN	30296,239	30296.239
+I	2012	GLP	Alemania	DEU	0,0135308	0.0135308
+I	2012	GLP	Argentina	ARG	294942,7367	294942.7367
+I	2012	GLP	China	CHN	4,9745455	4.9745455
+I	2012	GLP	Corea del Sur	KOR	76,075828	76.075828
+I	2012	GLP	Estados Unidos	USA	477152,018438	477152.018438
+I	2012	GLP	Grecia	GRC	26,265	26.265
+I	2012	GLP	Perú	PER	378,69	378.69
+I	2012	GLP	Sin descripción		0,2740385	0.2740385
+I	2012	IFO	Brasil	BRA	0,2116451	0.2116451
+I	2012	IFO	Canadá	CAN	393,74	393.74
+I	2012	IFO	Estados Unidos	USA	217449,9138363	217449.9138363
+I	2012	IFO	Perú	PER	104184,77142	104184.77142
+I	2012	Kerosene	Alemania	DEU	0,04734	0.04734
+I	2012	Kerosene	Brasil	BRA	0,07575	0.07575
+I	2012	Kerosene	Corea del Sur	KOR	36909,77	36909.77
+I	2012	Kerosene	Estados Unidos	USA	121852,7191546	121852.7191546
+I	2012	Kerosene	Japón	JPN	118718,79	118718.79
+I	2013	Carbón	Argentina	ARG	27148,56	27148.56
+I	2013	Carbón	Australia	AUS	945799,492	945799.492
+I	2013	Carbón	Canadá	CAN	315305,0340539	315305.0340539
+I	2013	Carbón	Colombia	COL	7321842,23692381	7321842.23692381
+I	2013	Carbón	Estados Unidos	USA	2719228,31902	2719228.31902
+I	2013	Crudo	Argentina	ARG	860914,666	860914.666
+I	2013	Crudo	Australia	AUS	72089,695	72089.695
+I	2013	Crudo	Brasil	BRA	2034985,116	2034985.116
+I	2013	Crudo	Canadá	CAN	811334,999	811334.999
+I	2013	Crudo	Colombia	COL	721528,58	721528.58
+I	2013	Crudo	Ecuador	ECU	3190269,399	3190269.399
+I	2013	Crudo	Estados Unidos	USA	0,0147653	0.0147653
+I	2013	Crudo	Inglaterra	GBR	970606,001	970606.001
+I	2013	Crudo	Nueva Zelandia	NZL	0,02	0.02
+I	2013	Crudo	Perú	PER	244901,807	244901.807
+I	2013	Crudo	Trinidad y Tobago	TTO	48223,274	48223.274
+I	2013	Diesel	Alemania	DEU	1,376	1.376
+I	2013	Diesel	China	CHN	596,454	596.454
+I	2013	Diesel	Corea del Sur	KOR	31111,749	31111.749
+I	2013	Diesel	Estados Unidos	USA	4288710,57247	4288710.57247
+I	2013	Diesel	Perú	PER	0,00423	0.00423
+I	2013	Fuel Oil 6	Estados Unidos	USA	49927,6351539	49927.6351539
+I	2013	Fuel Oil 6	Perú	PER	17075,956	17075.956
+I	2013	Gas Natural	Alemania	DEU	1,901	1.901
+I	2013	Gas Natural	Argentina	ARG	18756,24	18756.24
+I	2013	Gas Natural	Catar	QAT	120837,71856	120837.71856
+I	2013	Gas Natural	Sin descripción		285292,49442	285292.49442
+I	2013	Gas Natural	Trinidad y Tobago	TTO	2206727,3966	2206727.3966
+I	2013	Gasolina	Alemania	DEU	5,031	5.031
+I	2013	Gasolina	Brasil	BRA	0,06	0.06
+I	2013	Gasolina	Corea del Sur	KOR	18510,696	18510.696
+I	2013	Gasolina	Estados Unidos	USA	226224,4262993	226224.4262993
+I	2013	Gasolina	Holanda	NLD	189300,0156154	189300.0156154
+I	2013	Gasolina	Japón	JPN	75808,345	75808.345
+I	2013	GLP	Alemania	DEU	0,00526	0.00526
+I	2013	GLP	Argentina	ARG	353663,387	353663.387
+I	2013	GLP	China	CHN	0,2435	0.2435
+I	2013	GLP	Corea del Sur	KOR	81,5592	81.5592
+I	2013	GLP	España	ESP	0,01767	0.01767
+I	2013	GLP	Estados Unidos	USA	677417,1897425	677417.1897425
+I	2013	GLP	Grecia	GRC	73,0512	73.0512
+I	2013	GLP	Italia	ITA	0,6	0.6
+I	2013	GLP	Perú	PER	11642,18	11642.18
+I	2013	GLP	Zofri Arica		1003,99	1003.99
+I	2013	IFO	Canadá	CAN	259	259
+I	2013	IFO	Estados Unidos	USA	0,0434307	0.0434307
+I	2013	IFO	Perú	PER	25458,46858	25458.46858
+I	2013	Kerosene	Alemania	DEU	0,6064554	0.6064554
+I	2013	Kerosene	Canadá	CAN	0,1109385	0.1109385
+I	2013	Kerosene	Corea del Sur	KOR	148489,89801	148489.89801
+I	2013	Kerosene	Dinamarca	DNK	0,0008011	0.0008011
+I	2013	Kerosene	Estados Unidos	USA	156819,8500776	156819.8500776
+I	2013	Kerosene	India	IND	16,8	16.8
+I	2014	Carbón	Australia	AUS	866672,23522	866672.23522
+I	2014	Carbón	Canadá	CAN	229882,5	229882.5
+I	2014	Carbón	China	CHN	0,0076385	0.0076385
+I	2014	Carbón	Colombia	COL	6112181,151447	6112181.151447
+I	2014	Carbón	Estados Unidos	USA	2907388,7029	2907388.7029
+I	2014	Carbón	Nueva Zelandia	NZL	63685,4	63685.4
+I	2014	Crudo	Angola	AGO	509358,866	509358.866
+I	2014	Crudo	Argentina	ARG	101718,5699423	101718.5699423
+I	2014	Crudo	Brasil	BRA	3741289,626	3741289.626
+I	2014	Crudo	Canadá	CAN	400046,752	400046.752
+I	2014	Crudo	Colombia	COL	132032,789	132032.789
+I	2014	Crudo	Ecuador	ECU	3533523,371	3533523.371
+I	2014	Crudo	Estados Unidos	USA	0,2251539	0.2251539
+I	2014	Crudo	Inglaterra	GBR	275629,923	275629.923
+I	2014	Crudo	Perú	PER	180840,867	180840.867
+I	2014	Diesel	Alemania	DEU	1,72	1.72
+I	2014	Diesel	Bélgica	BEL	0,0012699	0.0012699
+I	2014	Diesel	Brasil	BRA	47,5	47.5
+I	2014	Diesel	Corea del Sur	KOR	29069,787	29069.787
+I	2014	Diesel	Estados Unidos	USA	4274462,7077054	4274462.7077054
+I	2014	Diesel	Japón	JPN	74275,03517	74275.03517
+I	2014	Diesel	Panamá	PAN	31,7465385	31.7465385
+I	2014	Gas Natural	Argentina	ARG	5105,025	5105.025
+I	2014	Gas Natural	Catar	QAT	55793,88816	55793.88816
+I	2014	Gas Natural	España	ESP	0,1	0.1
+I	2014	Gas Natural	Estados Unidos	USA	55768,0117931	55768.0117931
+I	2014	Gas Natural	Guinea Ecuatorial	GNQ	57859,05063	57859.05063
+I	2014	Gas Natural	Noruega	NOR	35887,52842	35887.52842
+I	2014	Gas Natural	Trinidad y Tobago	TTO	2473230,57622	2473230.57622
+I	2014	Gasolina	Alemania	DEU	0,3	0.3
+I	2014	Gasolina	España	ESP	6,0620154	6.0620154
+I	2014	Gasolina	Estados Unidos	USA	393573,6206171	393573.6206171
+I	2014	Gasolina	Estonia	EST	0,005	0.005
+I	2014	Gasolina	Finlandia	FIN	37311,313	37311.313
+I	2014	Gasolina	Holanda	NLD	76160,002	76160.002
+I	2014	Gasolina	Japón	JPN	100470,576	100470.576
+I	2014	GLP	Alemania	DEU	0,04029	0.04029
+I	2014	GLP	Argentina	ARG	257057,328	257057.328
+I	2014	GLP	China	CHN	0,2	0.2
+I	2014	GLP	Corea del Sur	KOR	53,920384	53.920384
+I	2014	GLP	España	ESP	0,3030769	0.3030769
+I	2014	GLP	Estados Unidos	USA	678465,2009047	678465.2009047
+I	2014	GLP	Francia	FRA	0,0048	0.0048
+I	2014	GLP	Grecia	GRC	40,9032	40.9032
+I	2014	GLP	Perú	PER	31875,4410000001	31875.4410000001
+I	2014	GLP	Zofri Arica		1135,15	1135.15
+I	2014	IFO	Alemania	DEU	0,85717	0.85717
+I	2014	IFO	Brasil	BRA	0,3416	0.3416
+I	2014	IFO	Estados Unidos	USA	1,5620831	1.5620831
+I	2014	IFO	Holanda	NLD	0,0104616	0.0104616
+I	2014	Kerosene	Alemania	DEU	13,8618931	13.8618931
+I	2014	Kerosene	Brasil	BRA	0,10048	0.10048
+I	2014	Kerosene	Canadá	CAN	0,3333923	0.3333923
+I	2014	Kerosene	Estados Unidos	USA	117811,795828	117811.795828
+I	2014	Kerosene	Inglaterra	GBR	0,0003692	0.0003692
+I	2014	Kerosene	Japón	JPN	69001,778	69001.778
+I	2015	Carbón	Australia	AUS	118821,74	118821.74
+I	2015	Carbón	Canadá	CAN	42501,6	42501.6
+I	2015	Carbón	Colombia	COL	359283,12	359283.12
+I	2015	Carbón	Estados Unidos	USA	180035,371	180035.371
+I	2015	Carbón	Nueva Zelandia	NZL	50644	50644
+I	2015	Crudo	Argentina	ARG	4897,3931	4897.3931
+I	2015	Crudo	Brasil	BRA	426879,399	426879.399
+I	2015	Crudo	Ecuador	ECU	249423,354	249423.354
+I	2015	Crudo	Estados Unidos	USA	18055,753	18055.753
+I	2015	Diesel	Estados Unidos	USA	399290,81378	399290.81378
+I	2015	Gas Natural	Noruega	NOR	14956,37135	14956.37135
+I	2015	Gas Natural	Trinidad y Tobago	TTO	117339,96518	117339.96518
+I	2015	Gasolina	Estados Unidos	USA	85237,74441	85237.74441
+I	2015	GLP	Argentina	ARG	43967,244	43967.244
+I	2015	GLP	Corea del Sur	KOR	29,98761	29.98761
+I	2015	GLP	Estados Unidos	USA	41912,427	41912.427
+I	2015	GLP	Perú	PER	1068,68	1068.68
+I	2015	GLP	Zofri Arica		112,4	112.4
+I	2015	Kerosene	Alemania	DEU	11,76376	11.76376
+I	2015	Kerosene	Estados Unidos	USA	24448,04328	24448.04328
