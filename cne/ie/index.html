@@ -15,6 +15,7 @@
 <script src="http://d3js.org/topojson.v1.min.js"></script>
 
 <!-- datamaps -->
+<!-- <script src="http://aaizemberg.github.io/infovis/cne/ie/datamaps.world.min.js"></script> -->
 <script src="datamaps.world.min.js"></script>
 
 <style>
@@ -89,48 +90,55 @@
   <div class="row">
     <div class="col-md-9" id="mapa-mundo">
       <div id="container" style="position: relative; height: 550px;"></div>
-      <!-- <img height="550" src="mapa-fake.jpg" alt="mapa"> -->
     </div>
-    <div class="col-md-3" id="tabla-combustible">
+    <div class="col-md-3" >
       <h5 id="titulo_variable">Combustible importado en 2014 desde todo el mundo hacia Chile</h5>
-      <img src="tabla-fake.jpg" alt="tabla">
+      <div id="tabla-combustible">
+        <table id="tbl" class="table table-striped">
+        </table>
+      </div>
     </div>
   </div>
 
   </div>
-<script>
 
+<script>
   var op_sel = "I";
   var producto_sel = "Combustible";
   var year_sel = "2014";
   var pais_sel = "todo el mundo";
 
 
-function texto () {
+function texto (pais3) {
     var str;
+    var pais = "todo el mundo";
+    if (pais3 != "*") {
+      //buscar la descripcion de pais!!
+      pais= pais3;
+    }
     if (op_sel == "I" ) {
-          str = d3.select("#producto").node().value + " importado en " + d3.select("#year").node().value + " desde " + pais_sel + " hacia Chile";
+          str = d3.select("#producto").node().value + " importado en " + d3.select("#year").node().value + " desde " + pais + " hacia Chile";
     } else {
-          str = d3.select("#producto").node().value + " exportado en " + d3.select("#year").node().value + " desde Chile hacia " + pais_sel;
+          str = d3.select("#producto").node().value + " exportado en " + d3.select("#year").node().value + " desde Chile hacia " + pais;
     }
     d3.select("#titulo_variable").text( str );
 }
 
   d3.select("select#op").on("change", function() {
   	op_sel = d3.select("#op").node().value;
-	texto();
+	texto("*");
 	tabla("*");
   });
 
   d3.select("select#year").on("change", function() {
   	year_sel = d3.select("#year").node().value;
-	texto();
+	texto("*");
 	tabla("*");
   });
 
   d3.select("select#producto").on("change", function() {
     	producto_sel = d3.select("#producto").node().value;
-  	texto();
+  	texto("*");
   	tabla("*");
   });
 
@@ -138,19 +146,20 @@ function texto () {
   var datos;
 
 
-  d3.tsv("datos.tsv", function(error, datos_tsv) {
-   if (error) return console.warn(error);
-   datos = datos_tsv;
-   mapa();
-   tabla("*");
+  d3.tsv("http://aaizemberg.github.io/infovis/cne/ie/datos.tsv", function(error, datos_tsv) {
+    if (error) return console.warn(error);
+    datos = datos_tsv;
+    mapa();
+    tabla("*");
   });
+
+
   var gg;
 
 
-  function tabla (pais3) {
-	//tabla para todos los productos
-    console.log("tabla");
+  function tabla(pais3) {
     var oo = _.filter(datos, function(n) { return n.operacion == op_sel; });
+
     var yy = _.filter(oo, function(n) { return n.year == year_sel; });
 
     var pp = yy;
@@ -158,7 +167,6 @@ function texto () {
     if (pais3 != "*") {
          pp = _.filter(yy, function(n) { return n.pais3 == pais3; });
     }
-
 
     var qq;
     if (producto_sel != "Combustible") {
@@ -173,25 +181,39 @@ function texto () {
         return u.producto;
       });
 
-
     var sumado = _.mapValues(agrupado, function(g) {
       return _.sum(_.pluck(g, "ton_punto"));
     });
 
+    console.log(sumado);
 
-    gg=sumado;
+    gg = sumado;
 
 
-    // hacer la tabla o el cuadradito segun producto_sel = "Combustible"
+// Mostrar diferente para un solo (producto_sel != "Combustible")
+      d3.select("table#tbl").data([]).exit().remove();
+      d3.select("div#tabla-combustible").append("table").attr("id","tbl").attr("class","table table-striped");
+      var tbl = d3.select("table.table-striped");
+
+      var thead = tbl.append("thead");
+      var th = thead.append("tr");
+
+    // titulos
+      th.append("th").text("Combustible");
+      th.append("th").text("TON");
+      var tbody = tbl.append("tbody");
+
+      var tr;
+
+      _.forEach(sumado, function(n, key) {
+          console.log(n);
+          console.log(key);
+          tr = tbody.append("tr");
+          tr.append("td").text(key);
+          tr.append("td").text(n);
+      });
 
   }
-
-
-  function valor () {
-	//valor en ton para ese un producto
-
-  }
-
 
   function mapa() {
 
@@ -237,6 +259,7 @@ function texto () {
 	              datamap.svg.selectAll('.datamaps-subunit').on('click', function(geography) {
 	               //   alert(geography.id + " " + geography.properties.name);
 	                  tabla(geography.id);
+                      texto(geography.id);
                   });
       }
 
@@ -245,11 +268,10 @@ function texto () {
       //
 
     });
-  }
-
-
+  } // mapa
 
 </script>
+
 
 </body>
 </html>
