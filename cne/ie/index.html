@@ -47,8 +47,8 @@
   <div class="row">
     <div class="col-md-2" >
       <select id="op" class="form-control">
-          <option value="imp">Importación</option>
-          <option value="exp">Exportación</option>
+          <option value="I">Importación</option>
+          <option value="E">Exportación</option>
       </select>
     </div>
     <div class="col-md-2">
@@ -98,27 +98,104 @@
   </div>
 
   </div>
-
 <script>
-  var op_sel = "imp";
+
+  var op_sel = "I";
   var producto_sel = "Combustible";
   var year_sel = "2014";
   var pais_sel = "todo el mundo";
 
-  mapa();
+
+function texto () {
+    var str;
+    if (op_sel == "I" ) {
+          str = d3.select("#producto").node().value + " importado en " + d3.select("#year").node().value + " desde " + pais_sel + " hacia Chile";
+    } else {
+          str = d3.select("#producto").node().value + " exportado en " + d3.select("#year").node().value + " desde Chile hacia " + pais_sel;
+    }
+    d3.select("#titulo_variable").text( str );
+}
 
   d3.select("select#op").on("change", function() {
-    var opera = " exportado";
-    if (op == "imp" ) {
-        opera= " importado";
-    }
-    var str = " " + producto_sel + opera + " en " + d3.select("#year").node().value + " desde " + pais_sel + " hacia Chile";
-    d3.select("#titulo_variable").text( str );
+  	op_sel = d3.select("#op").node().value;
+	texto();
+	tabla("*");
   });
+
+  d3.select("select#year").on("change", function() {
+  	year_sel = d3.select("#year").node().value;
+	texto();
+	tabla("*");
+  });
+
+  d3.select("select#producto").on("change", function() {
+    	producto_sel = d3.select("#producto").node().value;
+  	texto();
+  	tabla("*");
+  });
+
+
+  var datos;
+
+
+  d3.tsv("datos.tsv", function(error, datos_tsv) {
+   if (error) return console.warn(error);
+   datos = datos_tsv;
+   mapa();
+   tabla("*");
+  });
+  var gg;
+
+
+  function tabla (pais3) {
+	//tabla para todos los productos
+    console.log("tabla");
+    var oo = _.filter(datos, function(n) { return n.operacion == op_sel; });
+    var yy = _.filter(oo, function(n) { return n.year == year_sel; });
+
+    var pp = yy;
+
+    if (pais3 != "*") {
+         pp = _.filter(yy, function(n) { return n.pais3 == pais3; });
+    }
+
+
+    var qq;
+    if (producto_sel != "Combustible") {
+        // Filtro solo el porducto seleccionado
+        qq = _.filter(pp, function(n) { return n.producto == producto_sel; });
+    } else {
+      qq=pp;
+    }
+
+    // Agrupo por porducto
+      agrupado = _.groupBy(qq, function(u) {
+        return u.producto;
+      });
+
+
+    var sumado = _.mapValues(agrupado, function(g) {
+      return _.sum(_.pluck(g, "ton_punto"));
+    });
+
+
+    gg=sumado;
+
+
+    // hacer la tabla o el cuadradito segun producto_sel = "Combustible"
+
+  }
+
+
+  function valor () {
+	//valor en ton para ese un producto
+
+  }
+
 
   function mapa() {
 
-    var mapa = new Datamap({
+    var pp = new Datamap({
       element: document.getElementById('container'),
       fills: {
       defaultFill: "#aaa",
@@ -158,8 +235,9 @@
       },
       done: function(datamap) {
 	              datamap.svg.selectAll('.datamaps-subunit').on('click', function(geography) {
-	                  alert(geography.id + " " + geography.properties.name);
-	              });
+	               //   alert(geography.id + " " + geography.properties.name);
+	                  tabla(geography.id);
+                  });
       }
 
       //
@@ -169,7 +247,9 @@
     });
   }
 
- </script>
+
+
+</script>
 
 </body>
 </html>
