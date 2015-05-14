@@ -338,13 +338,13 @@ function fila(tbl, nombre,v1,v2) {
 	  tr.append("td").style("text-align","right").text((v2>0 ? v2.toLocaleString() : ""));
 	  if (v1>0 && v2>0) {
 
-		var vr =Math.round((v1-v2)/v1*100);
+		var vr =Math.round((v2-v1)/v2*100);
 		var ico = (vr>0 ? "triangle-top" : (vr<0 ? "triangle-bottom" : "minus"));
 		var color = (vr>0 ? "green" : (vr<0 ? "red" : "grey"));
 
 		tr.append("td").style("text-align","right").text(vr + "%").append("span").attr("class","glyphicon glyphicon-"+ico).style("color",color);
 
-		tr.append("td").style("text-align","right").style("color",(v1-v2 < 0 ? "red" : "black")).text((v1-v2).toLocaleString());
+		tr.append("td").style("text-align","right").style("color",(v2-v1 < 0 ? "red" : "black")).text((v2-v1).toLocaleString());
 	  } else {
 		tr.append("td").style("text-align","right").text("");
 		tr.append("td").style("text-align","right").text("");
