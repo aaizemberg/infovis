@@ -103,6 +103,77 @@
   </div>
 
 <script>
+var paises ={   "DEU": { "pais":"Alemania", "country":"Germany"},
+  "AGO": { "pais":"Angola", "country":"Angola"},
+  "SAU": { "pais":"Arabia Saudita", "country":"Saudi Arabia"},
+  "DZA": { "pais":"Argelia", "country":"Algeria"},
+  "ARG": { "pais":"Argentina", "country":"Argentina"},
+  "AUS": { "pais":"Australia", "country":"Australia"},
+  "AUT": { "pais":"Austria", "country":"Austria"},
+  "BEL": { "pais":"Bélgica", "country":"Belgium"},
+  "BEN": { "pais":"Benin", "country":"Benin"},
+  "BOL": { "pais":"Bolivia", "country":"Bolivia|Bolivia, Plurinational State of"},
+  "BRA": { "pais":"Brasil", "country":"Brazil"},
+  "CAN": { "pais":"Canadá", "country":"Canada"},
+  "QAT": { "pais":"Catar", "country":"Qatar"},
+  "CHL": { "pais":"Chile", "country":"Chile"},
+  "CHN": { "pais":"China", "country":"China"},
+  "COL": { "pais":"Colombia", "country":"Colombia"},
+  "COG": { "pais":"Congo", "country":"Republic of the Congo | Congo"},
+  "PRK": { "pais":"Corea del Norte", "country":"North Korea | Korea, Democratic People's Republic of"},
+  "KOR": { "pais":"Corea del Sur", "country":"South Korea | Korea, Republic of"},
+  "CIV": { "pais":"Costa de Marfil", "country":"Ivory Coast|Côte d'Ivoire"},
+  "DNK": { "pais":"Dinamarca", "country":"Denmark"},
+  "ECU": { "pais":"Ecuador", "country":"Ecuador"},
+  "EGY": { "pais":"Egipto", "country":"Egypt"},
+  "SLV": { "pais":"El Salvador", "country":"El Salvador"},
+  "ARE": { "pais":"Emiratos Árabes Unidos", "country":"United Arab Emirates"},
+  "ESP": { "pais":"España", "country":"Spain"},
+  "USA": { "pais":"Estados Unidos", "country":"United States"},
+  "EST": { "pais":"Estonia", "country":"Estonia"},
+  "FIN": { "pais":"Finlandia", "country":"Finland"},
+  "FRA": { "pais":"Francia", "country":"France"},
+  "GAB": { "pais":"Gabón", "country":"Gabon"},
+  "GHA": { "pais":"Ghana", "country":"Ghana"},
+  "GRC": { "pais":"Grecia", "country":"Greece"},
+  "GTM": { "pais":"Guatemala", "country":"Guatemala"},
+  "GIN": { "pais":"Guinea", "country":"Guinea"},
+  "GNQ": { "pais":"Guinea Ecuatorial", "country":"Equatorial Guinea"},
+  "NLD": { "pais":"Holanda", "country":"Netherlands"},
+  "IND": { "pais":"India", "country":"India"},
+  "IDN": { "pais":"Indonesia", "country":"Indonesia"},
+  "GBR": { "pais":"Inglaterra", "country":"United Kingdom"},
+  "ITA": { "pais":"Italia", "country":"Italy"},
+  "JPN": { "pais":"Japón", "country":"Japan"},
+  "MYS": { "pais":"Malasia", "country":"Malaysia"},
+  "MEX": { "pais":"México", "country":"Mexico"},
+  "NGA": { "pais":"Nigeria", "country":"Nigeria"},
+  "NOR": { "pais":"Noruega", "country":"Norway"},
+  "NZL": { "pais":"Nueva Zelandia", "country":"New Zealand"},
+  "PAN": { "pais":"Panamá", "country":"Panama"},
+  "PRY": { "pais":"Paraguay", "country":"Paraguay"},
+  "PER": { "pais":"Perú", "country":"Peru"},
+  "POL": { "pais":"Polonia", "country":"Poland"},
+  "DOM": { "pais":"República Dominicana", "country":"Dominican Republic"},
+  "RUS": { "pais":"Rusia", "country":"Russia|Russian Federation"},
+  "SGP": { "pais":"Singapur", "country":"Singapore"},
+  "ZAF": { "pais":"Sudáfrica", "country":"South Africa"},
+  "SWE": { "pais":"Suecia", "country":"Sweden"},
+  "CHE": { "pais":"Suiza", "country":"Switzerland"},
+  "THA": { "pais":"Tailandia", "country":"Thailand"},
+  "TWN": { "pais":"Taiwán", "country":"Taiwan"},
+  "FLK": { "pais":"Territorios Británicos en América", "country":"Falkland Islands | Falkland Islands (Malvinas)"},
+  "TTO": { "pais":"Trinidad y Tobago", "country":"Trinidad and Tobago"},
+  "TUR": { "pais":"Turquía", "country":"Turkey"},
+  "URY": { "pais":"Uruguay", "country":"Uruguay"},
+  "VEN": { "pais":"Venezuela", "country":"Venezuela | Venezuela, Bolivarian Republic of"},
+  "VNM": { "pais":"Vietnam", "country":"Vietnam"},
+//  "": { "pais":"Territorios Holandeses en América", "country":""},
+//  "": { "pais":"Zofri Arica", "country":""},
+  "": { "pais":"Sin descripción", "country":""}
+};
+
+
   var op_sel = "I";
   var producto_sel = "Combustible";
   var year_sel = "2014";
@@ -114,7 +185,8 @@ function texto (pais3) {
     var pais = "todo el mundo";
     if (pais3 != "*") {
       //buscar la descripcion de pais!!
-      pais= pais3;
+      //pais= pais3;
+      pais= paises[pais3].pais;
     }
     if (op_sel == "I" ) {
           str = d3.select("#producto").node().value + " importado en " + d3.select("#year").node().value + " desde " + pais + " hacia Chile";
