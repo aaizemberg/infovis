@@ -210,7 +210,7 @@ function texto (pais3) {
           console.log(key);
           tr = tbody.append("tr");
           tr.append("td").text(key);
-          tr.append("td").style("text-align","right").text(n.toFixed(2));
+          tr.append("td").style("text-align","right").text(Math.round(n).toLocaleString());
       });
 
   }
