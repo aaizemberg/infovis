@@ -200,18 +200,21 @@ function texto (pais3) {
   	op_sel = d3.select("#op").node().value;
 	texto("*");
 	tabla("*");
+    mapa();
   });
 
   d3.select("select#year").on("change", function() {
   	year_sel = d3.select("#year").node().value;
 	texto("*");
 	tabla("*");
+    mapa();
   });
 
   d3.select("select#producto").on("change", function() {
     	producto_sel = d3.select("#producto").node().value;
   	texto("*");
   	tabla("*");
+    mapa();
   });
 
 
@@ -257,7 +260,7 @@ function texto (pais3) {
       return _.sum(_.pluck(g, "ton_punto"));
     });
 
-    console.log(sumado);
+//    console.log(sumado);
 
     gg = sumado;
 
@@ -278,8 +281,8 @@ function texto (pais3) {
       var tr;
 
       _.forEach(sumado, function(n, key) {
-          console.log(n);
-          console.log(key);
+  //        console.log(n);
+  //        console.log(key);
           tr = tbody.append("tr");
           tr.append("td").text(key);
           tr.append("td").style("text-align","right").text(Math.round(n).toLocaleString());
@@ -288,6 +291,37 @@ function texto (pais3) {
   }
 
   function mapa() {
+
+    var oo = _.filter(datos, function(n) { return n.operacion == op_sel; });
+
+    var yy = _.filter(oo, function(n) { return n.year == year_sel; });
+
+    var qq;
+    if (producto_sel != "Combustible") {
+        // Filtro solo el porducto seleccionado
+      qq = _.filter(yy, function(n) { return n.producto == producto_sel; });
+    } else {
+      qq = yy;
+    }
+    // Agrupo por porducto
+      agrupado = _.groupBy(qq, function(u) {
+        return u.pais3;
+      });
+    console.log(agrupado);
+
+    var sumado = _.mapValues(agrupado, function(g) {
+      return _.sum(_.pluck(g, "ton_punto"));
+    });
+
+    console.log(sumado);
+
+    var minimo = _.min(sumado);
+    var maximo = _.max(sumado);
+    var cantidad = _.size(sumado);
+
+    console.log(minimo);
+    console.log(maximo);
+    console.log(cantidad);
 
     var pp = new Datamap({
       element: document.getElementById('container'),
@@ -342,8 +376,7 @@ function texto (pais3) {
     });
   } // mapa
 
+
 </script>
-
-
 </body>
 </html>
