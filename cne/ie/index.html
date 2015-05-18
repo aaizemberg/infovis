@@ -66,8 +66,8 @@
           <option value='2011'>2011</option>
           <option value='2012'>2012</option>
           <option value='2013'>2013</option>
-          <option value='2014' selected>2014</option>
-          <option value='2015'>2015</option>
+          <option value='2014'>2014</option>
+          <option value='2015' selected>2015</option>
       </select>
     </div>
     <div class="col-md-2" >
@@ -89,7 +89,10 @@
   <hr>
   <div class="row">
     <div class="col-md-9" id="mapa-mundo">
-      <div id="container" style="position: relative; height: 550px;"></div>
+      <div id="metac">
+        <div id="container" style="position: relative; height: 550px;"></div>
+      </div>
+
     </div>
     <div class="col-md-3" >
       <h5 id="titulo_variable">Combustible importado en 2014 desde todo el mundo hacia Chile</h5>
@@ -201,21 +204,21 @@ function texto (pais3) {
   	op_sel = d3.select("#op").node().value;
 	texto("*");
 	tabla("*");
-    updateMap();
+    mapa();
   });
 
   d3.select("select#year").on("change", function() {
   	year_sel = d3.select("#year").node().value;
 	texto("*");
 	tabla("*");
-    updateMap();
+    mapa();
   });
 
   d3.select("select#producto").on("change", function() {
     	producto_sel = d3.select("#producto").node().value;
   	texto("*");
   	tabla("*");
-    updateMap();
+    mapa();
   });
 
   var datos;
@@ -310,7 +313,7 @@ function texto (pais3) {
     var maximo = _.max(sumado);
     var cantidad = _.size(sumado);
 
-	var escala = d3.scale.linear().domain([minimo,maximo]).range([1,9]);
+	var escala = d3.scale.linear().domain([minimo,maximo]).range([1,11]);
 	var mdata = {};
 	_.forEach(sumado, function(n, key) {
 	  if (key != "") {
@@ -319,27 +322,42 @@ function texto (pais3) {
 	  }
 	});
 
+	console.log(mdata);
+
 	return mdata;
   }
 
 
   function mapa() {
 
+	d3.select("div#container").data([]).exit().remove();
+	d3.select("div#metac").append("div").attr("id","container").style("position","relative").style("height","550px");
+
     datamap = new Datamap({
       element: document.getElementById('container'),
       fills: {
-      defaultFill: "#aaa",
-        1: "#f7fcf5",
-        2: "#e5f5e0",
-        3: "#c7e9c0",
-        4: "#a1d99b",
-        5: "#74c476",
-        6: "#41ab5d",
-        7: "#238b45",
-        8: "#006d2c",
-        9: "#00441b"
+      defaultFill: "#eee",
+        1: "#313695",
+        2: "#4575b4",
+        3: "#74add1",
+        4: "#abd9e9",
+        5: "#e0f3f8",
+        6: "#ffffbf",
+        7: "#fee090",
+        8: "#fdae61",
+        9: "#f46d43",
+        10: "#d73027",
+        11: "#a50026"
       },
       data: DatosMapa(),
+
+      geographyConfig: {
+	          popupTemplate: function(geography, data) {
+	            return '<div class="hoverinfo"><strong>' + paises[geography.id].pais  + '</strong></div>';
+	          },
+      },
+
+
       done: function(datamap) {
 	              datamap.svg.selectAll('.datamaps-subunit').on('click', function(geography) {
 	               //   alert(geography.id + " " + geography.properties.name);
