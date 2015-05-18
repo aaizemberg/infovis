@@ -178,6 +178,7 @@ var paises ={   "DEU": { "pais":"Alemania", "country":"Germany"},
   var producto_sel = "Combustible";
   var year_sel = "2014";
   var pais_sel = "todo el mundo";
+  var datamap;
 
 
 function texto (pais3) {
@@ -200,26 +201,24 @@ function texto (pais3) {
   	op_sel = d3.select("#op").node().value;
 	texto("*");
 	tabla("*");
-    mapa();
+    updateMap();
   });
 
   d3.select("select#year").on("change", function() {
   	year_sel = d3.select("#year").node().value;
 	texto("*");
 	tabla("*");
-    mapa();
+    updateMap();
   });
 
   d3.select("select#producto").on("change", function() {
     	producto_sel = d3.select("#producto").node().value;
   	texto("*");
   	tabla("*");
-    mapa();
+    updateMap();
   });
 
-
   var datos;
-
 
   d3.tsv("http://aaizemberg.github.io/infovis/cne/ie/datos.tsv", function(error, datos_tsv) {
     if (error) return console.warn(error);
@@ -228,9 +227,7 @@ function texto (pais3) {
     tabla("*");
   });
 
-
   var gg;
-
 
   function tabla(pais3) {
     var oo = _.filter(datos, function(n) { return n.operacion == op_sel; });
@@ -290,12 +287,9 @@ function texto (pais3) {
 
   }
 
-  function mapa() {
-
+  function DatosMapa() {
     var oo = _.filter(datos, function(n) { return n.operacion == op_sel; });
-
     var yy = _.filter(oo, function(n) { return n.year == year_sel; });
-
     var qq;
     if (producto_sel != "Combustible") {
         // Filtro solo el porducto seleccionado
@@ -307,23 +301,31 @@ function texto (pais3) {
       agrupado = _.groupBy(qq, function(u) {
         return u.pais3;
       });
-    console.log(agrupado);
 
     var sumado = _.mapValues(agrupado, function(g) {
       return _.sum(_.pluck(g, "ton_punto"));
     });
 
-    console.log(sumado);
-
     var minimo = _.min(sumado);
     var maximo = _.max(sumado);
     var cantidad = _.size(sumado);
 
-    console.log(minimo);
-    console.log(maximo);
-    console.log(cantidad);
+	var escala = d3.scale.linear().domain([minimo,maximo]).range([1,9]);
+	var mdata = {};
+	_.forEach(sumado, function(n, key) {
+	  if (key != "") {
+		  var kv = {'fillKey': Math.round(escala(n))};
+		  mdata[key] = kv;
+	  }
+	});
 
-    var pp = new Datamap({
+	return mdata;
+  }
+
+
+  function mapa() {
+
+    datamap = new Datamap({
       element: document.getElementById('container'),
       fills: {
       defaultFill: "#aaa",
@@ -337,30 +339,7 @@ function texto (pais3) {
         8: "#006d2c",
         9: "#00441b"
       },
-      data: {
-        'ARG': {'fillKey': 9, 'cant': 100},
-        'BRA': {'fillKey': 8, 'cant': 100},
-        'BEL': {'fillKey': 3, 'cant': 100},
-        'CAN': {'fillKey': 4, 'cant': 100},
-        'CHE': {'fillKey': 5, 'cant': 100},
-        'CHN': {'fillKey': 6, 'cant': 100},
-        'DEU': {'fillKey': 7, 'cant': 100},
-        'DNK': {'fillKey': 8, 'cant': 100},
-        'USA': {'fillKey': 9, 'cant': 100},
-        'EGY': {'fillKey': 1, 'cant': 100},
-        'FIN': {'fillKey': 2, 'cant': 100},
-        'FRA': {'fillKey': 3, 'cant': 100},
-        'IDN': {'fillKey': 4, 'cant': 100},
-        'IND': {'fillKey': 5, 'cant': 100},
-        'JPN': {'fillKey': 6, 'cant': 100},
-        'KOR': {'fillKey': 7, 'cant': 100},
-        'NLD': {'fillKey': 8, 'cant': 100},
-        'NZL': {'fillKey': 9, 'cant': 100},
-        'PAK': {'fillKey': 1, 'cant': 100},
-        'SIN': {'fillKey': 2, 'cant': 100},
-        'TWN': {'fillKey': 2, 'cant': 100},
-        'GBR': {'fillKey': 4, 'cant': 100}
-      },
+      data: DatosMapa(),
       done: function(datamap) {
 	              datamap.svg.selectAll('.datamaps-subunit').on('click', function(geography) {
 	               //   alert(geography.id + " " + geography.properties.name);
@@ -376,6 +355,9 @@ function texto (pais3) {
     });
   } // mapa
 
+  function updateMap() {
+    datamap.updateChoropleth(DatosMapa());
+  }
 
 </script>
 </body>
