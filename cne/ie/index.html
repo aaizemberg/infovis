@@ -110,16 +110,6 @@
     </div>
   </div>
 
-<!--
-  <div class="row">
-    <div class="col-md-7" >
-    </div>
-   <div class="col-md-5" id="contpaleta">
-      <div id="paleta">
- 	  </div>
-   </div>
-  </div>
--->
 
   </div>
 
@@ -363,8 +353,8 @@ function texto (pais3) {
 	   .style("fill", function(d,i) { return d;} );
 
 	// escribo min y max
-	  svg.append("text").attr("x",0).attr("y",alto+15).attr("text-anchor","start").text(minimo.toLocaleString());
-	  svg.append("text").attr("x",ancho*colores.length).attr("y",alto+15).attr("text-anchor","end").text(maximo.toLocaleString());
+	  svg.append("text").attr("x",0).attr("y",alto+15).attr("text-anchor","start").text(Math.round(minimo).toLocaleString());
+	  svg.append("text").attr("x",ancho*colores.length).attr("y",alto+15).attr("text-anchor","end").text(Math.round(maximo).toLocaleString());
 
 
 
