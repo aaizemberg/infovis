@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>regiones chile</title>
+
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <script src="http://d3js.org/d3.geo.projection.v0.min.js"></script>
+  <script src="http://d3js.org/topojson.v1.min.js"></script>
+
+<!--
+  <script src="d3.v3.min.js"></script>
+  <script src="d3.geo.projection.v0.min.js"></script>
+  <script src="topojson.v1.min.js"></script>
+  <script src="datamaps.none.min.js"></script>
+-->
+
+<script src="https://raw.githubusercontent.com/markmarkoh/datamaps/master/dist/datamaps.none.min.js"></script>
+
+<style>
+
+.graticule {
+  fill: none;
+  stroke: #777;
+  stroke-opacity: .5;
+  stroke-width: .5px;
+}
+
+.land {
+  fill: #222;
+}
+
+.boundary {
+  fill: none;
+  stroke: #fff;
+  stroke-width: .5px;
+}
+
+</style>
+
+</head>
+<body>
+
+<div id="container" style="position: relative; width: 100px; height: 500px;border: 1px solid grey;"></div>
+
+<script>
+  var map = new Datamap({
+    element: document.getElementById('container'),
+    geographyConfig: {
+      dataUrl: 'regiones1e3.topojson'
+    },
+    scope: 'regiones',
+    fills: {
+      defaultFill: '#aaa'
+      /* selected: 'yellow' */
+    },
+/**    data: {
+      'CL-RM': {fillKey: 'selected'}
+    }, **/
+    setProjection: function(element) {
+
+// projection.center([location])
+// projection.translate([point])
+// projection.scale([scale])
+
+      var projection = d3.geo.mercator()
+        .center([-70, -40])
+        .scale( element.offsetHeight )
+        .translate([element.offsetWidth / 2, element.offsetHeight / 2]);
+
+       var path = d3.geo.path().projection(projection);
+       return {path: path, projection: projection};
+    }
+  });
+</script>
+
+</body>
+</html>
