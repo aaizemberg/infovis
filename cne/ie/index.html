@@ -97,7 +97,7 @@
       </div>
 
       <div class="col-md-3"  >
-        <h5 id="titulo_variable">Combustible importado en 2015 desde todo el mundo hacia Chile</h5>
+        <h5 id="titulo_variable"><b>Combustible importado en 2015 desde todo el mundo hacia Chile</b></h5>
         <div id="tabla-combustible" style="height:400px;">
           <table id="tbl" class="table table-striped"></table>
         </div>
@@ -203,7 +203,7 @@ function texto (pais3) {
     } else {
           str = d3.select("#producto").node().value + " exportado en " + d3.select("#year").node().value + " desde Chile hacia " + pais;
     }
-    d3.select("#titulo_variable").text( str );
+    d3.select("#titulo_variable").style("font-weight","bold").text( str );
 }
 
   d3.select("select#op").on("change", function() {
@@ -269,7 +269,8 @@ function texto (pais3) {
 //    console.log(sumado);
 
     gg = sumado;
-
+    var total = _.sum(sumado);
+	var cantidad = _.size(sumado);
 
 // Mostrar diferente para un solo (producto_sel != "Combustible")
       d3.select("table#tbl").data([]).exit().remove();
@@ -293,6 +294,13 @@ function texto (pais3) {
           tr.append("td").text(key);
           tr.append("td").style("text-align","right").text(Math.round(n).toLocaleString());
       });
+
+      if (cantidad > 1) {
+      	var tfoot = tbl.append("tfoot");
+      	var tf = tfoot.append("tr");
+      	tf.append("td").style("font-weight","bold").text("TOTAL");
+      	tf.append("td").style("text-align","right").style("font-weight","bold").text(Math.round(total).toLocaleString());
+	  }
 
   }
 
