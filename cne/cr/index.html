@@ -13,13 +13,11 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
-
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script src="http://d3js.org/d3.geo.projection.v0.min.js"></script>
 <script src="http://d3js.org/topojson.v1.min.js"></script>
 
 <script src="datamaps.none.min.js"></script>
-
 
 <style>
   body {
@@ -47,12 +45,13 @@
 <!-- <script src="https://raw.githubusercontent.com/lodash/lodash/3.8.0/lodash.min.js"></script> -->
   <script src="lodash.min.js"></script>
 
-
   <meta charset="utf-8">
   <title>Combustibles por región</title>
 
 </head>
 <body>
+
+<iframe src="http://junar-cdn-brandings.s3.amazonaws.com/files/cne_cl/header.html" width="100%" height="230px" frameborder="0" scrolling="no"></iframe>
 
 <div class="container">
 
@@ -113,9 +112,9 @@
 -->
     <div class="row">
       <div class="col-md-1" id="mapa_barras">
-	          <div id="metac">
-	            <div id="container" style="position: relative; width: 100px; height: 500px;"></div>
-	          </div>
+	    <div id="metac">
+	      <div id="container" style="position: relative; width: 100px; height: 500px;"></div>
+	    </div>
       </div>
       <div class="col-md-7" id="chart"></div>
 
@@ -474,5 +473,8 @@ function update_mapa(){
 }
 </script>
 </div>
+
+<iframe src="http://junar-cdn-brandings.s3.amazonaws.com/files/cne_cl/footer.html" width="100%" height="180px" frameborder="0" scrolling="no"></iframe>
+
 </body>
 </html>
