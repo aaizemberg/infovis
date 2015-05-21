@@ -12,6 +12,15 @@
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://d3js.org/d3.geo.projection.v0.min.js"></script>
+<script src="http://d3js.org/topojson.v1.min.js"></script>
+
+<script src="datamaps.none.min.js"></script>
+
+
 <style>
   body {
     padding-top: 1px;
@@ -104,7 +113,9 @@
 -->
     <div class="row">
       <div class="col-md-1" id="mapa_barras">
-        	<img src="mapa.png" alt="mapa">
+	          <div id="metac">
+	            <div id="container" style="position: relative; width: 100px; height: 500px;"></div>
+	          </div>
       </div>
       <div class="col-md-7" id="chart"></div>
 
@@ -174,6 +185,7 @@ var regiones = {
     region_sel = d3.select("#region").node().value;
     update_viz();
     tabla_comp();
+    update_mapa();
   });
 
   d3.select("select#combustible").on("change", function() {
@@ -199,12 +211,14 @@ var regiones = {
 
   var datos;
   var col = [];
+  var map;
 
   d3.json("datos.json", function(error, json) {
     if (error) return console.warn(error);
     datos = json;
     update_viz();
     tabla_comp();
+    mapa();
   });
 
 
@@ -395,6 +409,53 @@ function tabla_comp() {
 
 }
 
+
+  function DatosMapa() {
+	var mdata = {};
+	_.forEach(regiones, function(n, key) {
+		if (key != "CL") {
+			if (key == region_sel) {
+				var kv = {'fillKey': 'selected'};
+			}
+			else {
+				var kv = {'fillKey': 'defaultFill'};
+			}
+			mdata[key] = kv;
+		}
+ 	});
+	return mdata;
+  }
+
+function mapa() {
+
+  map = new Datamap({
+    element: document.getElementById('container'),
+    geographyConfig: {
+      dataUrl: 'regiones1e3.topojson'
+    },
+    scope: 'regiones',
+    fills: {
+      defaultFill: '#aaa',
+      selected: 'yellow'
+
+    },
+
+    setProjection: function(element) {
+
+      var projection = d3.geo.mercator()
+        .center([-70, -40])
+        .scale( element.offsetHeight )
+        .translate([element.offsetWidth / 2, element.offsetHeight / 2]);
+
+       var path = d3.geo.path().projection(projection);
+       return {path: path, projection: projection};
+    }
+  });
+}
+
+function update_mapa(){
+	map.updateChoropleth(DatosMapa());
+}
 </script>
 </div>
 </body>
