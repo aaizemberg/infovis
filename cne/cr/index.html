@@ -179,13 +179,17 @@ var regiones = {
   var y1_sel = 2013;
   var y2_sel = 2014;
 
-  d3.select("select#region").on("change", function() {
+  function update_region() {
     var str = "Venta de " + d3.select("#combustible").node().value + " en " + regiones[d3.select("#region").node().value];
     d3.select("#titulo_variable").text( str );
     region_sel = d3.select("#region").node().value;
     update_viz();
     tabla_comp();
     update_mapa();
+  }
+
+  d3.select("select#region").on("change", function() {
+    update_region();
   });
 
   d3.select("select#combustible").on("change", function() {
@@ -440,6 +444,17 @@ function mapa() {
 
     },
 
+      done: function(datamap) {
+	              datamap.svg.selectAll('.datamaps-subunit').on('click', function(geography) {
+	                  // alert(geography.id + " " + geography.properties.name);
+	                  // region_sel = geography.id;
+	                  document.getElementById('region').value = geography.id;
+	                  document.getElementById('region').focus();
+	                  update_region();
+                  });
+      },
+
+
     setProjection: function(element) {
 
       var projection = d3.geo.mercator()
@@ -454,6 +469,7 @@ function mapa() {
 }
 
 function update_mapa(){
+	console.log(DatosMapa());
 	map.updateChoropleth(DatosMapa());
 }
 </script>
