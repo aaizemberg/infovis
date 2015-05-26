@@ -5,6 +5,9 @@
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 	<script src="http://d3js.org/d3.v3.min.js"></script>
+	<script src="http://d3js.org/d3.geo.projection.v0.min.js"></script>
+	<script src="http://d3js.org/topojson.v1.min.js"></script>
+	<script src="datamaps.none.min.js"></script>
 	<script src="lodash.min.js"></script>
 	<meta charset="utf-8">
 	<title>Clientes residenciales por region y comuna</title>
@@ -45,7 +48,9 @@
 	<hr>
 
 	<div class="row">
-		<div class="col-md-1" id="mapa_barras">MAPA</div>
+		<div class="col-md-1" id="metac">
+	      <div id="container" style="position: relative; width: 100px; height: 500px;"></div>
+		</div>
 		<div class="col-md-7" id="chart">BARRAS</div>
 		<div class="col-md-4" valign="top" id="referencias">REFERENCIAS</div>
 	</div>
@@ -62,7 +67,34 @@
 // Otro comentario: hay comunas repetidas porque hay más de una distribuidora energética.
 // La alternativa es sumar las comunas iguales y expresar el consumo total de la comuna.
 
+var regiones = {
+  "CL": "Chile",
+  "CL-AI": "XI de Aysén del General Carlos Ibáñez del Campo",
+  "CL-AN": "II de Antofagasta",
+  "CL-AP": "XV Arica y Parinacota",
+  "CL-AR": "IX de la Araucanía",
+  "CL-AT": "III de Atacama",
+  "CL-BI": "VIII del Biobío",
+  "CL-CO": "IV de Coquimbo",
+  "CL-LI": "VI del Libertador General Bernardo O'Higgins",
+  "CL-LL": "X de Los Lagos",
+  "CL-LR": "XIV de los Ríos",
+  "CL-MA": "XII de Magallanes y de la Antártica Chilena",
+  "CL-ML": "VII del Maule",
+  "CL-RM": "Metropolitana de Santiago",
+  "CL-TA": "I de Tarapacá",
+  "CL-VS": "V de Valparaíso"
+};
+
 var datos;
+var region_sel ="CL";
+
+
+
+  d3.select("select#region").on("change", function() {
+    update_region();
+  });
+
 
 // d3.csv("http://cne.opendata.junar.com/datastreams/91876-clientes-residenciales-por-region-y-comuna.csv", function(error, data) {
 d3.csv("91876-clientes-residenciales-por-region-y-comuna.csv", function(error, data) {
@@ -93,6 +125,8 @@ d3.csv("91876-clientes-residenciales-por-region-y-comuna.csv", function(error, d
   // genero una variable global con los datos
   datos = data;
 
+  mapa();
+
   // hay que agrupar por Region, Comuna y sumar SumaDeEnergia
 
   /** Totales x region**/
@@ -106,8 +140,8 @@ d3.csv("91876-clientes-residenciales-por-region-y-comuna.csv", function(error, d
     //sumado_reg  {Antofagasta: 443529819, Arica y Parinacota: 161251484, Atacama: 191762427, Coquimbo: 446180175, Región Aisén del Gral. Carlos Ibáñez del Campo: 59102872…}
 
   /** Totales x comuna dada una region**/
-  	var region_sel = "Valparaíso";
-	var rrr = _.filter(datos, function(n) { return n.Nombre_region == region_sel; });
+  	var region_selPR = "Valparaíso";
+	var rrr = _.filter(datos, function(n) { return n.Nombre_region == region_selPR; });
 	var agrupado_comu = _.groupBy(rrr, function(u) {
   		return u.Nombre_comuna;
     });
@@ -144,6 +178,72 @@ d3.csv("91876-clientes-residenciales-por-region-y-comuna.csv", function(error, d
 **/
 
 });
+
+  function DatosMapa() {
+	var mdata = {};
+	_.forEach(regiones, function(n, key) {
+		if (key != "CL") {
+			if (key == region_sel) {
+				var kv = {'fillKey': 'selected'};
+			}
+			else {
+				var kv = {'fillKey': 'defaultFill'};
+			}
+			mdata[key] = kv;
+		}
+ 	});
+	return mdata;
+  }
+
+
+  function update_region() {
+    region_sel = d3.select("#region").node().value;
+    update_mapa();
+  }
+
+
+function mapa() {
+
+  map = new Datamap({
+    element: document.getElementById('container'),
+    geographyConfig: {
+      dataUrl: 'regiones1e3.topojson'
+    },
+    scope: 'regiones',
+    fills: {
+      defaultFill: '#aaa',
+      selected: 'yellow'
+
+    },
+
+      done: function(datamap) {
+	              datamap.svg.selectAll('.datamaps-subunit').on('click', function(geography) {
+	                  // alert(geography.id + " " + geography.properties.name);
+	                  // region_sel = geography.id;
+	                  document.getElementById('region').value = geography.id;
+	                  document.getElementById('region').focus();
+	                  update_region();
+                  });
+      },
+
+
+    setProjection: function(element) {
+
+      var projection = d3.geo.mercator()
+        .center([-70, -40])
+        .scale( element.offsetHeight )
+        .translate([element.offsetWidth / 2, element.offsetHeight / 2]);
+
+       var path = d3.geo.path().projection(projection);
+       return {path: path, projection: projection};
+    }
+  });
+}
+
+function update_mapa(){
+	console.log(DatosMapa());
+	map.updateChoropleth(DatosMapa());
+}
 
 </script>
 
