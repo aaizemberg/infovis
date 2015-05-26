@@ -1,13 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <script src="http://d3js.org/d3.v3.min.js"></script>
-  <script src="lodash.min.js"></script>
-  <meta charset="utf-8">
-  <title>Clientes residenciales por region y comuna</title>
+	<script src="https://code.jquery.com/jquery.min.js"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<script src="http://d3js.org/d3.v3.min.js"></script>
+	<script src="lodash.min.js"></script>
+	<meta charset="utf-8">
+	<title>Clientes residenciales por region y comuna</title>
 </head>
 <body>
 
+<div class="container">
+
+	<h1>Consumo eléctrico por región</h1>
+
+
+	<div class="row">
+		<div class="col-md-4">
+			<h3>Región</h3>
+			<select id="region" class="form-control">
+				<option value="CL" selected="selected">Todo el país</option>
+				<option value="CL-TA">Tarapacá</option>
+				<option value="CL-AN">Antofagasta</option>
+				<option value="CL-AT">Atacama</option>
+				<option value="CL-CO">Coquimbo</option>
+				<option value="CL-VS">Valparaíso</option>
+				<option value="CL-LI">Región del Libertador Gral. Bernardo O’Higgins</option>
+				<option value="CL-ML">Región del Maule</option>
+				<option value="CL-BI">Región del Biobío</option>
+				<option value="CL-AR">Región de la Araucanía</option>
+				<option value="CL-LL">Región de Los Lagos</option>
+				<option value="CL-AI">Región Aisén del Gral. Carlos Ibáñez del Campo</option>
+				<option value="CL-MA">Región de Magallanes y de la Antártica Chilena</option>
+				<option value="CL-LR">Región de Los Ríos</option>
+				<option value="CL-AP">Arica y Parinacota</option>
+				<option value="CL-RM">Región Metropolitana de Santiago</option>
+        	</select>
+
+		</div>
+		<div class="col-md-8"></div>
+	</div>
+
+	<hr>
+
+	<div class="row">
+		<div class="col-md-1" id="mapa_barras">MAPA</div>
+		<div class="col-md-7" id="chart">BARRAS</div>
+		<div class="col-md-4" valign="top" id="referencias">REFERENCIAS</div>
+	</div>
+
+</div>
 <script>
 
 //
@@ -51,6 +94,28 @@ d3.csv("91876-clientes-residenciales-por-region-y-comuna.csv", function(error, d
   datos = data;
 
   // hay que agrupar por Region, Comuna y sumar SumaDeEnergia
+
+  /** Totales x region**/
+	var agrupado_reg = _.groupBy(datos, function(u) {
+		return u.Nombre_region;
+    });
+    var sumado_reg = _.mapValues(agrupado_reg, function(g) {
+        return _.sum(_.pluck(g, "SumaDeEnergia"));
+    });
+
+    //sumado_reg  {Antofagasta: 443529819, Arica y Parinacota: 161251484, Atacama: 191762427, Coquimbo: 446180175, Región Aisén del Gral. Carlos Ibáñez del Campo: 59102872…}
+
+  /** Totales x comuna dada una region**/
+  	var region_sel = "Valparaíso";
+	var rrr = _.filter(datos, function(n) { return n.Nombre_region == region_sel; });
+	var agrupado_comu = _.groupBy(rrr, function(u) {
+  		return u.Nombre_comuna;
+    });
+    var sumado_comu = _.mapValues(agrupado_comu, function(g) {
+		return _.sum(_.pluck(g, "SumaDeEnergia"));
+	});
+
+   //sumado_comu {Algarrobo: 18872176, Cabildo: 11507779, Calera: 32795420, Calle Larga: 10945660, Cartagena: 15221732…}
 
 /**
 
