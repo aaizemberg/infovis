@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <script src="lodash.min.js"></script>
+  <meta charset="utf-8">
+  <title>Clientes residenciales por region y comuna</title>
+</head>
+<body>
+
+<script>
+
+//
+// "Tipo_cliente","Nombre_region","Nombre_comuna","SumaDeEnergía (kWh)","Energía Promedio por Cliente (KWh)","Clientes Promedio"
+//
+
+// Considerar solo la columna D (Suma Energía kWh) para el gráfico.
+// La unidad es kilowatts hora.
+// Otro comentario: hay comunas repetidas porque hay más de una distribuidora energética.
+// La alternativa es sumar las comunas iguales y expresar el consumo total de la comuna.
+
+var datos;
+
+// d3.csv("http://cne.opendata.junar.com/datastreams/91876-clientes-residenciales-por-region-y-comuna.csv", function(error, data) {
+d3.csv("91876-clientes-residenciales-por-region-y-comuna.csv", function(error, data) {
+  data.forEach(function(d) {
+    _.forEach(d, function(n, key) {
+	  switch(key) {
+	    case "Tipo_cliente": 						// Tipo_cliente: "Residencial"
+	          break;
+	    case "Nombre_region": 						// Nombre_region: "Valparaíso"
+	          break;
+	    case "Nombre_comuna": 						// Nombre_comuna: "Zapallar"
+	          break;
+	    case "SumaDeEnergía (kWh)": 				// SumaDeEnergía (kWh): "14,585,310.00"
+	    	  d.SumaDeEnergia = n.replace(/,/g,"").replace(".00","")
+	          break;
+	    case "Energía Promedio por Cliente (KWh)":	// Energía Promedio por Cliente (KWh): "2,516.00"
+	    	  d.EnergiaPromedioPorCliente = n.replace(/,/g,"").replace(".00","")
+	          break;
+	    case "Clientes Promedio":   				// Clientes Promedio: "5,798.00"
+	    	  d.ClientesPromedio = n.replace(/,/g,"").replace(".00","")
+	          break;
+	    default:
+	          break;
+	  } // switch
+    }); // para cada atributo dentro del registro
+  }); // para cada registro
+
+  // genero una variable global con los datos
+  datos = data;
+
+  // hay que agrupar por Region, Comuna y sumar SumaDeEnergia
+
+/**
+
+  x.domain(d3.extent(data, function(d) { return d.date; }));
+  y.domain(d3.extent(data, function(d) { return d.close; }));
+
+  svg.append("g")
+      .attr("class", "x axis")
+      .attr("transform", "translate(0," + height + ")")
+      .call(xAxis);
+
+  svg.append("g")
+      .attr("class", "y axis")
+      .call(yAxis)
+    .append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 6)
+      .attr("dy", ".71em")
+      .style("text-anchor", "end")
+      .text("horas");
+
+  svg.append("path")
+      .datum(data)
+      .attr("class", "line")
+      .attr("d", line);
+**/
+
+});
+
+</script>
+
+</body>
+</html>
