@@ -1,0 +1,6 @@
+http://cne.opendata.junar.com/datastreams/92599/balance-energetico-2013/	http://cne.opendata.junar.com/datastreams/92599-balance-energetico-2013.csv
+http://cne.opendata.junar.com/datastreams/92729/balance-energetico-2012/	http://cne.opendata.junar.com/datastreams/92729-balance-energetico-2012.csv
+http://cne.opendata.junar.com/datastreams/92730/balance-energetico-2011/	http://cne.opendata.junar.com/datastreams/92730-balance-energetico-2011.csv
+http://cne.opendata.junar.com/datastreams/92731/balance-energetico-2010/	http://cne.opendata.junar.com/datastreams/92731-balance-energetico-2010.csv
+http://cne.opendata.junar.com/datastreams/92732/balance-energetico-2009/	http://cne.opendata.junar.com/datastreams/92732-balance-energetico-2009.csv
+http://cne.opendata.junar.com/datastreams/92733/balance-energetico-2008/	http://cne.opendata.junar.com/datastreams/92733-balance-energetico-2008.csv
