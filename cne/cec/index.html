@@ -1,19 +1,55 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<script src="https://code.jquery.com/jquery.min.js"></script>
-	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-	<script src="http://d3js.org/d3.v3.min.js"></script>
-	<script src="http://d3js.org/d3.geo.projection.v0.min.js"></script>
-	<script src="http://d3js.org/topojson.v1.min.js"></script>
-	<script src="datamaps.none.min.js"></script>
-	<script src="lodash.min.js"></script>
+
+<script src="https://code.jquery.com/jquery.min.js"></script>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://d3js.org/d3.geo.projection.v0.min.js"></script>
+<script src="http://d3js.org/topojson.v1.min.js"></script>
+
+<script src="datamaps.none.min.js"></script>
+<style>
+  body {
+    padding-top: 1px;
+    padding-left: 1px;
+  }
+  @media (max-width: 980px) {
+    body {
+      padding-top: 1;
+    }
+  }
+  .container {width:100%;max-width:none;padding:20;}
+  table {
+  	font-size: small;
+  }
+</style>
+
+  <!-- d3.js -->
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+
+  <!-- c3.js -->
+  <link href="c3.min.css" rel="stylesheet" type="text/css">
+  <script src="c3.min.js"></script>
+
+<!-- <script src="https://raw.githubusercontent.com/lodash/lodash/3.8.0/lodash.min.js"></script> -->
+  <script src="lodash.min.js"></script>
+
+
 	<meta charset="utf-8">
 	<title>Clientes residenciales por region y comuna</title>
 </head>
 <body>
-
+<div id="pp"></div>
 <div class="container">
 
 	<h1>Consumo eléctrico por región</h1>
@@ -48,10 +84,10 @@
 	<hr>
 
 	<div class="row">
-		<div class="col-md-1" id="metac">
+		<div class="col-md-1">
 	      <div id="container" style="position: relative; width: 100px; height: 500px;"></div>
 		</div>
-		<div class="col-md-7" id="chart">BARRAS</div>
+		<div class="col-md-7" id="chart"></div>
 		<div class="col-md-4" valign="top" id="referencias">REFERENCIAS</div>
 	</div>
 
@@ -125,59 +161,71 @@ d3.csv("91876-clientes-residenciales-por-region-y-comuna.csv", function(error, d
   // genero una variable global con los datos
   datos = data;
 
+
+  barras();
   mapa();
 
   // hay que agrupar por Region, Comuna y sumar SumaDeEnergia
 
-  /** Totales x region**/
-	var agrupado_reg = _.groupBy(datos, function(u) {
-		return u.Nombre_region;
-    });
-    var sumado_reg = _.mapValues(agrupado_reg, function(g) {
-        return _.sum(_.pluck(g, "SumaDeEnergia"));
-    });
-
-    //sumado_reg  {Antofagasta: 443529819, Arica y Parinacota: 161251484, Atacama: 191762427, Coquimbo: 446180175, Región Aisén del Gral. Carlos Ibáñez del Campo: 59102872…}
-
-  /** Totales x comuna dada una region**/
-  	var region_selPR = "Valparaíso";
-	var rrr = _.filter(datos, function(n) { return n.Nombre_region == region_selPR; });
-	var agrupado_comu = _.groupBy(rrr, function(u) {
-  		return u.Nombre_comuna;
-    });
-    var sumado_comu = _.mapValues(agrupado_comu, function(g) {
-		return _.sum(_.pluck(g, "SumaDeEnergia"));
-	});
-
-   //sumado_comu {Algarrobo: 18872176, Cabildo: 11507779, Calera: 32795420, Calle Larga: 10945660, Cartagena: 15221732…}
-
-/**
-
-  x.domain(d3.extent(data, function(d) { return d.date; }));
-  y.domain(d3.extent(data, function(d) { return d.close; }));
-
-  svg.append("g")
-      .attr("class", "x axis")
-      .attr("transform", "translate(0," + height + ")")
-      .call(xAxis);
-
-  svg.append("g")
-      .attr("class", "y axis")
-      .call(yAxis)
-    .append("text")
-      .attr("transform", "rotate(-90)")
-      .attr("y", 6)
-      .attr("dy", ".71em")
-      .style("text-anchor", "end")
-      .text("horas");
-
-  svg.append("path")
-      .datum(data)
-      .attr("class", "line")
-      .attr("d", line);
-**/
 
 });
+
+function datos_grafico() {
+
+	if (region_sel == "CL") {
+	  /** Totales x region**/
+		var agrupado_reg = _.groupBy(datos, function(u) {
+			return u.Nombre_region;
+		});
+		var sumado_reg = _.mapValues(agrupado_reg, function(g) {
+			return _.sum(_.pluck(g, "SumaDeEnergia"));
+		});
+
+		//sumado_reg  {Antofagasta: 443529819, Arica y Parinacota: 161251484, Atacama: 191762427, Coquimbo: 446180175, Región Aisén del Gral. Carlos Ibáñez del Campo: 59102872…}
+		return sumado_reg;
+	} else {
+	  /** Totales x comuna dada una region**/
+		var rrr = _.filter(datos, function(n) { return n.Nombre_region == region_sel; });
+		var agrupado_comu = _.groupBy(rrr, function(u) {
+			return u.Nombre_comuna;
+		});
+		var sumado_comu = _.mapValues(agrupado_comu, function(g) {
+			return _.sum(_.pluck(g, "SumaDeEnergia"));
+		});
+
+	   //sumado_comu {Algarrobo: 18872176, Cabildo: 11507779, Calera: 32795420, Calle Larga: 10945660, Cartagena: 15221732…}
+	   return sumado_comu;
+	}
+}
+
+
+
+function barras() {
+
+	var sumado = datos_grafico();
+
+var chart = c3.generate({
+	size: {
+        height: 500,
+        width: 540
+    },
+    data: {
+        x: 'x',
+        columns: [
+            ['x', '2010', '2011', '2012', '2013', '2014', '2015'],
+            ['Region', 10, 10, 10, 10, 10, 10],
+        ],
+        type: 'bar',
+    },
+    grid: {
+        y: {
+            lines: [{value:0}]
+        }
+    }
+});
+alert("fin de funcion barras");
+}
+
 
   function DatosMapa() {
 	var mdata = {};
