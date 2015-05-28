@@ -104,21 +104,21 @@
 
 var regiones = {
   "CL": "Chile",
-  "CL-AI": "XI de Aysén del General Carlos Ibáñez del Campo",
-  "CL-AN": "II de Antofagasta",
-  "CL-AP": "XV Arica y Parinacota",
-  "CL-AR": "IX de la Araucanía",
-  "CL-AT": "III de Atacama",
-  "CL-BI": "VIII del Biobío",
-  "CL-CO": "IV de Coquimbo",
-  "CL-LI": "VI del Libertador General Bernardo O'Higgins",
-  "CL-LL": "X de Los Lagos",
-  "CL-LR": "XIV de los Ríos",
-  "CL-MA": "XII de Magallanes y de la Antártica Chilena",
-  "CL-ML": "VII del Maule",
-  "CL-RM": "Metropolitana de Santiago",
-  "CL-TA": "I de Tarapacá",
-  "CL-VS": "V de Valparaíso"
+  "CL-AI": "Región Aisén del Gral. Carlos Ibáñez del Campo",
+  "CL-AN": "Antofagasta",
+  "CL-AP": "Arica y Parinacota",
+  "CL-AR": "Región de la Araucanía",
+  "CL-AT": "Atacama",
+  "CL-BI": "Región del Biobío",
+  "CL-CO": "Coquimbo",
+  "CL-LI": "Región del Libertador Gral. Bernardo O’Higgins",
+  "CL-LL": "Región de Los Lagos",
+  "CL-LR": "Región de Los Ríos",
+  "CL-MA": "Región de Magallanes y de la Antártica Chilena",
+  "CL-ML": "Región del Maule",
+  "CL-RM": "Región Metropolitana de Santiago",
+  "CL-TA": "Tarapacá",
+  "CL-VS": "Valparaíso"
 };
 
 var datos;
@@ -128,6 +128,7 @@ var region_sel ="CL";
 
   d3.select("select#region").on("change", function() {
     update_region();
+
   });
 
 
@@ -184,7 +185,10 @@ function datos_grafico() {
 		return sumado_reg;
 	} else {
 	  /** Totales x comuna dada una region**/
-		var rrr = _.filter(datos, function(n) { return n.Nombre_region == region_sel; });
+		var rrr = _.filter(datos, function(n) { return n.Nombre_region == regiones[region_sel]; });
+
+
+
 		var agrupado_comu = _.groupBy(rrr, function(u) {
 			return u.Nombre_comuna;
 		});
@@ -193,6 +197,7 @@ function datos_grafico() {
 		});
 
 	   //sumado_comu {Algarrobo: 18872176, Cabildo: 11507779, Calera: 32795420, Calle Larga: 10945660, Cartagena: 15221732…}
+
 	   return sumado_comu;
 	}
 }
@@ -203,6 +208,37 @@ function barras() {
 
 	var sumado = datos_grafico();
 
+
+//	var list = {"you": 100, "me": 75, "foo": 116, "bar": 15};
+	var list= sumado;
+	var keysSorted = Object.keys(list).sort(function(a,b){return list[a]-list[b];});
+	SortedRev = keysSorted.reverse();
+	alert(SortedRev);
+
+	//            ['x', 'Antofagasta', 'Arica y Parinacota', 'Atacama', 'Coquimbo', 'Región Aisén del Gral. Carlos Ibáñez del Campo','Región Metropolitana de Santiago','Región de Los Lagos','Región de Los Ríos', 'Región de Magallanes y de la Antártica Chilena', 'Región de la Araucanía', 'Región del Biobío', 'Región del Libertador Gral. Bernardo O’Higgins', 'Región del Maule', 'Tarapacá', 'Valparaíso' ],
+	//            ['Region', 443529819, 161251484, 191762427, 446180175, 59102872, 5933698220, 528451723, 227141451, 128050951, 502668708, 1239599828, 591846388, 630061274, 261246750, 1324935857],
+	     var ejeX;
+	  ejeX = SortedRev;
+	  ejeX.unshift("x");
+
+	  col = [];
+	  col[0] = ejeX;
+	    var ceros = Array.apply(null, new Array(SortedRev.length-1)).map(Number.prototype.valueOf,0);
+
+
+	    for (var j = 0; j < SortedRev.length-1; j++) {
+	        ceros[j] = list[SortedRev[j+1]];
+	    }
+
+	    col[1] = ceros;
+	    if (region_sel == "CL") {
+	    	col[1].unshift("region");
+		} else {
+			col[1].unshift("comuna");
+		}
+
+
+
 var chart = c3.generate({
 	size: {
         height: 500,
@@ -210,10 +246,12 @@ var chart = c3.generate({
     },
     data: {
         x: 'x',
-        columns: [
+        columns: col,
+/*        columns: [
             ['x', 'Antofagasta', 'Arica y Parinacota', 'Atacama', 'Coquimbo', 'Región Aisén del Gral. Carlos Ibáñez del Campo','Región Metropolitana de Santiago','Región de Los Lagos','Región de Los Ríos', 'Región de Magallanes y de la Antártica Chilena', 'Región de la Araucanía', 'Región del Biobío', 'Región del Libertador Gral. Bernardo O’Higgins', 'Región del Maule', 'Tarapacá', 'Valparaíso' ],
             ['Region', 443529819, 161251484, 191762427, 446180175, 59102872, 5933698220, 528451723, 227141451, 128050951, 502668708, 1239599828, 591846388, 630061274, 261246750, 1324935857],
         ],
+*/
         type: 'bar',
     },
     axis: {
@@ -252,6 +290,7 @@ var chart = c3.generate({
   function update_region() {
     region_sel = d3.select("#region").node().value;
     update_mapa();
+    barras();
   }
 
 
