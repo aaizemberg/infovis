@@ -82,7 +82,7 @@
 
 		<div class="row">
 			<div class="col-md-2">
-				<div id="container" style="position: relative; width: 100px; height: 500px;"></div>
+				<div id="container" style="position: relative; width: 150px; height: 600px;"></div>
 			</div>
 			<div class="col-md-8" id="chart"></div>
 			<div class="col-md-2" id="contotal">
@@ -243,7 +243,7 @@ function barras() {
 
 	var chart = c3.generate({
 		size: {
-			height: 500,
+			height: 600,
 			width: 940
 		},
 		data: {
@@ -270,6 +270,10 @@ function barras() {
 					format: function (d) { return d/1000000; }
 					//or format: function (d) { return '$' + d; }
 				},
+				label: {
+					text: 'MM',
+					position: 'outer-middle',
+				}
 			},
 			rotated: true
 		}
