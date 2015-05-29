@@ -2,95 +2,97 @@
 <html>
 <head>
 
-<script src="https://code.jquery.com/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery.min.js"></script>
 
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
 
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
-<script src="http://d3js.org/d3.v3.min.js"></script>
-<script src="http://d3js.org/d3.geo.projection.v0.min.js"></script>
-<script src="http://d3js.org/topojson.v1.min.js"></script>
+	<script src="http://d3js.org/d3.v3.min.js"></script>
+	<script src="http://d3js.org/d3.geo.projection.v0.min.js"></script>
+	<script src="http://d3js.org/topojson.v1.min.js"></script>
 
-<script src="datamaps.none.min.js"></script>
-<style>
-  body {
-    padding-top: 1px;
-    padding-left: 1px;
-  }
-  @media (max-width: 980px) {
-    body {
-      padding-top: 1;
-    }
-  }
-  .container {width:100%;max-width:none;padding:20;}
-  table {
-  	font-size: small;
-  }
-</style>
+	<script src="datamaps.none.min.js"></script>
+	<style>
+	  body {
+		padding-top: 1px;
+		padding-left: 1px;
+	  }
+	  @media (max-width: 980px) {
+		body {
+		  padding-top: 1;
+		}
+	  }
+	  .container {width:100%;max-width:none;padding:20;}
+	  table {
+		font-size: small;
+	  }
+	</style>
 
-  <!-- d3.js -->
-  <script src="http://d3js.org/d3.v3.min.js"></script>
+	<!-- d3.js -->
+	<script src="http://d3js.org/d3.v3.min.js"></script>
 
-  <!-- c3.js -->
-  <link href="c3.min.css" rel="stylesheet" type="text/css">
-  <script src="c3.min.js"></script>
+	<!-- c3.js -->
+	<link href="c3.min.css" rel="stylesheet" type="text/css">
+	<script src="c3.min.js"></script>
 
 <!-- <script src="https://raw.githubusercontent.com/lodash/lodash/3.8.0/lodash.min.js"></script> -->
-  <script src="lodash.min.js"></script>
-
-
+	<script src="lodash.min.js"></script>
 	<meta charset="utf-8">
 	<title>Clientes residenciales por region y comuna</title>
 </head>
 <body>
-<div id="pp"></div>
-<div class="container">
+	<div id="pp"></div>
+	<div class="container">
 
-	<h1>Consumo eléctrico por región</h1>
+		<h1>Consumo eléctrico por región</h1>
 
 
-	<div class="row">
-		<div class="col-md-4">
-			<h3>Región</h3>
-			<select id="region" class="form-control">
-				<option value="CL" selected="selected">Todo el país</option>
-				<option value="CL-TA">Tarapacá</option>
-				<option value="CL-AN">Antofagasta</option>
-				<option value="CL-AT">Atacama</option>
-				<option value="CL-CO">Coquimbo</option>
-				<option value="CL-VS">Valparaíso</option>
-				<option value="CL-LI">Región del Libertador Gral. Bernardo O’Higgins</option>
-				<option value="CL-ML">Región del Maule</option>
-				<option value="CL-BI">Región del Biobío</option>
-				<option value="CL-AR">Región de la Araucanía</option>
-				<option value="CL-LL">Región de Los Lagos</option>
-				<option value="CL-AI">Región Aisén del Gral. Carlos Ibáñez del Campo</option>
-				<option value="CL-MA">Región de Magallanes y de la Antártica Chilena</option>
-				<option value="CL-LR">Región de Los Ríos</option>
-				<option value="CL-AP">Arica y Parinacota</option>
-				<option value="CL-RM">Región Metropolitana de Santiago</option>
-        	</select>
-
+		<div class="row">
+			<div class="col-md-4">
+				<h3>Región</h3>
+				<select id="region" class="form-control">
+					<option value="CL" selected="selected">Todo el país</option>
+					<option value="CL-TA">Tarapacá</option>
+					<option value="CL-AN">Antofagasta</option>
+					<option value="CL-AT">Atacama</option>
+					<option value="CL-CO">Coquimbo</option>
+					<option value="CL-VS">Valparaíso</option>
+					<option value="CL-LI">Región del Libertador Gral. Bernardo O’Higgins</option>
+					<option value="CL-ML">Región del Maule</option>
+					<option value="CL-BI">Región del Biobío</option>
+					<option value="CL-AR">Región de la Araucanía</option>
+					<option value="CL-LL">Región de Los Lagos</option>
+					<option value="CL-AI">Región Aisén del Gral. Carlos Ibáñez del Campo</option>
+					<option value="CL-MA">Región de Magallanes y de la Antártica Chilena</option>
+					<option value="CL-LR">Región de Los Ríos</option>
+					<option value="CL-AP">Arica y Parinacota</option>
+					<option value="CL-RM">Región Metropolitana de Santiago</option>
+				</select>
+			</div>
+			<div class="col-md-8"></div>
 		</div>
-		<div class="col-md-8"></div>
+
+		<hr>
+
+		<div class="row">
+			<div class="col-md-2">
+				<div id="container" style="position: relative; width: 100px; height: 500px;"></div>
+			</div>
+			<div class="col-md-8" id="chart"></div>
+			<div class="col-md-2" id="contotal">
+				<div id="total1"></div>
+				<div id="total2"></div>
+			</div>
+		</div>
+
 	</div>
 
-	<hr>
-
-	<div class="row">
-		<div class="col-md-2">
-	      <div id="container" style="position: relative; width: 100px; height: 500px;"></div>
-		</div>
-		<div class="col-md-10" id="chart"></div>
-	</div>
-
-</div>
 <script>
 
 //
@@ -161,12 +163,8 @@ d3.csv("91876-clientes-residenciales-por-region-y-comuna.csv", function(error, d
   // genero una variable global con los datos
   datos = data;
 
-
   barras();
   mapa();
-
-  // hay que agrupar por Region, Comuna y sumar SumaDeEnergia
-
 
 });
 
@@ -186,9 +184,6 @@ function datos_grafico() {
 	} else {
 	  /** Totales x comuna dada una region**/
 		var rrr = _.filter(datos, function(n) { return n.Nombre_region == regiones[region_sel]; });
-
-
-
 		var agrupado_comu = _.groupBy(rrr, function(u) {
 			return u.Nombre_comuna;
 		});
@@ -207,66 +202,78 @@ function datos_grafico() {
 function barras() {
 
 	var sumado = datos_grafico();
-
-
-//	var list = {"you": 100, "me": 75, "foo": 116, "bar": 15};
+	var total = _.sum(sumado);
 	var list= sumado;
 	var keysSorted = Object.keys(list).sort(function(a,b){return list[a]-list[b];});
 	SortedRev = keysSorted.reverse();
-	//alert(SortedRev);
-
 	//            ['x', 'Antofagasta', 'Arica y Parinacota', 'Atacama', 'Coquimbo', 'Región Aisén del Gral. Carlos Ibáñez del Campo','Región Metropolitana de Santiago','Región de Los Lagos','Región de Los Ríos', 'Región de Magallanes y de la Antártica Chilena', 'Región de la Araucanía', 'Región del Biobío', 'Región del Libertador Gral. Bernardo O’Higgins', 'Región del Maule', 'Tarapacá', 'Valparaíso' ],
 	//            ['Region', 443529819, 161251484, 191762427, 446180175, 59102872, 5933698220, 528451723, 227141451, 128050951, 502668708, 1239599828, 591846388, 630061274, 261246750, 1324935857],
-	     var ejeX;
-	  ejeX = SortedRev;
-	  ejeX.unshift("x");
+	var ejeX;
+	ejeX = SortedRev;
+	ejeX.unshift("x");
 
-	  col = [];
-	  col[0] = ejeX;
-	    var ceros = Array.apply(null, new Array(SortedRev.length-1)).map(Number.prototype.valueOf,0);
+	col = [];
+	col[0] = ejeX;
+	var ceros = Array.apply(null, new Array(SortedRev.length-1)).map(Number.prototype.valueOf,0);
+
+	for (var j = 0; j < SortedRev.length-1; j++) {
+		ceros[j] = list[SortedRev[j+1]];
+	}
+	col[1] = ceros;
+	var texto;
+	if (region_sel == "CL") {
+		col[1].unshift("region");
+		texto = "País";
+	} else {
+		col[1].unshift("comuna");
+		texto = "Región";
+	}
+
+	//Total
+	d3.select("div#total1").data([]).exit().remove();
+	d3.select("div#total2").data([]).exit().remove();
+	d3.select("div#contotal").append("div").attr("id","total1");
+	d3.select("div#contotal").append("div").attr("id","total2");
+	str = "Total " + texto ;
+	d3.select("#total1").style("font-weight","lighter").style("text-transform","uppercase").text( str );
+	str = total.toLocaleString() + " kWh";
+	d3.select("#total2").style("font-weight","bold").text( str );
 
 
-	    for (var j = 0; j < SortedRev.length-1; j++) {
-	        ceros[j] = list[SortedRev[j+1]];
-	    }
 
-	    col[1] = ceros;
-	    if (region_sel == "CL") {
-	    	col[1].unshift("region");
-		} else {
-			col[1].unshift("comuna");
-		}
-
-
-
-var chart = c3.generate({
-	size: {
-        height: 500,
-        width: 940
-    },
-    data: {
-        x: 'x',
-        columns: col,
-/*        columns: [
-            ['x', 'Antofagasta', 'Arica y Parinacota', 'Atacama', 'Coquimbo', 'Región Aisén del Gral. Carlos Ibáñez del Campo','Región Metropolitana de Santiago','Región de Los Lagos','Región de Los Ríos', 'Región de Magallanes y de la Antártica Chilena', 'Región de la Araucanía', 'Región del Biobío', 'Región del Libertador Gral. Bernardo O’Higgins', 'Región del Maule', 'Tarapacá', 'Valparaíso' ],
-            ['Region', 443529819, 161251484, 191762427, 446180175, 59102872, 5933698220, 528451723, 227141451, 128050951, 502668708, 1239599828, 591846388, 630061274, 261246750, 1324935857],
-        ],
+	var chart = c3.generate({
+		size: {
+			height: 500,
+			width: 940
+		},
+		data: {
+			x: 'x',
+			columns: col,
+/*          columns: [
+               ['x', 'Antofagasta', 'Arica y Parinacota', 'Atacama', 'Coquimbo', 'Región Aisén del Gral. Carlos Ibáñez del Campo','Región Metropolitana de Santiago','Región de Los Lagos','Región de Los Ríos', 'Región de Magallanes y de la Antártica Chilena', 'Región de la Araucanía', 'Región del Biobío', 'Región del Libertador Gral. Bernardo O’Higgins', 'Región del Maule', 'Tarapacá', 'Valparaíso' ],
+               ['Region', 443529819, 161251484, 191762427, 446180175, 59102872, 5933698220, 528451723, 227141451, 128050951, 502668708, 1239599828, 591846388, 630061274, 261246750, 1324935857],
+            ],
 */
-        type: 'bar',
-    },
-    axis: {
-	        x: {
-	            type: 'category',
-	            tick: {
-	                rotate: 75,
-	                multiline: false
-	            },
-	            height: 130
-	        },
-	        rotated: true
-    }
-});
-
+			type: 'bar',
+		},
+		axis: {
+			x: {
+				type: 'category',
+				tick: {
+				rotate: 75,
+				multiline: false
+				},
+				height: 130
+			},
+			y: {
+				tick: {
+					format: function (d) { return d/1000000; }
+					//or format: function (d) { return '$' + d; }
+				},
+			},
+			rotated: true
+		}
+	});
 }
 
 
