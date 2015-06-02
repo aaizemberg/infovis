@@ -1,0 +1,33 @@
+source,target,value
+Importación,GNL,4957
+Importación,Gas Natural,8264
+Importación,Carbón,38157
+Importación,Petróleo Crudo,103619
+Producción Primaria,Energía Eólica,68
+Producción Primaria,Biogás,69
+Producción Primaria,Petróleo Crudo,1957
+Producción Primaria,Carbón,3708
+Producción Primaria,Gas Natural,17886
+Producción Primaria,Energía Hídrica,22283
+Producción Primaria,Biomasa - Leña,51280
+Biogás,Plantas de Gas,69
+Biomasa - Leña,Centrales Eléctricas: Autoproductores,5880
+Carbón,Centrales Eléctricas: Servicio Publico,33506
+Carbón,Siderurgia: Hornos de Coque,4255
+Energía Eólica,Centrales Eléctricas: Servicio Publico,68
+Energía Hídrica,Centrales Eléctricas: Autoproductores,323
+Energía Hídrica,Centrales Eléctricas: Servicio Publico,21327
+Gas Natural,Centrales Eléctricas: Autoproductores,535
+Gas Natural,Centrales Eléctricas: Servicio Publico,8057
+Gas Natural,Liquefacción de Gas,8533
+Gas Natural,Refinería Petróleo - Gas Natural,5093
+GNL,Plantas de Gas,4957
+Petróleo Crudo,Refinería Petróleo - Gas Natural,106488
+Gas Natural,Plantas de Gas,5500
+Centrales Eléctricas: Autoproductores,Electricidad,3197
+Centrales Eléctricas: Servicio Publico,Electricidad,48136
+Siderurgia: Altos Hornos,Coque Mineral,1090
+Siderurgia: Altos Hornos,Gas de Altos Hornos,1060
+Siderurgia: Hornos de Coque,Coque Mineral,3104
+Siderurgia: Hornos de Coque,Gas Coque,984
+Siderurgia: Hornos de Coque,Alquitrán,183
