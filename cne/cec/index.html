@@ -123,8 +123,10 @@ var regiones = {
   "CL-VS": "Valparaíso"
 };
 
-var datos;
 var region_sel ="CL";
+var datos_pre;
+var datos=[];
+
 
 
 
@@ -134,39 +136,58 @@ var region_sel ="CL";
   });
 
 
-// d3.csv("http://cne.opendata.junar.com/datastreams/91876-clientes-residenciales-por-region-y-comuna.csv", function(error, data) {
-d3.csv("91876-clientes-residenciales-por-region-y-comuna.csv", function(error, data) {
-  data.forEach(function(d) {
-    _.forEach(d, function(n, key) {
-	  switch(key) {
-	    case "Tipo_cliente": 						// Tipo_cliente: "Residencial"
-	          break;
-	    case "Nombre_region": 						// Nombre_region: "Valparaíso"
-	          break;
-	    case "Nombre_comuna": 						// Nombre_comuna: "Zapallar"
-	          break;
-	    case "SumaDeEnergía (kWh)": 				// SumaDeEnergía (kWh): "14,585,310.00"
-	    	  d.SumaDeEnergia = n.replace(/,/g,"").replace(".00","")
-	          break;
-	    case "Energía Promedio por Cliente (KWh)":	// Energía Promedio por Cliente (KWh): "2,516.00"
-	    	  d.EnergiaPromedioPorCliente = n.replace(/,/g,"").replace(".00","")
-	          break;
-	    case "Clientes Promedio":   				// Clientes Promedio: "5,798.00"
-	    	  d.ClientesPromedio = n.replace(/,/g,"").replace(".00","")
-	          break;
-	    default:
-	          break;
-	  } // switch
-    }); // para cada atributo dentro del registro
-  }); // para cada registro
+ var url = "http://cne.cloudapi.junar.com/datastreams/invoke/CLIEN-RESID-POR-REGIO-Y?auth_key=2ce4c68fc14604cfc6641713d062479044fa33df&output=json_array";
 
-  // genero una variable global con los datos
-  datos = data;
+  $.ajax({
+    url:  url,
+    jsonp: "callback",
+    dataType: "jsonp",
+    success: function( response ) {
+      datos_pre = response.result;
+      armarDatos();
 
-  barras();
-  mapa();
+      barras();
+      mapa();
+    }
+  });
 
-});
+function armarDatos() {
+  var header=[];
+  headers=datos_pre[0];
+  //console.log(headers);
+
+  for(var i=1;i<datos_pre.length;i++){
+  	  var obj = {};
+  	  var currentline=datos_pre[i];
+
+  	  for(var j=0;j<headers.length;j++){
+
+        var key = headers[j];
+        var value = currentline[j];
+        	  switch(key) {
+        	    case "SumaDeEnergía (kWh)": 				// SumaDeEnergía (kWh): "14,585,310.00"
+	    	      key = "SumaDeEnergia";
+                  value = value.replace(/,/g,"").replace(".00","");
+	              break;
+	            case "Energía Promedio por Cliente (KWh)":	// Energía Promedio por Cliente (KWh): "2,516.00"
+	    	      key = "EnergiaPromedioPorCliente";
+                  value = value.replace(/,/g,"").replace(".00","");
+    	          break;
+	            case "Clientes Promedio":   				// Clientes Promedio: "5,798.00"
+	    	      key = "ClientesPromedio";
+                  value = value.replace(/,/g,"").replace(".00","");
+ 	              break;
+	            default:
+	              obj[headers[j]] = currentline[j];
+	            } // switch
+        obj[key] = value;
+
+  	  }
+
+  	  datos.push(obj);
+
+    }
+}
 
 function datos_grafico() {
 
@@ -239,12 +260,12 @@ function barras() {
 	str = total.toLocaleString() + " kWh";
 	d3.select("#total2").style("font-weight","bold").text( str );
 
-
+//chart.legend.hide(['data1', 'data2']);
 
 	var chart = c3.generate({
 		size: {
 			height: 600,
-			width: 940
+	//		width: 940
 		},
 		data: {
 			x: 'x',
@@ -255,6 +276,18 @@ function barras() {
             ],
 */
 			type: 'bar',
+		},
+		legend:{
+			hide:['region', 'comuna'],
+		},
+		tooltip: {
+		  format: {
+		    //title: function (x) { return 'Data ' + x; }
+		    // name: function (name, ratio, id, index) { return name; },
+		     value: function (value, ratio, id, index) { return (value.toLocaleString() + " kWh"); }
+		  }
+
+
 		},
 		axis: {
 			x: {
@@ -346,7 +379,7 @@ function mapa() {
 }
 
 function update_mapa(){
-	console.log(DatosMapa());
+	//console.log(DatosMapa());
 	map.updateChoropleth(DatosMapa());
 }
 
