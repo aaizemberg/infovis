@@ -1,49 +1,49 @@
 <!doctype html>
-<meta charset="utf-8">
- 
-<script src="http://www.d3plus.org/js/d3.js"></script>
-<script src="http://www.d3plus.org/js/topojson.js"></script>
-<script src="http://www.d3plus.org/js/d3plus.js"></script>
- 
-<div id="viz"></div>
- 
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="http://www.d3plus.org/js/d3.js"></script>
+  <script src="http://www.d3plus.org/js/topojson.js"></script>
+  <script src="http://www.d3plus.org/js/d3plus.js"></script>
+
+<!--
+<style>
+  div#viz {
+    width:300px;
+    height:600px;
+    border-style: solid;
+    border-width: 1px;
+  }
+</style>
+-->
+
+</head>
+
+<body>
+  <div id="viz"></div>
+
 <script>
-/**
-Antofagasta	443529819
-Arica y Parinacota	161251484
-Atacama	191762427
-Coquimbo	446180175
-Región Aisén del Gral. Carlos Ibáñez del Campo	59102872
-Región de la Araucanía	502668708
-Región de Los Lagos	528451723
-Región de Los Ríos	227141451
-Región de Magallanes y de la Antártica Chilena	128050951
-Región del Biobío	1239599828
-Región del Libertador Gral. Bernardo O’Higgins	591846388
-Región del Maule	630061274
-Región Metropolitana de Santiago	5933698220
-Tarapacá	261246750
-Valparaíso	1324935857
-**/
+
   var sample_data = [
-    {"value": 0, "id": "CL-TA", "name": "I de Tarapacá"},
-    {"value": 0, "id": "CL-AN", "name": "II de Antofagasta"},
-    {"value": 0, "id": "CL-AT", "name": "III de Atacama"},
-    {"value": 0, "id": "CL-CO", "name": "IV de Coquimbo"},
-    {"value": 0, "id": "CL-VS", "name": "V de Valparaíso"},
-    {"value": 0, "id": "CL-LI", "name": "VI del Libertador General Bernardo O'Higgins"},
-    {"value": 0, "id": "CL-ML", "name": "VII del Maule"},
-    {"value": 0, "id": "CL-BI", "name": "VIII del Biobío"},
-    {"value": 0, "id": "CL-AR", "name": "IX de la Araucanía"},
-    {"value": 0, "id": "CL-LL", "name": "X de Los Lagos"},
-    {"value": 0, "id": "CL-AI", "name": "XI de Aysén del General Carlos Ibáñez del Campo"},
-    {"value": 0, "id": "CL-MA", "name": "XII de Magallanes y de la Antártica Chilena"},
-    {"value": 0, "id": "CL-LR", "name": "XIV de los Ríos"},
-    {"value": 0, "id": "CL-AP", "name": "XV Arica y Parinacota"},
-    {"value": 0, "id": "CL-RM", "name": "Metropolitana de Santiago"}
+    {"consumo (kWh)": 261246750, "id": "CL-TA", "region": "Tarapacá"},
+    {"consumo (kWh)": 443529819, "id": "CL-AN", "region": "Antofagasta"},
+    {"consumo (kWh)": 191762427, "id": "CL-AT", "region": "Atacama"},
+    {"consumo (kWh)": 446180175, "id": "CL-CO", "region": "Coquimbo"},
+    {"consumo (kWh)": 1324935857, "id": "CL-VS", "region": "Valparaíso"},
+    {"consumo (kWh)": 591846388, "id": "CL-LI", "region": "Libertador General Bernardo O'Higgins"},
+    {"consumo (kWh)": 630061274, "id": "CL-ML", "region": "Maule"},
+    {"consumo (kWh)": 1239599828, "id": "CL-BI", "region": "Biobío"},
+    {"consumo (kWh)": 502668708, "id": "CL-AR", "region": "Araucanía"},
+    {"consumo (kWh)": 528451723, "id": "CL-LL", "region": "de Los Lagos"},
+    {"consumo (kWh)": 59102872, "id": "CL-AI", "region": "Aysén del General Carlos Ibáñez del Campo"},
+    {"consumo (kWh)": 128050951, "id": "CL-MA", "region": "Magallanes y de la Antártica Chilena"},
+    {"consumo (kWh)": 227141451, "id": "CL-LR", "region": "de los Ríos"},
+    {"consumo (kWh)": 161251484, "id": "CL-AP", "region": "Arica y Parinacota"},
+    {"consumo (kWh)": 5933698220, "id": "CL-RM", "region": "Metropolitana de Santiago"}
   ]
 
   var visualization = d3plus.viz()
+    .format("es_ES")
     .container("#viz")
     .data(sample_data)
     .type("geo_map")
@@ -52,9 +52,11 @@ Valparaíso	1324935857
       "value": "regiones1e3.topojson"
     })
     .id("id")
-    .text("name")
-    .color("value")
-    .tooltip("name")
+    .text("region")
+    .color("consumo (kWh)")
+    .tooltip("region")
     .draw()
 
 </script>
+</body>
+</html>

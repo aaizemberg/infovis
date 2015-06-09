@@ -13,7 +13,7 @@
 </head>
 <body>
 
-<div id="container" style="position: relative; width: 100px; height: 500px;border: 1px solid grey;"></div>
+<div id="container" style="position: relative; width: 200px; height: 600px;border: 1px solid grey;"></div>
 
 <script>
   var map = new Datamap({
@@ -25,11 +25,17 @@
     fills: {
       defaultFill: '#aaa',
       selected: 'yellow'
-
     },
     data: {
       'CL-RM': {fillKey: 'selected'}
     },
+    zoom: {
+	        enabled: true
+    },
+    zoomConfig: {
+		zoomOnClick: true,
+		zoomFactor: 0.8
+	},
     setProjection: function(element) {
 
 // projection.center([location])
@@ -43,6 +49,12 @@
 
        var path = d3.geo.path().projection(projection);
        return {path: path, projection: projection};
+    },
+    done: function(datamap) {
+		datamap.svg.call(d3.behavior.zoom().on("zoom", redraw));
+		function redraw() {
+			datamap.svg.selectAll("g").attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
+		}
     }
   });
 </script>
