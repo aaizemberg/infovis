@@ -1,0 +1,64 @@
+  var datos_pre;
+  var datos=[];
+
+  var url = "http://cne.cloudapi.junar.com/datastreams/invoke/CLIEN-RESID-POR-REGIO-Y?auth_key=2ce4c68fc14604cfc6641713d062479044fa33df&output=json_array";
+
+  $.ajax({
+    url:  url,
+    jsonp: "callback",
+    dataType: "jsonp",
+    success: function( response ) {
+      datos_pre = response.result;
+     
+      // parsear los 328 registros y ponerlo en una estructura comoda para la vizualización
+      armarDatos();
+ 
+      visualizeit();
+    }
+  });
+
+
+
+  
+
+function visualizeit() {
+    d3.select("body").append("p").text("tengo una estructura de datos con " + datos_pre.length + " registros.");
+} 
+
+function armarDatos() {
+  var header=[];
+  headers=datos_pre[0];
+  console.log(headers);
+  
+  for(var i=1;i<datos_pre.length;i++){
+  	  var obj = {};
+  	  var currentline=datos_pre[i];
+    
+  	  for(var j=0;j<headers.length;j++){
+
+        var key = headers[j];
+        var value = currentline[j];
+        	  switch(key) {
+        	    case "SumaDeEnergía (kWh)": 				// SumaDeEnergía (kWh): "14,585,310.00"
+	    	      key = "SumaDeEnergia";
+                  value = value.replace(/,/g,"").replace(".00","");
+	              break;
+	            case "Energía Promedio por Cliente (KWh)":	// Energía Promedio por Cliente (KWh): "2,516.00"
+	    	      key = "EnergiaPromedioPorCliente";
+                  value = value.replace(/,/g,"").replace(".00","");                  
+    	          break;
+	            case "Clientes Promedio":   				// Clientes Promedio: "5,798.00"
+	    	      key = "ClientesPromedio";
+                  value = value.replace(/,/g,"").replace(".00","");                  
+ 	              break;
+	            default:
+	              obj[headers[j]] = currentline[j];
+	            } // switch
+        obj[key] = value;
+        
+  	  }
+   
+  	  datos.push(obj);
+   
+    }
+}

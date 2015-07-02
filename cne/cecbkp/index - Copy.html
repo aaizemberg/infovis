@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<script src="https://code.jquery.com/jquery.min.js"></script>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+	<script src="http://d3js.org/d3.v3.min.js"></script>
+	<script src="http://d3js.org/d3.geo.projection.v0.min.js"></script>
+	<script src="http://d3js.org/topojson.v1.min.js"></script>
+
+	<script src="datamaps.none.min.js"></script>
+	<style>
+	  body {
+		padding-top: 1px;
+		padding-left: 1px;
+	  }
+	  @media (max-width: 980px) {
+		body {
+		  padding-top: 1;
+		}
+	  }
+	  .container {width:100%;max-width:none;padding:20;}
+	  table {
+		font-size: small;
+	  }
+	</style>
+
+	<!-- d3.js -->
+	<script src="http://d3js.org/d3.v3.min.js"></script>
+
+	<!-- c3.js -->
+	<link href="c3.min.css" rel="stylesheet" type="text/css">
+	<script src="c3.min.js"></script>
+
+<!-- <script src="https://raw.githubusercontent.com/lodash/lodash/3.8.0/lodash.min.js"></script> -->
+	<script src="lodash.min.js"></script>
+	<meta charset="utf-8">
+	<title>Clientes residenciales por region y comuna</title>
+</head>
+<body>
+	<div id="pp"></div>
+	<div class="container">
+
+		<h1>Consumo eléctrico por región</h1>
+
+
+		<div class="row">
+			<div class="col-md-4">
+				<h3>Región</h3>
+				<select id="region" class="form-control">
+					<option value="CL" selected="selected">Todo el país</option>
+					<option value="CL-TA">Tarapacá</option>
+					<option value="CL-AN">Antofagasta</option>
+					<option value="CL-AT">Atacama</option>
+					<option value="CL-CO">Coquimbo</option>
+					<option value="CL-VS">Valparaíso</option>
+					<option value="CL-LI">Región del Libertador Gral. Bernardo O’Higgins</option>
+					<option value="CL-ML">Región del Maule</option>
+					<option value="CL-BI">Región del Biobío</option>
+					<option value="CL-AR">Región de la Araucanía</option>
+					<option value="CL-LL">Región de Los Lagos</option>
+					<option value="CL-AI">Región Aisén del Gral. Carlos Ibáñez del Campo</option>
+					<option value="CL-MA">Región de Magallanes y de la Antártica Chilena</option>
+					<option value="CL-LR">Región de Los Ríos</option>
+					<option value="CL-AP">Arica y Parinacota</option>
+					<option value="CL-RM">Región Metropolitana de Santiago</option>
+				</select>
+			</div>
+			<div class="col-md-8"></div>
+		</div>
+
+		<hr>
+
+		<div class="row">
+			<div class="col-md-2">
+				<div id="container" style="position: relative; width: 150px; height: 600px;"></div>
+			</div>
+			<div class="col-md-8" id="chart"></div>
+			<div class="col-md-2" id="contotal">
+				<div id="total1"></div>
+				<div id="total2"></div>
+			</div>
+		</div>
+
+	</div>
+
+<script>
+
+//
+// "Tipo_cliente","Nombre_region","Nombre_comuna","SumaDeEnergía (kWh)","Energía Promedio por Cliente (KWh)","Clientes Promedio"
+//
+
+// Considerar solo la columna D (Suma Energía kWh) para el gráfico.
+// La unidad es kilowatts hora.
+// Otro comentario: hay comunas repetidas porque hay más de una distribuidora energética.
+// La alternativa es sumar las comunas iguales y expresar el consumo total de la comuna.
+
+var regiones = {
+  "CL": "Chile",
+  "CL-AI": "Región Aisén del Gral. Carlos Ibáñez del Campo",
+  "CL-AN": "Antofagasta",
+  "CL-AP": "Arica y Parinacota",
+  "CL-AR": "Región de la Araucanía",
+  "CL-AT": "Atacama",
+  "CL-BI": "Región del Biobío",
+  "CL-CO": "Coquimbo",
+  "CL-LI": "Región del Libertador Gral. Bernardo O’Higgins",
+  "CL-LL": "Región de Los Lagos",
+  "CL-LR": "Región de Los Ríos",
+  "CL-MA": "Región de Magallanes y de la Antártica Chilena",
+  "CL-ML": "Región del Maule",
+  "CL-RM": "Región Metropolitana de Santiago",
+  "CL-TA": "Tarapacá",
+  "CL-VS": "Valparaíso"
+};
+
+var datos;
+var region_sel ="CL";
+
+
+
+  d3.select("select#region").on("change", function() {
+    update_region();
+
+  });
+
+
+// d3.csv("http://cne.opendata.junar.com/datastreams/91876-clientes-residenciales-por-region-y-comuna.csv", function(error, data) {
+d3.csv("91876-clientes-residenciales-por-region-y-comuna.csv", function(error, data) {
+  data.forEach(function(d) {
+    _.forEach(d, function(n, key) {
+	  switch(key) {
+	    case "Tipo_cliente": 						// Tipo_cliente: "Residencial"
+	          break;
+	    case "Nombre_region": 						// Nombre_region: "Valparaíso"
+	          break;
+	    case "Nombre_comuna": 						// Nombre_comuna: "Zapallar"
+	          break;
+	    case "SumaDeEnergía (kWh)": 				// SumaDeEnergía (kWh): "14,585,310.00"
+	    	  d.SumaDeEnergia = n.replace(/,/g,"").replace(".00","")
+	          break;
+	    case "Energía Promedio por Cliente (KWh)":	// Energía Promedio por Cliente (KWh): "2,516.00"
+	    	  d.EnergiaPromedioPorCliente = n.replace(/,/g,"").replace(".00","")
+	          break;
+	    case "Clientes Promedio":   				// Clientes Promedio: "5,798.00"
+	    	  d.ClientesPromedio = n.replace(/,/g,"").replace(".00","")
+	          break;
+	    default:
+	          break;
+	  } // switch
+    }); // para cada atributo dentro del registro
+  }); // para cada registro
+
+  // genero una variable global con los datos
+  datos = data;
+
+  barras();
+  mapa();
+
+});
+
+function datos_grafico() {
+
+	if (region_sel == "CL") {
+	  /** Totales x region**/
+		var agrupado_reg = _.groupBy(datos, function(u) {
+			return u.Nombre_region;
+		});
+		var sumado_reg = _.mapValues(agrupado_reg, function(g) {
+			return _.sum(_.pluck(g, "SumaDeEnergia"));
+		});
+
+		//sumado_reg  {Antofagasta: 443529819, Arica y Parinacota: 161251484, Atacama: 191762427, Coquimbo: 446180175, Región Aisén del Gral. Carlos Ibáñez del Campo: 59102872…}
+		return sumado_reg;
+	} else {
+	  /** Totales x comuna dada una region**/
+		var rrr = _.filter(datos, function(n) { return n.Nombre_region == regiones[region_sel]; });
+		var agrupado_comu = _.groupBy(rrr, function(u) {
+			return u.Nombre_comuna;
+		});
+		var sumado_comu = _.mapValues(agrupado_comu, function(g) {
+			return _.sum(_.pluck(g, "SumaDeEnergia"));
+		});
+
+	   //sumado_comu {Algarrobo: 18872176, Cabildo: 11507779, Calera: 32795420, Calle Larga: 10945660, Cartagena: 15221732…}
+
+	   return sumado_comu;
+	}
+}
+
+
+
+function barras() {
+
+	var sumado = datos_grafico();
+	var total = _.sum(sumado);
+	var list= sumado;
+	var keysSorted = Object.keys(list).sort(function(a,b){return list[a]-list[b];});
+	SortedRev = keysSorted.reverse();
+	//            ['x', 'Antofagasta', 'Arica y Parinacota', 'Atacama', 'Coquimbo', 'Región Aisén del Gral. Carlos Ibáñez del Campo','Región Metropolitana de Santiago','Región de Los Lagos','Región de Los Ríos', 'Región de Magallanes y de la Antártica Chilena', 'Región de la Araucanía', 'Región del Biobío', 'Región del Libertador Gral. Bernardo O’Higgins', 'Región del Maule', 'Tarapacá', 'Valparaíso' ],
+	//            ['Region', 443529819, 161251484, 191762427, 446180175, 59102872, 5933698220, 528451723, 227141451, 128050951, 502668708, 1239599828, 591846388, 630061274, 261246750, 1324935857],
+	var ejeX;
+	ejeX = SortedRev;
+	ejeX.unshift("x");
+
+	col = [];
+	col[0] = ejeX;
+	var ceros = Array.apply(null, new Array(SortedRev.length-1)).map(Number.prototype.valueOf,0);
+
+	for (var j = 0; j < SortedRev.length-1; j++) {
+		ceros[j] = list[SortedRev[j+1]];
+	}
+	col[1] = ceros;
+	var texto;
+	if (region_sel == "CL") {
+		col[1].unshift("region");
+		texto = "País";
+	} else {
+		col[1].unshift("comuna");
+		texto = "Región";
+	}
+
+	//Total
+	d3.select("div#total1").data([]).exit().remove();
+	d3.select("div#total2").data([]).exit().remove();
+	d3.select("div#contotal").append("div").attr("id","total1");
+	d3.select("div#contotal").append("div").attr("id","total2");
+	str = "Total " + texto ;
+	d3.select("#total1").style("font-weight","lighter").style("text-transform","uppercase").text( str );
+	str = total.toLocaleString() + " kWh";
+	d3.select("#total2").style("font-weight","bold").text( str );
+
+
+
+	var chart = c3.generate({
+		size: {
+			height: 600,
+			width: 940
+		},
+		data: {
+			x: 'x',
+			columns: col,
+/*          columns: [
+               ['x', 'Antofagasta', 'Arica y Parinacota', 'Atacama', 'Coquimbo', 'Región Aisén del Gral. Carlos Ibáñez del Campo','Región Metropolitana de Santiago','Región de Los Lagos','Región de Los Ríos', 'Región de Magallanes y de la Antártica Chilena', 'Región de la Araucanía', 'Región del Biobío', 'Región del Libertador Gral. Bernardo O’Higgins', 'Región del Maule', 'Tarapacá', 'Valparaíso' ],
+               ['Region', 443529819, 161251484, 191762427, 446180175, 59102872, 5933698220, 528451723, 227141451, 128050951, 502668708, 1239599828, 591846388, 630061274, 261246750, 1324935857],
+            ],
+*/
+			type: 'bar',
+		},
+		axis: {
+			x: {
+				type: 'category',
+				tick: {
+				rotate: 75,
+				multiline: false
+				},
+				height: 130
+			},
+			y: {
+				tick: {
+
+					format: function (d) { return (Math.round( d/1000000 * 10 ) / 10); }
+					//format: function (d) { return (d); }
+					//or format: function (d) { return '$' + d; }
+				},
+				label: {
+					text: 'MM',
+					position: 'outer-middle',
+				}
+			},
+			rotated: true
+		}
+	});
+}
+
+
+  function DatosMapa() {
+	var mdata = {};
+	_.forEach(regiones, function(n, key) {
+		if (key != "CL") {
+			if (key == region_sel) {
+				var kv = {'fillKey': 'selected'};
+			}
+			else {
+				var kv = {'fillKey': 'defaultFill'};
+			}
+			mdata[key] = kv;
+		}
+ 	});
+	return mdata;
+  }
+
+
+  function update_region() {
+    region_sel = d3.select("#region").node().value;
+    update_mapa();
+    barras();
+  }
+
+
+function mapa() {
+
+  map = new Datamap({
+    element: document.getElementById('container'),
+    geographyConfig: {
+      dataUrl: 'regiones1e3.topojson'
+    },
+    scope: 'regiones',
+    fills: {
+      defaultFill: '#aaa',
+      selected: 'yellow'
+
+    },
+
+      done: function(datamap) {
+	              datamap.svg.selectAll('.datamaps-subunit').on('click', function(geography) {
+	                  // alert(geography.id + " " + geography.properties.name);
+	                  // region_sel = geography.id;
+	                  document.getElementById('region').value = geography.id;
+	                  document.getElementById('region').focus();
+	                  update_region();
+                  });
+      },
+
+
+    setProjection: function(element) {
+
+      var projection = d3.geo.mercator()
+        .center([-70, -40])
+        .scale( element.offsetHeight )
+        .translate([element.offsetWidth / 2, element.offsetHeight / 2]);
+
+       var path = d3.geo.path().projection(projection);
+       return {path: path, projection: projection};
+    }
+  });
+}
+
+function update_mapa(){
+	console.log(DatosMapa());
+	map.updateChoropleth(DatosMapa());
+}
+
+</script>
+
+</body>
+</html>
