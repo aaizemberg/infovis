@@ -165,7 +165,7 @@ function armarDatos() {
         var key = headers[j];
         var value = currentline[j];
         	  switch(key) {
-        	    case "SumaDeEnergía (kWh)": 				// SumaDeEnergía (kWh): "14,585,310.00"
+        	    case "Suma de Energía (kWh)": 				// SumaDeEnergía (kWh): "14,585,310.00"
 	    	      key = "SumaDeEnergia";
                   value = value.replace(/,/g,"").replace(".00","");
 	              break;
