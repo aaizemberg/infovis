@@ -97,7 +97,8 @@
 
 //
 // "Tipo_cliente","Nombre_region","Nombre_comuna","SumaDeEnergía (kWh)","Energía Promedio por Cliente (KWh)","Clientes Promedio"
-//
+// Lo cambiaron por
+// "Tipo de Cliente","Región","Comuna","Suma de Energía (kWh)","Energía Promedio por Cliente (KWh)"
 
 // Considerar solo la columna D (Suma Energía kWh) para el gráfico.
 // La unidad es kilowatts hora.
@@ -197,8 +198,8 @@ function datos_grafico() {
 	if (region_sel == "CL") {
 	  /** Totales x region**/
 		var agrupado_reg = _.groupBy(datos, function(u) {
-//			return u.Nombre_region;
 // Cambiaron Nombre_region x Región
+//			return u.Nombre_region;
 			return u.Región;
 		});
 		var sumado_reg = _.mapValues(agrupado_reg, function(g) {
@@ -209,9 +210,12 @@ function datos_grafico() {
 		return sumado_reg;
 	} else {
 	  /** Totales x comuna dada una region**/
-		var rrr = _.filter(datos, function(n) { return n.Nombre_region == regiones[region_sel]; });
+//		var rrr = _.filter(datos, function(n) { return n.Nombre_region == regiones[region_sel]; });
+		var rrr = _.filter(datos, function(n) { return n.Región == regiones[region_sel]; });
+
 		var agrupado_comu = _.groupBy(rrr, function(u) {
-			return u.Nombre_comuna;
+//			return u.Nombre_comuna;
+			return u.Comuna;
 		});
 		var sumado_comu = _.mapValues(agrupado_comu, function(g) {
 			return _.sum(_.pluck(g, "SumaDeEnergia"));
