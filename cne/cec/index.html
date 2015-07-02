@@ -165,7 +165,9 @@ function armarDatos() {
         var key = headers[j];
         var value = currentline[j];
         	  switch(key) {
-        	    case "SumaDeEnergía (kWh)": 				// SumaDeEnergía (kWh): "14,585,310.00"
+// Cambiaron el nombre del campo
+//				case "SumaDeEnergía (kWh)": 				// SumaDeEnergía (kWh): "14,585,310.00"
+        	    case "Suma de Energía (kWh)": 				// SumaDeEnergía (kWh): "14,585,310.00"
 	    	      key = "SumaDeEnergia";
                   value = value.replace(/,/g,"").replace(".00","");
 	              break;
@@ -173,6 +175,7 @@ function armarDatos() {
 	    	      key = "EnergiaPromedioPorCliente";
                   value = value.replace(/,/g,"").replace(".00","");
     	          break;
+// Este campo no lo mandan más
 	            case "Clientes Promedio":   				// Clientes Promedio: "5,798.00"
 	    	      key = "ClientesPromedio";
                   value = value.replace(/,/g,"").replace(".00","");
