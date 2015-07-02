@@ -168,6 +168,7 @@ function armarDatos() {
         	    case "Suma de Energía (kWh)": 				// SumaDeEnergía (kWh): "14,585,310.00"
 	    	      key = "SumaDeEnergia";
                   value = value.replace(/,/g,"").replace(".00","");
+                  console.log(value);
 	              break;
 	            case "Energía Promedio por Cliente (KWh)":	// Energía Promedio por Cliente (KWh): "2,516.00"
 	    	      key = "EnergiaPromedioPorCliente";
