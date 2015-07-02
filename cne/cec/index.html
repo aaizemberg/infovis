@@ -197,7 +197,9 @@ function datos_grafico() {
 	if (region_sel == "CL") {
 	  /** Totales x region**/
 		var agrupado_reg = _.groupBy(datos, function(u) {
-			return u.Nombre_region;
+//			return u.Nombre_region;
+// Cambiaron Nombre_region x Región
+			return u.Región;
 		});
 		var sumado_reg = _.mapValues(agrupado_reg, function(g) {
 			return _.sum(_.pluck(g, "SumaDeEnergia"));
