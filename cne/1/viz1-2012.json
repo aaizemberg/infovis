@@ -1,0 +1,904 @@
+{
+  "head" : {
+    "vars" : [ "item", "source", "total" ]
+  },
+  "results" : {
+    "bindings" : [ {
+      "source" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Energía Eólica"
+      },
+      "item" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Error Estadístico"
+      },
+      "total" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "0"
+      }
+    }, {
+      "source" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Biomasa - Leña"
+      },
+      "item" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Error Estadístico"
+      },
+      "total" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "0"
+      }
+    }, {
+      "source" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Petróleo Crudo"
+      },
+      "item" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Error Estadístico"
+      },
+      "total" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "0"
+      }
+    }, {
+      "source" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Gas Natural"
+      },
+      "item" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Error Estadístico"
+      },
+      "total" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "1524"
+      }
+    }, {
+      "source" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Energía Hídrica"
+      },
+      "item" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Error Estadístico"
+      },
+      "total" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "-153"
+      }
+    }, {
+      "source" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Carón"
+      },
+      "item" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Error Estadístico"
+      },
+      "total" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "-1613"
+      }
+    }, {
+      "source" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Energía Solar"
+      },
+      "item" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Error Estadístico"
+      },
+      "total" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "0"
+      }
+    }, {
+      "source" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Biogas"
+      },
+      "item" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Error Estadístico"
+      },
+      "total" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "0"
+      }
+    }, {
+      "source" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Biomasa - Leña"
+      },
+      "item" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Exportación"
+      },
+      "total" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "0"
+      }
+    }, {
+      "source" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Energía Solar"
+      },
+      "item" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Exportación"
+      },
+      "total" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "0"
+      }
+    }, {
+      "source" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Gas Natural"
+      },
+      "item" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Exportación"
+      },
+      "total" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "0"
+      }
+    }, {
+      "source" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Carón"
+      },
+      "item" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Exportación"
+      },
+      "total" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "0"
+      }
+    }, {
+      "source" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Energía Eólica"
+      },
+      "item" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Exportación"
+      },
+      "total" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "0"
+      }
+    }, {
+      "source" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Petróleo Crudo"
+      },
+      "item" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Exportación"
+      },
+      "total" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "0"
+      }
+    }, {
+      "source" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Energía Hídrica"
+      },
+      "item" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Exportación"
+      },
+      "total" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "0"
+      }
+    }, {
+      "source" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Biogas"
+      },
+      "item" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Exportación"
+      },
+      "total" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "0"
+      }
+    }, {
+      "source" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Biogas"
+      },
+      "item" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Importación"
+      },
+      "total" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "0"
+      }
+    }, {
+      "source" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Petróleo Crudo"
+      },
+      "item" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Importación"
+      },
+      "total" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "91063"
+      }
+    }, {
+      "source" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Gas Natural"
+      },
+      "item" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Importación"
+      },
+      "total" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "36584"
+      }
+    }, {
+      "source" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Carón"
+      },
+      "item" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Importación"
+      },
+      "total" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "62329"
+      }
+    }, {
+      "source" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Energía Hídrica"
+      },
+      "item" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Importación"
+      },
+      "total" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "0"
+      }
+    }, {
+      "source" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Energía Eólica"
+      },
+      "item" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Importación"
+      },
+      "total" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "0"
+      }
+    }, {
+      "source" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Energía Solar"
+      },
+      "item" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Importación"
+      },
+      "total" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "0"
+      }
+    }, {
+      "source" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Biomasa - Leña"
+      },
+      "item" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Importación"
+      },
+      "total" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "0"
+      }
+    }, {
+      "source" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Biogas"
+      },
+      "item" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Producción Primaria"
+      },
+      "total" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "72"
+      }
+    }, {
+      "source" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Biomasa - Leña"
+      },
+      "item" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Producción Primaria"
+      },
+      "total" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "89299"
+      }
+    }, {
+      "source" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Petróleo Crudo"
+      },
+      "item" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Producción Primaria"
+      },
+      "total" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "3532"
+      }
+    }, {
+      "source" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Gas Natural"
+      },
+      "item" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Producción Primaria"
+      },
+      "total" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "11505"
+      }
+    }, {
+      "source" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Carón"
+      },
+      "item" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Producción Primaria"
+      },
+      "total" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "3737"
+      }
+    }, {
+      "source" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Energía Hídrica"
+      },
+      "item" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Producción Primaria"
+      },
+      "total" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "17336"
+      }
+    }, {
+      "source" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Energía Solar"
+      },
+      "item" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Producción Primaria"
+      },
+      "total" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "185"
+      }
+    }, {
+      "source" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Energía Eólica"
+      },
+      "item" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Producción Primaria"
+      },
+      "total" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "351"
+      }
+    }, {
+      "source" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Petróleo Crudo"
+      },
+      "item" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Pérdidas"
+      },
+      "total" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "0"
+      }
+    }, {
+      "source" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Energía Solar"
+      },
+      "item" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Pérdidas"
+      },
+      "total" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "0"
+      }
+    }, {
+      "source" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Biogas"
+      },
+      "item" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Pérdidas"
+      },
+      "total" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "0"
+      }
+    }, {
+      "source" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Energía Hídrica"
+      },
+      "item" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Pérdidas"
+      },
+      "total" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "153"
+      }
+    }, {
+      "source" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Carón"
+      },
+      "item" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Pérdidas"
+      },
+      "total" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "0"
+      }
+    }, {
+      "source" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Energía Eólica"
+      },
+      "item" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Pérdidas"
+      },
+      "total" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "0"
+      }
+    }, {
+      "source" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Biomasa - Leña"
+      },
+      "item" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Pérdidas"
+      },
+      "total" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "0"
+      }
+    }, {
+      "source" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Gas Natural"
+      },
+      "item" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Pérdidas"
+      },
+      "total" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "586"
+      }
+    }, {
+      "source" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Petróleo Crudo"
+      },
+      "item" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Var.Stock + Perdidas + Error Est."
+      },
+      "total" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "-2195"
+      }
+    }, {
+      "source" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Biogas"
+      },
+      "item" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Var.Stock + Perdidas + Error Est."
+      },
+      "total" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "0"
+      }
+    }, {
+      "source" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Energía Solar"
+      },
+      "item" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Var.Stock + Perdidas + Error Est."
+      },
+      "total" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "0"
+      }
+    }, {
+      "source" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Biomasa - Leña"
+      },
+      "item" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Var.Stock + Perdidas + Error Est."
+      },
+      "total" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "521"
+      }
+    }, {
+      "source" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Carón"
+      },
+      "item" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Var.Stock + Perdidas + Error Est."
+      },
+      "total" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "-427"
+      }
+    }, {
+      "source" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Energía Hídrica"
+      },
+      "item" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Var.Stock + Perdidas + Error Est."
+      },
+      "total" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "0"
+      }
+    }, {
+      "source" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Energía Eólica"
+      },
+      "item" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Var.Stock + Perdidas + Error Est."
+      },
+      "total" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "0"
+      }
+    }, {
+      "source" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Gas Natural"
+      },
+      "item" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Var.Stock + Perdidas + Error Est."
+      },
+      "total" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "2510"
+      }
+    }, {
+      "source" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Biogas"
+      },
+      "item" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Variación de Stock"
+      },
+      "total" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "0"
+      }
+    }, {
+      "source" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Energía Solar"
+      },
+      "item" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Variación de Stock"
+      },
+      "total" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "0"
+      }
+    }, {
+      "source" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Carón"
+      },
+      "item" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Variación de Stock"
+      },
+      "total" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "1186"
+      }
+    }, {
+      "source" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Energía Hídrica"
+      },
+      "item" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Variación de Stock"
+      },
+      "total" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "0"
+      }
+    }, {
+      "source" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Petróleo Crudo"
+      },
+      "item" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Variación de Stock"
+      },
+      "total" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "-2195"
+      }
+    }, {
+      "source" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Energía Eólica"
+      },
+      "item" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Variación de Stock"
+      },
+      "total" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "0"
+      }
+    }, {
+      "source" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Biomasa - Leña"
+      },
+      "item" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Variación de Stock"
+      },
+      "total" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "521"
+      }
+    }, {
+      "source" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Gas Natural"
+      },
+      "item" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "Variación de Stock"
+      },
+      "total" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+        "type" : "literal",
+        "value" : "399"
+      }
+    } ]
+  }
+}

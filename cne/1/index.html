@@ -32,6 +32,18 @@
 </style>
 <body>
 
+<select id="year">
+  <option value="2008">2008</option>
+  <option value="2009">2009</option>
+  <option value="2010">2010</option>
+  <option value="2011">2011</option>
+  <option value="2012">2012</option>
+  <option selected="selected" value="2013">2013</option>
+<!--  <option value="2014">2014</option> -->
+<!--  <option value="2015">2015</option> -->
+</select>
+
+
 <div id="chart">Cargando datos...</div>
 
 <!-- <script src="d3.v3.min.js"></script> -->
@@ -44,6 +56,34 @@ from http://bl.ocks.org/frischmilch/7667996
 <script src="sankey.js"></script>
 
 <script>
+
+var year_sel = "2013";
+
+function load(y) {
+  d3.json("viz1-" + y + ".json", function(error, data) {
+  	console.log( "leyendo: " + "viz1-" + y + ".json" );
+
+//  data.results.bindings[0].source.value -->  "Carón"
+//  data.results.bindings[0].item.value   -->  "Exportación"
+//  data.results.bindings[0].total.value  --> "0"
+
+    data.results.bindings.forEach(function (d, i) {
+    	if ( d.total.value !== "0" ) {
+    	  console.log( d.source.value + ", " + d.item.value + ", " +  d.total.value );
+    	}
+/**
+	          graph.nodes.push({ "name": d.source.value });
+	          graph.nodes.push({ "name": d.item.value });
+			  graph.links.push({ "source": d.source,"target": d.target,"value": d.total.value });
+**/
+    })
+  })
+}
+
+d3.select("select#year").on("change", function() {
+    year_sel = d3.select("select#year").node().value;
+    load(year_sel);
+});
 
 var units = "unidades";
 
@@ -74,24 +114,24 @@ var path = sankey.link();
 d3.csv("datos_2009.csv", function(error, data) {
  		//set up graph in same style as original example but empty
   		graph = {"nodes" : [], "links" : []};
-                data.forEach(function (d, i) {
-                	graph.nodes.push({ "name": d.source });
-                	graph.nodes.push({ "name": d.target });
-			graph.links.push({ "source": d.source,"target": d.target,"value": d.value });
-		})
+        data.forEach(function (d, i) {
+          graph.nodes.push({ "name": d.source });
+          graph.nodes.push({ "name": d.target });
+		  graph.links.push({ "source": d.source,"target": d.target,"value": d.value });
+        })
 
 
-                // thanks Mike Bostock https://groups.google.com/d/msg/d3-js/pl297cFtIQk/Eso4q_eBu1IJ
-                // this handy little function returns only the distinct / unique nodes
-                graph.nodes = d3.keys(d3.nest()
+        // thanks Mike Bostock https://groups.google.com/d/msg/d3-js/pl297cFtIQk/Eso4q_eBu1IJ
+        // this handy little function returns only the distinct / unique nodes
+        graph.nodes = d3.keys(d3.nest()
                          .key(function (d) { return d.name; })
                          .map(graph.nodes));
 
 		//it appears d3 with force layout wants a numeric source and target
-                //so loop through each link replacing the text with its index from node
+        //so loop through each link replacing the text with its index from node
 		graph.links.forEach(function (d, i) {
 			graph.links[i].source = graph.nodes.indexOf(graph.links[i].source);
-                	graph.links[i].target = graph.nodes.indexOf(graph.links[i].target);
+            graph.links[i].target = graph.nodes.indexOf(graph.links[i].target);
 		});
 
 		//now loop through each nodes to make nodes an array of objects rather than an array of strings
