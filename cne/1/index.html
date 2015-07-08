@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<head>
+<script src="https://code.jquery.com/jquery.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <meta charset="utf-8">
 <title>Balance energetico</title>
 <style>
@@ -30,22 +34,33 @@
   stroke-opacity: .5;
 }
 </style>
+</head>
 <body>
+	<div class="container">
+		<h1>Balance de energía</h1>
+		<div class="row">
+			<div class="col-md-4">
+			  <select id="year" class="form-control">
+				<option value="2008">2008</option>
+				<option value="2009">2009</option>
+				<option value="2010">2010</option>
+				<option value="2011">2011</option>
+				<option value="2012">2012</option>
+				<option selected="selected" value="2013">2013</option>
+				<!--  <option value="2014">2014</option> -->
+				<!--  <option value="2015">2015</option> -->
+			  </select>
+			</div>
+			<div class="col-md-8"></div>
+		</div>
+		<hr>
 
-  <select id="year">
-    <option value="2008">2008</option>
-    <option value="2009">2009</option>
-    <option value="2010">2010</option>
-    <option value="2011">2011</option>
-    <option value="2012">2012</option>
-    <option selected="selected" value="2013">2013</option>
-    <!--  <option value="2014">2014</option> -->
-    <!--  <option value="2015">2015</option> -->
-  </select>
-
-
-  <div id="chart">Cargando datos...</div>
-
+		<div class="row">
+			<div class="col-md-12">
+			  <div id="chart">Cargando datos...</div>
+			</div>
+		</div>
+	</div>
   <!-- <script src="d3.v3.min.js"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" charset="utf-8"></script>
 
@@ -88,7 +103,7 @@ function load(y) {
 
   var path = sankey.link();
 
-  
+
   d3.json("viz1-" + y + ".json", function(error, data) {
     console.log( "leyendo: " + "viz1-" + y + ".json" );
     graph = {"nodes" : [], "links" : []};
@@ -126,7 +141,7 @@ function load(y) {
       graph.nodes[i] = { "name": d };
     });
 
-  
+
   sankey
     .nodes(graph.nodes)
     .links(graph.links)
