@@ -78,25 +78,27 @@
           <option value="CL-RM">Metropolitana de Santiago</option>
         </select>
       </div>
+
       <div class="col-md-3">
         <select id="combustible" class="form-control"> <!-- class="input-small|input-medium|input-large|input-xlarge|input-xxlarge" -->
           <option value="combustibles" selected="selected">Todos</option>
-          <option value="GASOLINA_81">GASOLINA_81</option>
-          <option value="GASOLINA_93_SP">GASOLINA_93_SP</option>
-          <option value="GASOLINA_95_SP">GASOLINA_95_SP</option>
-          <option value="GASOLINA_97_SP">GASOLINA_97_SP</option>
-          <option value="GASOLINA_AVIACION_1000130">GASOLINA_AVIACION_1000130</option>
-          <option value="KEROSENE_AVIACION">KEROSENE_AVIACION</option>
-          <option value="KEROSENE_DOMESTICO">KEROSENE_DOMESTICO</option>
-          <option value="P_COMBUSTIBLE_180">P_COMBUSTIBLE_180</option>
-          <option value="P_COMBUSTIBLE_5">P_COMBUSTIBLE_5</option>
-          <option value="P_COMBUSTIBLE_6">P_COMBUSTIBLE_6</option>
-          <option value="P_DIESEL">P_DIESEL</option>
-          <option value="P_DIESEL_A1">P_DIESEL_A1</option>
-          <option value="P_DIESEL_B">P_DIESEL_B</option>
-          <option value="P_DIESEL_B1">P_DIESEL_B1</option>
-          <option value="P_DIESEL_B2">P_DIESEL_B2</option>
-          <option value="P_DIESEL_INVERNAL">P_DIESEL_INVERNAL</option>
+          <option value="GASOLINA_81">Gasolina 81</option>
+          <option value="GASOLINA_93">Gasolina 93</option>
+          <option value="GASOLINA_93_SP">Gasolina 93 (con plomo)</option>
+          <option value="GASOLINA_95_SP">Gasolina 95</option>
+          <option value="GASOLINA_97_SP">Gasolina 97</option>
+          <option value="GASOLINA_AVIACION_1000130">Gasolina de Aviación</option>
+          <option value="KEROSENE_AVIACION">Kerosene de Aviación</option>
+          <option value="KEROSENE_DOMESTICO">Kerosene Doméstico</option>
+          <option value="P_COMBUSTIBLE_180">Petróleo Combustible 180</option>
+          <option value="P_COMBUSTIBLE_5">Petróleo Combustible 5</option>
+          <option value="P_COMBUSTIBLE_6">Petróleo Combustible 6</option>
+          <option value="P_DIESEL">Petróleo Diesel</option>
+          <option value="P_DIESEL_A1">Petróleo Diesel A1</option>
+          <option value="P_DIESEL_B">Petróleo Diesel B</option>
+          <option value="P_DIESEL_INVERNAL">Petróleo Diesel Invernal</option>
+          <option value="P_DIESEL_B1">Petróleo Diesel B1</option>
+          <option value="P_DIESEL_B2">Petróleo Diesel B2</option>
         </select>
       </div>
 	<div class="col-md-5"></div>
@@ -389,26 +391,24 @@ function tabla_comp() {
   th.append("th").text(y2_sel);
   th.append("th").text("Var %");
   th.append("th").text("Var m3");
-
   var tbody = tabla.append("tbody");
-  fila(tbody,"gasolina_81", datos_tabla_a1.GASOLINA_81, datos_tabla_a2.GASOLINA_81);
-  fila(tbody,'gasolina_93', datos_tabla_a1.GASOLINA_93, datos_tabla_a2.GASOLINA_93);
-  fila(tbody,'gasolina_93_sp', datos_tabla_a1.GASOLINA_93_SP, datos_tabla_a2.GASOLINA_93_SP);
-  fila(tbody,'gasolina_95_sp', datos_tabla_a1.GASOLINA_95_SP, datos_tabla_a2.GASOLINA_95_SP);
-  fila(tbody,'gasolina_97_sp', datos_tabla_a1.GASOLINA_97_SP, datos_tabla_a2.GASOLINA_97_SP);
-  fila(tbody,'gasolina_aviacion_1000130', datos_tabla_a1.GASOLINA_AVIACION_1000130, datos_tabla_a2.GASOLINA_AVIACION_1000130);
-  fila(tbody,'kerosene_aviacion', datos_tabla_a1.KEROSENE_AVIACION, datos_tabla_a2.KEROSENE_AVIACION);
-  fila(tbody,'kerosene_domestico', datos_tabla_a1.KEROSENE_DOMESTICO, datos_tabla_a2.KEROSENE_DOMESTICO);
-  fila(tbody,'p_combustible_180', datos_tabla_a1.P_COMBUSTIBLE_180, datos_tabla_a2.P_COMBUSTIBLE_180);
-  fila(tbody,'p_combustible_5', datos_tabla_a1.P_COMBUSTIBLE_5, datos_tabla_a2.P_COMBUSTIBLE_5);
-  fila(tbody,'p_combustible_6', datos_tabla_a1.P_COMBUSTIBLE_6, datos_tabla_a2.P_COMBUSTIBLE_6);
-  fila(tbody,'p_diesel', datos_tabla_a1.P_DIESEL, datos_tabla_a2.P_DIESEL);
-  fila(tbody,'p_diesel_a1', datos_tabla_a1.P_DIESEL_A1, datos_tabla_a2.P_DIESEL_A1);
-  fila(tbody,'p_diesel_a2', datos_tabla_a1.P_DIESEL_A2, datos_tabla_a2.P_DIESEL_A2);
-  fila(tbody,'p_diesel_b', datos_tabla_a1.P_DIESEL_B, datos_tabla_a2.P_DIESEL_B);
-  fila(tbody,'p_diesel_invernal', datos_tabla_a1.P_DIESEL_INVERNAL, datos_tabla_a2.P_DIESEL_INVERNAL);
-  fila(tbody,'p_diesel_b1', datos_tabla_a1.P_DIESEL_B1, datos_tabla_a2.P_DIESEL_B1);
-  fila(tbody,'p_diesel_b2', datos_tabla_a1.P_DIESEL_B2, datos_tabla_a2.P_DIESEL_B2);
+  fila(tbody,"Gasolina 81", datos_tabla_a1.GASOLINA_81, datos_tabla_a2.GASOLINA_81);
+  fila(tbody,'Gasolina 93 (con plomo)', datos_tabla_a1.GASOLINA_93, datos_tabla_a2.GASOLINA_93);
+  fila(tbody,'Gasolina 93', datos_tabla_a1.GASOLINA_93_SP, datos_tabla_a2.GASOLINA_93_SP);
+  fila(tbody,'Gasolina 95', datos_tabla_a1.GASOLINA_95_SP, datos_tabla_a2.GASOLINA_95_SP);
+  fila(tbody,'Gasolina 97', datos_tabla_a1.GASOLINA_97_SP, datos_tabla_a2.GASOLINA_97_SP);
+  fila(tbody,'Gasolina de Aviación', datos_tabla_a1.GASOLINA_AVIACION_1000130, datos_tabla_a2.GASOLINA_AVIACION_1000130);
+  fila(tbody,'Kerosene de Aviación', datos_tabla_a1.KEROSENE_AVIACION, datos_tabla_a2.KEROSENE_AVIACION);
+  fila(tbody,'Kerosene Doméstico', datos_tabla_a1.KEROSENE_DOMESTICO, datos_tabla_a2.KEROSENE_DOMESTICO);
+  fila(tbody,'Petróleo Combustible 180', datos_tabla_a1.P_COMBUSTIBLE_180, datos_tabla_a2.P_COMBUSTIBLE_180);
+  fila(tbody,'Petróleo Combustible 5', datos_tabla_a1.P_COMBUSTIBLE_5, datos_tabla_a2.P_COMBUSTIBLE_5);
+  fila(tbody,'Petróleo Combustible 6', datos_tabla_a1.P_COMBUSTIBLE_6, datos_tabla_a2.P_COMBUSTIBLE_6);
+  fila(tbody,'Petróleo Diesel', datos_tabla_a1.P_DIESEL, datos_tabla_a2.P_DIESEL);
+  fila(tbody,'Petróleo Diesel A1', datos_tabla_a1.P_DIESEL_A1, datos_tabla_a2.P_DIESEL_A1);
+  fila(tbody,'Petróleo Diesel B', datos_tabla_a1.P_DIESEL_B, datos_tabla_a2.P_DIESEL_B);
+  fila(tbody,'Petróleo Diesel Invernal', datos_tabla_a1.P_DIESEL_INVERNAL, datos_tabla_a2.P_DIESEL_INVERNAL);
+  fila(tbody,'Petróleo Diesel B1', datos_tabla_a1.P_DIESEL_B1, datos_tabla_a2.P_DIESEL_B1);
+  fila(tbody,'Petróleo Diesel B2', datos_tabla_a1.P_DIESEL_B2, datos_tabla_a2.P_DIESEL_B2);
 
 }
 
