@@ -105,7 +105,6 @@
 	</div>
 
   <hr>
-
 <!--
     <div class="row">
     	<div class="col-md-8"><h4 id="titulo_variable">Venta de combustibles en Chile</h4></div>
@@ -153,48 +152,46 @@
      </div>
     </div>
   </div>
-
+</div>
 
 <script>
-//TERMINAR ESTO
-//Poner los nombres de gasolina en extenso
-var dict_combustible = {
-'gasolina_81':'Gasolina 81',
-'gasolina_93':'Gasolina 93 (con plomo)',
-'gasolina_93_sp':'Gasolina 93',
-'gasolina_95_sp':'Gasolina 95',
-'gasolina_97_sp':'Gasolina 97',
-'gasolina_aviacion_1000130':'Gasolina de Aviación',
-'kerosene_aviacion':'Kerosene de Aviación',
-'kerosene_domestico':'Kerosene Doméstico',
-'p_combustible_180':'Petróleo Combustible 180',
-'p_combustible_5':'Petróleo Combustible 5',
-'p_combustible_6':'Petróleo Combustible 6',
-'p_diesel':'Petróleo Diesel',
-'p_diesel_a1':'Petróleo Diesel A1',
-'p_diesel_b':'Petróleo Diesel B',
-'p_diesel_invernal':'Petróleo Diesel Invernal',
-'p_diesel_b1':'Petróleo Diesel B1',
-'p_diesel_b2':'Petróleo Diesel B2'
+  var dict_combustible = {
+	'gasolina_81':'Gasolina 81',
+	'gasolina_93':'Gasolina 93 (con plomo)',
+	'gasolina_93_sp':'Gasolina 93',
+	'gasolina_95_sp':'Gasolina 95',
+	'gasolina_97_sp':'Gasolina 97',
+	'gasolina_aviacion_1000130':'Gasolina de Aviación',
+	'kerosene_aviacion':'Kerosene de Aviación',
+	'kerosene_domestico':'Kerosene Doméstico',
+	'p_combustible_180':'Petróleo Combustible 180',
+	'p_combustible_5':'Petróleo Combustible 5',
+	'p_combustible_6':'Petróleo Combustible 6',
+	'p_diesel':'Petróleo Diesel',
+	'p_diesel_a1':'Petróleo Diesel A1',
+	'p_diesel_b':'Petróleo Diesel B',
+	'p_diesel_invernal':'Petróleo Diesel Invernal',
+	'p_diesel_b1':'Petróleo Diesel B1',
+	'p_diesel_b2':'Petróleo Diesel B2'
 };
 
 var regiones = {
-  "CL": "Chile",
-  "CL-AI": "XI de Aysén del General Carlos Ibáñez del Campo",
-  "CL-AN": "II de Antofagasta",
-  "CL-AP": "XV Arica y Parinacota",
-  "CL-AR": "IX de la Araucanía",
-  "CL-AT": "III de Atacama",
-  "CL-BI": "VIII del Biobío",
-  "CL-CO": "IV de Coquimbo",
-  "CL-LI": "VI del Libertador General Bernardo O'Higgins",
-  "CL-LL": "X de Los Lagos",
-  "CL-LR": "XIV de los Ríos",
-  "CL-MA": "XII de Magallanes y de la Antártica Chilena",
-  "CL-ML": "VII del Maule",
-  "CL-RM": "Metropolitana de Santiago",
-  "CL-TA": "I de Tarapacá",
-  "CL-VS": "V de Valparaíso"
+	"CL": "Chile",
+	"CL-AI": "XI de Aysén del General Carlos Ibáñez del Campo",
+	"CL-AN": "II de Antofagasta",
+	"CL-AP": "XV Arica y Parinacota",
+	"CL-AR": "IX de la Araucanía",
+	"CL-AT": "III de Atacama",
+	"CL-BI": "VIII del Biobío",
+	"CL-CO": "IV de Coquimbo",
+	"CL-LI": "VI del Libertador General Bernardo O'Higgins",
+	"CL-LL": "X de Los Lagos",
+	"CL-LR": "XIV de los Ríos",
+	"CL-MA": "XII de Magallanes y de la Antártica Chilena",
+	"CL-ML": "VII del Maule",
+	"CL-RM": "Metropolitana de Santiago",
+	"CL-TA": "I de Tarapacá",
+	"CL-VS": "V de Valparaíso"
 };
 
   var region_sel ="CL";
@@ -220,18 +217,15 @@ var regiones = {
     d3.select("#titulo_variable").text( str );
     combustible_sel= d3.select("#combustible").node().value;
     update_viz();
-    // tabla_comp(); Siempre mostramos todos los combustibles
   });
 
   d3.select("select#y1").on("change", function() {
     y1_sel = d3.select("#y1").node().value;
-    //update_viz();
     tabla_comp();
   });
 
   d3.select("select#y2").on("change", function() {
     y2_sel = d3.select("#y2").node().value;
-    //update_viz();
     tabla_comp();
   });
 
@@ -254,13 +248,14 @@ function update_viz() {
   // metros cúbicos por año según el combustible (cc) y/o la region (rr)
   //
   function m3xa(cc,rr) {
+    var ccc;
     if ( rr == "CL" ) {
       // CL = todo Chile
-      var ccc = _.filter(datos, function(n) { return n.combustible == cc; });
+      ccc = _.filter(datos, function(n) { return n.combustible == cc; });
     }
     else {
       var rrr = _.filter(datos, function(n) { return n.region == rr; });
-      var ccc = _.filter(rrr, function(n) { return n.combustible == cc; });
+      ccc = _.filter(rrr, function(n) { return n.combustible == cc; });
     }
 
     var agrupado_c = _.groupBy(ccc, function(u) {
@@ -283,12 +278,9 @@ function update_viz() {
    	combustibles = [combustible_sel];
   }
 
-
   var ejeX;
   ejeX = _.uniq(_.map(datos, 'year'));
   ejeX.unshift("x");
-
-
 
   col = [];
   col[0] = ejeX;
@@ -321,7 +313,6 @@ function update_viz() {
         		y : {
             			tick: {
                 			format: d3.format(",")
-//              			format: function (d) { return "$" + d; }
             			},
             			label: 'm3'
 		    	}
@@ -341,57 +332,40 @@ function update_viz() {
   		        grouped: false
           }
   	});
-
-
   }
 
 function datos_comp(aa,cc,rr) {
-// var años = [2013,2014];
-// var aaa = _.filter(datos, function(n) { return aa.indexOf(n.year) > -1; });
-
-//  var aa=2013
   var aaa = _.filter(datos, function(n) { return n.year == aa; });
-
-
   var ccc = _.filter(aaa, function(n) { return cc.indexOf(n.combustible) > -1; });
   var rrr;
-
   if ( rr == "CL" ) {
     rrr = ccc;
   } else {
     rrr = _.filter(ccc, function(n) { return n.region == rr; });
   }
-
   var agrupado_c = _.groupBy(rrr, function(u) {
       return u.combustible;
     });
-
   var sumado = _.mapValues(agrupado_c, function(g) {
       return _.sum(_.pluck(g, "m3"));
     });
-
   return sumado;
 }
 
 function fila(tbl, nombre,v1,v2) {
-
 	if (v1>0 || v2>0) {
-
 	  var tr = tbl.append("tr");
-
 	  tr.append("td").text(nombre);
 	  tr.append("td").style("text-align","right").text((v1>0 ? v1.toLocaleString() : ""));
 	  tr.append("td").style("text-align","right").text((v2>0 ? v2.toLocaleString() : ""));
 	  if (v1>0 && v2>0) {
-
 		var vr =Math.round((v2-v1)/v2*100);
 		var ico = (vr>0 ? "triangle-top" : (vr<0 ? "triangle-bottom" : "minus"));
 		var color = (vr>0 ? "green" : (vr<0 ? "red" : "grey"));
-
 		tr.append("td").style("text-align","right").text(vr + "%").append("span").attr("class","glyphicon glyphicon-"+ico).style("color",color);
-
 		tr.append("td").style("text-align","right").style("color",(v2-v1 < 0 ? "red" : "black")).text((v2-v1).toLocaleString());
-	  } else {
+	  }
+	  else {
 		tr.append("td").style("text-align","right").text("");
 		tr.append("td").style("text-align","right").text("");
 	  }
@@ -400,15 +374,11 @@ function fila(tbl, nombre,v1,v2) {
 
 function tabla_comp() {
   combustibles = _.uniq(_.map(datos, 'combustible'));
-
   var datos_tabla_a1 = datos_comp(y1_sel,combustibles, region_sel );
   var datos_tabla_a2 = datos_comp(y2_sel,combustibles, region_sel );
-
-
   d3.select("table#tbl").data([]).exit().remove();
   d3.select("div#comp").append("table").attr("id","tbl").attr("class","table table-condensed");
   var tabla = d3.select("table#tbl");
-
   var thead = tabla.append("thead");
   var th = thead.append("tr");
 
@@ -436,25 +406,24 @@ function tabla_comp() {
   fila(tbody,'Petróleo Diesel Invernal', datos_tabla_a1.P_DIESEL_INVERNAL, datos_tabla_a2.P_DIESEL_INVERNAL);
   fila(tbody,'Petróleo Diesel B1', datos_tabla_a1.P_DIESEL_B1, datos_tabla_a2.P_DIESEL_B1);
   fila(tbody,'Petróleo Diesel B2', datos_tabla_a1.P_DIESEL_B2, datos_tabla_a2.P_DIESEL_B2);
-
 }
 
-
-  function DatosMapa() {
-	var mdata = {};
-	_.forEach(regiones, function(n, key) {
-		if (key != "CL") {
-			if (key == region_sel) {
-				var kv = {'fillKey': 'selected'};
-			}
-			else {
-				var kv = {'fillKey': 'defaultFill'};
-			}
-			mdata[key] = kv;
-		}
- 	});
-	return mdata;
-  }
+function DatosMapa() {
+  var mdata = {};
+  var kv;
+  _.forEach(regiones, function(n, key) {
+    if (key != "CL") {
+      if (key == region_sel) {
+        kv = {'fillKey': 'selected'};
+      }
+      else {
+        kv = {'fillKey': 'defaultFill'};
+      }
+      mdata[key] = kv;
+    }
+  });
+  return mdata;
+}
 
 function mapa() {
 
@@ -480,7 +449,6 @@ function mapa() {
                   });
       },
 
-
     setProjection: function(element) {
 
       var projection = d3.geo.mercator()
@@ -499,7 +467,6 @@ function update_mapa(){
 	map.updateChoropleth(DatosMapa());
 }
 </script>
-</div>
 
 <iframe src="http://junar-cdn-brandings.s3.amazonaws.com/files/cne_cl/footer.html" width="100%" height="180px" frameborder="0" scrolling="no"></iframe>
 
