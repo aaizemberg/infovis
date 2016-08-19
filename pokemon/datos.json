@@ -1,0 +1,1059 @@
+[
+  {
+    "id": 16,
+    "pokemon": "Pidgey",
+    "tipo": "normal",
+    "SpawnChance": 15.98,
+    "AvgSpawns": "1,598 / 10,000 spawns"
+  },
+  {
+    "id": 19,
+    "pokemon": "Rattata",
+    "tipo": "normal",
+    "SpawnChance": 13.05,
+    "AvgSpawns": "1,305 / 10,000 spawns"
+  },
+  {
+    "id": 13,
+    "pokemon": "Weedle",
+    "tipo": "bicho",
+    "SpawnChance": 7.12,
+    "AvgSpawns": "712 / 10,000 spawns"
+  },
+  {
+    "id": 41,
+    "pokemon": "Zubat",
+    "tipo": "veneno",
+    "SpawnChance": 6.52,
+    "AvgSpawns": "652 / 10,000 spawns"
+  },
+  {
+    "id": 129,
+    "pokemon": "Magikarp",
+    "tipo": "agua",
+    "SpawnChance": 4.78,
+    "AvgSpawns": "478 / 10,000 spawns"
+  },
+  {
+    "id": 21,
+    "pokemon": "Spearow",
+    "tipo": "normal",
+    "SpawnChance": 4.73,
+    "AvgSpawns": "473 / 10,000 spawns"
+  },
+  {
+    "id": 96,
+    "pokemon": "Drowzee",
+    "tipo": "psiquico",
+    "SpawnChance": 3.21,
+    "AvgSpawns": "321 / 10,000 spawns"
+  },
+  {
+    "id": 10,
+    "pokemon": "Caterpie",
+    "tipo": "bicho",
+    "SpawnChance": 3.032,
+    "AvgSpawns": "303.2 / 10,000 spawns"
+  },
+  {
+    "id": 133,
+    "pokemon": "Eevee",
+    "tipo": "normal",
+    "SpawnChance": 2.75,
+    "AvgSpawns": "275 / 10,000 spawns"
+  },
+  {
+    "id": 54,
+    "pokemon": "Psyduck",
+    "tipo": "agua",
+    "SpawnChance": 2.54,
+    "AvgSpawns": "254 / 10,000 spawns"
+  },
+  {
+    "id": 46,
+    "pokemon": "Paras",
+    "tipo": "bicho",
+    "SpawnChance": 2.36,
+    "AvgSpawns": "236 / 10,000 spawns"
+  },
+  {
+    "id": 48,
+    "pokemon": "Venonat",
+    "tipo": "bicho",
+    "SpawnChance": 2.28,
+    "AvgSpawns": "228 / 10,000 spawns"
+  },
+  {
+    "id": 23,
+    "pokemon": "Ekans",
+    "tipo": "veneno",
+    "SpawnChance": 2.27,
+    "AvgSpawns": "227 / 10,000 spawns"
+  },
+  {
+    "id": 60,
+    "pokemon": "Poliwag",
+    "tipo": "agua",
+    "SpawnChance": 2.19,
+    "AvgSpawns": "219 / 10,000 spawns"
+  },
+  {
+    "id": 118,
+    "pokemon": "Goldeen",
+    "tipo": "agua",
+    "SpawnChance": 2.18,
+    "AvgSpawns": "218 / 10,000 spawns"
+  },
+  {
+    "id": 98,
+    "pokemon": "Krabby",
+    "tipo": "agua",
+    "SpawnChance": 2.12,
+    "AvgSpawns": "212 / 10,000 spawns"
+  },
+  {
+    "id": 120,
+    "pokemon": "Staryu",
+    "tipo": "agua",
+    "SpawnChance": 1.95,
+    "AvgSpawns": "195 / 10,000 spawns"
+  },
+  {
+    "id": 29,
+    "pokemon": "Nidoran (Female)",
+    "tipo": "veneno",
+    "SpawnChance": 1.38,
+    "AvgSpawns": "138 / 10,000 spawns"
+  },
+  {
+    "id": 32,
+    "pokemon": "Nidoran (Male)",
+    "tipo": "veneno",
+    "SpawnChance": 1.31,
+    "AvgSpawns": "131 / 10,000 spawns"
+  },
+  {
+    "id": 74,
+    "pokemon": "Geodude",
+    "tipo": "roca",
+    "SpawnChance": 1.19,
+    "AvgSpawns": "119 / 10,000 spawns"
+  },
+  {
+    "id": 69,
+    "pokemon": "Bellsprout",
+    "tipo": "planta",
+    "SpawnChance": 1.15,
+    "AvgSpawns": "115 / 10,000 spawns"
+  },
+  {
+    "id": 116,
+    "pokemon": "Horsea",
+    "tipo": "agua",
+    "SpawnChance": 1.13,
+    "AvgSpawns": "113 / 10,000 spawns"
+  },
+  {
+    "id": 27,
+    "pokemon": "Sandshrew",
+    "tipo": "tierra",
+    "SpawnChance": 1.11,
+    "AvgSpawns": "111 / 10,000 spawns"
+  },
+  {
+    "id": 79,
+    "pokemon": "Slowpoke",
+    "tipo": "agua",
+    "SpawnChance": 1.05,
+    "AvgSpawns": "105 / 10,000 spawns"
+  },
+  {
+    "id": 43,
+    "pokemon": "Oddish",
+    "tipo": "planta",
+    "SpawnChance": 1.02,
+    "AvgSpawns": "102 / 10,000 spawns"
+  },
+  {
+    "id": 17,
+    "pokemon": "Pidgeotto",
+    "tipo": "normal",
+    "SpawnChance": 1.02,
+    "AvgSpawns": "102 / 10,000 spawns"
+  },
+  {
+    "id": 127,
+    "pokemon": "Pinsir",
+    "tipo": "bicho",
+    "SpawnChance": 0.99,
+    "AvgSpawns": "99 / 10,000 spawns"
+  },
+  {
+    "id": 35,
+    "pokemon": "Clefairy",
+    "tipo": "hada",
+    "SpawnChance": 0.92,
+    "AvgSpawns": "92 / 10,000 spawns"
+  },
+  {
+    "id": 58,
+    "pokemon": "Growlithe",
+    "tipo": "fuego",
+    "SpawnChance": 0.92,
+    "AvgSpawns": "92 / 10,000 spawns"
+  },
+  {
+    "id": 56,
+    "pokemon": "Mankey",
+    "tipo": "lucha",
+    "SpawnChance": 0.92,
+    "AvgSpawns": "92 / 10,000 spawns"
+  },
+  {
+    "id": 52,
+    "pokemon": "Meowth",
+    "tipo": "normal",
+    "SpawnChance": 0.86,
+    "AvgSpawns": "86 / 10,000 spawns"
+  },
+  {
+    "id": 72,
+    "pokemon": "Tentacool",
+    "tipo": "agua",
+    "SpawnChance": 0.81,
+    "AvgSpawns": "81 / 10,000 spawns"
+  },
+  {
+    "id": 92,
+    "pokemon": "Gastly",
+    "tipo": "fantasma",
+    "SpawnChance": 0.79,
+    "AvgSpawns": "79 / 10,000 spawns"
+  },
+  {
+    "id": 102,
+    "pokemon": "Exeggcute",
+    "tipo": "planta",
+    "SpawnChance": 0.78,
+    "AvgSpawns": "78 / 10,000 spawns"
+  },
+  {
+    "id": 81,
+    "pokemon": "Magnemite",
+    "tipo": "electrico",
+    "SpawnChance": 0.71,
+    "AvgSpawns": "71 / 10,000 spawns"
+  },
+  {
+    "id": 1,
+    "pokemon": "Bulbasaur",
+    "tipo": "planta",
+    "SpawnChance": 0.69,
+    "AvgSpawns": "69 / 10,000 spawns"
+  },
+  {
+    "id": 100,
+    "pokemon": "Voltorb",
+    "tipo": "electrico",
+    "SpawnChance": 0.65,
+    "AvgSpawns": "65 / 10,000 spawns"
+  },
+  {
+    "id": 111,
+    "pokemon": "Rhyhorn",
+    "tipo": "tierra",
+    "SpawnChance": 0.63,
+    "AvgSpawns": "63 / 10,000 spawns"
+  },
+  {
+    "id": 104,
+    "pokemon": "Cubone",
+    "tipo": "tierra",
+    "SpawnChance": 0.61,
+    "AvgSpawns": "61 / 10,000 spawns"
+  },
+  {
+    "id": 7,
+    "pokemon": "Squirtle",
+    "tipo": "agua",
+    "SpawnChance": 0.58,
+    "AvgSpawns": "58 / 10,000 spawns"
+  },
+  {
+    "id": 84,
+    "pokemon": "Doduo",
+    "tipo": "normal",
+    "SpawnChance": 0.52,
+    "AvgSpawns": "52 / 10,000 spawns"
+  },
+  {
+    "id": 90,
+    "pokemon": "Shellder",
+    "tipo": "agua",
+    "SpawnChance": 0.52,
+    "AvgSpawns": "52 / 10,000 spawns"
+  },
+  {
+    "id": 77,
+    "pokemon": "Ponyta",
+    "tipo": "fuego",
+    "SpawnChance": 0.51,
+    "AvgSpawns": "51 / 10,000 spawns"
+  },
+  {
+    "id": 66,
+    "pokemon": "Machop",
+    "tipo": "lucha",
+    "SpawnChance": 0.49,
+    "AvgSpawns": "49 / 10,000 spawns"
+  },
+  {
+    "id": 14,
+    "pokemon": "Kakuna",
+    "tipo": "bicho",
+    "SpawnChance": 0.44,
+    "AvgSpawns": "44 / 10,000 spawns"
+  },
+  {
+    "id": 63,
+    "pokemon": "Abra",
+    "tipo": "psiquico",
+    "SpawnChance": 0.42,
+    "AvgSpawns": "42 / 10,000 spawns"
+  },
+  {
+    "id": 42,
+    "pokemon": "Golbat",
+    "tipo": "veneno",
+    "SpawnChance": 0.42,
+    "AvgSpawns": "42 / 10,000 spawns"
+  },
+  {
+    "id": 20,
+    "pokemon": "Raticate",
+    "tipo": "normal",
+    "SpawnChance": 0.41,
+    "AvgSpawns": "41 / 10,000 spawns"
+  },
+  {
+    "id": 50,
+    "pokemon": "Diglett",
+    "tipo": "tierra",
+    "SpawnChance": 0.4,
+    "AvgSpawns": "40 / 10,000 spawns"
+  },
+  {
+    "id": 39,
+    "pokemon": "Jigglypuff",
+    "tipo": "normal",
+    "SpawnChance": 0.39,
+    "AvgSpawns": "39 / 10,000 spawns"
+  },
+  {
+    "id": 124,
+    "pokemon": "Jynx",
+    "tipo": "hielo",
+    "SpawnChance": 0.35,
+    "AvgSpawns": "35 / 10,000 spawns"
+  },
+  {
+    "id": 147,
+    "pokemon": "Dratini",
+    "tipo": "dragon",
+    "SpawnChance": 0.3,
+    "AvgSpawns": "30 / 10,000 spawns"
+  },
+  {
+    "id": 86,
+    "pokemon": "Seel",
+    "tipo": "agua",
+    "SpawnChance": 0.28,
+    "AvgSpawns": "28 / 10,000 spawns"
+  },
+  {
+    "id": 4,
+    "pokemon": "Charmander",
+    "tipo": "fuego",
+    "SpawnChance": 0.253,
+    "AvgSpawns": "25.3 / 10,000 spawns"
+  },
+  {
+    "id": 114,
+    "pokemon": "Tangela",
+    "tipo": "planta",
+    "SpawnChance": 0.228,
+    "AvgSpawns": "22.8 / 10,000 spawns"
+  },
+  {
+    "id": 85,
+    "pokemon": "Dodrio",
+    "tipo": "normal",
+    "SpawnChance": 0.22,
+    "AvgSpawns": "22 / 10,000 spawns"
+  },
+  {
+    "id": 37,
+    "pokemon": "Vulpix",
+    "tipo": "fuego",
+    "SpawnChance": 0.22,
+    "AvgSpawns": "22 / 10,000 spawns"
+  },
+  {
+    "id": 25,
+    "pokemon": "Pikachu",
+    "tipo": "electrico",
+    "SpawnChance": 0.21,
+    "AvgSpawns": "21 / 10,000 spawns"
+  },
+  {
+    "id": 109,
+    "pokemon": "Koffing",
+    "tipo": "veneno",
+    "SpawnChance": 0.2,
+    "AvgSpawns": "20 / 10,000 spawns"
+  },
+  {
+    "id": 11,
+    "pokemon": "Metapod",
+    "tipo": "bicho",
+    "SpawnChance": 0.187,
+    "AvgSpawns": "18.7 / 10,000 spawns"
+  },
+  {
+    "id": 22,
+    "pokemon": "Fearow",
+    "tipo": "normal",
+    "SpawnChance": 0.15,
+    "AvgSpawns": "15 / 10,000 spawns"
+  },
+  {
+    "id": 138,
+    "pokemon": "Omanyte",
+    "tipo": "roca",
+    "SpawnChance": 0.14,
+    "AvgSpawns": "14 / 10,000 spawns"
+  },
+  {
+    "id": 123,
+    "pokemon": "Scyther",
+    "tipo": "bicho",
+    "SpawnChance": 0.14,
+    "AvgSpawns": "14 / 10,000 spawns"
+  },
+  {
+    "id": 18,
+    "pokemon": "Pidgeot",
+    "tipo": "normal",
+    "SpawnChance": 0.13,
+    "AvgSpawns": "13 / 10,000 spawns"
+  },
+  {
+    "id": 61,
+    "pokemon": "Poliwhirl",
+    "tipo": "agua",
+    "SpawnChance": 0.13,
+    "AvgSpawns": "13 / 10,000 spawns"
+  },
+  {
+    "id": 128,
+    "pokemon": "Tauros",
+    "tipo": "normal",
+    "SpawnChance": 0.12,
+    "AvgSpawns": "12 / 10,000 spawns"
+  },
+  {
+    "id": 97,
+    "pokemon": "Hypno",
+    "tipo": "psiquico",
+    "SpawnChance": 0.1,
+    "AvgSpawns": "10 / 10,000 spawns"
+  },
+  {
+    "id": 140,
+    "pokemon": "Kabuto",
+    "tipo": "roca",
+    "SpawnChance": 0.1,
+    "AvgSpawns": "10 / 10,000 spawns"
+  },
+  {
+    "id": 126,
+    "pokemon": "Magmar",
+    "tipo": "fuego",
+    "SpawnChance": 0.1,
+    "AvgSpawns": "10 / 10,000 spawns"
+  },
+  {
+    "id": 95,
+    "pokemon": "Onix",
+    "tipo": "roca",
+    "SpawnChance": 0.1,
+    "AvgSpawns": "10 / 10,000 spawns"
+  },
+  {
+    "id": 30,
+    "pokemon": "Nidorina",
+    "tipo": "veneno",
+    "SpawnChance": 0.088,
+    "AvgSpawns": "8.8 / 10,000 spawns"
+  },
+  {
+    "id": 55,
+    "pokemon": "Golduck",
+    "tipo": "agua",
+    "SpawnChance": 0.087,
+    "AvgSpawns": "8.7 / 10,000 spawns"
+  },
+  {
+    "id": 33,
+    "pokemon": "Nidorino",
+    "tipo": "veneno",
+    "SpawnChance": 0.083,
+    "AvgSpawns": "8.3 / 10,000 spawns"
+  },
+  {
+    "id": 73,
+    "pokemon": "Tentacruel",
+    "tipo": "agua",
+    "SpawnChance": 0.082,
+    "AvgSpawns": "8.2 / 10,000 spawns"
+  },
+  {
+    "id": 119,
+    "pokemon": "Seaking",
+    "tipo": "agua",
+    "SpawnChance": 0.08,
+    "AvgSpawns": "8 / 10,000 spawns"
+  },
+  {
+    "id": 125,
+    "pokemon": "Electabuzz",
+    "tipo": "electrico",
+    "SpawnChance": 0.074,
+    "AvgSpawns": "7.4 / 10,000 spawns"
+  },
+  {
+    "id": 47,
+    "pokemon": "Parasect",
+    "tipo": "bicho",
+    "SpawnChance": 0.074,
+    "AvgSpawns": "7.4 / 10,000 spawns"
+  },
+  {
+    "id": 24,
+    "pokemon": "Arbok",
+    "tipo": "veneno",
+    "SpawnChance": 0.072,
+    "AvgSpawns": "7.2 / 10,000 spawns"
+  },
+  {
+    "id": 49,
+    "pokemon": "Venomoth",
+    "tipo": "bicho",
+    "SpawnChance": 0.072,
+    "AvgSpawns": "7.2 / 10,000 spawns"
+  },
+  {
+    "id": 70,
+    "pokemon": "Weepinbell",
+    "tipo": "planta",
+    "SpawnChance": 0.072,
+    "AvgSpawns": "7.2 / 10,000 spawns"
+  },
+  {
+    "id": 75,
+    "pokemon": "Graveler",
+    "tipo": "roca",
+    "SpawnChance": 0.071,
+    "AvgSpawns": "7.1 / 10,000 spawns"
+  },
+  {
+    "id": 44,
+    "pokemon": "Gloom",
+    "tipo": "planta",
+    "SpawnChance": 0.064,
+    "AvgSpawns": "6.4 / 10,000 spawns"
+  },
+  {
+    "id": 99,
+    "pokemon": "Kingler",
+    "tipo": "agua",
+    "SpawnChance": 0.062,
+    "AvgSpawns": "6.2 / 10,000 spawns"
+  },
+  {
+    "id": 88,
+    "pokemon": "Grimer",
+    "tipo": "veneno",
+    "SpawnChance": 0.052,
+    "AvgSpawns": "5.2 / 10,000 spawns"
+  },
+  {
+    "id": 93,
+    "pokemon": "Haunter",
+    "tipo": "fantasma",
+    "SpawnChance": 0.052,
+    "AvgSpawns": "5.2 / 10,000 spawns"
+  },
+  {
+    "id": 15,
+    "pokemon": "Beedrill",
+    "tipo": "bicho",
+    "SpawnChance": 0.051,
+    "AvgSpawns": "5.1 / 10,000 spawns"
+  },
+  {
+    "id": 2,
+    "pokemon": "Ivysaur",
+    "tipo": "planta",
+    "SpawnChance": 0.042,
+    "AvgSpawns": "4.2 / 10,000 spawns"
+  },
+  {
+    "id": 28,
+    "pokemon": "Sandslash",
+    "tipo": "tierra",
+    "SpawnChance": 0.037,
+    "AvgSpawns": "3.7 / 10,000 spawns"
+  },
+  {
+    "id": 80,
+    "pokemon": "Slowbro",
+    "tipo": "agua",
+    "SpawnChance": 0.036,
+    "AvgSpawns": "3.6 / 10,000 spawns"
+  },
+  {
+    "id": 67,
+    "pokemon": "Machoke",
+    "tipo": "lucha",
+    "SpawnChance": 0.034,
+    "AvgSpawns": "3.4 / 10,000 spawns"
+  },
+  {
+    "id": 117,
+    "pokemon": "Seadra",
+    "tipo": "agua",
+    "SpawnChance": 0.034,
+    "AvgSpawns": "3.4 / 10,000 spawns"
+  },
+  {
+    "id": 121,
+    "pokemon": "Starmie",
+    "tipo": "agua",
+    "SpawnChance": 0.034,
+    "AvgSpawns": "3.4 / 10,000 spawns"
+  },
+  {
+    "id": 8,
+    "pokemon": "Wartortle",
+    "tipo": "agua",
+    "SpawnChance": 0.034,
+    "AvgSpawns": "3.4 / 10,000 spawns"
+  },
+  {
+    "id": 57,
+    "pokemon": "Primeape",
+    "tipo": "lucha",
+    "SpawnChance": 0.031,
+    "AvgSpawns": "3.1 / 10,000 spawns"
+  },
+  {
+    "id": 64,
+    "pokemon": "Kadabra",
+    "tipo": "psiquico",
+    "SpawnChance": 0.027,
+    "AvgSpawns": "2.7 / 10,000 spawns"
+  },
+  {
+    "id": 82,
+    "pokemon": "Magneton",
+    "tipo": "electrico",
+    "SpawnChance": 0.023,
+    "AvgSpawns": "2.3 / 10,000 spawns"
+  },
+  {
+    "id": 12,
+    "pokemon": "Butterfree",
+    "tipo": "bicho",
+    "SpawnChance": 0.022,
+    "AvgSpawns": "2.2 / 10,000 spawns"
+  },
+  {
+    "id": 107,
+    "pokemon": "Hitmonchan",
+    "tipo": "lucha",
+    "SpawnChance": 0.022,
+    "AvgSpawns": "2.2 / 10,000 spawns"
+  },
+  {
+    "id": 53,
+    "pokemon": "Persian",
+    "tipo": "normal",
+    "SpawnChance": 0.022,
+    "AvgSpawns": "2.2 / 10,000 spawns"
+  },
+  {
+    "id": 112,
+    "pokemon": "Rhydon",
+    "tipo": "tierra",
+    "SpawnChance": 0.022,
+    "AvgSpawns": "2.2 / 10,000 spawns"
+  },
+  {
+    "id": 83,
+    "pokemon": "Farfetch'd",
+    "tipo": "normal",
+    "SpawnChance": 0.0212,
+    "AvgSpawns": "2.12 / 10,000 spawns"
+  },
+  {
+    "id": 148,
+    "pokemon": "Dragonair",
+    "tipo": "dragon",
+    "SpawnChance": 0.02,
+    "AvgSpawns": "2 / 10,000 spawns"
+  },
+  {
+    "id": 101,
+    "pokemon": "Electrode",
+    "tipo": "electrico",
+    "SpawnChance": 0.02,
+    "AvgSpawns": "2 / 10,000 spawns"
+  },
+  {
+    "id": 106,
+    "pokemon": "Hitmonlee",
+    "tipo": "lucha",
+    "SpawnChance": 0.02,
+    "AvgSpawns": "2 / 10,000 spawns"
+  },
+  {
+    "id": 105,
+    "pokemon": "Marowak",
+    "tipo": "tierra",
+    "SpawnChance": 0.02,
+    "AvgSpawns": "2 / 10,000 spawns"
+  },
+  {
+    "id": 142,
+    "pokemon": "Aerodactyl",
+    "tipo": "roca",
+    "SpawnChance": 0.018,
+    "AvgSpawns": "1.8 / 10,000 spawns"
+  },
+  {
+    "id": 40,
+    "pokemon": "Wigglytuff",
+    "tipo": "normal",
+    "SpawnChance": 0.018,
+    "AvgSpawns": "1.8 / 10,000 spawns"
+  },
+  {
+    "id": 59,
+    "pokemon": "Arcanine",
+    "tipo": "fuego",
+    "SpawnChance": 0.017,
+    "AvgSpawns": "1.7 / 10,000 spawns"
+  },
+  {
+    "id": 136,
+    "pokemon": "Flareon",
+    "tipo": "fuego",
+    "SpawnChance": 0.017,
+    "AvgSpawns": "1.7 / 10,000 spawns"
+  },
+  {
+    "id": 34,
+    "pokemon": "Nidoking",
+    "tipo": "veneno",
+    "SpawnChance": 0.017,
+    "AvgSpawns": "1.7 / 10,000 spawns"
+  },
+  {
+    "id": 3,
+    "pokemon": "Venusaur",
+    "tipo": "planta",
+    "SpawnChance": 0.017,
+    "AvgSpawns": "1.7 / 10,000 spawns"
+  },
+  {
+    "id": 143,
+    "pokemon": "Snorlax",
+    "tipo": "normal",
+    "SpawnChance": 0.016,
+    "AvgSpawns": "1.6 / 10,000 spawns"
+  },
+  {
+    "id": 110,
+    "pokemon": "Weezing",
+    "tipo": "veneno",
+    "SpawnChance": 0.016,
+    "AvgSpawns": "1.6 / 10,000 spawns"
+  },
+  {
+    "id": 91,
+    "pokemon": "Cloyster",
+    "tipo": "agua",
+    "SpawnChance": 0.015,
+    "AvgSpawns": "1.5 / 10,000 spawns"
+  },
+  {
+    "id": 51,
+    "pokemon": "Dugtrio",
+    "tipo": "tierra",
+    "SpawnChance": 0.014,
+    "AvgSpawns": "1.4 / 10,000 spawns"
+  },
+  {
+    "id": 103,
+    "pokemon": "Exeggutor",
+    "tipo": "planta",
+    "SpawnChance": 0.014,
+    "AvgSpawns": "1.4 / 10,000 spawns"
+  },
+  {
+    "id": 134,
+    "pokemon": "Vaporeon",
+    "tipo": "agua",
+    "SpawnChance": 0.014,
+    "AvgSpawns": "1.4 / 10,000 spawns"
+  },
+  {
+    "id": 113,
+    "pokemon": "Chansey",
+    "tipo": "normal",
+    "SpawnChance": 0.013,
+    "AvgSpawns": "1.3 / 10,000 spawns"
+  },
+  {
+    "id": 87,
+    "pokemon": "Dewgong",
+    "tipo": "agua",
+    "SpawnChance": 0.013,
+    "AvgSpawns": "1.3 / 10,000 spawns"
+  },
+  {
+    "id": 5,
+    "pokemon": "Charmeleon",
+    "tipo": "fuego",
+    "SpawnChance": 0.012,
+    "AvgSpawns": "1.2 / 10,000 spawns"
+  },
+  {
+    "id": 36,
+    "pokemon": "Clefable",
+    "tipo": "hada",
+    "SpawnChance": 0.012,
+    "AvgSpawns": "1.2 / 10,000 spawns"
+  },
+  {
+    "id": 135,
+    "pokemon": "Jolteon",
+    "tipo": "electrico",
+    "SpawnChance": 0.012,
+    "AvgSpawns": "1.2 / 10,000 spawns"
+  },
+  {
+    "id": 31,
+    "pokemon": "Nidoqueen",
+    "tipo": "veneno",
+    "SpawnChance": 0.012,
+    "AvgSpawns": "1.2 / 10,000 spawns"
+  },
+  {
+    "id": 137,
+    "pokemon": "Porygon",
+    "tipo": "normal",
+    "SpawnChance": 0.012,
+    "AvgSpawns": "1.2 / 10,000 spawns"
+  },
+  {
+    "id": 108,
+    "pokemon": "Lickitung",
+    "tipo": "normal",
+    "SpawnChance": 0.011,
+    "AvgSpawns": "1.1 / 10,000 spawns"
+  },
+  {
+    "id": 62,
+    "pokemon": "Poliwrath",
+    "tipo": "agua",
+    "SpawnChance": 0.011,
+    "AvgSpawns": "1.1 / 10,000 spawns"
+  },
+  {
+    "id": 78,
+    "pokemon": "Rapidash",
+    "tipo": "fuego",
+    "SpawnChance": 0.011,
+    "AvgSpawns": "1.1 / 10,000 spawns"
+  },
+  {
+    "id": 45,
+    "pokemon": "Vileplume",
+    "tipo": "planta",
+    "SpawnChance": 0.0097,
+    "AvgSpawns": "0.97 / 10,000 spawns"
+  },
+  {
+    "id": 115,
+    "pokemon": "Kangaskhan",
+    "tipo": "normal",
+    "SpawnChance": 0.0086,
+    "AvgSpawns": "0.86 / 10,000 spawns"
+  },
+  {
+    "id": 38,
+    "pokemon": "Ninetails",
+    "tipo": "fuego",
+    "SpawnChance": 0.0077,
+    "AvgSpawns": "0.77 / 10,000 spawns"
+  },
+  {
+    "id": 26,
+    "pokemon": "Raichu",
+    "tipo": "electrico",
+    "SpawnChance": 0.0076,
+    "AvgSpawns": "0.76 / 10,000 spawns"
+  },
+  {
+    "id": 65,
+    "pokemon": "Alakazam",
+    "tipo": "psiquico",
+    "SpawnChance": 0.0073,
+    "AvgSpawns": "0.73 / 10,000 spawns"
+  },
+  {
+    "id": 68,
+    "pokemon": "Machamp",
+    "tipo": "lucha",
+    "SpawnChance": 0.0068,
+    "AvgSpawns": "0.68 / 10,000 spawns"
+  },
+  {
+    "id": 9,
+    "pokemon": "Blastoise",
+    "tipo": "agua",
+    "SpawnChance": 0.0067,
+    "AvgSpawns": "0.67 / 10,000 spawns"
+  },
+  {
+    "id": 94,
+    "pokemon": "Gengar",
+    "tipo": "fantasma",
+    "SpawnChance": 0.0067,
+    "AvgSpawns": "0.67 / 10,000 spawns"
+  },
+  {
+    "id": 139,
+    "pokemon": "Omastar",
+    "tipo": "roca",
+    "SpawnChance": 0.0061,
+    "AvgSpawns": "0.61 / 10,000 spawns"
+  },
+  {
+    "id": 131,
+    "pokemon": "Lapras",
+    "tipo": "agua",
+    "SpawnChance": 0.006,
+    "AvgSpawns": "0.6 / 10,000 spawns"
+  },
+  {
+    "id": 71,
+    "pokemon": "Victreebel",
+    "tipo": "planta",
+    "SpawnChance": 0.0059,
+    "AvgSpawns": "0.59 / 10,000 spawns"
+  },
+  {
+    "id": 76,
+    "pokemon": "Golem",
+    "tipo": "roca",
+    "SpawnChance": 0.0047,
+    "AvgSpawns": "0.47 / 10,000 spawns"
+  },
+  {
+    "id": 130,
+    "pokemon": "Gyarados",
+    "tipo": "agua",
+    "SpawnChance": 0.0032,
+    "AvgSpawns": "0.32 / 10,000 spawns"
+  },
+  {
+    "id": 141,
+    "pokemon": "Kabutops",
+    "tipo": "roca",
+    "SpawnChance": 0.0032,
+    "AvgSpawns": "0.32 / 10,000 spawns"
+  },
+  {
+    "id": 6,
+    "pokemon": "Charizard",
+    "tipo": "fuego",
+    "SpawnChance": 0.0031,
+    "AvgSpawns": "0.31 / 10,000 spawns"
+  },
+  {
+    "id": 122,
+    "pokemon": "Mr. Mime",
+    "tipo": "psiquico",
+    "SpawnChance": 0.0031,
+    "AvgSpawns": "0.31 / 10,000 spawns"
+  },
+  {
+    "id": 89,
+    "pokemon": "Muk",
+    "tipo": "veneno",
+    "SpawnChance": 0.0031,
+    "AvgSpawns": "0.31 / 10,000 spawns"
+  },
+  {
+    "id": 149,
+    "pokemon": "Dragonite",
+    "tipo": "dragon",
+    "SpawnChance": 0.0011,
+    "AvgSpawns": "0.11 / 10,000 spawns"
+  },
+  {
+    "id": 144,
+    "pokemon": "Articuno",
+    "tipo": "hielo",
+    "SpawnChance": 0,
+    "AvgSpawns": "Not yet in game"
+  },
+  {
+    "id": 132,
+    "pokemon": "Ditto",
+    "tipo": "normal",
+    "SpawnChance": 0,
+    "AvgSpawns": "Not yet in game"
+  },
+  {
+    "id": 151,
+    "pokemon": "Mew",
+    "tipo": "psiquico",
+    "SpawnChance": 0,
+    "AvgSpawns": "Not yet in game"
+  },
+  {
+    "id": 150,
+    "pokemon": "Mewtwo",
+    "tipo": "psiquico",
+    "SpawnChance": 0,
+    "AvgSpawns": "Not yet in game"
+  },
+  {
+    "id": 146,
+    "pokemon": "Moltres",
+    "tipo": "fuego",
+    "SpawnChance": 0,
+    "AvgSpawns": "Not yet in game"
+  },
+  {
+    "id": 145,
+    "pokemon": "Zapdos",
+    "tipo": "electrico",
+    "SpawnChance": 0,
+    "AvgSpawns": "Not yet in game"
+  }
+]
