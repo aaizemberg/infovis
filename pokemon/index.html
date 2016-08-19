@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+  <title>PokemonGo / pokeradar.io</title>
+</head>
+<body>
+
+<script>
+  var data;
+  var w  = d3.scale.linear().domain([0,15.98]).range([0,400]);
+
+function viz() {
+  var svg = d3.select("body").append("svg").attr("width",800).attr("height",150*40);
+  
+  svg.selectAll("image").data(data).enter().append("image")
+     .attr("x",10)
+     .attr("y", function(d,i) {return i*40}  )
+     .attr("width",40)
+     .attr("height",40)
+     .attr("xlink:href", function(d) {return "https://df48mbt4ll5mz.cloudfront.net/images/pokemon/" + d.id + ".png";} )
+     .append("title").text( function(d) {return d.pokemon + ": " + d.AvgSpawns;} );
+    
+  svg.selectAll("rect").data(data).enter().append("rect")
+     .attr("x",50)
+     .attr("y", function(d,i) {return i*40;})
+     .attr("width",function(d) {return w(d.SpawnChance);})
+     .attr("height",39)
+     .attr("fill","steelblue")
+     .append("title").text( function(d) {return d.pokemon + ": " + d.AvgSpawns;} );
+}
+
+var url = "datos.json";
+d3.json( url , function(error, json) {
+  if (error) throw error;
+  data = json;
+  viz();
+});
+</script>  
+  
+</body>
+</html>
