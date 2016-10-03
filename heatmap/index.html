@@ -4,7 +4,6 @@
     <title>heatmap</title>
     <link rel="stylesheet" href="leaflet.css" />
     <script src="leaflet.js"></script>
-    <script src="//spin.js.org/spin.min.js"></script>
     <style>
         #map { width: 800px; height: 600px; }
         body { font: 16px/1.4 "Helvetica Neue", Arial, sans-serif; }
@@ -13,46 +12,20 @@
     </style>
 </head>
 <body>
-
-<div id="spinner"></div>
 <div id="map"></div>
 
 <script src="leaflet-heat.js"></script>
 <script src="datos.js"></script>
 
 <script>
-var opts = {
-  lines: 13 // The number of lines to draw
-, length: 28 // The length of each line
-, width: 14 // The line thickness
-, radius: 42 // The radius of the inner circle
-, scale: 1 // Scales overall size of the spinner
-, corners: 1 // Corner roundness (0..1)
-, color: '#000' // #rgb or #rrggbb or array of colors
-, opacity: 0.25 // Opacity of the lines
-, rotate: 0 // The rotation offset
-, direction: 1 // 1: clockwise, -1: counterclockwise
-, speed: 1 // Rounds per second
-, trail: 60 // Afterglow percentage
-, fps: 20 // Frames per second when using setTimeout() as a fallback for CSS
-, zIndex: 2e9 // The z-index (defaults to 2000000000)
-, className: 'spinner' // The CSS class to assign to the spinner
-, top: '50%' // Top position relative to parent
-, left: '50%' // Left position relative to parent
-, shadow: false // Whether to render a shadow
-, hwaccel: false // Whether to use hardware acceleration
-, position: 'absolute' // Element positioning
-}
-  var target = document.getElementById('spinner')
-  var spinner = new Spinner(opts).spin(target);
-
   var map = L.map('map').setView([0, 0], 3);
   var tiles = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
   }).addTo(map);
   addressPoints = addressPoints.map(function(p) { return [p[1], p[0]]; });
+
   var heat = L.heatLayer(addressPoints).addTo(map);
-  spinner.stop();
+
 </script>
 </body>
 </html>
