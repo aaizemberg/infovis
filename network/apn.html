@@ -1,11 +1,10 @@
 <!doctype html>
 <html>
 <head>
-  <title>Network | Circular images</title>
-
-  <style type="text/css">
+  <title>apn</title>
+  <style>
     body {
-      font: 10pt arial;
+      font: 10pt Arial;
     }
     #mynetwork {
       width: 600px;
@@ -22,6 +21,8 @@
     var nodes = null;
     var edges = null;
     var network = null;
+    
+    var selected;
 
     function draw() {
       nodes = [
@@ -39,6 +40,7 @@
         edges: edges
       };
       var options = {
+        interaction:{hover:true},
         nodes: {
           borderWidth:4,
           size:30,
@@ -53,6 +55,9 @@
         }
       };
       network = new vis.Network(container, data, options);
+      network.on("selectNode", function (params) {
+        window.open("//twitter.com/"+params.nodes[0]);
+      });
     }
 
   </script>
