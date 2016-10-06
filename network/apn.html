@@ -7,15 +7,19 @@
       font: 10pt Arial;
     }
     #mynetwork {
-      width: 600px;
-      height: 500px;
+      width: 800px;
+      height: 600px;
       border: 1px solid lightgray;
       background-color:#333333;
     }
   </style>
 
   <script src="//visjs.org/dist/vis.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/4.16.4/lodash.min.js"></script>
   <link href="//visjs.org/dist/vis.css" rel="stylesheet" type="text/css" />
+
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<!--  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"> -->
 
   <script> 
     var nodes = null;
@@ -26,12 +30,29 @@
 
     function draw() {
       nodes = [
-        {id: 'mauriciomacri',  label: 'mm', title: '<b>Mauricio Macri</b><br/>Presidencia',  shape: 'circularImage', image: 'https://pbs.twimg.com/profile_images/653558348273569792/joxg8DZD_400x400.png'},
-        {id: 'marquitospena',  label: 'mp', title: '<b>Marcos Peña</b><br/>Jefe de Ministros',  shape: 'circularImage', image: 'https://pbs.twimg.com/profile_images/756255471670005760/_kcdpP7r_400x400.jpg'}
+//      {id: '',  label: '', title: '<b></b><br/>',  shape: 'circularImage', image: ''},
+        {id: 'mauriciomacri',  label: 'mm', title: '<b>Mauricio Macri</b><br/>Presidente',  shape: 'circularImage', image: 'https://pbs.twimg.com/profile_images/653558348273569792/joxg8DZD_400x400.png'},
+        {id: 'marquitospena',  label: 'mp', title: '<b>Marcos Peña</b><br/>Jefe de Gabinete de Ministros',  shape: 'circularImage', image: 'https://pbs.twimg.com/profile_images/756255471670005760/_kcdpP7r_400x400.jpg'},
+        {id: 'gabimichetti',  label: 'gm', title: '<b>Gabriela Michetti</b><br/>Vicepresidente',  shape: 'circularImage', image: 'https://pbs.twimg.com/profile_images/616072918653607936/dMrvLR3v_400x400.jpg'},
+        {id: 'deAndreis',  label: 'da', title: '<b>Fernando de Andreis</b><br/>Secretario General',  shape: 'circularImage', image: 'https://pbs.twimg.com/profile_images/669631668291018752/takRMPAW_400x400.jpg'},
+        {id: 'pabloclusellas',  label: 'pc', title: '<b>Pablo Clusellas</b><br/>Legal y Tecnica',  shape: 'circularImage', image: 'https://pbs.twimg.com/profile_images/675484918730891264/2A2GWh81_400x400.jpg'},
+        {id: 'ministerios',  url: 'https://es.wikipedia.org/wiki/Anexo:Ministerios_de_la_Rep%C3%BAblica_Argentina', label: '', title: '<b>Ministerios</b>',  shape: 'icon', icon: { face: 'FontAwesome', code: '\uf1ad', size: 50, color: '#f0a30a' }},
+        {id: 'BuryaileRicardo',  label: 'rb', title: '<b>Ricardo BURYAILE</b><br/>AGROINDUSTRIA',  shape: 'circularImage', image: 'https://pbs.twimg.com/profile_images/741616323147489280/c95yYVIc_400x400.jpg'},
+        {id: 'frigeriorogelio',  label: 'rf', title: '<b>Rogelio FRIGERIO</b><br/>INTERIOR, OBRAS PÚBLICAS Y VIVIENDA',  shape: 'circularImage', image: 'https://pbs.twimg.com/profile_images/564906360161046528/2a9SkZxa_400x400.jpeg'},
+        {id: 'minturprensa',  label: 'js', title: '<b>José Gustavo SANTOS</b><br/>TURISMO',  shape: 'circularImage', image: 'https://pbs.twimg.com/profile_images/557991616095334402/tkq13bh4_400x400.jpeg'},
+        {id: 'sergiobergman',  label: 'sb', title: '<b>Sergio Alejandro BERGMAN</b><br/>AMBIENTE Y DESARROLLO SUSTENTABLE',  shape: 'circularImage', image: 'https://pbs.twimg.com/profile_images/755863451046711297/WlGYDZJ9_400x400.jpg'}
       ];
 
       edges = [
-        {from: 'mauriciomacri', to: 'marquitospena', arrows:'to'}
+        {from: 'mauriciomacri', to: 'marquitospena', arrows:'to'},
+        {from: 'mauriciomacri', to: 'gabimichetti', arrows:'to'},
+        {from: 'mauriciomacri', to: 'deAndreis', arrows:'to'},
+        {from: 'mauriciomacri', to: 'pabloclusellas', arrows:'to'},
+        {from: 'marquitospena', to: 'ministerios', arrows:'to'},
+        {from: 'ministerios', to: 'BuryaileRicardo', arrows:'to'},
+        {from: 'ministerios', to: 'frigeriorogelio', arrows:'to'},
+        {from: 'ministerios', to: 'minturprensa', arrows:'to'},
+        {from: 'ministerios', to: 'sergiobergman', arrows:'to'}
       ];
 
       var container = document.getElementById('mynetwork');
@@ -56,7 +77,13 @@
       };
       network = new vis.Network(container, data, options);
       network.on("selectNode", function (params) {
-        window.open("//twitter.com/"+params.nodes[0]);
+        selected = params;
+        if (params.nodes[0] == 'ministerios') {
+          window.open( _.find(nodes, { 'id': 'ministerios' }).url );
+        }
+        else {
+          window.open("//twitter.com/"+params.nodes[0]);
+        }
       });
     }
 
