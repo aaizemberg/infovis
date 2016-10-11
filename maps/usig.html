@@ -4,9 +4,9 @@
 	<title>Leaflet con los Tiles de la USIG</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">	
-	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
-	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
-	<script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
+	<!-- <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" /> -->
+	<link rel="stylesheet" href="//unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
+	<script src="//unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
 	<style>
 		body {
 			padding: 0;
@@ -24,8 +24,8 @@
 
 <script>
   var mymap = L.map('map').setView([-34.604916,-58.3900979], 11);
-  var url = 'http://tiles1.usig.buenosaires.gob.ar/mapcache/tms/1.0.0/amba_con_transporte_3857@GoogleMapsCompatible/{z}/{x}/{y}.png';
-  var tms_usig = L.tileLayer(url, { attribution: '<a href="http://mapa.buenosaires.gob.ar/">USIG</a> (GCBA)', tms: true }).addTo(mymap);
+  var url = '//tiles1.usig.buenosaires.gob.ar/mapcache/tms/1.0.0/amba_con_transporte_3857@GoogleMapsCompatible/{z}/{x}/{y}.png';
+  var tms_usig = L.tileLayer(url, { attribution: '<a href="//mapa.buenosaires.gob.ar/">USIG</a> (GCBA)', tms: true }).addTo(mymap);
 </script>
 
 </body>
