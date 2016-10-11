@@ -4,7 +4,7 @@
     <title>MM DS 2015</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
     <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
-    <link rel="shortcut icon" href="http://cartodb.com/assets/favicon.ico" />
+    <link rel="shortcut icon" href="//cartodb.com/assets/favicon.ico" />
     <style>
       html, body, #map {
         height: 100%;
@@ -13,26 +13,25 @@
       }
     </style>
 
-    <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.15/themes/css/cartodb.css" />
+    <link rel="stylesheet" href="//libs.cartocdn.com/cartodb.js/v3/3.15/themes/css/cartodb.css" />
   </head>
   <body>
     <div id="map"></div>
 
     <!-- include cartodb.js library -->
-    <script src="http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>
-
+    <script src="//libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>
 
     <script>
-      function main() {
-        cartodb.createVis('map', 'https://aaizemberg.carto.com/api/v2/viz/a2122a42-8c10-11e6-9108-0e3ff518bd15/viz.json', {
+      function main() {           
+        cartodb.createVis('map', '//aaizemberg.carto.com/api/v2/viz/a2122a42-8c10-11e6-9108-0e3ff518bd15/viz.json', {
             shareable: false,
             title: false,
             description: false,
             search: true,
             tiles_loader: true,
-            center_lat: -40,
-            center_lon: -60,
-            zoom: 4
+            center_lat: -34.6091546,
+            center_lon: -58.4007409,
+            zoom: 10
         })
         .done(function(vis, layers) {
           // layer 0 is the base layer, layer 1 is cartodb layer
