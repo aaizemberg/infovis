@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="//cdnjs.cloudflare.com/ajax/libs/d3/4.2.3/d3.min.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>circle packing using d3 pack layout</title>
+</head>
+<body>
+
+<script>
+var data = {
+  "name": "Argentina",
+  "children": [
+    {"name":"Buenos Aires","size":15625084},
+    {"name":"Córdoba","size":3308876},
+    {"name":"Santa Fe","size":3194537},
+    {"name":"Ciudad Autónoma de Buenos Aires","size":2890151},
+    {"name":"Mendoza","size":1738929},
+    {"name":"Tucumán","size":1448188},
+    {"name":"Entre Ríos","size":1235994},
+    {"name":"Salta","size":1214441},
+    {"name":"Misiones","size":1101593},
+    {"name":"Chaco","size":1055259},
+    {"name":"Corrientes","size":992595},
+    {"name":"Santiago del Estero","size":874006},
+    {"name":"San Juan","size":681055},
+    {"name":"Jujuy","size":673307},
+    {"name":"Río Negro","size":638645},
+    {"name":"Neuquén","size":551266},
+    {"name":"Formosa","size":530162},
+    {"name":"Chubut","size":509108},
+    {"name":"San Luis","size":432310},
+    {"name":"Catamarca","size":367828},
+    {"name":"La Rioja","size":333642},
+    {"name":"La Pampa","size":318951},
+    {"name":"Santa Cruz","size":273964},
+    {"name":"Tierra del Fuego","size":127205}
+  ]};
+
+var w = 500, format = d3.format(",d");
+var c10 = d3.schemeCategory10;
+
+var pack = d3.pack()
+    .size([w, w])
+    .padding(3);
+
+var pack = d3.pack().size([w, w]).padding(3);
+//  .sort(null)
+//  .value(function(d) { return d.size; });
+
+var svg = d3.select("body").append("svg").attr("width", w).attr("height", w);
+
+var vis = svg.datum(data).selectAll(".node").data(pack.nodes).enter()
+             .append("g")
+             .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
+
+var titles = vis.append("title")
+                .attr("x", function(d) { return d.x; })
+                .attr("y", function(d) { return d.y; })
+                .text(function(d) { return d.name + (d.children ? "" : ": " + format(d.value)); });
+
+var circles = vis.append("circle")
+                .style("fill", function(d,i) { return !d.children ? c10[i] : "white"; })
+                .attr("stroke", "grey")
+//              .attr("cx", function(d) { return d.x; })
+//              .attr("cy", function(d) { return d.y; })
+                .attr("r", function(d)  { return d.r; })
+              .on("mouseout", function() {
+                  d3.select(this).attr("stroke","grey");
+              })
+              .on("mouseover", function() {
+                  d3.select(this).attr("stroke","black");
+              });
+
+//var text = vis.append("text").style("text-anchor","middle").attr("dy", ".3em").text( function(d) {return d.name; } );
+</script>
+
+</body>
+</html>
