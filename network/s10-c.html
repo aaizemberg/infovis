@@ -1,0 +1,239 @@
+<!doctype html>
+<html>
+<head>
+  <title>ITBA - Ing. Informatica - S10</title>
+
+  <script src="vis.js"></script>
+  <link href="vis.css" rel="stylesheet" type="text/css" />
+
+  <style type="text/css">
+    #mynetwork {
+      left: 0;
+      top: 0;
+      position: absolute;
+      width: 75%;
+      height: calc(100% - 5px);
+      border: 1px solid lightgray;
+    }
+    #detalles {
+      right: 0;
+      top: 0;
+      position: absolute;
+      width: 25%;
+      height: calc(100% - 5px);
+      border: 1px solid lightgray;
+    }
+  </style>
+</head>
+<body>
+
+<div id="mynetwork"></div>
+<div id="detalles"></div>
+
+<script>
+  // create an array with nodes
+  var nodes = new vis.DataSet([
+	{id: '31.08', label: '31.08', title: 'Sistemas de Representacion', shape: 'box' },
+	{id: '72.03', label: '72.03', title: 'Introduccion a la Informatica', shape: 'box' },
+	{id: '93.26', label: '93.26', title: 'Analisis Matematico I', shape: 'box' },
+	{id: '93.58', label: '93.58', title: 'Algebra', shape: 'box' },
+	{id: '94.24', label: '94.24', title: 'Metodologia del Aprendizaje', shape: 'box' },
+	{id: '72.31', label: '72.31', title: 'Programacion Imperativa', shape: 'box' },
+	{id: '93.28', label: '93.28', title: 'Analisis Matematico II', shape: 'box' },
+	{id: '93.41', label: '93.41', title: 'Fisica I', shape: 'box' },
+	{id: '93.59', label: '93.59', title: 'Matematica Discreta', shape: 'box' },
+	{id: '12.09', label: '12.09', title: 'Quimica', shape: 'box' },
+	{id: '72.32', label: '72.32', title: 'Diseño y Procesamiento de Doc Xml', shape: 'box' },
+	{id: '72.33', label: '72.33', title: 'Programacion Orientada a Objetos', shape: 'box' },
+	{id: '93.35', label: '93.35', title: 'Logica Computacional', shape: 'box' },
+	{id: '93.42', label: '93.42', title: 'Fisica II', shape: 'box' },
+	{id: '72.08', label: '72.08', title: 'Arquitecturas de Computadoras', shape: 'box' },
+	{id: '72.34', label: '72.34', title: 'Estructura de Datos y Algoritmos', shape: 'box' },
+	{id: '93.24', label: '93.24', title: 'Probabil.y Estadistica(k/s)', shape: 'box' },
+	{id: '93.43', label: '93.43', title: 'Fisica III', shape: 'box' },
+	{id: '72.11', label: '72.11', title: 'Sistemas Operativos', shape: 'box' },
+	{id: '72.35', label: '72.35', title: 'Ingenieria de Software I', shape: 'box' },
+	{id: '72.36', label: '72.36', title: 'Interaccion Hombre-computadora (HCI)', shape: 'box' },
+	{id: '72.37', label: '72.37', title: 'Base de Datos I', shape: 'box' },
+	{id: '72.07', label: '72.07', title: 'Protocolos de Comunicacion', shape: 'box' },
+	{id: '72.38', label: '72.38', title: 'Proyecto de Aplicaciones Web', shape: 'box' },
+	{id: '72.39', label: '72.39', title: 'Automatas, Teoria de Lenguajes y Compiladores', shape: 'box' },
+	{id: '93.07', label: '93.07', title: 'Metodos Numericos', shape: 'box' },
+	{id: '94.21', label: '94.21', title: 'Formacion General I', shape: 'box' },
+	{id: '94.51', label: '94.51', title: 'Ingles I (Bachiller)', shape: 'box' },
+	{id: '61.24', label: '61.24', title: 'Economia para Ingenieros', shape: 'box' },
+	{id: '72.27', label: '72.27', title: 'Sistemas de Inteligencia Artificial', shape: 'box' },
+	{id: '72.40', label: '72.40', title: 'Ingenieria de Software II', shape: 'box' },
+	{id: '72.41', label: '72.41', title: 'Base de Datos II', shape: 'box' },
+	{id: '72.44', label: '72.44', title: 'Criptografia y Seguridad', shape: 'box' },
+	{id: '61.32', label: '61.32', title: 'Derecho para Ingenieros', shape: 'box' },
+	{id: '72.25', label: '72.25', title: 'Simulacion de Sistemas', shape: 'box' },
+	{id: '72.42', label: '72.42', title: 'Programacion de Objetos Distribuidos', shape: 'box' },
+	{id: '72.43', label: '72.43', title: 'Gestión de Proyectos Informáticos', shape: 'box' },
+	{id: '93.75', label: '93.75', title: 'Metodos Numericos Avanzados', shape: 'box' },
+	{id: '72.20', label: '72.20', title: 'Redes de Informacion', shape: 'box' },
+	{id: '72.45', label: '72.45', title: 'Proyecto Final', shape: 'box' },
+	{id: '12.83', label: '12.83', title: 'Seguridad Ocupacional y Ambiental', shape: 'box' },
+	{id: '94.52', label: '94.52', title: 'Ingles II (Ingeniero)', shape: 'box' },
+	{id: '95.01', label: '95.01', title: 'Practica Laboral', shape: 'box' },
+	{id: '94.23', label: '94.23', title: 'Formacion General III', shape: 'box' },
+	{id: '94.29', label: '94.29', title: 'Formacion para Emprendedores', shape: 'box' },
+	{id: '16.50', label: '16.50', title: 'Introducción a la Bioinformática', shape: 'box' },
+	{id: '22.09', label: '22.09', title: 'Fundamentos Electronicos de la Informatica', shape: 'box' },
+	{id: '22.27', label: '22.27', title: 'Transmision de Datos', shape: 'box' },
+	{id: '72.02', label: '72.02', title: 'Organizacion Basica de la Computadora', shape: 'box' },
+	{id: '72.18', label: '72.18', title: 'Programacion Funcional', shape: 'box' },
+	{id: '72.22', label: '72.22', title: 'Sistemas Tolerantes a Fallas', shape: 'box' },
+	{id: '72.23', label: '72.23', title: 'Diseño y Construccion de Compiladores', shape: 'box' },
+	{id: '72.28', label: '72.28', title: 'Topologia de Internet: Analisis y Modelado', shape: 'box' },
+	{id: '72.29', label: '72.29', title: 'Tipos para Lenguajes de Programación', shape: 'box' },
+	{id: '72.46', label: '72.46', title: 'Robotica Basada en Comportamiento', shape: 'box' },
+	{id: '72.49', label: '72.49', title: 'Sistemas Tolerantes a Fallas', shape: 'box' },
+	{id: '72.50', label: '72.50', title: 'Introducción Al Desarrollo de Videojuegos', shape: 'box' },
+	{id: '72.51', label: '72.51', title: 'Tecnologias para Web 2.0 y Redes Sociales', shape: 'box' },
+	{id: '72.52', label: '72.52', title: 'Análisis y Tratamiento de Imágenes', shape: 'box' },
+	{id: '72.53', label: '72.53', title: 'Visión Computacional 3D', shape: 'box' },
+	{id: '72.54', label: '72.54', title: 'Olap y Extraccion de Informacion', shape: 'box' },
+	{id: '72.55', label: '72.55', title: 'Ontologias en la Web', shape: 'box' },
+	{id: '72.56', label: '72.56', title: 'Automatizacion e Integracion de Sistemas de Informacion', shape: 'box' },
+	{id: '72.57', label: '72.57', title: 'Sistemas Embebidos', shape: 'box' },
+	{id: '72.58', label: '72.58', title: 'Computacion Grafica', shape: 'box' },
+	{id: '72.59', label: '72.59', title: 'Sistemas de Inteligencia Artificial II', shape: 'box' },
+	{id: '72.60', label: '72.60', title: 'Programacion Funcional', shape: 'box' },
+	{id: '72.61', label: '72.61', title: 'Taller de Diseño de Videojuegos', shape: 'box' },
+	{id: '72.64', label: '72.64', title: 'Cloud Computing', shape: 'box' },
+	{id: '72.65', label: '72.65', title: 'Desarrollo de Videojuegos 2D en iPhone OS', shape: 'box' },
+	{id: '72.66', label: '72.66', title: 'Sistemas Embebidos', shape: 'box' },
+	{id: '72.67', label: '72.67', title: 'Robotica Cinematica Computacional', shape: 'box' },
+	{id: '72.68', label: '72.68', title: 'Arte y Ciencia Interactivos', shape: 'box' },
+	{id: '72.69', label: '72.69', title: 'Seguridad de Software basada en Flujo de Información', shape: 'box' },
+	{id: '72.70', label: '72.70', title: 'Modelos e Imágenes Fractales', shape: 'box' },
+	{id: '72.71', label: '72.71', title: 'Integración de Sistemas de Información', shape: 'box' },
+	{id: '72.72', label: '72.72', title: 'Analisis y Verificación de Modelos y Códigos', shape: 'box' },
+	{id: '72.73', label: '72.73', title: 'Aprendizaje por Refuerzo en Robótica', shape: 'box' },
+	{id: '72.74', label: '72.74', title: 'Visualización de Información', shape: 'box' },
+	{id: '72.75', label: '72.75', title: 'Aprendizaje Automático (Machine Learning)', shape: 'box' },
+	{id: '72.77', label: '72.77', title: 'Técnicas Automáticas para Testing de Software', shape: 'box' },
+	{id: '72.78', label: '72.78', title: 'OLAP Espacial', shape: 'box' },
+	{id: '72.79', label: '72.79', title: 'Sistemas Multiagente I', shape: 'box' },
+	{id: '72.80', label: '72.80', title: 'Big Data', shape: 'box' },
+	{id: '72.81', label: '72.81', title: 'Simulación y Animación de Sistemas Multipartículas', shape: 'box' },
+	{id: '72.82', label: '72.82', title: 'Tópicos de NOSQL', shape: 'box' },
+	{id: '72.83', label: '72.83', title: 'Técnicas avanzadas de HCI con uso de rastreadores de ojos y manos', shape: 'box' },
+	{id: '72.84', label: '72.84', title: 'Base de Datos Espaciales y Sistemas de Información Geográfica', shape: 'box' },
+	{id: '72.85', label: '72.85', title: 'Análisis de Datos en la Web Semántica', shape: 'box' },
+	{id: '72.86', label: '72.86', title: 'Técnicas Avanzadas en Videojuegos', shape: 'box' },
+	{id: '72.87', label: '72.87', title: 'Diseño Sonoro para Animación y Videojuegos', shape: 'box' },
+	{id: '72.88', label: '72.88', title: 'Introducción a la Neurociencia Computacional', shape: 'box' },
+	{id: '72.89', label: '72.89', title: 'Moneda Digital Descentralizada', shape: 'box' },
+	{id: '72.90', label: '72.90', title: 'Internet de las Cosas (IoT)', shape: 'box' },
+	{id: '94.26', label: '94.26', title: 'Comunicacion Organizacional', shape: 'box' },
+	{id: '94.42', label: '94.42', title: 'Comunicacion Estrategica', shape: 'box' }
+  ]);
+
+  // create an array with edges
+  var edges = new vis.DataSet([
+	{from: '72.03', to: '72.31', arrows:'to' },
+	{from: '93.58', to: '72.31', arrows:'to' },
+	{from: '93.26', to: '93.28', arrows:'to' },
+	{from: '93.58', to: '93.28', arrows:'to' },
+	{from: '93.26', to: '93.41', arrows:'to' },
+	{from: '93.58', to: '93.59', arrows:'to' },
+	{from: '72.31', to: '72.32', arrows:'to' },
+	{from: '72.31', to: '72.33', arrows:'to' },
+	{from: '93.58', to: '93.35', arrows:'to' },
+	{from: '93.28', to: '93.42', arrows:'to' },
+	{from: '72.31', to: '72.08', arrows:'to' },
+	{from: '72.33', to: '72.34', arrows:'to' },
+	{from: '93.59', to: '72.34', arrows:'to' },
+	{from: '93.28', to: '93.24', arrows:'to' },
+	{from: '93.28', to: '93.43', arrows:'to' },
+	{from: '93.41', to: '93.43', arrows:'to' },
+	{from: '72.34', to: '72.11', arrows:'to' },
+	{from: '72.08', to: '72.11', arrows:'to' },
+	{from: '72.33', to: '72.35', arrows:'to' },
+	{from: '72.33', to: '72.36', arrows:'to' },
+	{from: '72.32', to: '72.36', arrows:'to' },
+	{from: '72.34', to: '72.37', arrows:'to' },
+	{from: '93.35', to: '72.37', arrows:'to' },
+	{from: '72.11', to: '72.07', arrows:'to' },
+	{from: '72.11', to: '72.38', arrows:'to' },
+	{from: '72.37', to: '72.38', arrows:'to' },
+	{from: '72.36', to: '72.38', arrows:'to' },
+	{from: '72.35', to: '72.38', arrows:'to' },
+	{from: '72.34', to: '72.39', arrows:'to' },
+	{from: '93.28', to: '93.07', arrows:'to' },
+	{from: '93.24', to: '61.24', arrows:'to' },
+	{from: '93.24', to: '72.27', arrows:'to' },
+	{from: '72.34', to: '72.27', arrows:'to' },
+	{from: '72.11', to: '72.40', arrows:'to' },
+	{from: '72.35', to: '72.40', arrows:'to' },
+	{from: '72.37', to: '72.41', arrows:'to' },
+	{from: '72.11', to: '72.41', arrows:'to' },
+	{from: '72.38', to: '72.44', arrows:'to' },
+	{from: '72.07', to: '72.44', arrows:'to' },
+	{from: '72.38', to: '72.25', arrows:'to' },
+	{from: '93.07', to: '72.25', arrows:'to' },
+	{from: '72.38', to: '72.42', arrows:'to' },
+	{from: '72.07', to: '72.42', arrows:'to' },
+	{from: '61.24', to: '72.43', arrows:'to' },
+	{from: '72.40', to: '72.43', arrows:'to' },
+	{from: '93.07', to: '93.75', arrows:'to' },
+	{from: '72.07', to: '72.20', arrows:'to' },
+	{from: '93.43', to: '72.20', arrows:'to' },
+	{from: '72.43', to: '72.45', arrows:'to' },
+	{from: '94.51', to: '94.52', arrows:'to' },
+	{from: '72.37', to: '16.50', arrows:'to' },
+	{from: '72.07', to: '72.28', arrows:'to' },
+	{from: '72.34', to: '72.29', arrows:'to' },
+	{from: '72.27', to: '72.46', arrows:'to' },
+	{from: '72.42', to: '72.49', arrows:'to' },
+	{from: '72.27', to: '72.50', arrows:'to' },
+	{from: '72.42', to: '72.51', arrows:'to' },
+	{from: '72.34', to: '72.52', arrows:'to' },
+	{from: '93.75', to: '72.52', arrows:'to' },
+	{from: '72.34', to: '72.53', arrows:'to' },
+	{from: '93.24', to: '72.54', arrows:'to' },
+	{from: '72.41', to: '72.54', arrows:'to' },
+	{from: '72.37', to: '72.55', arrows:'to' },
+	{from: '72.32', to: '72.55', arrows:'to' },
+	{from: '72.42', to: '72.56', arrows:'to' },
+	{from: '93.43', to: '72.57', arrows:'to' },
+	{from: '72.34', to: '72.58', arrows:'to' },
+	{from: '72.27', to: '72.59', arrows:'to' },
+	{from: '72.34', to: '72.60', arrows:'to' },
+	{from: '72.34', to: '72.61', arrows:'to' },
+	{from: '72.42', to: '72.64', arrows:'to' },
+	{from: '72.34', to: '72.65', arrows:'to' },
+	{from: '72.31', to: '72.74', arrows:'to' },
+	{from: '72.34', to: '72.75', arrows:'to' },
+	{from: '93.24', to: '72.75', arrows:'to' },
+	{from: '72.38', to: '72.81', arrows:'to' },
+	{from: '72.37', to: '72.82', arrows:'to' },
+	{from: '72.36', to: '72.83', arrows:'to' },
+	{from: '72.37', to: '72.84', arrows:'to' },
+	{from: '72.37', to: '72.85', arrows:'to' },
+	{from: '72.32', to: '72.85', arrows:'to' },
+	{from: '72.34', to: '72.86', arrows:'to' },
+	{from: '72.07', to: '72.86', arrows:'to' },
+	{from: '72.34', to: '72.87', arrows:'to' },
+	{from: '72.34', to: '72.88', arrows:'to' },
+	{from: '93.24', to: '72.88', arrows:'to' },
+	{from: '72.44', to: '72.89', arrows:'to' },
+	{from: '93.07', to: '72.90', arrows:'to' },
+	{from: '93.43', to: '72.90', arrows:'to' }
+  ]);
+
+  // create a network
+  var container = document.getElementById('mynetwork');
+  var data = {
+    nodes: nodes,
+    edges: edges
+  };
+
+  var options = {};
+  var network = new vis.Network(container, data, options);
+</script>
+
+</body>
+</html>
