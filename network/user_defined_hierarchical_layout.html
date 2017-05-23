@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>Network | Hierarchical Layout, userDefined</title>
+  <title>ITBA | S10</title>
 
   <script src="lodash.min.js"></script>
   <script src="vis.min.js"></script>
@@ -309,7 +309,7 @@
         // add event listeners
         network.on('select', function (params) {
             parametros = params;
-            console.log( "Params: " + params );
+            // console.log( "Params: " + params );
             if (parametros.nodes.length == 1) {
               var sel = _.filter(datos, { 'id': params.nodes[0] });
               // document.getElementById('selection').innerHTML = 'Materia seleccionada: ' + params.nodes;
