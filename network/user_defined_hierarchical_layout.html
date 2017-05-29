@@ -17,13 +17,14 @@
 
   <style type="text/css">
         body {
-          font: 10pt sans;
+          font: 14pt;
+          font-family: Helvetica, Arial, sans-serif;
           margin: 10px;
         }
 
         #mynetwork {
-            width: 900px;
-            height: 500px;
+            width: 100%;
+            height: 530px;
             border: 1px solid lightgray;
         }
   </style>
@@ -48,190 +49,192 @@
 <div id="mynetwork"></div>
 
 <script>
-    var datos = [{"id":31.08,"materia":"Sistemas de Representacion","profesor":"Maria Ines De Piero","email":"ipiero@itba.edu.ar","depto":"Mecánica","creditos":3,"cred_requeridos":0,"correlativas":"","año":1,"cuatrimestre":1,"ultima vez que se dicto":2017,"orden":0.1,"alumnos":"#N/A","docentes":"#N/A"},
-{"id":72.03,"materia":"Introduccion a la Informatica","profesor":"Alejandra Buquete","email":"mbuquete@itba.edu.ar","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"","año":1,"cuatrimestre":1,"ultima vez que se dicto":2017,"orden":0,"alumnos":"40","docentes":"2"},
-{"id":93.26,"materia":"Analisis Matematico I","profesor":"Jose Luis Mancilla Aguilar","email":"jmancill@itba.edu.ar","depto":"Matematica","creditos":6,"cred_requeridos":0,"correlativas":"","año":1,"cuatrimestre":1,"ultima vez que se dicto":2017,"orden":0,"alumnos":"#N/A","docentes":"#N/A"},
-{"id":93.58,"materia":"Algebra","profesor":"Jose Luis Mancilla Aguilar","email":"jmancill@itba.edu.ar","depto":"Matematica","creditos":9,"cred_requeridos":0,"correlativas":"","año":1,"cuatrimestre":1,"ultima vez que se dicto":2017,"orden":0,"alumnos":"#N/A","docentes":"#N/A"},
-{"id":94.24,"materia":"Metodologia del Aprendizaje","profesor":"Maria Celia Gayoso","email":"mgayoso@itba.edu.ar","depto":"Economía y Desarrollo Profesional","creditos":3,"cred_requeridos":0,"correlativas":"","año":1,"cuatrimestre":1,"ultima vez que se dicto":2017,"orden":0.1,"alumnos":"#N/A","docentes":"#N/A"},
-{"id":72.31,"materia":"Programacion Imperativa","profesor":"Marcelo Garberoglio","email":"mgarbe@itba.edu.ar","depto":"Informática","creditos":9,"cred_requeridos":0,"correlativas":"72.03  93.58","año":1,"cuatrimestre":2,"ultima vez que se dicto":2017,"orden":1,"alumnos":"49","docentes":"4"},
-{"id":93.28,"materia":"Analisis Matematico II","profesor":"Jorge Luis Hagman","email":"hagman@itba.edu.ar","depto":"Matematica","creditos":6,"cred_requeridos":0,"correlativas":"93.26  93.58","año":1,"cuatrimestre":2,"ultima vez que se dicto":2017,"orden":1,"alumnos":"#N/A","docentes":"#N/A"},
-{"id":93.41,"materia":"Fisica I","profesor":"Roberto Daniel Delellis","email":"rdele@itba.edu.ar","depto":"Física","creditos":6,"cred_requeridos":0,"correlativas":"93.26","año":1,"cuatrimestre":2,"ultima vez que se dicto":2017,"orden":1,"alumnos":"#N/A","docentes":"#N/A"},
-{"id":93.59,"materia":"Matematica Discreta","profesor":"Monica Ines Orecchia","email":"morecchi@itba.edu.ar","depto":"Matematica","creditos":6,"cred_requeridos":0,"correlativas":"93.58","año":1,"cuatrimestre":2,"ultima vez que se dicto":2017,"orden":1,"alumnos":"#N/A","docentes":"#N/A"},
-{"id":12.09,"materia":"Quimica","profesor":"Juan Jose Testa Fernandez","email":"jtesta@itba.edu.ar","depto":"Quimica","creditos":3,"cred_requeridos":0,"correlativas":"","año":2,"cuatrimestre":1,"ultima vez que se dicto":2017,"orden":2,"alumnos":"#N/A","docentes":"#N/A"},
-{"id":72.32,"materia":"Diseño y Procesamiento de Doc Xml","profesor":"Valeria Soliani","email":"vsoliani@itba.edu.ar","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"72.31","año":2,"cuatrimestre":1,"ultima vez que se dicto":2017,"orden":2,"alumnos":"35","docentes":"2"},
-{"id":72.33,"materia":"Programacion Orientada a Objetos","profesor":"Santiago Bermudez","email":"sbermudez@itba.edu.ar","depto":"Informática","creditos":6,"cred_requeridos":0,"correlativas":"72.31","año":2,"cuatrimestre":1,"ultima vez que se dicto":2017,"orden":2,"alumnos":"40","docentes":"2"},
-{"id":93.35,"materia":"Logica Computacional","profesor":"Noni, Maria Laura","email":"mnoni@itba.edu.ar","depto":"Matematica","creditos":6,"cred_requeridos":0,"correlativas":"93.58","año":2,"cuatrimestre":1,"ultima vez que se dicto":2017,"orden":2,"alumnos":"#N/A","docentes":"#N/A"},
-{"id":93.42,"materia":"Fisica II","profesor":"König, Pablo Germán","email":"pkonig@itba.edu.ar","depto":"Física","creditos":6,"cred_requeridos":0,"correlativas":"93.28","año":2,"cuatrimestre":1,"ultima vez que se dicto":2017,"orden":2,"alumnos":"#N/A","docentes":"#N/A"},
-{"id":72.08,"materia":"Arquitecturas de Computadoras","profesor":"Santiago Valles","email":"svalles@itba.edu.ar","depto":"Informática","creditos":6,"cred_requeridos":0,"correlativas":"72.31","año":2,"cuatrimestre":2,"ultima vez que se dicto":2017,"orden":3,"alumnos":"30","docentes":"2"},
-{"id":72.34,"materia":"Estructura de Datos y Algoritmos","profesor":"Santiago Bermudez","email":"sbermudez@itba.edu.ar","depto":"Informática","creditos":6,"cred_requeridos":0,"correlativas":"72.33  93.59","año":2,"cuatrimestre":2,"ultima vez que se dicto":2017,"orden":3,"alumnos":"35","docentes":"2"},
-{"id":93.24,"materia":"Probabil.y Estadistica(k/s)","profesor":"Villaverde, Francisco Fernando","email":"paco@itba.edu.ar","depto":"Matematica","creditos":6,"cred_requeridos":0,"correlativas":"93.28","año":2,"cuatrimestre":2,"ultima vez que se dicto":2017,"orden":3,"alumnos":"#N/A","docentes":"#N/A"},
-{"id":93.43,"materia":"Fisica III","profesor":"Rinaldi, Horacio Daniel","email":"hrinaldi@itba.edu.ar","depto":"Física","creditos":6,"cred_requeridos":0,"correlativas":"93.28  93.41","año":2,"cuatrimestre":2,"ultima vez que se dicto":2017,"orden":3,"alumnos":"#N/A","docentes":"#N/A"},
-{"id":72.11,"materia":"Sistemas Operativos","profesor":"Nestor Gabriel Esquivel","email":"neesquivel@itba.edu.ar","depto":"Informática","creditos":6,"cred_requeridos":0,"correlativas":"72.34  72.08","año":3,"cuatrimestre":1,"ultima vez que se dicto":2017,"orden":4,"alumnos":"19","docentes":"3"},
-{"id":72.35,"materia":"Ingenieria de Software I","profesor":"Alejandra Buquete","email":"mbuquete@itba.edu.ar","depto":"Informática","creditos":6,"cred_requeridos":0,"correlativas":"72.33","año":3,"cuatrimestre":1,"ultima vez que se dicto":2017,"orden":4,"alumnos":"27","docentes":"1"},
-{"id":72.36,"materia":"Interaccion Hombre-computadora (HCI)","profesor":"Leticia Gomez","email":"lgomez@itba.edu.ar","depto":"Informática","creditos":6,"cred_requeridos":0,"correlativas":"72.33  72.32","año":3,"cuatrimestre":1,"ultima vez que se dicto":2017,"orden":4,"alumnos":"22","docentes":"3"},
-{"id":72.37,"materia":"Base de Datos I","profesor":"Leticia Gomez","email":"lgomez@itba.edu.ar","depto":"Informática","creditos":6,"cred_requeridos":0,"correlativas":"72.34  93.35","año":3,"cuatrimestre":1,"ultima vez que se dicto":2017,"orden":4,"alumnos":"17","docentes":"3"},
-{"id":72.07,"materia":"Protocolos de Comunicacion","profesor":"Codagnone, Juan Francisco","email":"jcodagno@itba.edu.ar","depto":"Informática","creditos":6,"cred_requeridos":0,"correlativas":"72.11","año":3,"cuatrimestre":2,"ultima vez que se dicto":2017,"orden":5,"alumnos":"32","docentes":"3"},
-{"id":72.38,"materia":"Proyecto de Aplicaciones Web","profesor":"Crespo, Alvaro Andrés","email":"acrespo@itba.edu.ar","depto":"Informática","creditos":6,"cred_requeridos":0,"correlativas":"72.11  72.37  72.36  72.35","año":3,"cuatrimestre":2,"ultima vez que se dicto":2017,"orden":5,"alumnos":"20","docentes":"2"},
-{"id":72.39,"materia":"Automatas, Teoria de Lenguajes y Compiladores","profesor":"Juan Santos","email":"jsantos@itba.edu.ar","depto":"Informática","creditos":6,"cred_requeridos":0,"correlativas":"72.34","año":3,"cuatrimestre":2,"ultima vez que se dicto":2017,"orden":5,"alumnos":"20","docentes":"3"},
-{"id":93.07,"materia":"Metodos Numericos","profesor":"Villaverde, Francisco Fernando","email":"paco@itba.edu.ar","depto":"Matematica","creditos":3,"cred_requeridos":0,"correlativas":"93.28","año":3,"cuatrimestre":2,"ultima vez que se dicto":2017,"orden":5,"alumnos":"#N/A","docentes":"#N/A"},
-{"id":94.21,"materia":"Formacion General I","profesor":"Diaz Leimbacher, Enrique Daniel","email":"ediazleimbacher@itba.edu.ar","depto":"Economía y Desarrollo Profesional","creditos":3,"cred_requeridos":0,"correlativas":"","año":3,"cuatrimestre":2,"ultima vez que se dicto":2017,"orden":5,"alumnos":"#N/A","docentes":"#N/A"},
-{"id":94.51,"materia":"Ingles I (Bachiller)","profesor":"Gonzalez Ferro, Ana Maria","email":"amg@itba.edu.ar","depto":"Economía y Desarrollo Profesional","creditos":0,"cred_requeridos":0,"correlativas":"","año":3,"cuatrimestre":2,"ultima vez que se dicto":2017,"orden":5,"alumnos":"#N/A","docentes":"#N/A"},
-{"id":61.24,"materia":"Economia para Ingenieros","profesor":"Coccolo, Pablo Bartolome","email":"pcoccolo@itba.edu.ar","depto":"Economía y Desarrollo Profesional","creditos":3,"cred_requeridos":0,"correlativas":"93.24","año":4,"cuatrimestre":1,"ultima vez que se dicto":2017,"orden":6,"alumnos":"#N/A","docentes":"#N/A"},
-{"id":72.27,"materia":"Sistemas de Inteligencia Artificial","profesor":"Cristina Parpaglione","email":"cparpag@itba.edu.ar","depto":"Informática","creditos":6,"cred_requeridos":0,"correlativas":"93.24  72.34","año":4,"cuatrimestre":1,"ultima vez que se dicto":2017,"orden":6,"alumnos":"41","docentes":"1"},
-{"id":72.40,"materia":"Ingenieria de Software II","profesor":"Alejandra Buquete","email":"mbuquete@itba.edu.ar","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"72.11  72.35","año":4,"cuatrimestre":1,"ultima vez que se dicto":2017,"orden":6,"alumnos":"19","docentes":"3"},
-{"id":72.41,"materia":"Base de Datos II","profesor":"Cristina Parpaglione","email":"cparpag@itba.edu.ar","depto":"Informática","creditos":6,"cred_requeridos":0,"correlativas":"72.37  72.11","año":4,"cuatrimestre":1,"ultima vez que se dicto":2017,"orden":6,"alumnos":"18","docentes":"2"},
-{"id":72.44,"materia":"Criptografia y Seguridad","profesor":"Pablo Abad","email":"pabad@itba.edu.ar","depto":"Informática","creditos":6,"cred_requeridos":0,"correlativas":"72.38  72.07","año":4,"cuatrimestre":1,"ultima vez que se dicto":2017,"orden":6,"alumnos":"35","docentes":"3"},
-{"id":61.32,"materia":"Derecho para Ingenieros","profesor":"Perego, Pablo Alejandro","email":"pperego@itba.edu.ar","depto":"Economía y Desarrollo Profesional","creditos":3,"cred_requeridos":144,"correlativas":"","año":4,"cuatrimestre":2,"ultima vez que se dicto":2017,"orden":7,"alumnos":"#N/A","docentes":"#N/A"},
-{"id":72.25,"materia":"Simulacion de Sistemas","profesor":"Daniel Parisi","email":"dparisi@itba.edu.ar","depto":"Informática","creditos":6,"cred_requeridos":0,"correlativas":"72.38  93.07","año":4,"cuatrimestre":1,"ultima vez que se dicto":2017,"orden":6,"alumnos":"10","docentes":"2"},
-{"id":72.42,"materia":"Programacion de Objetos Distribuidos","profesor":"Marcelo Turrin","email":"mturrin@itba.edu.ar","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"72.38  72.07","año":4,"cuatrimestre":2,"ultima vez que se dicto":2016,"orden":7,"alumnos":"#N/A","docentes":"#N/A"},
-{"id":72.43,"materia":"Gestión de Proyectos Informáticos","profesor":"Alicia Mon","email":"almon@itba.edu.ar","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"61.24  72.40","año":4,"cuatrimestre":2,"ultima vez que se dicto":2017,"orden":7,"alumnos":"15","docentes":"2"},
-{"id":93.75,"materia":"Metodos Numericos Avanzados","profesor":"Pablo Fierens","email":"pfierens@itba.edu.ar","depto":"Matematica","creditos":6,"cred_requeridos":0,"correlativas":"93.07","año":4,"cuatrimestre":2,"ultima vez que se dicto":2016,"orden":7,"alumnos":"#N/A","docentes":"#N/A"},
-{"id":72.20,"materia":"Redes de Informacion","profesor":"Santiago Valles","email":"svalles@itba.edu.ar","depto":"Informática","creditos":6,"cred_requeridos":0,"correlativas":"72.07  93.43","año":5,"cuatrimestre":1,"ultima vez que se dicto":2017,"orden":8,"alumnos":"40","docentes":"3"},
-{"id":72.45,"materia":"Proyecto Final","profesor":"Mario Bolo","email":"mbolo@itba.edu.ar","depto":"Informática","creditos":12,"cred_requeridos":160,"correlativas":"72.43","año":5,"cuatrimestre":1,"ultima vez que se dicto":2017,"orden":8,"alumnos":"17","docentes":"3"},
-{"id":12.83,"materia":"Seguridad Ocupacional y Ambiental","profesor":"Ordoñez, Hernán Darío","email":"hordonez@itba.edu.ar","depto":"Quimica","creditos":3,"cred_requeridos":140,"correlativas":"","año":5,"cuatrimestre":2,"ultima vez que se dicto":2017,"orden":9,"alumnos":"#N/A","docentes":"#N/A"},
-{"id":94.52,"materia":"Ingles II (Ingeniero)","profesor":"Gonzalez Ferro, Ana Maria","email":"amg@itba.edu.ar","depto":"Economía y Desarrollo Profesional","creditos":0,"cred_requeridos":0,"correlativas":"94.51","año":5,"cuatrimestre":2,"ultima vez que se dicto":2017,"orden":9,"alumnos":"#N/A","docentes":"#N/A"},
-{"id":95.01,"materia":"Practica Laboral","profesor":"","email":"","depto":"Secretaria Academica","creditos":0,"cred_requeridos":192,"correlativas":"","año":5,"cuatrimestre":2,"ultima vez que se dicto":2017,"orden":9,"alumnos":"#N/A","docentes":"#N/A"},
-{"id":94.23,"materia":"Formacion General III","profesor":"Gutierrez Krüsemann, Ricardo Jose M.","email":"rgutierr@itba.edu.ar","depto":"Economía y Desarrollo Profesional","creditos":3,"cred_requeridos":168,"correlativas":"","año":5,"cuatrimestre":2,"ultima vez que se dicto":2017,"orden":9,"alumnos":"#N/A","docentes":"#N/A"},
-{"id":94.29,"materia":"Formacion para Emprendedores","profesor":"Miguez, Daniel Edgardo","email":"dmiguez@itba.edu.ar","depto":"Economía y Desarrollo Profesional","creditos":3,"cred_requeridos":0,"correlativas":"","año":5,"cuatrimestre":2,"ultima vez que se dicto":2017,"orden":9,"alumnos":"#N/A","docentes":"#N/A"},
-{"id":16.50,"materia":"Introducción a la Bioinformática","profesor":"Yankilevich, Patricio","email":"pyankilevich@itba.edu.ar","depto":"Bioingeniería","creditos":3,"cred_requeridos":0,"correlativas":"72.37","año":null,"cuatrimestre":null,"ultima vez que se dicto":2017,"orden":10,"alumnos":"#N/A","docentes":"#N/A"},
-{"id":22.09,"materia":"Fundamentos Electronicos de la Informatica","profesor":"Eduardo Oreglia","email":"eoreglia@itba.edu.ar","depto":"Electrónica","creditos":6,"cred_requeridos":0,"correlativas":"","año":null,"cuatrimestre":2,"ultima vez que se dicto":2008,"orden":11,"alumnos":"#N/A","docentes":"#N/A"},
-{"id":22.27,"materia":"Transmision de Datos","profesor":"Gustavo Hirchoren","email":"ghirchor@itba.edu.ar","depto":"Electrónica","creditos":4,"cred_requeridos":0,"correlativas":"","año":null,"cuatrimestre":2,"ultima vez que se dicto":2009,"orden":11,"alumnos":"#N/A","docentes":"#N/A"},
-{"id":72.02,"materia":"Organizacion Basica de la Computadora","profesor":"Laura Zabaleta","email":"lzabalet@itba.edu.ar","depto":"Informática","creditos":6,"cred_requeridos":0,"correlativas":"","año":null,"cuatrimestre":2,"ultima vez que se dicto":2008,"orden":10,"alumnos":"#N/A","docentes":"#N/A"},
-{"id":72.18,"materia":"Programacion Funcional","profesor":"Pablo Martinez Lopez","email":"fidel@itba.edu.ar","depto":"Informática","creditos":4,"cred_requeridos":0,"correlativas":"","año":null,"cuatrimestre":1,"ultima vez que se dicto":2009,"orden":10,"alumnos":"#N/A","docentes":"#N/A"},
-{"id":72.22,"materia":"Sistemas Tolerantes a Fallas","profesor":"Santiago Vallés","email":"svalles@itba.edu.ar","depto":"Informática","creditos":6,"cred_requeridos":0,"correlativas":"","año":null,"cuatrimestre":2,"ultima vez que se dicto":2008,"orden":10,"alumnos":"#N/A","docentes":"#N/A"},
-{"id":72.23,"materia":"Diseño y Construccion de Compiladores","profesor":"Marcelo Garberoglio","email":"mgarbe@itba.edu.ar","depto":"Informática","creditos":6,"cred_requeridos":0,"correlativas":"","año":null,"cuatrimestre":1,"ultima vez que se dicto":2008,"orden":11,"alumnos":"#N/A","docentes":"#N/A"},
-{"id":72.28,"materia":"Topologia de Internet: Analisis y Modelado","profesor":"Alvarez-Hamelin, Jose Ignacio","email":"ihameli@itba.edu.ar","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"72.07","año":null,"cuatrimestre":null,"ultima vez que se dicto":2017,"orden":10,"alumnos":"1","docentes":"1"},
-{"id":72.29,"materia":"Tipos para Lenguajes de Programación","profesor":"Eduardo Bonelli","email":"ebonelli@itba.edu.ar","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"72.34","año":null,"cuatrimestre":2,"ultima vez que se dicto":2015,"orden":10,"alumnos":"#N/A","docentes":"#N/A"},
-{"id":72.46,"materia":"Robotica Basada en Comportamiento","profesor":"Juan Santos","email":"jsantos@itba.edu.ar","depto":"Informática","creditos":6,"cred_requeridos":0,"correlativas":"72.27","año":null,"cuatrimestre":2,"ultima vez que se dicto":2010,"orden":10,"alumnos":"#N/A","docentes":"#N/A"},
-{"id":72.49,"materia":"Sistemas Tolerantes a Fallas","profesor":"Santiago Vallés","email":"svalles@itba.edu.ar","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"72.42","año":null,"cuatrimestre":2,"ultima vez que se dicto":2010,"orden":10,"alumnos":"#N/A","docentes":"#N/A"},
-{"id":72.50,"materia":"Introducción Al Desarrollo de Videojuegos","profesor":"Diego Gabriel Ruiz","email":"druiz@itba.edu.ar","depto":"Informática","creditos":6,"cred_requeridos":0,"correlativas":"72.27","año":null,"cuatrimestre":2,"ultima vez que se dicto":2016,"orden":11,"alumnos":"#N/A","docentes":"#N/A"},
-{"id":72.51,"materia":"Tecnologias para Web 2.0 y Redes Sociales","profesor":"Gabriel Agustin Praino","email":"","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"72.42","año":null,"cuatrimestre":2,"ultima vez que se dicto":2010,"orden":11,"alumnos":"#N/A","docentes":"#N/A"},
-{"id":72.52,"materia":"Análisis y Tratamiento de Imágenes","profesor":"Juliana Gambini","email":"mgambini@itba.edu.ar","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"72.34  93.75","año":null,"cuatrimestre":null,"ultima vez que se dicto":2017,"orden":11,"alumnos":"8","docentes":"1"},
-{"id":72.54,"materia":"Olap y Extraccion de Informacion","profesor":"Alejandro Vaisman","email":"avaisman@itba.edu.ar","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"93.24  72.41","año":null,"cuatrimestre":null,"ultima vez que se dicto":2017,"orden":10,"alumnos":"4","docentes":"1"},
-{"id":72.55,"materia":"Ontologias en la Web","profesor":"Alejandro Vaisman","email":"avaisman@itba.edu.ar","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"72.37  72.32","año":null,"cuatrimestre":1,"ultima vez que se dicto":2017,"orden":11,"alumnos":"#N/A","docentes":"#N/A"},
-{"id":72.56,"materia":"Automatizacion e Integracion de Sistemas de Informacion","profesor":"Mariano Benitez","email":"mbenitez@itba.edu.ar","depto":"Informática","creditos":6,"cred_requeridos":0,"correlativas":"72.42","año":null,"cuatrimestre":2,"ultima vez que se dicto":2010,"orden":10,"alumnos":"#N/A","docentes":"#N/A"},
-{"id":72.57,"materia":"Sistemas Embebidos","profesor":"Matias Madorno","email":"mmadorno@itba.edu.ar","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"93.43","año":null,"cuatrimestre":1,"ultima vez que se dicto":2010,"orden":10,"alumnos":"#N/A","docentes":"#N/A"},
-{"id":72.58,"materia":"Computacion Grafica","profesor":"Mariano Merchante","email":"mmerchan@itba.edu.ar","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"72.34","año":null,"cuatrimestre":1,"ultima vez que se dicto":2016,"orden":11,"alumnos":"#N/A","docentes":"#N/A"},
-{"id":72.60,"materia":"Programacion Funcional","profesor":"Martinez Lopez, Pablo Ernesto","email":"fidel@itba.edu.ar","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"72.34","año":null,"cuatrimestre":null,"ultima vez que se dicto":2017,"orden":11,"alumnos":"1","docentes":"2"},
-{"id":72.61,"materia":"Taller de Diseño de Videojuegos","profesor":"Silvia Gomez","email":"sgomez@itba.edu.ar","depto":"Informática","creditos":1,"cred_requeridos":0,"correlativas":"72.34","año":null,"cuatrimestre":1,"ultima vez que se dicto":2011,"orden":11,"alumnos":"#N/A","docentes":"#N/A"},
-{"id":72.64,"materia":"Cloud Computing","profesor":"Santiago Vallés","email":"svalles@itba.edu.ar","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"72.42","año":null,"cuatrimestre":2,"ultima vez que se dicto":2011,"orden":11,"alumnos":"#N/A","docentes":"#N/A"},
-{"id":72.65,"materia":"Desarrollo de Videojuegos 2D en iPhone OS","profesor":"Lorenzon, Jorge Alejandro","email":"jolorenz@itba.edu.ar","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"72.34","año":null,"cuatrimestre":null,"ultima vez que se dicto":2017,"orden":11,"alumnos":"5","docentes":"1"},
-{"id":72.66,"materia":"Sistemas Embebidos","profesor":"Matias Madorno","email":"mmadorno@itba.edu.ar","depto":"Informática","creditos":6,"cred_requeridos":0,"correlativas":"","año":null,"cuatrimestre":2,"ultima vez que se dicto":2016,"orden":10,"alumnos":"#N/A","docentes":"#N/A"},
-{"id":72.68,"materia":"Arte y Ciencia Interactivos","profesor":"Andreas Daniel Matt","email":"","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"","año":null,"cuatrimestre":2,"ultima vez que se dicto":2011,"orden":10,"alumnos":"#N/A","docentes":"#N/A"},
-{"id":72.69,"materia":"Seguridad de Software basada en Flujo de Información","profesor":"Eduardo Bonelli","email":"ebonelli@itba.edu.ar","depto":"Informática","creditos":6,"cred_requeridos":0,"correlativas":"","año":null,"cuatrimestre":2,"ultima vez que se dicto":2011,"orden":11,"alumnos":"#N/A","docentes":"#N/A"},
-{"id":72.70,"materia":"Modelos e Imágenes Fractales","profesor":"Claudio Delrieux (prof. visitante)","email":"cad@uns.edu.ar","depto":"Informática","creditos":1,"cred_requeridos":0,"correlativas":"","año":null,"cuatrimestre":1,"ultima vez que se dicto":2011,"orden":11,"alumnos":"#N/A","docentes":"#N/A"},
-{"id":72.71,"materia":"Integración de Sistemas de Información","profesor":"Mariano Benitez","email":"mbenitez@itba.edu.ar","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"","año":null,"cuatrimestre":null,"ultima vez que se dicto":2017,"orden":10,"alumnos":"12","docentes":"1"},
-{"id":72.72,"materia":"Analisis y Verificación de Modelos y Códigos","profesor":"Marcelo Frias","email":"mfrias@itba.edu.ar","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"","año":null,"cuatrimestre":null,"ultima vez que se dicto":2017,"orden":11,"alumnos":"10","docentes":"1"},
-{"id":72.73,"materia":"Aprendizaje por Refuerzo en Robótica","profesor":"Juan Santos","email":"jsantos@itba.edu.ar","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"","año":null,"cuatrimestre":1,"ultima vez que se dicto":2015,"orden":10,"alumnos":"#N/A","docentes":"#N/A"},
-{"id":72.74,"materia":"Visualización de Información","profesor":"Ariel Aizemberg","email":"aaizemberg@itba.edu.ar","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"72.31","año":null,"cuatrimestre":null,"ultima vez que se dicto":2017,"orden":11,"alumnos":"15","docentes":"1"},
-{"id":72.75,"materia":"Aprendizaje Automático (Machine Learning)","profesor":"Julia Villar","email":"jvillar@itba.edu.ar","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"72.34  93.24","año":null,"cuatrimestre":null,"ultima vez que se dicto":2017,"orden":10,"alumnos":"8","docentes":"1"},
-{"id":72.77,"materia":"Técnicas Automáticas para Testing de Software","profesor":"Sarfraz Khurshid (prof. visitante)","email":"khurshid@ece.utexas.edu","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"","año":null,"cuatrimestre":2,"ultima vez que se dicto":2012,"orden":10,"alumnos":"#N/A","docentes":"#N/A"},
-{"id":72.78,"materia":"OLAP Espacial","profesor":"Ariel Vaisman","email":"avaisman@itba.edu.ar","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"","año":null,"cuatrimestre":1,"ultima vez que se dicto":2013,"orden":11,"alumnos":"#N/A","docentes":"#N/A"},
-{"id":72.79,"materia":"Sistemas Multiagente I","profesor":"Cristina Parpaglione","email":"cparpag@itba.edu.ar","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"","año":null,"cuatrimestre":2,"ultima vez que se dicto":2016,"orden":11,"alumnos":"#N/A","docentes":"#N/A"},
-{"id":72.80,"materia":"Big Data","profesor":"Lucila Stancato","email":"lstancat@itba.edu.ar","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"","año":null,"cuatrimestre":2,"ultima vez que se dicto":2013,"orden":10,"alumnos":"#N/A","docentes":"#N/A"},
-{"id":72.81,"materia":"Simulación y Animación de Sistemas Multipartículas","profesor":"Daniel Parisi","email":"dparisi@itba.edu.ar","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"72.38","año":null,"cuatrimestre":2,"ultima vez que se dicto":2016,"orden":10,"alumnos":"#N/A","docentes":"#N/A"},
-{"id":72.82,"materia":"Tópicos de NOSQL","profesor":"Oscar Romero (prof. visitante)","email":"oromero@essi.upc.edu","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"72.37","año":null,"cuatrimestre":1,"ultima vez que se dicto":2014,"orden":11,"alumnos":"#N/A","docentes":"#N/A"},
-{"id":72.83,"materia":"Técnicas avanzadas de HCI con uso de rastreadores de ojos y manos","profesor":"Marcela Alejandra Guerrero","email":"mguerrero@itba.edu.ar","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"72.36","año":null,"cuatrimestre":1,"ultima vez que se dicto":2015,"orden":11,"alumnos":"#N/A","docentes":"#N/A"},
-{"id":72.84,"materia":"Base de Datos Espaciales y Sistemas de Información Geográfica","profesor":"Ariel Aizemberg","email":"aaizemberg@itba.edu.ar","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"72.37","año":null,"cuatrimestre":2,"ultima vez que se dicto":2016,"orden":11,"alumnos":"#N/A","docentes":"#N/A"},
-{"id":72.85,"materia":"Análisis de Datos en la Web Semántica","profesor":"Alejandro Vaisman","email":"avaisman@itba.edu.ar","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"72.37  72.32","año":null,"cuatrimestre":2,"ultima vez que se dicto":2016,"orden":10,"alumnos":"#N/A","docentes":"#N/A"},
-{"id":72.86,"materia":"Técnicas Avanzadas en Videojuegos","profesor":"Jorge Lorenzon","email":"jlorenzon@itba.edu.ar","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"72.34  72.07","año":null,"cuatrimestre":2,"ultima vez que se dicto":2016,"orden":11,"alumnos":"#N/A","docentes":"#N/A"},
-{"id":72.87,"materia":"Diseño Sonoro para Animación y Videojuegos","profesor":"Leandro Marcio Ottati","email":"lottati@itba.edu.ar","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"72.34","año":null,"cuatrimestre":1,"ultima vez que se dicto":2017,"orden":11,"alumnos":"11","docentes":"1"},
-{"id":72.88,"materia":"Introducción a la Neurociencia Computacional","profesor":"Villar, Ana Julia","email":"jvillar@itba.edu.ar","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"72.34  93.24","año":null,"cuatrimestre":2,"ultima vez que se dicto":2016,"orden":11,"alumnos":"4","docentes":"1"},
-{"id":72.89,"materia":"Moneda Digital Descentralizada","profesor":"Jardi Bello, Yemel Angel","email":"yjardibe@itba.edu.ar","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"72.44","año":null,"cuatrimestre":2,"ultima vez que se dicto":2016,"orden":10,"alumnos":"#N/A","docentes":"#N/A"},
-{"id":72.90,"materia":"Internet de las Cosas (IoT)","profesor":"Santiago Vallés","email":"svalles@itba.edu.ar","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"93.07  93.43","año":null,"cuatrimestre":2,"ultima vez que se dicto":2016,"orden":10,"alumnos":"#N/A","docentes":"#N/A"},
-{"id":94.26,"materia":"Comunicacion Organizacional","profesor":"Maria Esperanza Presas Neira","email":"mpresas@itba.edu.ar","depto":"Desarrollo Profesional","creditos":3,"cred_requeridos":0,"correlativas":"","año":null,"cuatrimestre":null,"ultima vez que se dicto":2008,"orden":11,"alumnos":"#N/A","docentes":"#N/A"},
-{"id":94.42,"materia":"Comunicacion Estrategica","profesor":"Presas Neira, Maria Esperanza","email":"mpresas@itba.edu.ar","depto":"Economía y Desarrollo Profesional","creditos":3,"cred_requeridos":0,"correlativas":"","año":null,"cuatrimestre":1,"ultima vez que se dicto":2017,"orden":10,"alumnos":"#N/A","docentes":"#N/A"}];
+    var datos = [
+{"id":"31.08","materia":"Sistemas de Representacion","profesor":"Maria Ines De Piero","email":"ipiero@itba.edu.ar","depto":"Mecánica","creditos":3,"cred_requeridos":0,"correlativas":"","año":1,"cuatrimestre":1,"ultima":2017,"orden":0,"alumnos":"#N/A","docentes":"#N/A","cant_cuat":"#N/A","prom_alumnos":"#N/A"},
+{"id":"72.03","materia":"Introduccion a la Informatica","profesor":"Alejandra Buquete","email":"mbuquete@itba.edu.ar","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"","año":1,"cuatrimestre":1,"ultima":2017,"orden":0,"alumnos":"40","docentes":"2","cant_cuat":"3","prom_alumnos":"34"},
+{"id":"93.26","materia":"Analisis Matematico I","profesor":"Jose Luis Mancilla Aguilar","email":"jmancill@itba.edu.ar","depto":"Matematica","creditos":6,"cred_requeridos":0,"correlativas":"","año":1,"cuatrimestre":1,"ultima":2017,"orden":0,"alumnos":"#N/A","docentes":"#N/A","cant_cuat":"#N/A","prom_alumnos":"#N/A"},
+{"id":"93.58","materia":"Algebra","profesor":"Jose Luis Mancilla Aguilar","email":"jmancill@itba.edu.ar","depto":"Matematica","creditos":9,"cred_requeridos":0,"correlativas":"","año":1,"cuatrimestre":1,"ultima":2017,"orden":0,"alumnos":"#N/A","docentes":"#N/A","cant_cuat":"#N/A","prom_alumnos":"#N/A"},
+{"id":"94.24","materia":"Metodologia del Aprendizaje","profesor":"Maria Celia Gayoso","email":"mgayoso@itba.edu.ar","depto":"Economía y Desarrollo Profesional","creditos":3,"cred_requeridos":0,"correlativas":"","año":1,"cuatrimestre":1,"ultima":2017,"orden":0,"alumnos":"#N/A","docentes":"#N/A","cant_cuat":"#N/A","prom_alumnos":"#N/A"},
+{"id":"72.31","materia":"Programacion Imperativa","profesor":"Marcelo Garberoglio","email":"mgarbe@itba.edu.ar","depto":"Informática","creditos":9,"cred_requeridos":0,"correlativas":"72.03  93.58","año":1,"cuatrimestre":2,"ultima":2017,"orden":1,"alumnos":"49","docentes":"4","cant_cuat":"3","prom_alumnos":"52"},
+{"id":"93.28","materia":"Analisis Matematico II","profesor":"Jorge Luis Hagman","email":"hagman@itba.edu.ar","depto":"Matematica","creditos":6,"cred_requeridos":0,"correlativas":"93.26  93.58","año":1,"cuatrimestre":2,"ultima":2017,"orden":1,"alumnos":"#N/A","docentes":"#N/A","cant_cuat":"#N/A","prom_alumnos":"#N/A"},
+{"id":"93.41","materia":"Fisica I","profesor":"Roberto Daniel Delellis","email":"rdele@itba.edu.ar","depto":"Física","creditos":6,"cred_requeridos":0,"correlativas":"93.26","año":1,"cuatrimestre":2,"ultima":2017,"orden":1,"alumnos":"#N/A","docentes":"#N/A","cant_cuat":"#N/A","prom_alumnos":"#N/A"},
+{"id":"93.59","materia":"Matematica Discreta","profesor":"Monica Ines Orecchia","email":"morecchi@itba.edu.ar","depto":"Matematica","creditos":6,"cred_requeridos":0,"correlativas":"93.58","año":1,"cuatrimestre":2,"ultima":2017,"orden":1,"alumnos":"#N/A","docentes":"#N/A","cant_cuat":"#N/A","prom_alumnos":"#N/A"},
+{"id":"12.09","materia":"Quimica","profesor":"Juan Jose Testa Fernandez","email":"jtesta@itba.edu.ar","depto":"Quimica","creditos":3,"cred_requeridos":0,"correlativas":"","año":2,"cuatrimestre":1,"ultima":2017,"orden":2,"alumnos":"#N/A","docentes":"#N/A","cant_cuat":"#N/A","prom_alumnos":"#N/A"},
+{"id":"72.32","materia":"Diseño y Procesamiento de Doc Xml","profesor":"Valeria Soliani","email":"vsoliani@itba.edu.ar","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"72.31","año":2,"cuatrimestre":1,"ultima":2017,"orden":2,"alumnos":"35","docentes":"2","cant_cuat":"3","prom_alumnos":"32"},
+{"id":"72.33","materia":"Programacion Orientada a Objetos","profesor":"Santiago Bermudez","email":"sbermudez@itba.edu.ar","depto":"Informática","creditos":6,"cred_requeridos":0,"correlativas":"72.31","año":2,"cuatrimestre":1,"ultima":2017,"orden":2,"alumnos":"40","docentes":"2","cant_cuat":"3","prom_alumnos":"39"},
+{"id":"93.35","materia":"Logica Computacional","profesor":"Noni, Maria Laura","email":"mnoni@itba.edu.ar","depto":"Matematica","creditos":6,"cred_requeridos":0,"correlativas":"93.58","año":2,"cuatrimestre":1,"ultima":2017,"orden":2,"alumnos":"#N/A","docentes":"#N/A","cant_cuat":"#N/A","prom_alumnos":"#N/A"},
+{"id":"93.42","materia":"Fisica II","profesor":"König, Pablo Germán","email":"pkonig@itba.edu.ar","depto":"Física","creditos":6,"cred_requeridos":0,"correlativas":"93.28","año":2,"cuatrimestre":1,"ultima":2017,"orden":2,"alumnos":"#N/A","docentes":"#N/A","cant_cuat":"#N/A","prom_alumnos":"#N/A"},
+{"id":"72.08","materia":"Arquitecturas de Computadoras","profesor":"Santiago Valles","email":"svalles@itba.edu.ar","depto":"Informática","creditos":6,"cred_requeridos":0,"correlativas":"72.31","año":2,"cuatrimestre":2,"ultima":2017,"orden":3,"alumnos":"30","docentes":"2","cant_cuat":"3","prom_alumnos":"29"},
+{"id":"72.34","materia":"Estructura de Datos y Algoritmos","profesor":"Santiago Bermudez","email":"sbermudez@itba.edu.ar","depto":"Informática","creditos":6,"cred_requeridos":0,"correlativas":"72.33  93.59","año":2,"cuatrimestre":2,"ultima":2017,"orden":3,"alumnos":"35","docentes":"2","cant_cuat":"3","prom_alumnos":"28"},
+{"id":"93.24","materia":"Probabil.y Estadistica(k/s)","profesor":"Villaverde, Francisco Fernando","email":"paco@itba.edu.ar","depto":"Matematica","creditos":6,"cred_requeridos":0,"correlativas":"93.28","año":2,"cuatrimestre":2,"ultima":2017,"orden":3,"alumnos":"#N/A","docentes":"#N/A","cant_cuat":"#N/A","prom_alumnos":"#N/A"},
+{"id":"93.43","materia":"Fisica III","profesor":"Rinaldi, Horacio Daniel","email":"hrinaldi@itba.edu.ar","depto":"Física","creditos":6,"cred_requeridos":0,"correlativas":"93.28  93.41","año":2,"cuatrimestre":2,"ultima":2017,"orden":3,"alumnos":"#N/A","docentes":"#N/A","cant_cuat":"#N/A","prom_alumnos":"#N/A"},
+{"id":"72.11","materia":"Sistemas Operativos","profesor":"Nestor Gabriel Esquivel","email":"neesquivel@itba.edu.ar","depto":"Informática","creditos":6,"cred_requeridos":0,"correlativas":"72.34  72.08","año":3,"cuatrimestre":1,"ultima":2017,"orden":4,"alumnos":"19","docentes":"3","cant_cuat":"3","prom_alumnos":"20"},
+{"id":"72.35","materia":"Ingenieria de Software I","profesor":"Alejandra Buquete","email":"mbuquete@itba.edu.ar","depto":"Informática","creditos":6,"cred_requeridos":0,"correlativas":"72.33","año":3,"cuatrimestre":1,"ultima":2017,"orden":4,"alumnos":"27","docentes":"1","cant_cuat":"3","prom_alumnos":"25"},
+{"id":"72.36","materia":"Interaccion Hombre-computadora (HCI)","profesor":"Leticia Gomez","email":"lgomez@itba.edu.ar","depto":"Informática","creditos":6,"cred_requeridos":0,"correlativas":"72.33  72.32","año":3,"cuatrimestre":1,"ultima":2017,"orden":4,"alumnos":"22","docentes":"3","cant_cuat":"3","prom_alumnos":"23"},
+{"id":"72.37","materia":"Base de Datos I","profesor":"Leticia Gomez","email":"lgomez@itba.edu.ar","depto":"Informática","creditos":6,"cred_requeridos":0,"correlativas":"72.34  93.35","año":3,"cuatrimestre":1,"ultima":2017,"orden":4,"alumnos":"17","docentes":"3","cant_cuat":"3","prom_alumnos":"23"},
+{"id":"72.07","materia":"Protocolos de Comunicacion","profesor":"Codagnone, Juan Francisco","email":"jcodagno@itba.edu.ar","depto":"Informática","creditos":6,"cred_requeridos":0,"correlativas":"72.11","año":3,"cuatrimestre":2,"ultima":2017,"orden":5,"alumnos":"32","docentes":"3","cant_cuat":"3","prom_alumnos":"29"},
+{"id":"72.38","materia":"Proyecto de Aplicaciones Web","profesor":"Crespo, Alvaro Andrés","email":"acrespo@itba.edu.ar","depto":"Informática","creditos":6,"cred_requeridos":0,"correlativas":"72.11  72.37  72.36  72.35","año":3,"cuatrimestre":2,"ultima":2017,"orden":5,"alumnos":"20","docentes":"2","cant_cuat":"3","prom_alumnos":"20"},
+{"id":"72.39","materia":"Automatas, Teoria de Lenguajes y Compiladores","profesor":"Juan Santos","email":"jsantos@itba.edu.ar","depto":"Informática","creditos":6,"cred_requeridos":0,"correlativas":"72.34","año":3,"cuatrimestre":2,"ultima":2017,"orden":5,"alumnos":"20","docentes":"3","cant_cuat":"3","prom_alumnos":"23"},
+{"id":"93.07","materia":"Metodos Numericos","profesor":"Villaverde, Francisco Fernando","email":"paco@itba.edu.ar","depto":"Matematica","creditos":3,"cred_requeridos":0,"correlativas":"93.28","año":3,"cuatrimestre":2,"ultima":2017,"orden":5,"alumnos":"#N/A","docentes":"#N/A","cant_cuat":"#N/A","prom_alumnos":"#N/A"},
+{"id":"94.21","materia":"Formacion General I","profesor":"Diaz Leimbacher, Enrique Daniel","email":"ediazleimbacher@itba.edu.ar","depto":"Economía y Desarrollo Profesional","creditos":3,"cred_requeridos":0,"correlativas":"","año":3,"cuatrimestre":2,"ultima":2017,"orden":5,"alumnos":"#N/A","docentes":"#N/A","cant_cuat":"#N/A","prom_alumnos":"#N/A"},
+{"id":"94.51","materia":"Ingles I (Bachiller)","profesor":"Gonzalez Ferro, Ana Maria","email":"amg@itba.edu.ar","depto":"Economía y Desarrollo Profesional","creditos":0,"cred_requeridos":0,"correlativas":"","año":3,"cuatrimestre":2,"ultima":2017,"orden":5,"alumnos":"#N/A","docentes":"#N/A","cant_cuat":"#N/A","prom_alumnos":"#N/A"},
+{"id":"61.24","materia":"Economia para Ingenieros","profesor":"Coccolo, Pablo Bartolome","email":"pcoccolo@itba.edu.ar","depto":"Economía y Desarrollo Profesional","creditos":3,"cred_requeridos":0,"correlativas":"93.24","año":4,"cuatrimestre":1,"ultima":2017,"orden":6,"alumnos":"#N/A","docentes":"#N/A","cant_cuat":"#N/A","prom_alumnos":"#N/A"},
+{"id":"72.27","materia":"Sistemas de Inteligencia Artificial","profesor":"Cristina Parpaglione","email":"cparpag@itba.edu.ar","depto":"Informática","creditos":6,"cred_requeridos":0,"correlativas":"93.24  72.34","año":4,"cuatrimestre":1,"ultima":2017,"orden":6,"alumnos":"41","docentes":"1","cant_cuat":"1","prom_alumnos":"41"},
+{"id":"72.40","materia":"Ingenieria de Software II","profesor":"Alejandra Buquete","email":"mbuquete@itba.edu.ar","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"72.11  72.35","año":4,"cuatrimestre":1,"ultima":2017,"orden":6,"alumnos":"19","docentes":"3","cant_cuat":"3","prom_alumnos":"14"},
+{"id":"72.41","materia":"Base de Datos II","profesor":"Cristina Parpaglione","email":"cparpag@itba.edu.ar","depto":"Informática","creditos":6,"cred_requeridos":0,"correlativas":"72.37  72.11","año":4,"cuatrimestre":1,"ultima":2017,"orden":6,"alumnos":"18","docentes":"2","cant_cuat":"3","prom_alumnos":"22"},
+{"id":"72.44","materia":"Criptografia y Seguridad","profesor":"Pablo Abad","email":"pabad@itba.edu.ar","depto":"Informática","creditos":6,"cred_requeridos":0,"correlativas":"72.38  72.07","año":4,"cuatrimestre":1,"ultima":2017,"orden":6,"alumnos":"35","docentes":"3","cant_cuat":"1","prom_alumnos":"35"},
+{"id":"61.32","materia":"Derecho para Ingenieros","profesor":"Perego, Pablo Alejandro","email":"pperego@itba.edu.ar","depto":"Economía y Desarrollo Profesional","creditos":3,"cred_requeridos":144,"correlativas":"","año":4,"cuatrimestre":2,"ultima":2017,"orden":7,"alumnos":"#N/A","docentes":"#N/A","cant_cuat":"#N/A","prom_alumnos":"#N/A"},
+{"id":"72.25","materia":"Simulacion de Sistemas","profesor":"Daniel Parisi","email":"dparisi@itba.edu.ar","depto":"Informática","creditos":6,"cred_requeridos":0,"correlativas":"72.38  93.07","año":4,"cuatrimestre":1,"ultima":2017,"orden":6,"alumnos":"10","docentes":"2","cant_cuat":"3","prom_alumnos":"17"},
+{"id":"72.42","materia":"Programacion de Objetos Distribuidos","profesor":"Marcelo Turrin","email":"mturrin@itba.edu.ar","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"72.38  72.07","año":4,"cuatrimestre":2,"ultima":2016,"orden":7,"alumnos":"#N/A","docentes":"#N/A","cant_cuat":"2","prom_alumnos":"33"},
+{"id":"72.43","materia":"Gestión de Proyectos Informáticos","profesor":"Alicia Mon","email":"almon@itba.edu.ar","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"61.24  72.40","año":4,"cuatrimestre":2,"ultima":2017,"orden":7,"alumnos":"15","docentes":"2","cant_cuat":"3","prom_alumnos":"22"},
+{"id":"93.75","materia":"Metodos Numericos Avanzados","profesor":"Pablo Fierens","email":"pfierens@itba.edu.ar","depto":"Matematica","creditos":6,"cred_requeridos":0,"correlativas":"93.07","año":4,"cuatrimestre":2,"ultima":2016,"orden":7,"alumnos":"#N/A","docentes":"#N/A","cant_cuat":"#N/A","prom_alumnos":"#N/A"},
+{"id":"72.20","materia":"Redes de Informacion","profesor":"Santiago Valles","email":"svalles@itba.edu.ar","depto":"Informática","creditos":6,"cred_requeridos":0,"correlativas":"72.07  93.43","año":5,"cuatrimestre":1,"ultima":2017,"orden":8,"alumnos":"40","docentes":"3","cant_cuat":"1","prom_alumnos":"40"},
+{"id":"72.45","materia":"Proyecto Final","profesor":"Mario Bolo","email":"mbolo@itba.edu.ar","depto":"Informática","creditos":12,"cred_requeridos":160,"correlativas":"72.43","año":5,"cuatrimestre":1,"ultima":2017,"orden":8,"alumnos":"17","docentes":"3","cant_cuat":"3","prom_alumnos":"13"},
+{"id":"12.83","materia":"Seguridad Ocupacional y Ambiental","profesor":"Ordoñez, Hernán Darío","email":"hordonez@itba.edu.ar","depto":"Quimica","creditos":3,"cred_requeridos":140,"correlativas":"","año":5,"cuatrimestre":2,"ultima":2017,"orden":9,"alumnos":"#N/A","docentes":"#N/A","cant_cuat":"#N/A","prom_alumnos":"#N/A"},
+{"id":"94.52","materia":"Ingles II (Ingeniero)","profesor":"Gonzalez Ferro, Ana Maria","email":"amg@itba.edu.ar","depto":"Economía y Desarrollo Profesional","creditos":0,"cred_requeridos":0,"correlativas":"94.51","año":5,"cuatrimestre":2,"ultima":2017,"orden":9,"alumnos":"#N/A","docentes":"#N/A","cant_cuat":"#N/A","prom_alumnos":"#N/A"},
+{"id":"95.01","materia":"Practica Laboral","profesor":"","email":"","depto":"Secretaria Academica","creditos":0,"cred_requeridos":192,"correlativas":"","año":5,"cuatrimestre":2,"ultima":2017,"orden":9,"alumnos":"#N/A","docentes":"#N/A","cant_cuat":"#N/A","prom_alumnos":"#N/A"},
+{"id":"94.23","materia":"Formacion General III","profesor":"Gutierrez Krüsemann, Ricardo Jose M.","email":"rgutierr@itba.edu.ar","depto":"Economía y Desarrollo Profesional","creditos":3,"cred_requeridos":168,"correlativas":"","año":5,"cuatrimestre":2,"ultima":2017,"orden":9,"alumnos":"#N/A","docentes":"#N/A","cant_cuat":"#N/A","prom_alumnos":"#N/A"},
+{"id":"94.29","materia":"Formacion para Emprendedores","profesor":"Miguez, Daniel Edgardo","email":"dmiguez@itba.edu.ar","depto":"Economía y Desarrollo Profesional","creditos":3,"cred_requeridos":0,"correlativas":"","año":5,"cuatrimestre":2,"ultima":2017,"orden":9,"alumnos":"#N/A","docentes":"#N/A","cant_cuat":"#N/A","prom_alumnos":"#N/A"},
+{"id":"16.50","materia":"Introducción a la Bioinformática","profesor":"Yankilevich, Patricio","email":"pyankilevich@itba.edu.ar","depto":"Bioingeniería","creditos":3,"cred_requeridos":0,"correlativas":"72.37","año":null,"cuatrimestre":null,"ultima":2017,"orden":11,"alumnos":"#N/A","docentes":"#N/A","cant_cuat":"#N/A","prom_alumnos":"#N/A"},
+{"id":"22.09","materia":"Fundamentos Electronicos de la Informatica","profesor":"Eduardo Oreglia","email":"eoreglia@itba.edu.ar","depto":"Electrónica","creditos":6,"cred_requeridos":0,"correlativas":"","año":null,"cuatrimestre":2,"ultima":2008,"orden":10,"alumnos":"#N/A","docentes":"#N/A","cant_cuat":"#N/A","prom_alumnos":"#N/A"},
+{"id":"22.27","materia":"Transmision de Datos","profesor":"Gustavo Hirchoren","email":"ghirchor@itba.edu.ar","depto":"Electrónica","creditos":4,"cred_requeridos":0,"correlativas":"","año":null,"cuatrimestre":2,"ultima":2009,"orden":10,"alumnos":"#N/A","docentes":"#N/A","cant_cuat":"#N/A","prom_alumnos":"#N/A"},
+{"id":"72.02","materia":"Organizacion Basica de la Computadora","profesor":"Laura Zabaleta","email":"lzabalet@itba.edu.ar","depto":"Informática","creditos":6,"cred_requeridos":0,"correlativas":"","año":null,"cuatrimestre":2,"ultima":2008,"orden":10,"alumnos":"#N/A","docentes":"#N/A","cant_cuat":"#N/A","prom_alumnos":"#N/A"},
+{"id":"72.18","materia":"Programacion Funcional","profesor":"Pablo Martinez Lopez","email":"fidel@itba.edu.ar","depto":"Informática","creditos":4,"cred_requeridos":0,"correlativas":"","año":null,"cuatrimestre":1,"ultima":2009,"orden":10,"alumnos":"#N/A","docentes":"#N/A","cant_cuat":"#N/A","prom_alumnos":"#N/A"},
+{"id":"72.22","materia":"Sistemas Tolerantes a Fallas","profesor":"Santiago Vallés","email":"svalles@itba.edu.ar","depto":"Informática","creditos":6,"cred_requeridos":0,"correlativas":"","año":null,"cuatrimestre":2,"ultima":2008,"orden":11,"alumnos":"#N/A","docentes":"#N/A","cant_cuat":"#N/A","prom_alumnos":"#N/A"},
+{"id":"72.23","materia":"Diseño y Construccion de Compiladores","profesor":"Marcelo Garberoglio","email":"mgarbe@itba.edu.ar","depto":"Informática","creditos":6,"cred_requeridos":0,"correlativas":"","año":null,"cuatrimestre":1,"ultima":2008,"orden":10,"alumnos":"#N/A","docentes":"#N/A","cant_cuat":"#N/A","prom_alumnos":"#N/A"},
+{"id":"72.28","materia":"Topologia de Internet: Analisis y Modelado","profesor":"Alvarez-Hamelin, Jose Ignacio","email":"ihameli@itba.edu.ar","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"72.07","año":null,"cuatrimestre":null,"ultima":2017,"orden":10,"alumnos":"1","docentes":"1","cant_cuat":"3","prom_alumnos":"1"},
+{"id":"72.29","materia":"Tipos para Lenguajes de Programación","profesor":"Eduardo Bonelli","email":"ebonelli@itba.edu.ar","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"72.34","año":null,"cuatrimestre":2,"ultima":2015,"orden":10,"alumnos":"#N/A","docentes":"#N/A","cant_cuat":"#N/A","prom_alumnos":"#N/A"},
+{"id":"72.46","materia":"Robotica Basada en Comportamiento","profesor":"Juan Santos","email":"jsantos@itba.edu.ar","depto":"Informática","creditos":6,"cred_requeridos":0,"correlativas":"72.27","año":null,"cuatrimestre":2,"ultima":2010,"orden":10,"alumnos":"#N/A","docentes":"#N/A","cant_cuat":"#N/A","prom_alumnos":"#N/A"},
+{"id":"72.49","materia":"Sistemas Tolerantes a Fallas","profesor":"Santiago Vallés","email":"svalles@itba.edu.ar","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"72.42","año":null,"cuatrimestre":2,"ultima":2010,"orden":10,"alumnos":"#N/A","docentes":"#N/A","cant_cuat":"#N/A","prom_alumnos":"#N/A"},
+{"id":"72.50","materia":"Introducción Al Desarrollo de Videojuegos","profesor":"Diego Gabriel Ruiz","email":"druiz@itba.edu.ar","depto":"Informática","creditos":6,"cred_requeridos":0,"correlativas":"72.27","año":null,"cuatrimestre":2,"ultima":2016,"orden":10,"alumnos":"#N/A","docentes":"#N/A","cant_cuat":"2","prom_alumnos":"18"},
+{"id":"72.51","materia":"Tecnologias para Web 2.0 y Redes Sociales","profesor":"Gabriel Agustin Praino","email":"","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"72.42","año":null,"cuatrimestre":2,"ultima":2010,"orden":11,"alumnos":"#N/A","docentes":"#N/A","cant_cuat":"#N/A","prom_alumnos":"#N/A"},
+{"id":"72.52","materia":"Análisis y Tratamiento de Imágenes","profesor":"Juliana Gambini","email":"mgambini@itba.edu.ar","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"72.34  93.75","año":null,"cuatrimestre":null,"ultima":2017,"orden":11,"alumnos":"8","docentes":"1","cant_cuat":"3","prom_alumnos":"7"},
+{"id":"72.54","materia":"Olap y Extraccion de Informacion","profesor":"Alejandro Vaisman","email":"avaisman@itba.edu.ar","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"93.24  72.41","año":null,"cuatrimestre":null,"ultima":2017,"orden":11,"alumnos":"4","docentes":"1","cant_cuat":"1","prom_alumnos":"4"},
+{"id":"72.55","materia":"Ontologias en la Web","profesor":"Alejandro Vaisman","email":"avaisman@itba.edu.ar","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"72.37  72.32","año":null,"cuatrimestre":1,"ultima":2016,"orden":11,"alumnos":4,"docentes":1,"cant_cuat":1,"prom_alumnos":4},
+{"id":"72.56","materia":"Automatizacion e Integracion de Sistemas de Informacion","profesor":"Mariano Benitez","email":"mbenitez@itba.edu.ar","depto":"Informática","creditos":6,"cred_requeridos":0,"correlativas":"72.42","año":null,"cuatrimestre":2,"ultima":2010,"orden":10,"alumnos":"#N/A","docentes":"#N/A","cant_cuat":"#N/A","prom_alumnos":"#N/A"},
+{"id":"72.57","materia":"Sistemas Embebidos","profesor":"Matias Madorno","email":"mmadorno@itba.edu.ar","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"93.43","año":null,"cuatrimestre":1,"ultima":2010,"orden":11,"alumnos":"#N/A","docentes":"#N/A","cant_cuat":"#N/A","prom_alumnos":"#N/A"},
+{"id":"72.58","materia":"Computacion Grafica","profesor":"Mariano Merchante","email":"mmerchan@itba.edu.ar","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"72.34","año":null,"cuatrimestre":1,"ultima":2016,"orden":10,"alumnos":"#N/A","docentes":"#N/A","cant_cuat":"#N/A","prom_alumnos":"#N/A"},
+{"id":"72.60","materia":"Programacion Funcional","profesor":"Martinez Lopez, Pablo Ernesto","email":"fidel@itba.edu.ar","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"72.34","año":null,"cuatrimestre":null,"ultima":2017,"orden":10,"alumnos":"1","docentes":"2","cant_cuat":"3","prom_alumnos":"5"},
+{"id":"72.61","materia":"Taller de Diseño de Videojuegos","profesor":"Silvia Gomez","email":"sgomez@itba.edu.ar","depto":"Informática","creditos":1,"cred_requeridos":0,"correlativas":"72.34","año":null,"cuatrimestre":1,"ultima":2011,"orden":11,"alumnos":"#N/A","docentes":"#N/A","cant_cuat":"#N/A","prom_alumnos":"#N/A"},
+{"id":"72.64","materia":"Cloud Computing","profesor":"Santiago Vallés","email":"svalles@itba.edu.ar","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"72.42","año":null,"cuatrimestre":2,"ultima":2011,"orden":11,"alumnos":"#N/A","docentes":"#N/A","cant_cuat":"#N/A","prom_alumnos":"#N/A"},
+{"id":"72.65","materia":"Desarrollo de Videojuegos 2D en iPhone OS","profesor":"Lorenzon, Jorge Alejandro","email":"jolorenz@itba.edu.ar","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"72.34","año":null,"cuatrimestre":null,"ultima":2017,"orden":11,"alumnos":"5","docentes":"1","cant_cuat":"1","prom_alumnos":"5"},
+{"id":"72.66","materia":"Sistemas Embebidos","profesor":"Matias Madorno","email":"mmadorno@itba.edu.ar","depto":"Informática","creditos":6,"cred_requeridos":0,"correlativas":"","año":null,"cuatrimestre":2,"ultima":2016,"orden":11,"alumnos":"#N/A","docentes":"#N/A","cant_cuat":"2","prom_alumnos":"2"},
+{"id":"72.68","materia":"Arte y Ciencia Interactivos","profesor":"Andreas Daniel Matt","email":"","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"","año":null,"cuatrimestre":2,"ultima":2011,"orden":11,"alumnos":"#N/A","docentes":"#N/A","cant_cuat":"#N/A","prom_alumnos":"#N/A"},
+{"id":"72.69","materia":"Seguridad de Software basada en Flujo de Información","profesor":"Eduardo Bonelli","email":"ebonelli@itba.edu.ar","depto":"Informática","creditos":6,"cred_requeridos":0,"correlativas":"","año":null,"cuatrimestre":2,"ultima":2011,"orden":10,"alumnos":"#N/A","docentes":"#N/A","cant_cuat":"#N/A","prom_alumnos":"#N/A"},
+{"id":"72.70","materia":"Modelos e Imágenes Fractales","profesor":"Claudio Delrieux (prof. visitante)","email":"cad@uns.edu.ar","depto":"Informática","creditos":1,"cred_requeridos":0,"correlativas":"","año":null,"cuatrimestre":1,"ultima":2011,"orden":11,"alumnos":"#N/A","docentes":"#N/A","cant_cuat":"#N/A","prom_alumnos":"#N/A"},
+{"id":"72.71","materia":"Integración de Sistemas de Información","profesor":"Mariano Benitez","email":"mbenitez@itba.edu.ar","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"","año":null,"cuatrimestre":null,"ultima":2017,"orden":11,"alumnos":"12","docentes":"1","cant_cuat":"3","prom_alumnos":"12"},
+{"id":"72.72","materia":"Analisis y Verificación de Modelos y Códigos","profesor":"Marcelo Frias","email":"mfrias@itba.edu.ar","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"","año":null,"cuatrimestre":null,"ultima":2017,"orden":10,"alumnos":"10","docentes":"1","cant_cuat":"1","prom_alumnos":"10"},
+{"id":"72.73","materia":"Aprendizaje por Refuerzo en Robótica","profesor":"Juan Santos","email":"jsantos@itba.edu.ar","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"","año":null,"cuatrimestre":1,"ultima":2015,"orden":10,"alumnos":"#N/A","docentes":"#N/A","cant_cuat":"#N/A","prom_alumnos":"#N/A"},
+{"id":"72.74","materia":"Visualización de Información","profesor":"Ariel Aizemberg","email":"aaizemberg@itba.edu.ar","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"72.31","año":null,"cuatrimestre":null,"ultima":2017,"orden":11,"alumnos":"15","docentes":"1","cant_cuat":"1","prom_alumnos":"15"},
+{"id":"72.75","materia":"Aprendizaje Automático (Machine Learning)","profesor":"Julia Villar","email":"jvillar@itba.edu.ar","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"72.34  93.24","año":null,"cuatrimestre":null,"ultima":2017,"orden":10,"alumnos":"8","docentes":"1","cant_cuat":"3","prom_alumnos":"7"},
+{"id":"72.77","materia":"Técnicas Automáticas para Testing de Software","profesor":"Sarfraz Khurshid (prof. visitante)","email":"khurshid@ece.utexas.edu","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"","año":null,"cuatrimestre":2,"ultima":2012,"orden":11,"alumnos":"#N/A","docentes":"#N/A","cant_cuat":"#N/A","prom_alumnos":"#N/A"},
+{"id":"72.78","materia":"OLAP Espacial","profesor":"Ariel Vaisman","email":"avaisman@itba.edu.ar","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"","año":null,"cuatrimestre":1,"ultima":2013,"orden":11,"alumnos":"#N/A","docentes":"#N/A","cant_cuat":"#N/A","prom_alumnos":"#N/A"},
+{"id":"72.79","materia":"Sistemas Multiagente I","profesor":"Cristina Parpaglione","email":"cparpag@itba.edu.ar","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"72.27","año":null,"cuatrimestre":2,"ultima":2016,"orden":11,"alumnos":"#N/A","docentes":"#N/A","cant_cuat":"2","prom_alumnos":"1"},
+{"id":"72.80","materia":"Big Data","profesor":"Lucila Stancato","email":"lstancat@itba.edu.ar","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"","año":null,"cuatrimestre":2,"ultima":2013,"orden":10,"alumnos":"#N/A","docentes":"#N/A","cant_cuat":"#N/A","prom_alumnos":"#N/A"},
+{"id":"72.81","materia":"Simulación y Animación de Sistemas Multipartículas","profesor":"Daniel Parisi","email":"dparisi@itba.edu.ar","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"72.38","año":null,"cuatrimestre":2,"ultima":2016,"orden":10,"alumnos":"#N/A","docentes":"#N/A","cant_cuat":"2","prom_alumnos":"0"},
+{"id":"72.82","materia":"Tópicos de NOSQL","profesor":"Oscar Romero (prof. visitante)","email":"oromero@essi.upc.edu","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"72.37","año":null,"cuatrimestre":1,"ultima":2014,"orden":10,"alumnos":"#N/A","docentes":"#N/A","cant_cuat":"#N/A","prom_alumnos":"#N/A"},
+{"id":"72.83","materia":"Técnicas avanzadas de HCI con uso de rastreadores de ojos y manos","profesor":"Marcela Alejandra Guerrero","email":"mguerrero@itba.edu.ar","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"72.36","año":null,"cuatrimestre":1,"ultima":2015,"orden":10,"alumnos":"#N/A","docentes":"#N/A","cant_cuat":"#N/A","prom_alumnos":"#N/A"},
+{"id":"72.84","materia":"Base de Datos Espaciales y Sistemas de Información Geográfica","profesor":"Ariel Aizemberg","email":"aaizemberg@itba.edu.ar","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"72.37","año":null,"cuatrimestre":2,"ultima":2016,"orden":11,"alumnos":"#N/A","docentes":"#N/A","cant_cuat":"2","prom_alumnos":"13"},
+{"id":"72.85","materia":"Análisis de Datos en la Web Semántica","profesor":"Alejandro Vaisman","email":"avaisman@itba.edu.ar","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"72.37  72.32","año":null,"cuatrimestre":2,"ultima":2016,"orden":11,"alumnos":"#N/A","docentes":"#N/A","cant_cuat":"2","prom_alumnos":"2"},
+{"id":"72.86","materia":"Técnicas Avanzadas en Videojuegos","profesor":"Jorge Lorenzon","email":"jlorenzon@itba.edu.ar","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"72.34  72.07","año":null,"cuatrimestre":2,"ultima":2016,"orden":11,"alumnos":"#N/A","docentes":"#N/A","cant_cuat":"2","prom_alumnos":"3"},
+{"id":"72.87","materia":"Diseño Sonoro para Animación y Videojuegos","profesor":"Leandro Marcio Ottati","email":"lottati@itba.edu.ar","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"72.34","año":null,"cuatrimestre":1,"ultima":2017,"orden":11,"alumnos":"11","docentes":"1","cant_cuat":"3","prom_alumnos":"10"},
+{"id":"72.88","materia":"Introducción a la Neurociencia Computacional","profesor":"Villar, Ana Julia","email":"jvillar@itba.edu.ar","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"72.34  93.24","año":null,"cuatrimestre":2,"ultima":2016,"orden":11,"alumnos":"4","docentes":"1","cant_cuat":"3","prom_alumnos":"4"},
+{"id":"72.89","materia":"Moneda Digital Descentralizada","profesor":"Jardi Bello, Yemel Angel","email":"yjardibe@itba.edu.ar","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"72.44","año":null,"cuatrimestre":2,"ultima":2016,"orden":10,"alumnos":"#N/A","docentes":"#N/A","cant_cuat":"2","prom_alumnos":"22"},
+{"id":"72.90","materia":"Internet de las Cosas (IoT)","profesor":"Santiago Vallés","email":"svalles@itba.edu.ar","depto":"Informática","creditos":3,"cred_requeridos":0,"correlativas":"93.07  93.43","año":null,"cuatrimestre":2,"ultima":2016,"orden":10,"alumnos":"#N/A","docentes":"#N/A","cant_cuat":"2","prom_alumnos":"12"},
+{"id":"94.26","materia":"Comunicacion Organizacional","profesor":"Maria Esperanza Presas Neira","email":"mpresas@itba.edu.ar","depto":"Desarrollo Profesional","creditos":3,"cred_requeridos":0,"correlativas":"","año":null,"cuatrimestre":null,"ultima":2008,"orden":10,"alumnos":"#N/A","docentes":"#N/A","cant_cuat":"#N/A","prom_alumnos":"#N/A"},
+{"id":"94.42","materia":"Comunicacion Estrategica","profesor":"Presas Neira, Maria Esperanza","email":"mpresas@itba.edu.ar","depto":"Economía y Desarrollo Profesional","creditos":3,"cred_requeridos":0,"correlativas":"","año":null,"cuatrimestre":1,"ultima":2017,"orden":10,"alumnos":"#N/A","docentes":"#N/A","cant_cuat":"#N/A","prom_alumnos":"#N/A"}];
 
     var links = [
-        {"from":72.03,"to":72.31},
-        {"from":93.58,"to":72.31},
-        {"from":93.26,"to":93.28},
-        {"from":93.58,"to":93.28},
-        {"from":93.26,"to":93.41},
-        {"from":93.58,"to":93.59},
-        {"from":72.31,"to":72.32},
-        {"from":72.31,"to":72.33},
-        {"from":93.58,"to":93.35},
-        {"from":93.28,"to":93.42},
-        {"from":72.31,"to":72.08},
-        {"from":72.33,"to":72.34},
-        {"from":93.59,"to":72.34},
-        {"from":93.28,"to":93.24},
-        {"from":93.28,"to":93.43},
-        {"from":93.41,"to":93.43},
-        {"from":72.34,"to":72.11},
-        {"from":72.08,"to":72.11},
-        {"from":72.33,"to":72.35},
-        {"from":72.33,"to":72.36},
-        {"from":72.32,"to":72.36},
-        {"from":72.34,"to":72.37},
-        {"from":93.35,"to":72.37},
-        {"from":72.11,"to":72.07},
-        {"from":72.11,"to":72.38},
-        {"from":72.37,"to":72.38},
-        {"from":72.36,"to":72.38},
-        {"from":72.35,"to":72.38},
-        {"from":72.34,"to":72.39},
-        {"from":93.28,"to":93.07},
-        {"from":93.24,"to":61.24},
-        {"from":93.24,"to":72.27},
-        {"from":72.34,"to":72.27},
-        {"from":72.11,"to":72.40},
-        {"from":72.35,"to":72.40},
-        {"from":72.37,"to":72.41},
-        {"from":72.11,"to":72.41},
-        {"from":72.38,"to":72.44},
-        {"from":72.07,"to":72.44},
-        {"from":72.38,"to":72.25},
-        {"from":93.07,"to":72.25},
-        {"from":72.38,"to":72.42},
-        {"from":72.07,"to":72.42},
-        {"from":61.24,"to":72.43},
-        {"from":72.40,"to":72.43},
-        {"from":93.07,"to":93.75},
-        {"from":72.07,"to":72.20},
-        {"from":93.43,"to":72.20},
-        {"from":72.43,"to":72.45},
-        {"from":94.51,"to":94.52},
-        {"from":72.37,"to":16.50},
-        {"from":72.07,"to":72.28},
-        {"from":72.34,"to":72.29},
-        {"from":72.27,"to":72.46},
-        {"from":72.42,"to":72.49},
-        {"from":72.27,"to":72.50},
-        {"from":72.42,"to":72.51},
-        {"from":72.34,"to":72.52},
-        {"from":93.75,"to":72.52},
-        {"from":72.34,"to":72.53},
-        {"from":93.24,"to":72.54},
-        {"from":72.41,"to":72.54},
-        {"from":72.37,"to":72.55},
-        {"from":72.32,"to":72.55},
-        {"from":72.42,"to":72.56},
-        {"from":93.43,"to":72.57},
-        {"from":72.34,"to":72.58},
-        {"from":72.27,"to":72.59},
-        {"from":72.34,"to":72.60},
-        {"from":72.34,"to":72.61},
-        {"from":72.42,"to":72.64},
-        {"from":72.34,"to":72.65},
-        {"from":72.31,"to":72.74},
-        {"from":72.34,"to":72.75},
-        {"from":93.24,"to":72.75},
-        {"from":72.38,"to":72.81},
-        {"from":72.37,"to":72.82},
-        {"from":72.36,"to":72.83},
-        {"from":72.37,"to":72.84},
-        {"from":72.37,"to":72.85},
-        {"from":72.32,"to":72.85},
-        {"from":72.34,"to":72.86},
-        {"from":72.07,"to":72.86},
-        {"from":72.34,"to":72.87},
-        {"from":72.34,"to":72.88},
-        {"from":93.24,"to":72.88},
-        {"from":72.44,"to":72.89},
-        {"from":93.07,"to":72.90},
-        {"from":93.43,"to":72.90}];
+        {"from":"72.03","to":"72.31"},
+        {"from":"93.58","to":"72.31"},
+        {"from":"93.26","to":"93.28"},
+        {"from":"93.58","to":"93.28"},
+        {"from":"93.26","to":"93.41"},
+        {"from":"93.58","to":"93.59"},
+        {"from":"72.31","to":"72.32"},
+        {"from":"72.31","to":"72.33"},
+        {"from":"93.58","to":"93.35"},
+        {"from":"93.28","to":"93.42"},
+        {"from":"72.31","to":"72.08"},
+        {"from":"72.33","to":"72.34"},
+        {"from":"93.59","to":"72.34"},
+        {"from":"93.28","to":"93.24"},
+        {"from":"93.28","to":"93.43"},
+        {"from":"93.41","to":"93.43"},
+        {"from":"72.34","to":"72.11"},
+        {"from":"72.08","to":"72.11"},
+        {"from":"72.33","to":"72.35"},
+        {"from":"72.33","to":"72.36"},
+        {"from":"72.32","to":"72.36"},
+        {"from":"72.34","to":"72.37"},
+        {"from":"93.35","to":"72.37"},
+        {"from":"72.11","to":"72.07"},
+        {"from":"72.11","to":"72.38"},
+        {"from":"72.37","to":"72.38"},
+        {"from":"72.36","to":"72.38"},
+        {"from":"72.35","to":"72.38"},
+        {"from":"72.34","to":"72.39"},
+        {"from":"93.28","to":"93.07"},
+        {"from":"93.24","to":"61.24"},
+        {"from":"93.24","to":"72.27"},
+        {"from":"72.34","to":"72.27"},
+        {"from":"72.11","to":"72.40"},
+        {"from":"72.35","to":"72.40"},
+        {"from":"72.37","to":"72.41"},
+        {"from":"72.11","to":"72.41"},
+        {"from":"72.38","to":"72.44"},
+        {"from":"72.07","to":"72.44"},
+        {"from":"72.38","to":"72.25"},
+        {"from":"93.07","to":"72.25"},
+        {"from":"72.38","to":"72.42"},
+        {"from":"72.07","to":"72.42"},
+        {"from":"61.24","to":"72.43"},
+        {"from":"72.40","to":"72.43"},
+        {"from":"93.07","to":"93.75"},
+        {"from":"72.07","to":"72.20"},
+        {"from":"93.43","to":"72.20"},
+        {"from":"72.43","to":"72.45"},
+        {"from":"94.51","to":"94.52"},
+        {"from":"72.37","to":"16.50"},
+        {"from":"72.07","to":"72.28"},
+        {"from":"72.34","to":"72.29"},
+        {"from":"72.27","to":"72.46"},
+        {"from":"72.42","to":"72.49"},
+        {"from":"72.27","to":"72.50"},
+        {"from":"72.42","to":"72.51"},
+        {"from":"72.34","to":"72.52"},
+        {"from":"93.75","to":"72.52"},
+        {"from":"72.34","to":"72.53"},
+        {"from":"93.24","to":"72.54"},
+        {"from":"72.41","to":"72.54"},
+        {"from":"72.37","to":"72.55"},
+        {"from":"72.32","to":"72.55"},
+        {"from":"72.42","to":"72.56"},
+        {"from":"93.43","to":"72.57"},
+        {"from":"72.34","to":"72.58"},
+        {"from":"72.27","to":"72.59"},
+        {"from":"72.34","to":"72.60"},
+        {"from":"72.34","to":"72.61"},
+        {"from":"72.42","to":"72.64"},
+        {"from":"72.34","to":"72.65"},
+        {"from":"72.31","to":"72.74"},
+        {"from":"72.34","to":"72.75"},
+        {"from":"93.24","to":"72.75"},
+        {"from":"72.38","to":"72.81"},
+        {"from":"72.37","to":"72.82"},
+        {"from":"72.36","to":"72.83"},
+        {"from":"72.37","to":"72.84"},
+        {"from":"72.37","to":"72.85"},
+        {"from":"72.32","to":"72.85"},
+        {"from":"72.34","to":"72.86"},
+        {"from":"72.07","to":"72.86"},
+        {"from":"72.34","to":"72.87"},
+        {"from":"72.34","to":"72.88"},
+        {"from":"93.24","to":"72.88"},
+        {"from":"72.44","to":"72.89"},
+        {"from":"93.07","to":"72.90"},
+        {"from":"93.43","to":"72.90"},
+        {"from":"72.27","to":"72.79"}];
 
     var nodes = null;
     var edges = null;
@@ -240,16 +243,26 @@
     var sel;
     var parametros;
 
+    var data;
+
     var colores = {
   "Desarrollo Profesional": "#1f78b4",
   "Economía y Desarrollo Profesional": "#b2df8a",
   "Electrónica": "#33a02c",
   "Física": "#fb9a99",
-  "Informática": "#e31a1c",
+  "Informática": "#a6cee3",
   "Matematica": "#fdbf6f",
   "Mecánica": "#ff7f00",
   "Quimica": "#cab2d6",
-  "Secretaria Academica": "#6a3d9a"
+  "Secretaria Academica": "#6a3d9a",
+  "Bioingeniería": "#fee0d2"
+};
+
+var cuat2symbol = {
+  "1" : "triangle",
+  "2" : "triangleDown",
+  "3" : "dot",
+  "#N/A" : "box"
 };
 
     function destroy() {
@@ -263,10 +276,21 @@
         destroy();
 
         nodes = [];
+
         function addNodes(d) {
-          if (d['ultima vez que se dicto'] > 2015) {
-            nodes.push({id: d.id, label: d.id, level: d.orden, title: d.materia,
-              color: { background: 'white', border: colores[d.depto], highlight: {background:'white',border:colores[d.depto]} }
+          var valor = 1;
+   		  if (d.prom_alumnos !== "#N/A") {
+   		  	valor = d.prom_alumnos;
+   		  }
+          if (d['ultima'] > 2015) {
+            nodes.push({
+              id: d.id,
+              label: d.id,
+              level: d.orden,
+              title: d.materia,
+              value: valor,
+              shape: cuat2symbol[d.cant_cuat],
+              color: { background: colores[d.depto], border: colores[d.depto], highlight: {background:'white',border:colores[d.depto]} }
             });
           }
         }
@@ -282,7 +306,7 @@
         links.forEach(addLinks);
 
         var container = document.getElementById('mynetwork');
-        var data = {
+        data = {
             nodes: nodes,
             edges: edges
         };
@@ -293,10 +317,20 @@
                     type: 'cubicBezier',
                     forceDirection: (directionInput.value == "UD" || directionInput.value == "DU") ? 'vertical' : 'horizontal',
                     roundness: 0.4
-                },
-                shadow: true
+                }, shadow: false
             },
-            nodes: { borderWidth: 1/* , shadow: true */ },
+            nodes: {
+              borderWidth: 1,
+              shape: 'dot',
+              shadow: true,
+              scaling: {
+			              customScalingFunction: function (min,max,total,value) {
+			                return 2*(value)/max;
+			              },
+			              min:5,
+			              max:25
+			              }
+            },
             layout: {
                 hierarchical: {
                     direction: directionInput.value
@@ -314,11 +348,11 @@
               var sel = _.filter(datos, { 'id': params.nodes[0] });
               // document.getElementById('selection').innerHTML = 'Materia seleccionada: ' + params.nodes;
               var ad = "";
-              if (sel[0].alumnos == "#N/A") {
+              if (sel[0].prom_alumnos == "#N/A") {
                 ad = "";
               }
               else {
-                ad = ", alumnos: " + sel[0].alumnos + ", docentes: " + sel[0].docentes;
+                ad = ", alumnos: " + sel[0].prom_alumnos + ", docentes: " + sel[0].docentes;
               }
               document.getElementById('selection').innerHTML = "id: " + sel[0].id + " <b>" + sel[0].materia + "</b> profesor a cargo: <b>" + sel[0].profesor + "</b> <a href='mailto:" + sel[0].email + "'>" + sel[0].email+ "</a> Depto: " + sel[0].depto + ad;
             }
