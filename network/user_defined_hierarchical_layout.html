@@ -47,12 +47,18 @@
   <input type="hidden" id='direction' value="LR">
 </p>
 
+<svg id="carreras" width="300" height="180"></svg>
+<svg id="cuatrimestres" width="220" height="200">
+  <path d="M 25,0 50,50 0,50 z" fill="none" stroke="black"></path>
+  <text x="60" y="30">1er cuatrimestre</text>
+  <path d="M0,60 50,60 25,110 z" fill="none" stroke="black"></path>
+  <text x="60" y="90">2do cuatrimestre</text>
+  <circle cx="25" cy="140" r="20" fill="none" stroke="black"></circle>
+  <text x="60" y="145">1ro y 2do cuatrimestre</text>
+</svg>
+	
 <p id="selection">&nbsp;</p>
 <div id="mynetwork"></div>
-
-<br>
-
-<svg width="300" height="150"></svg>
 
 <script>
 var datos = [{"id":"31.08","materia":"Sistemas de Representacion","profesor":"Maria Ines De Piero","email":"ipiero@itba.edu.ar","depto":"Mecánica","creditos":3,"cred_requeridos":0,"correlativas":"","año":1,"cuatrimestre":1,"ultima":2017,"orden":0,"alumnos":"#N/A","docentes":"#N/A","cant_cuat":"#N/A","prom_alumnos":"#N/A"},
@@ -404,7 +410,7 @@ var deptos = [{"carrera":"Desarrollo Profesional","color":"#1f78b4"},
 {"carrera":"Secretaria Academica","color":"#6a3d9a"},
 {"carrera":"Bioingeniería","color":"#fee0d2"}];
 
-d3.select("svg").selectAll("rect").data(deptos).enter().append("rect")
+d3.select("svg#carreras").selectAll("rect").data(deptos).enter().append("rect")
   .attr("width",10).attr("height",10)
   .attr("x", 10)
   .attr("y", function(d,i){return i*15;})
@@ -412,7 +418,7 @@ d3.select("svg").selectAll("rect").data(deptos).enter().append("rect")
   .attr("stroke","none")
   .attr("fill", function(d){return d.color;});
 
-d3.select("svg").selectAll("text").data(deptos).enter().append("text")
+d3.select("svg#carreras").selectAll("text").data(deptos).enter().append("text")
   .attr("x", 25)
   .attr("y", function(d,i){return 11+i*15;})
   .text(function(d){return d.carrera});	
