@@ -1,0 +1,192 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+
+  <title>ITBA - Lic. en Administración y Sistemas - Plan: L13</title>
+
+<!--
+  <script src="//visjs.org/dist/vis.js"></script>
+  <link href="//visjs.org/dist/vis.css" rel="stylesheet" type="text/css" />
+-->
+  <script src="vis.js"></script>
+  <link href="vis.css" rel="stylesheet" type="text/css" />
+
+  <style type="text/css">
+    #mynetwork {
+      width: 1200px;
+      height: 500px;
+      border: 1px solid lightgray;
+    }
+  </style>
+</head>
+<body>
+
+<h1>ITBA - Lic. en Administración y Sistemas - Plan: L13</h1>
+<div id="mynetwork"></div>
+
+<script>
+  // create an array with nodes
+  var nodes = new vis.DataSet([
+  {id: '10.09', label: '10.09', title: 'Formación para Emprendedores'},
+  {id: '11.83', label: '11.83', title: 'Gestion de Operaciones'},
+  {id: '11.84', label: '11.84', title: 'Gestion de Proyectos'},
+  {id: '11.85', label: '11.85', title: 'Toma de Decisiones'},
+  {id: '61.12', label: '61.12', title: 'Gestion Financiera'},
+  {id: '61.40', label: '61.40', title: 'Economia y Finanzas Internacionales'},
+  {id: '61.82', label: '61.82', title: 'Macroeconomia'},
+  {id: '61.90', label: '61.90', title: 'Derecho Publico y Privado'},
+  {id: '61.92', label: '61.92', title: 'Derecho Aduanero'},
+  {id: '71.80', label: '71.80', title: 'Utilitarios en Informatica'},
+  {id: '71.85', label: '71.85', title: 'Programacion'},
+  {id: '71.88', label: '71.88', title: 'Gestion de Datos'},
+  {id: '81.02', label: '81.02', title: 'Introduccion a la Licenciatura en Adm y Sistemas'},
+  {id: '81.07', label: '81.07', title: 'Sistemas Contables'},
+  {id: '81.08', label: '81.08', title: 'Aplicacion de las Telecomunicaciones'},
+  {id: '81.11', label: '81.11', title: 'Contabilidad Gerencial'},
+  {id: '81.20', label: '81.20', title: 'Comercializacion'},
+  {id: '81.21', label: '81.21', title: 'Gestion de Ventas'},
+  {id: '81.23', label: '81.23', title: 'Comercio Electronico'},
+  {id: '81.26', label: '81.26', title: 'Comercio Exterior'},
+  {id: '81.27', label: '81.27', title: 'Impuestos para la toma de Decisiones'},
+  {id: '81.30', label: '81.30', title: 'Analisis y Modelado de Procesos de Negocios'},
+  {id: '81.31', label: '81.31', title: 'Analisis y Diseño de Aplicaciones Informaticas'},
+  {id: '81.36', label: '81.36', title: 'Sistemas Integrados de Gestion Empresaria II'},
+  {id: '81.38', label: '81.38', title: 'Integracion de Procesos de Negocios y Aplic Inf'},
+  {id: '81.39', label: '81.39', title: 'Sistemas Integrados de Gestion Empresaria I'},
+  {id: '81.41', label: '81.41', title: 'Estrategia Empresaria'},
+  {id: '81.45', label: '81.45', title: 'Seminario de Actualizacion'},
+  {id: '81.46', label: '81.46', title: 'Auditoria General y de Sistemas'},
+  {id: '81.52', label: '81.52', title: 'Negocios y Tecnologia en Internet'},
+  {id: '81.55', label: '81.55', title: 'Diagnostico Empresario y Plan de Accion ( Trabajo Final )'},
+  {id: '81.56', label: '81.56', title: 'Arquitectura de la Tecnologia Informática'},
+  {id: '81.60', label: '81.60', title: 'Sistemas Integrados de Gestion en la Ind de Serv'},
+  {id: '81.61', label: '81.61', title: 'Modelado Avanzado de Proc e Intelig de Neg'},
+  {id: '81.63', label: '81.63', title: 'Marketing Internacional'},
+  {id: '81.64', label: '81.64', title: 'Gestión y Sistemas de Información de la Logistica Internacional'},
+  {id: '93.20', label: '93.20', title: 'Analisis Matematico'},
+  {id: '93.21', label: '93.21', title: 'Algebra'},
+  {id: '93.39', label: '93.39', title: 'Estadistica'},
+  {id: '94.40', label: '94.40', title: 'Estructura de las Organizaciones'},
+  {id: '94.41', label: '94.41', title: 'Gestion de los Recursos Humanos'},
+  {id: '94.60', label: '94.60', title: 'Panorama Historico Global'},
+  {id: '94.61', label: '94.61', title: 'Filosofia'},
+  {id: '94.62', label: '94.62', title: 'Etica en los Negocios'},
+  {id: '94.63', label: '94.63', title: 'Epistemologia y Heuristica'},
+  {id: '94.90', label: '94.90', title: 'Inglés I (analista)'},
+  {id: '94.91', label: '94.91', title: 'Inglés II (licenciado)'},
+  {id: 'OR.CI', label: 'OR.CI', title: 'Orientacion: Comercio Internacional', shape: 'box',  color: {background:'white', border:'black'} },
+  {id: 'OR.SI', label: 'OR.SI', title: 'Orientacion: Sistemas de Información', shape: 'box', color: {background:'white', border:'black'} }
+
+  ]);
+
+  // create an array with edges
+  var edges = new vis.DataSet([
+  {from: '94.40', to: '10.09', arrows:'to'},
+  {from: '93.39', to: '11.83', arrows:'to' },
+  {from: '81.02', to: '11.83', arrows:'to' },
+  {from: '81.07', to: '11.84', arrows:'to' },
+  {from: '93.39', to: '11.85', arrows:'to' },
+  {from: '81.02', to: '11.85', arrows:'to' },
+  {from: '81.07', to: '61.12', arrows:'to' },
+  {from: '93.21', to: '61.12', arrows:'to' },
+  {from: '61.82', to: '61.40', arrows:'to' },
+  {from: '61.81', to: '61.40', arrows:'to' },
+  {from: '61.12', to: '61.40', arrows:'to' },
+  {from: '93.20', to: '61.82', arrows:'to' },
+  {from: '61.90', to: '61.92', arrows:'to' },
+  {from: '81.26', to: '61.92', arrows:'to' },
+  {from: '71.80', to: '71.85', arrows:'to' },
+  {from: '71.85', to: '71.88', arrows:'to' },
+  {from: '93.20', to: '71.88', arrows:'to' },
+  {from: '81.07', to: '81.11', arrows:'to' },
+  {from: '81.02', to: '81.20', arrows:'to' },
+  {from: '81.20', to: '81.21', arrows:'to' },
+  {from: '81.31', to: '81.23', arrows:'to' },
+  {from: '81.52', to: '81.23', arrows:'to' },
+  {from: '81.21', to: '81.26', arrows:'to' },
+  {from: '61.90', to: '81.27', arrows:'to' },
+  {from: '81.11', to: '81.27', arrows:'to' },
+  {from: '61.82', to: '81.27', arrows:'to' },
+  {from: '81.02', to: '81.30', arrows:'to' },
+  {from: '71.85', to: '81.30', arrows:'to' },
+  {from: '71.88', to: '81.31', arrows:'to' },
+  {from: '81.39', to: '81.36', arrows:'to' },
+  {from: '81.56', to: '81.38', arrows:'to' },
+  {from: '81.36', to: '81.38', arrows:'to' },
+  {from: '71.88', to: '81.39', arrows:'to' },
+  {from: '81.07', to: '81.39', arrows:'to' },
+  {from: '81.11', to: '81.41', arrows:'to' },
+  {from: '61.82', to: '81.41', arrows:'to' },
+  {from: '81.21', to: '81.41', arrows:'to' },
+  {from: '61.12', to: '81.41', arrows:'to' },
+  {from: '11.85', to: '81.41', arrows:'to' },
+  {from: '94.41', to: '81.41', arrows:'to' },
+  {from: '81.31', to: '81.46', arrows:'to' },
+  {from: '94.40', to: '81.46', arrows:'to' },
+  {from: '81.08', to: '81.52', arrows:'to' },
+  {from: '81.39', to: '81.55', arrows:'to' },
+  {from: '81.21', to: '81.55', arrows:'to' },
+  {from: '11.83', to: '81.55', arrows:'to' },
+  {from: '61.12', to: '81.55', arrows:'to' },
+  {from: '11.84', to: '81.55', arrows:'to' },
+  {from: '11.85', to: '81.55', arrows:'to' },
+  {from: '81.30', to: '81.55', arrows:'to' },
+  {from: '81.31', to: '81.56', arrows:'to' },
+  {from: '81.52', to: '81.56', arrows:'to' },
+  {from: '81.30', to: '81.60', arrows:'to' },
+  {from: '81.36', to: '81.60', arrows:'to' },
+  {from: '81.41', to: '81.61', arrows:'to' },
+  {from: '81.30', to: '81.61', arrows:'to' },
+  {from: '71.88', to: '81.61', arrows:'to' },
+  {from: '81.36', to: '81.61', arrows:'to' },
+  {from: '81.20', to: '81.63', arrows:'to' },
+  {from: '11.83', to: '81.64', arrows:'to' },
+  {from: '81.26', to: '81.64', arrows:'to' },
+  {from: '81.36', to: '81.64', arrows:'to' },
+  {from: '93.20', to: '93.39', arrows:'to' },
+  {from: '81.02', to: '94.40', arrows:'to' },
+  {from: '61.90', to: '94.41', arrows:'to' },
+  {from: '94.61', to: '94.63', arrows:'to' },
+  {from: '94.90', to: '94.91', arrows:'to' },
+  {from: '10.09', to: 'OR.CI', arrows:'to' },
+  {from: '61.40', to: 'OR.CI', arrows:'to' },
+  {from: '81.26', to: 'OR.CI', arrows:'to' },
+  {from: '81.41', to: 'OR.CI', arrows:'to' },
+  {from: '81.56', to: 'OR.CI', arrows:'to' },
+  {from: '81.63', to: 'OR.CI', arrows:'to' },
+  {from: '61.92', to: 'OR.CI', arrows:'to' },
+  {from: '81.23', to: 'OR.CI', arrows:'to' },
+  {from: '81.27', to: 'OR.CI', arrows:'to' },
+  {from: '81.45', to: 'OR.CI', arrows:'to' },
+  {from: '81.55', to: 'OR.CI', arrows:'to' },
+  {from: '81.64', to: 'OR.CI', arrows:'to' },
+  {from: '94.91', to: 'OR.CI', arrows:'to' },
+  {from: '10.09', to: 'OR.SI', arrows:'to' },
+  {from: '81.26', to: 'OR.SI', arrows:'to' },
+  {from: '81.41', to: 'OR.SI', arrows:'to' },
+  {from: '81.46', to: 'OR.SI', arrows:'to' },
+  {from: '81.56', to: 'OR.SI', arrows:'to' },
+  {from: '81.60', to: 'OR.SI', arrows:'to' },
+  {from: '81.23', to: 'OR.SI', arrows:'to' },
+  {from: '81.27', to: 'OR.SI', arrows:'to' },
+  {from: '81.38', to: 'OR.SI', arrows:'to' },
+  {from: '81.45', to: 'OR.SI', arrows:'to' },
+  {from: '81.55', to: 'OR.SI', arrows:'to' },
+  {from: '81.61', to: 'OR.SI', arrows:'to' },
+  {from: '94.91', to: 'OR.SI', arrows:'to' }
+  ]);
+
+  // create a network
+  var container = document.getElementById('mynetwork');
+  var data = {
+    nodes: nodes,
+    edges: edges
+  };
+  var options = {};
+  var network = new vis.Network(container, data, options);
+</script>
+
+</body>
+</html>
