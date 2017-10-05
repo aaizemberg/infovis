@@ -1,0 +1,232 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>ITBA - Lic. en Administración y Sistemas - Plan: L13</title>
+
+  <script src="vis.min.js"></script>
+  <link href="vis-network.min.css" rel="stylesheet" type="text/css"/>
+
+
+<style type="text/css">
+  body {
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 10px;
+  }
+
+  #mynetwork {
+    max-width:100%;
+	margin: auto;
+    height: 550px;
+    border: 1px solid lightgray;
+  }
+
+</style>
+
+</head>
+
+<body>
+<h2>ITBA | Lic. en Administración y Sistemas | Plan: L13</h2>
+
+<!-- <p id="selection">&nbsp;</p> -->
+
+<div id="mynetwork"></div>
+
+<script>
+var nodes = [
+{"id":"71.80","label":"71.80","title":"Utilitarios en Informatica","level":0,"x":-750,"y":-700,"creditos":6,"año":1,"cuatrimetre":1,"correlativas":""},
+{"id":"81.02","label":"81.02","title":"Introduccion a la Licenciatura en Adm y Sistemas","level":0,"x":-750,"y":-600,"creditos":6,"año":1,"cuatrimetre":1,"correlativas":""},
+{"id":"81.07","label":"81.07","title":"Sistemas Contables","level":0,"x":-750,"y":-500,"creditos":6,"año":1,"cuatrimetre":1,"correlativas":""},
+{"id":"93.21","label":"93.21","title":"Algebra","level":0,"x":-750,"y":-400,"creditos":6,"año":1,"cuatrimetre":1,"correlativas":""},
+{"id":"71.85","label":"71.85","title":"Programacion","level":1,"x":-600,"y":-700,"creditos":6,"año":1,"cuatrimetre":2,"correlativas":"71.80"},
+{"id":"81.08","label":"81.08","title":"Aplicacion de las Telecomunicaciones","level":1,"x":-600,"y":-600,"creditos":3,"año":1,"cuatrimetre":2,"correlativas":""},
+{"id":"93.20","label":"93.20","title":"Analisis Matematico","level":1,"x":-600,"y":-500,"creditos":6,"año":1,"cuatrimetre":2,"correlativas":""},
+{"id":"94.60","label":"94.60","title":"Panorama Historico Global","level":1,"x":-600,"y":-403,"creditos":3,"año":1,"cuatrimetre":2,"correlativas":""},
+{"id":"94.61","label":"94.61","title":"Filosofia","level":1,"x":-600,"y":-299,"creditos":3,"año":1,"cuatrimetre":2,"correlativas":""},
+{"id":"61.81","label":"61.81","title":"Microeconomía","level":2,"x":-450,"y":-700,"creditos":3,"año":2,"cuatrimetre":1,"correlativas":"93.20"},
+{"id":"81.11","label":"81.11","title":"Contabilidad Gerencial","level":2,"x":-450,"y":-600,"creditos":6,"año":2,"cuatrimetre":1,"correlativas":"81.07"},
+{"id":"81.52","label":"81.52","title":"Negocios y Tecnologia en Internet","level":2,"x":-450,"y":-500,"creditos":6,"año":2,"cuatrimetre":1,"correlativas":"81.08"},
+{"id":"93.39","label":"93.39","title":"Estadistica","level":2,"x":-450,"y":-400,"creditos":6,"año":2,"cuatrimetre":1,"correlativas":"93.20"},
+{"id":"94.62","label":"94.62","title":"Etica en los Negocios","level":2,"x":-450,"y":-108,"creditos":3,"año":2,"cuatrimetre":1,"correlativas":""},
+{"id":"61.12","label":"61.12","title":"Gestion Financiera","level":3,"x":-300,"y":-700,"creditos":6,"año":2,"cuatrimetre":2,"correlativas":"81.07 93.21"},
+{"id":"61.82","label":"61.82","title":"Macroeconomia","level":3,"x":-300,"y":-600,"creditos":3,"año":2,"cuatrimetre":2,"correlativas":"93.20"},
+{"id":"61.90","label":"61.90","title":"Derecho Publico y Privado","level":3,"x":-300,"y":-500,"creditos":3,"año":2,"cuatrimetre":2,"correlativas":""},
+{"id":"71.88","label":"71.88","title":"Gestion de Datos","level":3,"x":-300,"y":-400,"creditos":6,"año":2,"cuatrimetre":2,"correlativas":"71.85 93.20"},
+{"id":"81.20","label":"81.20","title":"Comercializacion","level":3,"x":-300,"y":-300,"creditos":3,"año":2,"cuatrimetre":2,"correlativas":"81.02"},
+{"id":"94.63","label":"94.63","title":"Epistemologia y Heuristica","level":3,"x":-300,"y":-106,"creditos":3,"año":2,"cuatrimetre":2,"correlativas":"94.61"},
+{"id":"94.90","label":"94.90","title":"Inglés I (analista)","level":3,"x":-300,"y":-210,"creditos":0,"año":2,"cuatrimetre":2,"correlativas":""},
+{"id":"11.83","label":"11.83","title":"Gestion de Operaciones","level":4,"x":-150,"y":-700,"creditos":6,"año":3,"cuatrimetre":1,"correlativas":"93.39 81.02"},
+{"id":"81.21","label":"81.21","title":"Gestion de Ventas","level":4,"x":-150,"y":-600,"creditos":3,"año":3,"cuatrimetre":1,"correlativas":"81.20"},
+{"id":"81.30","label":"81.30","title":"Analisis y Modelado de Procesos de Negocios","level":4,"x":-150,"y":-500,"creditos":6,"año":3,"cuatrimetre":1,"correlativas":"81.02 71.85"},
+{"id":"81.39","label":"81.39","title":"Sistemas Integrados de Gestion Empresaria I","level":4,"x":-150,"y":-400,"creditos":6,"año":3,"cuatrimetre":1,"correlativas":"71.88 81.07"},
+{"id":"94.40","label":"94.40","title":"Estructura de las Organizaciones","level":4,"x":-150,"y":-300,"creditos":3,"año":3,"cuatrimetre":1,"correlativas":"81.02"},
+{"id":"11.84","label":"11.84","title":"Gestion de Proyectos","level":5,"x":0,"y":-700,"creditos":3,"año":3,"cuatrimetre":2,"correlativas":"81.07"},
+{"id":"11.85","label":"11.85","title":"Toma de Decisiones","level":5,"x":0,"y":-600,"creditos":6,"año":3,"cuatrimetre":2,"correlativas":"93.39 81.02"},
+{"id":"81.31","label":"81.31","title":"Analisis y Diseño de Aplicaciones Informaticas","level":5,"x":0,"y":-500,"creditos":6,"año":3,"cuatrimetre":2,"correlativas":"71.88"},
+{"id":"81.36","label":"81.36","title":"Sistemas Integrados de Gestion Empresaria II","level":5,"x":0,"y":-400,"creditos":6,"año":3,"cuatrimetre":2,"correlativas":"81.39"},
+{"id":"94.41","label":"94.41","title":"Gestion de los Recursos Humanos","level":5,"x":0,"y":-300,"creditos":3,"año":3,"cuatrimetre":2,"correlativas":"61.90"},
+{"id":"10.09","label":"10.09","title":"Formación para Emprendedores","level":7,"x":300,"y":-700,"creditos":3,"año":4,"cuatrimetre":1,"correlativas":"94.40"},
+{"id":"61.40","label":"61.40","title":"Economia y Finanzas Internacionales","level":7,"x":300,"y":-600,"creditos":6,"año":4,"cuatrimetre":1,"correlativas":"61.82 61.81 61.12"},
+{"id":"81.26","label":"81.26","title":"Comercio Exterior","level":7,"x":300,"y":-500,"creditos":3,"año":4,"cuatrimetre":1,"correlativas":"81.21"},
+{"id":"81.41","label":"81.41","title":"Estrategia Empresaria","level":7,"x":300,"y":-400,"creditos":6,"año":4,"cuatrimetre":1,"correlativas":"81.11 61.82 81.21 61.12 11.85 94.41"},
+{"id":"81.56","label":"81.56","title":"Arquitectura de la Tecnologia Informática","level":7,"x":300,"y":-200,"creditos":6,"año":4,"cuatrimetre":1,"correlativas":"81.31 81.52"},
+{"id":"81.63","label":"81.63","title":"Marketing Internacional","level":7,"x":300,"y":0,"creditos":3,"año":4,"cuatrimetre":1,"correlativas":"81.20"},
+{"id":"61.92","label":"61.92","title":"Derecho Aduanero","level":8,"x":450,"y":-700,"creditos":3,"año":4,"cuatrimetre":2,"correlativas":"61.90 81.26"},
+{"id":"81.23","label":"81.23","title":"Comercio Electronico","level":8,"x":450,"y":-600,"creditos":3,"año":4,"cuatrimetre":2,"correlativas":"81.31 81.52"},
+{"id":"81.27","label":"81.27","title":"Impuestos para la toma de Decisiones","level":8,"x":450,"y":-500,"creditos":3,"año":4,"cuatrimetre":2,"correlativas":"61.90 81.11 61.82"},
+{"id":"81.45","label":"81.45","title":"Seminario de Actualizacion","level":8,"x":450,"y":-300,"creditos":3,"año":4,"cuatrimetre":2,"correlativas":""},
+{"id":"81.55","label":"81.55","title":"Diagnostico Empresario y Plan de Accion ( Trabajo Final )","level":8,"x":450,"y":-200,"creditos":6,"año":4,"cuatrimetre":2,"correlativas":"81.39 81.21 11.83 61.12 11.84 11.85 81.30"},
+{"id":"81.64","label":"81.64","title":"Gestión y Sistemas de Información de la Logistica Internacional","level":8,"x":450,"y":0,"creditos":6,"año":4,"cuatrimetre":2,"correlativas":"11.83 81.26 81.36"},
+{"id":"94.91","label":"94.91","title":"Inglés II (licenciado)","level":8,"x":450,"y":100,"creditos":0,"año":4,"cuatrimetre":2,"correlativas":"94.90"},
+// {"id":"10.09","label":"10.09,"title":"Formación para Emprendedores","level":7,"x":300,"y":-700,"creditos":3,"año":4,"cuatrimetre":1,"correlativas":"94.40"},
+// {"id":"81.26","label":"81.26,"title":"Comercio Exterior","level":7,"x":300,"y":-500,"creditos":3,"año":4,"cuatrimetre":1,"correlativas":"81.21"},
+// {"id":"81.41","label":"81.41,"title":"Estrategia Empresaria","level":7,"x":300,"y":-400,"creditos":6,"año":4,"cuatrimetre":1,"correlativas":"81.11  61.82  81.21  61.12  94.41  11.85"},
+{"id":"81.46","label":"81.46","title":"Auditoria General y de Sistemas","level":7,"x":300,"y":-300,"creditos":null,"año":4,"cuatrimetre":1,"correlativas":"81.31  94.40"},
+// {"id":"81.56","label":"81.56,"title":"Arquitectura de la Tecnologia Informática","level":7,"x":300,"y":-200,"creditos":6,"año":4,"cuatrimetre":1,"correlativas":"81.31  81.52"},
+{"id":"81.60","label":"81.60","title":"Sistemas Integrados de Gestion en la Ind de Serv","level":7,"x":300,"y":-100,"creditos":null,"año":4,"cuatrimetre":1,"correlativas":"81.30  81.36"},
+// {"id":"81.23","label":"81.23,"title":"Comercio Electronico","level":8,"x":450,"y":-600,"creditos":3,"año":4,"cuatrimetre":2,"correlativas":"81.31  81.52"},
+// {"id":"81.27","label":"81.27,"title":"Impuestos para la toma de Decisiones","level":8,"x":450,"y":-500,"creditos":3,"año":4,"cuatrimetre":2,"correlativas":"61.90  81.11  61.82"},
+{"id":"81.38","label":"81.38","title":"Integracion de Procesos de Negocios y Aplic Inf","level":8,"x":450,"y":-400,"creditos":null,"año":4,"cuatrimetre":2,"correlativas":"81.56  81.36"},
+// {"id":"81.45","label":"81.45,"title":"Seminario de Actualizacion","level":8,"x":450,"y":-300,"creditos":3,"año":4,"cuatrimetre":2,"correlativas":""},
+// {"id":"81.55","label":"81.55,"title":"Diagnostico Empresario y Plan de Accion ( Trabajo Final )","level":8,"x":450,"y":-200,"creditos":6,"año":4,"cuatrimetre":2,"correlativas":"81.39  81.21  11.83  61.12  11.84  11.85  81.30"},
+{"id":"81.61","label":"81.61","title":"Modelado Avanzado de Proc e Intelig de Neg","level":8,"x":450,"y":-100,"creditos":6,"año":4,"cuatrimetre":2,"correlativas":"81.41  81.30  71.88  81.36"},
+// {"id":"94.91","label":"94.91,"title":"Inglés II (licenciado)","level":8,"x":450,"y":100,"creditos":0,"año":4,"cuatrimetre":2,"correlativas":"94.90"},
+{"id":"OR.CI","label":"OR.CI","title":"Orientación: Comercio Internacional","level":6,"x":750,"y":-510,"creditos":null,"año":null,"cuatrimetre":null,"correlativas":"10.09 61.40 81.26 81.41 81.56 81.63 61.92 81.23 81.27 81.45 81.55 81.64 94.91"},
+{"id":"OR.SI","label":"OR.SI","title":"Orientación: Sistemas de Información","level":6,"x":750,"y":-170,"creditos":null,"año":null,"cuatrimetre":null,"correlativas":"10.09 81.26 81.41 81.46 81.56 81.60 81.23 81.27 81.38 81.45 81.55 81.61 94.91"}
+];
+
+var edges = [
+  {from: '94.40', to: '10.09' },
+  {from: '93.39', to: '11.83' },
+  {from: '81.02', to: '11.83' },
+  {from: '81.07', to: '11.84' },
+  {from: '93.39', to: '11.85' },
+  {from: '81.02', to: '11.85' },
+  {from: '81.07', to: '61.12' },
+  {from: '93.21', to: '61.12' },
+  {from: '61.82', to: '61.40' },
+  {from: '61.81', to: '61.40' },
+  {from: '61.12', to: '61.40' },
+  {from: '93.20', to: '61.82' },
+  {from: '61.90', to: '61.92' },
+  {from: '81.26', to: '61.92' },
+  {from: '71.80', to: '71.85' },
+  {from: '71.85', to: '71.88' },
+  {from: '93.20', to: '71.88' },
+  {from: '81.07', to: '81.11' },
+  {from: '81.02', to: '81.20' },
+  {from: '81.20', to: '81.21' },
+  {from: '81.31', to: '81.23' },
+  {from: '81.52', to: '81.23' },
+  {from: '81.21', to: '81.26' },
+  {from: '61.90', to: '81.27' },
+  {from: '81.11', to: '81.27' },
+  {from: '61.82', to: '81.27' },
+  {from: '81.02', to: '81.30' },
+  {from: '71.85', to: '81.30' },
+  {from: '71.88', to: '81.31' },
+  {from: '81.39', to: '81.36' },
+  {from: '81.56', to: '81.38' },
+  {from: '81.36', to: '81.38' },
+  {from: '71.88', to: '81.39' },
+  {from: '81.07', to: '81.39' },
+  {from: '81.11', to: '81.41' },
+  {from: '61.82', to: '81.41' },
+  {from: '81.21', to: '81.41' },
+  {from: '61.12', to: '81.41' },
+  {from: '11.85', to: '81.41' },
+  {from: '94.41', to: '81.41' },
+  {from: '81.31', to: '81.46' },
+  {from: '94.40', to: '81.46' },
+  {from: '81.08', to: '81.52' },
+  {from: '81.39', to: '81.55' },
+  {from: '81.21', to: '81.55' },
+  {from: '11.83', to: '81.55' },
+  {from: '61.12', to: '81.55' },
+  {from: '11.84', to: '81.55' },
+  {from: '11.85', to: '81.55' },
+  {from: '81.30', to: '81.55' },
+  {from: '81.31', to: '81.56' },
+  {from: '81.52', to: '81.56' },
+  {from: '81.30', to: '81.60' },
+  {from: '81.36', to: '81.60' },
+  {from: '81.41', to: '81.61' },
+  {from: '81.30', to: '81.61' },
+  {from: '71.88', to: '81.61' },
+  {from: '81.36', to: '81.61' },
+  {from: '81.20', to: '81.63' },
+  {from: '11.83', to: '81.64' },
+  {from: '81.26', to: '81.64' },
+  {from: '81.36', to: '81.64' },
+  {from: '93.20', to: '93.39' },
+  {from: '81.02', to: '94.40' },
+  {from: '61.90', to: '94.41' },
+  {from: '94.61', to: '94.63' },
+  {from: '94.90', to: '94.91' },
+  {from: '10.09', to: 'OR.CI' },
+  {from: '61.40', to: 'OR.CI' },
+  {from: '81.26', to: 'OR.CI' },
+  {from: '81.41', to: 'OR.CI' },
+  {from: '81.56', to: 'OR.CI' },
+  {from: '81.63', to: 'OR.CI' },
+  {from: '61.92', to: 'OR.CI' },
+  {from: '81.23', to: 'OR.CI' },
+  {from: '81.27', to: 'OR.CI' },
+  {from: '81.45', to: 'OR.CI' },
+  {from: '81.55', to: 'OR.CI' },
+  {from: '81.64', to: 'OR.CI' },
+  {from: '94.91', to: 'OR.CI' },
+  {from: '10.09', to: 'OR.SI' },
+  {from: '81.26', to: 'OR.SI' },
+  {from: '81.41', to: 'OR.SI' },
+  {from: '81.46', to: 'OR.SI' },
+  {from: '81.56', to: 'OR.SI' },
+  {from: '81.60', to: 'OR.SI' },
+  {from: '81.23', to: 'OR.SI' },
+  {from: '81.27', to: 'OR.SI' },
+  {from: '81.38', to: 'OR.SI' },
+  {from: '81.45', to: 'OR.SI' },
+  {from: '81.55', to: 'OR.SI' },
+  {from: '81.61', to: 'OR.SI' },
+  {from: '94.91', to: 'OR.SI' }
+];
+
+    var network = null;
+	var container = document.getElementById('mynetwork');
+
+	var data = {
+		nodes: nodes,
+		edges: edges
+	};
+
+	var options = {
+		edges: {
+			smooth: {
+				type: 'cubicBezier',
+				forceDirection: 'horizontal',
+				roundness: 0.4
+			},
+			shadow: false
+            },
+            nodes: {
+              borderWidth: 1,
+              shape: 'dot',
+              shadow: true
+            },
+/**
+            layout: {
+                hierarchical: {
+                    direction: 'LR'
+                }
+            },
+**/
+            physics: false
+	};
+	network = new vis.Network(container, data, options);
+
+</script>
+
+</body>
+</html>
+
