@@ -96,6 +96,12 @@ var nodes = [
 {"id":"OR.SI","label":"OR.SI","title":"Orientación: Sistemas de Información","level":6,"x":750,"y":-170,"creditos":null,"año":null,"cuatrimetre":null,"correlativas":"10.09 81.26 81.41 81.46 81.56 81.60 81.23 81.27 81.38 81.45 81.55 81.61 94.91"}
 ];
 
+/**
+nodes.forEach(function(d) {
+  d.label= d.id;
+});
+**/
+
 var edges = [
   {from: '94.40', to: '10.09' },
   {from: '93.39', to: '11.83' },
@@ -191,6 +197,10 @@ var edges = [
   {from: '81.61', to: 'OR.SI' },
   {from: '94.91', to: 'OR.SI' }
 ];
+
+edges.forEach(function(d) {
+  d.arrows= 'to';
+});
 
     var network = null;
 	var container = document.getElementById('mynetwork');

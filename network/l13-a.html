@@ -178,6 +178,10 @@
   {from: '94.91', to: 'OR.SI'}
   ]);
 
+  edges.forEach(function(d) {
+    d.arrows= 'to';
+  });
+
   // create a network
   var container = document.getElementById('mynetwork');
   var data = {
