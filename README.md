@@ -1,5 +1,11 @@
 # infovis
 
-[slider](http://aaizemberg.github.io/infovis/slider/)
+Energia Abierta (.cl) via Junar
+* frontend --> http://energiaabierta.cl/
+* Consumo electrico por region --> http://energiaabierta.cl/visualizaciones/consumo-electrico-por-region/
+* Venta de combustibles por region --> http://energiaabierta.cl/visualizaciones/combustibles-por-region/
+* Importaciones y Exportaciones --> http://aaizemberg.github.io/infovis/cne/ie/index.html
 
-Durante una clase, me preguntaron si se podia agregarle interactividad a un gráfico de barras, para filtrar la información ya mostrada. Yo lo implemente con un slider de html5, les recomiendo mirar también [este ejemplo](https://bl.ocks.org/mbostock/6452972) donde Mike Bostok lo implementa en SVG.
+Las visualizaciones para el Municipio de Cordoba
+* frontend --> https://gobiernoabierto.cordoba.gob.ar/visualizaciones/lista/
+* github --> https://github.com/ModernizacionMuniCBA/visualizaciones
