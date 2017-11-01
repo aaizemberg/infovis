@@ -9,3 +9,6 @@ Energia Abierta (.cl) via Junar
 Las visualizaciones para el Municipio de Cordoba
 * frontend --> https://gobiernoabierto.cordoba.gob.ar/visualizaciones/lista/
 * github --> https://github.com/ModernizacionMuniCBA/visualizaciones
+* Burbujas --> https://modernizacionmunicba.github.io/visualizaciones/burbuja-funcionarios/
+* Dendograma --> https://modernizacionmunicba.github.io/visualizaciones/dendograma/
+* Crossfilter --> https://modernizacionmunicba.github.io/visualizaciones/funcionarios-filtrable/#[]
