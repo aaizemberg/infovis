@@ -14,6 +14,30 @@
     {"name":"Se realizó en Essor el Test Drive Tour Citroën del Nuevo C4 Cactus","size":2},
     {"name":"Un Instagram chino arrasa entre los jóvenes y ya vale 75.000 millones de dólares","size":1},
     {"name":"Cómo recuperar audios borrados de WhatsApp","size":1}]
+  },
+  {
+   "name": "Deportes",
+   "children": []
+  },
+  {
+   "name": "Economía",
+   "children": []
+  },
+  {
+   "name": "Entretenimiento",
+   "children": []
+  },
+  {
+   "name": "Internacional",
+   "children": []
+  },
+  {
+   "name": "Nacional",
+   "children": []
+  },
+  {
+   "name": "Salud",
+   "children": []
   }
  ]
 }
