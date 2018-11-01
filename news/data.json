@@ -17,27 +17,81 @@
   },
   {
    "name": "Deportes",
-   "children": []
+   "children": [{"name":"iPad Pro de 2018: 5 razones para no actualizarte","size":970},
+{"name":"Cuáles son las novedades que llegaron al videojuego Assassin's Creed: Odyssey","size":38},
+{"name":"Qué tiene el OnePlus 6T para competirle al iPhone XS y al Samsung S9 por la mitad del precio","size":25},
+{"name":"¡Confirmado! Tendremos publicidad en estados de WhatsApp","size":20},
+{"name":"Se filtraron imágenes del posible diseño del Samsung S10","size":8},
+{"name":"¿Samsung, Apple o Motorola? Cuál es el celular más utilizado en la Argentina","size":7},
+{"name":"Mercedes-Benz Clase A: la inteligencia artificial al servicio del confort","size":3},
+{"name":"Se realizó en Essor el Test Drive Tour Citroën del Nuevo C4 Cactus","size":2},
+{"name":"Un Instagram chino arrasa entre los jóvenes y ya vale 75.000 millones de dólares","size":1},
+{"name":"Cómo recuperar audios borrados de WhatsApp","size":1}]
   },
   {
    "name": "Economía",
-   "children": []
+   "children": [{"name":"Tras una nueva apuesta del mercado por el ","size":253},
+{"name":"Rebelión en Google: histórica huelga de ingenieros contra abusos de poder y el acoso","size":58},
+{"name":"La Bolsa de Comercio porteña cerró octubre con una fuerte caída del 12%","size":48},
+{"name":"Adecoagro y Vicentín se quedan con parte de SanCor","size":36},
+{"name":"Nafta: en algunas estaciones ya no aceptan tarjetas de crédito","size":27},
+{"name":"Las automotrices dicen que perdieron US$500 millones por las medidas oficiales y reclaman un bono","size":26},
+{"name":"Cyber Monday: algunas empresas extienden las ofertas toda la semana","size":13},
+{"name":"Los cigarrillos aumentan 8,4% en promedio","size":10},
+{"name":"Un sistema que permite pagar de manera innovadora, rápida y segura","size":3},
+{"name":"Bolsas de Europa rebotan suben 0,9% animadas por recorte de impuestos anunciados en China","size":2}]
   },
   {
    "name": "Entretenimiento",
-   "children": []
+   "children": [{"name":"La Bomba Tucumana, expulsada del Bailando 2018 por un insólito capricho","size":140},
+{"name":"Otro hijo de El Potro Rodrigo: Beatriz Olave recibió un audio que lo certifica","size":101},
+{"name":"Casados con hijos 2019: por ahora, la versión teatral es sólo un deseo","size":83},
+{"name":"Florencia Peña apuntó contra Mica Viciconte: su paciencia llegó al límite","size":80},
+{"name":"Las primeras fotos de Nati Jota después de su operación de lolas","size":31},
+{"name":"Preocupación por la salud del Pelado López: se ausentará de la TV hasta diciembre","size":7},
+{"name":"Luis Miguel anunció su regreso con una sorpresa por todo el país","size":7},
+{"name":"Brenda Asnicar reveló los motivos por los que no habla de su marido","size":5},
+{"name":"El conmovedor video del encuentro de Catherine Fulop con su madre, tras dos años: ","size":5},
+{"name":"Arte feminista: la muestra que desnudó el machismo de las canciones de moda y se volvió viral","size":1}]
   },
   {
    "name": "Internacional",
-   "children": []
+   "children": [{"name":"Dictan tres años de cárcel para Keiko Fujimori","size":1294},
+{"name":"Khashoggi fue ahorcado apenas entró al consulado","size":651},
+{"name":"La Unión Europea presiona al Mercosur para cerrar un acuerdo antes de la cumbre del G20","size":559},
+{"name":"Vaticano: hallan huesos y se reabre un misterio de 35 años","size":306},
+{"name":"Francia abrió una investigación por los repetidos casos de bebés que nacen con malformaciones en los brazos","size":104},
+{"name":"Salen familias a pedir su 'Halloween'","size":96},
+{"name":"El abuso sexual en Corea del Norte ni siquiera tiene nombre y es sistemático","size":91},
+{"name":"Una mujer aseguró que un duende la visitaba para “hacerle el amor”","size":83},
+{"name":"Brasil: Jair Bolsonaro dice que Israel tiene derecho a decidir cuál es su capital","size":50},
+{"name":"Una maestra fue detenida por tener sexo con una alumna y pagó una ridícula fianza","size":1}]
   },
   {
    "name": "Nacional",
-   "children": []
+   "children": [{"name":"Para distender la relación, Macri le hizo un guiño a Vidal por el Fondo del Conurbano","size":200},
+{"name":"Despliegan más de 110 personas para limpiar el derrame de crudo","size":83},
+{"name":"Un hombre de 40 años murió mientras practicaba crossfit","size":37},
+{"name":"Un nene apuntó con un arma a una periodista que trabajaba en una villa","size":24},
+{"name":"Cuándo la indemnización de un ejecutivo pagará Ganancias","size":12},
+{"name":"Desde este jueves, el tren que une Constitución con Mar del Plata tardará 30 minutos menos","size":12},
+{"name":"A los gritos, Sergio Berni cruzó a un abogad haitiano en vivo: ","size":11},
+{"name":"Puso una cámara para saber quién le robaba y se llevó una sorpresa: era su vecina","size":8},
+{"name":"Restricciones para autos en Tribunales: cuánto cuesta y cómo se tramita el permiso para poder circular","size":4},
+{"name":"Falleció un trabajador petrolero en Cutral Co","size":1}]
   },
   {
    "name": "Salud",
-   "children": []
+   "children": [{"name":"Salud vacunará los fines de semana contra el sarampión y la rubéola","size":42},
+{"name":"Desmienten audio que alerta sobre casos de triquinosis por consumir pollo","size":25},
+{"name":"Prevención del dengue y zika","size":16},
+{"name":"Los adultos también deben controlar sus vacunas","size":10},
+{"name":"Controlarán manchas y lunares como prevención del cáncer de piel","size":6},
+{"name":"Llegará una nueva ","size":5},
+{"name":"¿Te cepillás los dientes de manera correcta? Cuidá tu sonrisa y tu salud","size":4},
+{"name":"Se vacunó contra el sarampión sólo la mitad de la población","size":3},
+{"name":"Restan vacunar 2700 niños contra el Sarampión y la Rubeola","size":2},
+{"name":"Caminar diez minutos puede mejorar tu cerebro","size":1}]
   }
  ]
 }
