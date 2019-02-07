@@ -2,7 +2,14 @@
 
 ## ie = Importaciones y Exportaciones
 
-## cr = Combustibles por Región
+http://energiaabierta.cl/visualizaciones/importaciones-y-exportaciones/
+http://energiaabierta.cne.cl/VizCNE/VIZ/VZ7/
+
+## Venta nacional de combustible líquido para todo Chile
+
+cr = Combustibles por Región
+
+http://energiaabierta.cne.cl/VizCNE/VIZ/VZ5/
 
 http://cne.opendata.junar.com/datastreams/91818/ventas-nacionales-por-producto-y-por-region-en-2006/
 http://cne.opendata.junar.com/datastreams/91816/ventas-nacionales-por-producto-y-por-region-en-2007/
