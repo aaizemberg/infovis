@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Electores por Circuito en la Provincia de Córdoba</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      width: calc(100vw - (100vw - 100%));
+    }
+    nav {
+      display: flex;
+      box-sizing: border-box;
+    }
+    nav button {
+      border: 1px solid #038854;
+      background-color: #00a665;
+      box-sizing: border-box;
+      color: #FFFFFF;
+      cursor: pointer;
+      flex: 1 1 auto;
+      padding: 10px;
+    }
+    nav button:focus {
+      outline: none;
+    }
+    .activo {
+      border-color: transparent;
+      background-color: #00d984;
+    }
+    #viz {
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+<nav>
+  <button onClick="cargar(this,2007)">2007</button>
+  <button onClick="cargar(this,2011)">2011</button>
+  <button onClick="cargar(this,2013)">2013</button>
+  <button onClick="cargar(this,2015)">2015</button>
+  <button onClick="cargar(this,2017)">2017</button>
+  <button class="activo" onClick="cargar(this,2019)">2019</button>
+</nav>
+<div id="viz"></div>
+
+<script src="//d3plus.org/js/d3.js"></script>
+<script src="//d3plus.org/js/d3plus.js"></script>
+<script>
+  const viz = document.getElementById('viz');
+  const botones = document.getElementsByTagName('button');
+
+  const formatoNumeros = (numero, key) => {
+    return Math.round(numero) !== numero ? numero.toFixed(2) + "%" : numero.toLocaleString('es-AR');
+  };
+
+  const visualization = d3plus.viz()
+    .container("#viz")
+    .data("//modernizacionmunicba.github.io/visualizaciones-electores-por-circuito-en-cordoba/electores.tsv")
+    .type("tree_map")
+    .id(["Nombre Seccion", "Nombre Circuito"])
+    .size("Electores 2019")
+    .format("es_ES")
+    .format({ "number" : formatoNumeros})
+    .draw();
+
+  const limpiarClases = () => {
+    for (let i = 0; i < botones.length; i++) {
+      botones[i].classList.remove('activo');
+    }
+  }
+
+  const cargar = (boton, anio) => {
+    limpiarClases();
+    boton.classList.add('activo');
+
+    visualization
+        .size(`Electores ${anio}`)
+        .format({ "number" : formatoNumeros})
+        .draw();
+  }
+</script>
+
+</body>
+</html>
