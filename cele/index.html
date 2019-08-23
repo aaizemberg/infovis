@@ -1,0 +1,32 @@
+<!doctype html>
+<meta charset="utf-8">
+<script src="//d3plus.org/js/d3.js"></script>
+<script src="//d3plus.org/js/d3plus.js"></script>
+<div id="viz"></div> 
+
+<script>
+  // d3.tsv("https://observatoriolegislativocele.conocimientoabierto.org/data.csv", function(data) {
+  // voy a subir el .csv al mismo directorio, donde esta la visualizacion del treemap 
+  d3.csv("data.csv", function(data) {
+  	console.log( data[0] );
+
+	  // countries=ar,pe&types=ley,proyecto
+	  // 
+
+    // para cada registro, agrego una una variable que necesito para el treemap
+    data.forEach(function(d) {    
+      d["cantidad"] = 1;
+    })
+
+    var visualization = d3plus.viz()
+      .format('es_ES')
+      .container("#viz")  
+      .data( data )  
+      .type("tree_map")   
+      .id(["objetivo_legitimo","pais"])         
+      .size("cantidad")      
+      .draw();       
+
+  });
+
+</script>
