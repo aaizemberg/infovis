@@ -5,27 +5,28 @@
 <div id="viz"></div> 
 
 <script>
-  // d3.tsv("https://observatoriolegislativocele.conocimientoabierto.org/data.csv", function(data) {
-  // voy a subir el .csv al mismo directorio, donde esta la visualizacion del treemap 
-  d3.csv("./data.csv", function(data) {
-    console.log( data[0] );
-	  
-    // countries=ar,pe&types=ley,proyecto
-    // estaria bueno, poder filtrar por pais o tipo=ley,proyecto
-    // ahora estoy tomando todo el dataset
+  d3.csv("data.csv", function(data) {
+  	console.log( data[0] );
+	// countries=ar,pe&types=ley,proyecto
+	// 
 
-    // para cada registro, agrego una una variable que necesito para el treemap
+    // para cada registro, agrego una una variable, para el treemap
     data.forEach(function(d) {    
       d["cantidad"] = 1;
     })
 
     var visualization = d3plus.viz()
+//    .font("transform","lowercase")
       .format('es_ES')
+      .format({text:function(text){return text;}})
       .container("#viz")  
       .data( data )  
       .type("tree_map")   
       .id(["objetivo_legitimo","pais"])         
-      .size("cantidad")      
+      .size("cantidad") 
+      .time({"value": "anio"})     
       .draw();       
+
   });
+
 </script>
