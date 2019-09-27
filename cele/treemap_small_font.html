@@ -1,0 +1,46 @@
+<!doctype html>
+<meta charset="utf-8">
+<script src="//d3plus.org/js/d3.js"></script>
+<script src="//d3plus.org/js/d3plus.js"></script>
+<div id="viz"></div> 
+<script>
+  d3.csv("data.csv", function(data) {
+    // console.log( data[0] );
+    // countries=co,ec,gt,cl,pe,mx,py,ar&types=ley,proyecto
+    var url_string = window.location.href;
+    var url = new URL(url_string);
+    var countries = url.searchParams.get("countries").toUpperCase();
+    var types= url.searchParams.get("types").toUpperCase();
+    // console.log('paises: ' + countries);
+    // console.log('proyectos/ley: ' + types);
+    var iso3166          = ['AR','CL','CO','EC','GT','MX','PY','PE'];
+    var iso3166_fullname = ['ARGENTINA','CHILE','COLOMBIA','ECUADOR','GUATEMALA','MÉXICO','PARAGUAY','PERÚ'];
+    for (i = 0; i < iso3166.length; i++) {
+        countries = countries.replace(iso3166[i],iso3166_fullname[i]);
+    }
+    var sel_data = [];
+    data.forEach(function(d) {
+      if (countries.search(d.pais) > -1 && types.search(d.tipo) > -1)  {
+          var row = {
+              'objetivo_legitimo': d.objetivo_legitimo,
+              'pais': d.pais,
+              'anio': d.anio,
+              'tipo' : d.tipo,
+              'cantidad': 1
+          };
+          sel_data.push(row);
+      }
+    });
+    var visualization = d3plus.viz()
+//    .font("transform","lowercase")
+      .format('es_ES')
+      .format({text:function(text){return text;}})
+      .container("#viz")  
+      .data( sel_data )
+      .type("tree_map")   
+      .id(["objetivo_legitimo","pais","tipo"])
+      .size("cantidad") 
+      .time({"value": "anio"})     
+      .draw();       
+  });
+</script>
