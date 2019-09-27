@@ -13,6 +13,16 @@
     var types= url.searchParams.get("types").toUpperCase();
     // console.log('paises: ' + countries);
     // console.log('proyectos/ley: ' + types);
+    var colores = {
+      "ARGENTINA" : "#ff0000",
+      "CHILE"     : "#00ff00",
+      "COLOMBIA"  : "#0000ff",
+      "ECUADOR"   : "#ffff00",
+      "GUATEMALA" : "#ff00ff",
+      "MÉXICO"    : "#00ffff",
+      "PARAGUAY"  : "#880088",
+      "PERÚ"      : "#008800",
+    }
     var iso3166          = ['AR','CL','CO','EC','GT','MX','PY','PE'];
     var iso3166_fullname = ['ARGENTINA','CHILE','COLOMBIA','ECUADOR','GUATEMALA','MÉXICO','PARAGUAY','PERÚ'];
     for (i = 0; i < iso3166.length; i++) {
@@ -26,7 +36,8 @@
               'pais': d.pais,
               'anio': d.anio,
               'tipo' : d.tipo,
-              'cantidad': 1
+              'cantidad': 1,
+              'color' : colores[d.pais]
           };
           sel_data.push(row);
       }
@@ -41,7 +52,12 @@
       .id(["objetivo_legitimo","pais","tipo"])
       .size("cantidad") 
       .time({"value": "anio"})
-      .labels({"resize": false, "font": {"size": 10}})
+      .shapeConfig({
+        fill: function(d) {
+          return d.color;
+        }
+      })
+      // .labels({"resize": false, "font": {"size": 10}})
       .draw();       
   });
 </script>
