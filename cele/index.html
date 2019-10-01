@@ -20,7 +20,7 @@
         countries = countries.replace(iso3166[i],iso3166_fullname[i]);
     }
 **/    
-    var sel_data = [];
+    var sel_data  = [];
     data.forEach(function(d) {
       if (countries.search(d.pais) > -1 && types.search(d.tipo) > -1)  {
           var row = {
@@ -33,16 +33,23 @@
           sel_data.push(row);
       }
     });
+
+    var defaults = { "resize": true };
+
+    d3plus.textwrap().config(defaults);
+
     var visualization = d3plus.viz()
-//    .font("transform","lowercase")
+      .config(defaults)
+	  .font({"family":"Open Sans Light"})
+	  .labels({"resize":true})
       .format('es_ES')
-      .format({text:function(text){return text;}})
+      .format({text:function(text){return text;}}) // texto original
       .container("#viz")  
       .data( sel_data )
       .type("tree_map")   
       .id(["objetivo_legitimo","pais", "tipo"])
       .size("cantidad") 
-      .time({"value": "anio"})     
+      .time({"value": "anio"}) 
       .draw();       
   });
 </script>
