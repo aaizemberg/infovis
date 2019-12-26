@@ -14,3 +14,6 @@ Las visualizaciones para el Municipio de Cordoba
 * [Burbujas](https://modernizacionmunicba.github.io/visualizaciones/burbuja-funcionarios/)
 * [Dendograma](https://modernizacionmunicba.github.io/visualizaciones/dendograma/)
 * [Crossfilter](https://modernizacionmunicba.github.io/visualizaciones/funcionarios-filtrable/#[])
+
+Timeline
+* https://aaizemberg.github.io/infovis/timeline/index.html
