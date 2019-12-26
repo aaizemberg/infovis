@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+  <title>timeline</title>
+  <script type="text/javascript" src="//unpkg.com/vis-timeline@latest/dist/vis-timeline-graph2d.min.js"></script>
+  <link href="//unpkg.com/vis-timeline@latest/dist/vis-timeline-graph2d.min.css" rel="stylesheet" type="text/css" />
+  <style type="text/css">
+    #mynetwork {
+      width: 600px;
+      height: 400px;
+      border: 1px solid lightgray;
+    }
+  </style>
+</head>
+<body>
+<div id="visualization"></div>
+<script type="text/javascript">
+  var container = document.getElementById('visualization');
+  var items = new vis.DataSet([
+    {id: 0, content: 'Nacimiento', start: '1966-12-03', type: 'point'},
+    {id: 1, content: 'Secundaria<br>Escuela Técnica ORT', start: '1980-04-01', end: '1985-12-31'},
+    {id: 2, content: 'CBC', start: '1986-04-01', end: '1986-12-31', type: 'point'},
+    {id: 3, content: 'Lic. en Cs de la Computación<br>Exactas, UBA', start: '1987-04-14', end: '1992'},
+    {id: 4, content: 'Bruno', start: '1999-01-04', type: 'point'},
+    {id: 5, content: 'Juana', start: '2001-04-30', type: 'point'}
+  ]);
+  var options = {};
+  var timeline = new vis.Timeline(container, items, options);
+</script>
+</body>
+</html>
