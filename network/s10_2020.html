@@ -74,7 +74,7 @@
 
 
 <script>
-var datos = [{"id":"12.09","materia":"Quimica","ultimo":null,"profesor":"Juan Jose Testa Fernandez","depto":"Quimica","creditos":3,"cred_requeridos":0,"correlativas":"","año":2,"cuatrimestre":1,"orden":2,"alumnos":"#N/A","docentes":"#N/A","cant_cuat":"#N/A","x":-525,"y":-1294},
+var datos = [{"id":"12.09","materia":"Quimica","ultimo":2020.1,"profesor":"Juan Jose Testa Fernandez","depto":"Quimica","creditos":3,"cred_requeridos":0,"correlativas":"","año":2,"cuatrimestre":1,"orden":2,"alumnos":"#N/A","docentes":"#N/A","cant_cuat":"#N/A","x":-525,"y":-1294},
 {"id":"12.83","materia":"Seguridad Ocupacional y Ambiental","ultimo":null,"profesor":"Ordoñez, Hernán Darío","depto":"Quimica","creditos":3,"cred_requeridos":140,"correlativas":"","año":5,"cuatrimestre":2,"orden":9,"alumnos":"#N/A","docentes":"#N/A","cant_cuat":"#N/A","x":525,"y":-1129},
 {"id":"16.50","materia":"Introducción a la Bioinformática","ultimo":null,"profesor":"Yankilevich, Patricio","depto":"Bioingeniería","creditos":3,"cred_requeridos":0,"correlativas":"72.37","año":null,"cuatrimestre":null,"orden":11,"alumnos":"#N/A","docentes":"#N/A","cant_cuat":"#N/A","x":675,"y":-2124},
 {"id":"31.08","materia":"Sistemas de Representacion","ultimo":null,"profesor":"Maria Ines De Piero","depto":"Mecánica","creditos":3,"cred_requeridos":0,"correlativas":"","año":1,"cuatrimestre":1,"orden":0,"alumnos":"#N/A","docentes":"#N/A","cant_cuat":"#N/A","x":-825,"y":-1869},
@@ -286,8 +286,8 @@ var cuat2symbol = {
 
         function addNodes(d) {
           var valor = 1;
-   		  if (d.prom_alumnos !== "#N/A") {
-   		  	valor = d.prom_alumnos;
+   		  if (d.alumnos !== "#N/A") {
+   		  	valor = d.alumnos;
    		  }
           if (d['ultimo'] > '2019') {
             nodes.push({
@@ -360,11 +360,11 @@ var cuat2symbol = {
               var sel = _.filter(datos, { 'id': params.nodes[0] });
               // document.getElementById('selection').innerHTML = 'Materia seleccionada: ' + params.nodes;
               var ad = "";
-              if (sel[0].prom_alumnos == "#N/A") {
+              if (sel[0].alumnos == "#N/A") {
                 ad = "";
               }
               else {
-                ad = ", alumnos: " + sel[0].prom_alumnos + ", docentes: " + sel[0].docentes;
+                ad = ", alumnos: " + sel[0].alumnos + ", docentes: " + sel[0].docentes;
               }
               document.getElementById('selection').innerHTML = "id: " + sel[0].id + " <b>" + sel[0].materia + "</b> profesor a cargo: <b>" + sel[0].profesor + "</b> <a href='mailto:" + sel[0].email + "'>" + sel[0].email+ "</a> Depto: " + sel[0].depto + ad;
             }
