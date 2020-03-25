@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Muertos en la Argentina por el Coronavirus</title>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.10.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.7.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.3.2"></script>
+  </head>
+  <body>
+    <div id="vis"></div>
+
+    <p><small>SQL<pre>
+	SELECT date, difference
+	FROM covid_19_cases
+	WHERE country_region = 'Argentina'
+	  AND case_type = 'Deaths'
+	  AND date > '2020-03-01'
+	ORDER BY date
+	</pre><small></p>
+
+    <p><small>
+    source:
+    <a href="https://data.world/covid-19-data-resource-hub/covid-19-case-counts">data.world COVID-19 case counts</a>,
+    <a href="https://www.tableau.com/covid-19-coronavirus-data-resources">COVID-19 Data Hub</a>
+    </small></p>
+
+    <script type="text/javascript">
+      var yourVlSpec = {
+  "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
+  "title": "Muertos en la Argentina por el Coronavirus",
+  "width": 640,
+  "height": 250,
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
+  },
+  "mark": {"type": "bar", "size": 20, "tooltip": true},
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "scale": {
+        "type": "linear",
+        "zero": true
+      }
+    },
+    "y": {
+      "field": "difference",
+      "type": "quantitative",
+      "scale": {
+        "type": "linear",
+        "zero": true
+      }
+    }
+  },
+  "data": {
+    "url": "https://download.data.world/s/7wl35y4h4bpb2difvczwjz4ard2zat",
+    "format" : {"type" : "csv" },
+    },
+  "config": {
+    "background": "#ffffff",
+    "padding": 20
+  }
+};
+      vegaEmbed('#vis', yourVlSpec);
+    </script>
+  </body>
+</html>
