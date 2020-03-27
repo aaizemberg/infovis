@@ -26,42 +26,42 @@
 
     <script type="text/javascript">
       var yourVlSpec = {
-  "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
-  "title": "Muertos en la Argentina por el Coronavirus",
-  "width": 640,
-  "height": 250,
-  "autosize": {
-    "type": "fit",
-    "contains": "padding"
-  },
-  "mark": {"type": "bar", "size": 20, "tooltip": true},
-  "encoding": {
-    "x": {
-      "field": "date",
-      "type": "temporal",
-      "scale": {
-        "type": "linear",
-        "zero": true
-      }
-    },
-    "y": {
-      "field": "difference",
-      "type": "quantitative",
-      "scale": {
-        "type": "linear",
-        "zero": true
-      }
-    }
-  },
-  "data": {
-    "url": "https://download.data.world/s/7wl35y4h4bpb2difvczwjz4ard2zat",
-    "format" : {"type" : "csv" },
-    },
-  "config": {
-    "background": "#ffffff",
-    "padding": 20
-  }
-};
+		  "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
+		  "title": "Muertos en la Argentina por el Coronavirus",
+		  "width": 640,
+		  "height": 250,
+		  "autosize": {
+			"type": "fit",
+			"contains": "padding"
+		  },
+		  "mark": {"type": "bar", "size": 20, "tooltip": true},
+		  "encoding": {
+			"x": {
+			  "field": "date",
+			  "type": "temporal",
+			  "scale": {
+				"type": "linear",
+				"zero": true
+			  }
+			},
+			"y": {
+			  "field": "difference",
+			  "type": "quantitative",
+			  "scale": {
+				"type": "linear",
+				"zero": true
+			  }
+			}
+		  },
+		  "data": {
+			"url": "https://download.data.world/s/4qc44cbdlshb5dcryh3kqwdllzb5fj",
+			"format" : {"type" : "csv" },
+			},
+		  "config": {
+			"background": "#ffffff",
+			"padding": 20
+		  }
+		};
       vegaEmbed('#vis', yourVlSpec);
     </script>
   </body>
