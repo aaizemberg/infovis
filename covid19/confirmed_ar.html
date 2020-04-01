@@ -24,44 +24,44 @@
     <a href="https://www.tableau.com/covid-19-coronavirus-data-resources">COVID-19 Data Hub</a>
     </small></p>
 
-    <script type="text/javascript">
-      var yourVlSpec = {
-  "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
-  "title": "COVID-19 | Casos en estado 'Confirmed' en la Argentina",
-  "width": 640,
-  "height": 250,
-  "autosize": {
-    "type": "fit",
-    "contains": "padding"
-  },
-  "mark": {"type": "bar", "size": 20, "tooltip": true},
-  "encoding": {
-    "x": {
-      "field": "date",
-      "type": "temporal",
-      "scale": {
-        "type": "linear",
-        "zero": true
-      }
-    },
-    "y": {
-      "field": "difference",
-      "type": "quantitative",
-      "scale": {
-        "type": "linear",
-        "zero": true
-      }
-    }
-  },
-  "data": {
-    "url": "https://download.data.world/s/c6v5asalmp3lcbkff6smil2nzelscm",
-    "format" : {"type" : "csv" },
-    },
-  "config": {
-    "background": "#ffffff",
-    "padding": 20
-  }
-};
+    <script>
+    var yourVlSpec = {
+	  "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
+	  "title": "COVID-19 | Casos en estado 'Confirmed' en la Argentina",
+	  "width": 640,
+	  "height": 250,
+	  "autosize": {
+		"type": "fit",
+		"contains": "padding"
+	  },
+	  "mark": {"type": "bar", "size": 16, "tooltip": true},
+	  "encoding": {
+		"x": {
+		  "field": "date",
+		  "type": "temporal",
+		  "scale": {
+			"type": "linear",
+			"zero": true
+		  }
+		},
+		"y": {
+		  "field": "difference",
+		  "type": "quantitative",
+		  "scale": {
+			"type": "linear",
+			"zero": true
+		  }
+		}
+	  },
+	  "data": {
+		"url": "https://download.data.world/s/c6v5asalmp3lcbkff6smil2nzelscm",
+		"format" : {"type" : "csv" },
+		},
+	  "config": {
+		"background": "#ffffff",
+		"padding": 20
+	  }
+	};
       vegaEmbed('#vis', yourVlSpec);
     </script>
   </body>
