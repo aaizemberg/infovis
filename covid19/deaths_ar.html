@@ -1,22 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Muertos en la Argentina por el Coronavirus</title>
+    <title>Muertos en la Argentina por el Coronavirus - promedio móvil de 7 días</title>
     <script src="https://cdn.jsdelivr.net/npm/vega@5.10.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.7.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.3.2"></script>
   </head>
   <body>
     <div id="vis"></div>
-
-    <p><small>SQL<pre>
-	SELECT date, difference
-	FROM covid_19_cases
-	WHERE country_region = 'Argentina'
-	  AND case_type = 'Deaths'
-	  AND date > '2020-03-01'
-	ORDER BY date
-	</pre><small></p>
 
     <p><small>
     source:
