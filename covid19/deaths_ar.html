@@ -25,44 +25,47 @@
     </small></p>
 
     <script>
-      var yourVlSpec = {
-		  "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
-		  "title": "Muertos en la Argentina por el Coronavirus",
-		  "width": 640,
-		  "height": 250,
-		  "autosize": {
-			"type": "fit",
-			"contains": "padding"
-		  },
-		  "mark": {"type": "bar", "size": 6, "color": "#de2d26", "tooltip": true},
-		  "encoding": {
-			"x": {
-			  "field": "date",
-			  "type": "temporal",
-			  "scale": {
-				"type": "linear",
-				"zero": true
-			  }
-			},
-			"y": {
-			  "field": "difference",
-			  "type": "quantitative",
-			  "scale": {
-				"type": "linear",
-				"zero": true
-			  }
-			}
-		  },
-		  "data": {
-			"url": "https://download.data.world/s/4qc44cbdlshb5dcryh3kqwdllzb5fj",
-			"format" : {"type" : "csv" },
-			},
-		  "config": {
-			"background": "#ffffff",
-			"padding": 20
-		  }
-		};
-      vegaEmbed('#vis', yourVlSpec);
+var vegalite_spec = {
+  "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
+  "title": "Muertos en la Argentina por el Coronavirus",
+  "width": 640,
+  "height": 250,
+  "autosize": {"type": "fit", "contains": "padding"},
+  "mark": {"type": "bar", "size": 3, "color": "#e41a1c", "tooltip": true},
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "scale": {"type": "linear", "zero": true},
+      "title": "fecha"
+    },
+    "y": {
+      "field": "promedio_movil",
+      "type": "quantitative",
+      "scale": {"type": "linear", "zero": true},
+      "title": "promedio móvil (7 días)"
+    }
+  },
+  "data": {
+    "url": "https://download.data.world/s/4qc44cbdlshb5dcryh3kqwdllzb5fj",
+    "format": {"type": "csv"}
+  },
+  "transform": [
+    {
+      "window": [{
+          "op": "average",
+          "field": "difference",
+          "as": "promedio_movil"
+      }],
+      "sort": [
+        {"field": "date", "order": "ascending"}
+      ],
+      "frame": [-7,0]
+    }
+  ],
+  "config": {"background": "#ffffff", "padding": 20}
+};
+      vegaEmbed('#vis', vegalite_spec);
     </script>
   </body>
 </html>
