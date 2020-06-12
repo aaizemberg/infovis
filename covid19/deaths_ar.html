@@ -16,13 +16,10 @@
     </small></p>
 
     <script>
-var vegalite_spec = {
+      var vegalite_spec = {
   "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
-  "title": "Muertos en la Argentina por el Coronavirus",
-  "width": 640,
-  "height": 250,
-  "autosize": {"type": "fit", "contains": "padding"},
-  "mark": {"type": "bar", "size": 3, "color": "#e41a1c", "tooltip": true},
+  "width" : window.innerWidth - 160,
+  "mark": {"type": "bar", "size": ((window.innerWidth < 500) ? 1 : 3), "color": "#e41a1c", "tooltip": true},
   "encoding": {
     "x": {
       "field": "date",
@@ -34,27 +31,23 @@ var vegalite_spec = {
       "field": "promedio_movil",
       "type": "quantitative",
       "scale": {"type": "linear", "zero": true},
-      "title": "promedio móvil (7 días)"
+      "title": "promedio móvil (7 dias)"
     }
   },
   "data": {
-    "url": "https://download.data.world/s/4qc44cbdlshb5dcryh3kqwdllzb5fj",
+    "url": "https://download.data.world/s/pch2necevm5ryyg3umc62oqnklnaox",
     "format": {"type": "csv"}
   },
   "transform": [
     {
-      "window": [{
-          "op": "average",
-          "field": "difference",
-          "as": "promedio_movil"
-      }],
-      "sort": [
-        {"field": "date", "order": "ascending"}
+      "window": [
+        {"op": "average", "field": "count", "as": "promedio_movil"}
       ],
-      "frame": [-7,0]
+      "sort": [{"field": "date", "order": "ascending"}],
+      "frame": [7, 0]
     }
   ],
-  "config": {"background": "#ffffff", "padding": 20}
+  "config": {"background": "#ffffff", "padding": 10}
 };
       vegaEmbed('#vis', vegalite_spec);
     </script>
