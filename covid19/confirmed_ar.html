@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>COVID-19 | Casos en estado 'Confirmed' en la Argentina</title>
+    <title>COVID-19 en la Argentina, nuevos casos por día - promedio móvil de 7 días</title>
     <script src="https://cdn.jsdelivr.net/npm/vega@5.10.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.7.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.3.2"></script>
@@ -9,60 +9,47 @@
   <body>
     <div id="vis"></div>
 
-    <p><small>SQL<pre>
-	SELECT date, difference
-	FROM covid_19_cases
-	WHERE country_region = 'Argentina'
-	AND case_type = 'Confirmed'
-	AND date > '2020-03-01'
-	ORDER BY date
-    </pre><small></p>
-
     <p><small>
     source:
-    <a href="https://data.world/covid-19-data-resource-hub/covid-19-case-counts">data.world COVID-19 case counts</a>,
+    <a href="https://data.world/covid-19-data-resource-hub/covid-19-case-counts">data.world COVID-19 Activity</a>,
     <a href="https://www.tableau.com/covid-19-coronavirus-data-resources">COVID-19 Data Hub</a>
     </small></p>
 
     <script>
-    var yourVlSpec = {
-	  "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
-	  "title": "COVID-19 | Casos en estado 'Confirmed' en la Argentina",
-	  "width": 640,
-	  "height": 250,
-	  "autosize": {
-		"type": "fit",
-		"contains": "padding"
-	  },
-	  "mark": {"type": "bar", "size": 6, "tooltip": true},
-	  "encoding": {
-		"x": {
-		  "field": "date",
-		  "type": "temporal",
-		  "scale": {
-			"type": "linear",
-			"zero": true
-		  }
-		},
-		"y": {
-		  "field": "difference",
-		  "type": "quantitative",
-		  "scale": {
-			"type": "linear",
-			"zero": true
-		  }
-		}
-	  },
-	  "data": {
-		"url": "https://download.data.world/s/c6v5asalmp3lcbkff6smil2nzelscm",
-		"format" : {"type" : "csv" },
-		},
-	  "config": {
-		"background": "#ffffff",
-		"padding": 20
-	  }
-	};
-      vegaEmbed('#vis', yourVlSpec);
+      var vegalite_spec = {
+  "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
+  "width" : window.innerWidth - 160,
+  "mark": {"type": "bar", "size": ((window.innerWidth < 500) ? 1 : 3), "color": "#888", "tooltip": true},
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "scale": {"type": "linear", "zero": true},
+      "title": "fecha"
+    },
+    "y": {
+      "field": "promedio_movil",
+      "type": "quantitative",
+      "scale": {"type": "linear", "zero": true},
+      "title": "promedio móvil (7 dias)"
+    }
+  },
+  "data": {
+    "url": "https://download.data.world/s/tjxi7r3elkwye3ru5edgq4um6c2bk7",
+    "format": {"type": "csv"}
+  },
+  "transform": [
+    {
+      "window": [
+        {"op": "average", "field": "count", "as": "promedio_movil"}
+      ],
+      "sort": [{"field": "date", "order": "ascending"}],
+      "frame": [7, 0]
+    }
+  ],
+  "config": {"background": "#ffffff", "padding": 10}
+};
+      vegaEmbed('#vis', vegalite_spec);
     </script>
   </body>
 </html>
