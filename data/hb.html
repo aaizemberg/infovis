@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Hernan Brizuela, Butterfly & DHS</title>
+</head>
+<body>
+
+  <h3><a href="http://www.hernan-tdm.com/index3.htm">Hernan Brizuela, Butterfly & DHS</a></h3>
+  <br>
+  
+  <div class="viewof-selectable"></div>
+  <div class="viewof-s_table"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/@aaizemberg/table-tennis.js?v=3";
+(new Runtime).module(define, name => {
+  if (name === "viewof selectable") return Inspector.into(".viewof-selectable")();
+  if (name === "viewof s_table") return Inspector.into(".viewof-s_table")();
+  return ["signal","selected","s_table"].includes(name) || null;
+});
+</script>
+  
+</body>
+</html>
