@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Treemap</title>
+</head>
+<body>
+
+<div id="observablehq-viewof-index-128f5103"></div>
+<div id="observablehq-chart-128f5103"></div>
+<div id="observablehq-referencias-128f5103"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/@aaizemberg/animated-treemap.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "viewof index") return new Inspector(document.querySelector("#observablehq-viewof-index-128f5103"));
+  if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-128f5103"));
+  if (name === "referencias") return new Inspector(document.querySelector("#observablehq-referencias-128f5103"));
+  return ["update"].includes(name);
+});
+</script>
+  
+</body>
+</html>
