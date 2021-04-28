@@ -18,9 +18,9 @@
   
 <script>
 
-var url = 'https://download.data.world/s/3fz3463ioldys7bu67hdq2kfqzzr5e';
+var url = 'https://aaizemberg.github.io/infovis/itba/2021/datos_q1.tsv';
 
-d3.csv( url ).then(function(data) {
+d3.tsv( url ).then(function(data) {
   var card = d3.select("div#Q1-2020").selectAll("div").data(data).enter()
     .append("div").attr("class", "col-lg-4 col-sm-6 mb-4")
     .append("div").attr("class", "card h-100");
