@@ -14,7 +14,7 @@
     <div class="row" id="q1-2021">
   </div>
 <script>
-var url = 'https://aaizemberg.github.io/infovis/itba/2021/datos_q1.tsv';
+var url = 'https://aaizemberg.github.io/infovis/itba/2021/datos_q1.tsv?q=' + Math.random();
 d3.tsv(url).then(function(data) {
   var card = d3.select("div#q1-2021").selectAll("div").data(data).enter()
     .append("div").attr("class", "col-lg-4 col-sm-6 mb-4")
