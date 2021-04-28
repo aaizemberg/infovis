@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TP Datos Personales - ITBA - 2do cuatrimestre/2020</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://d3js.org/d3.v6.min.js"></script>   
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+
+</head>
+<body>
+  
+  <div class="container">
+    <div class="row" id="Q1-2020">
+  </div>
+  
+<script>
+
+var url = 'https://download.data.world/s/3fz3463ioldys7bu67hdq2kfqzzr5e';
+
+d3.csv( url ).then(function(data) {
+  var card = d3.select("div#Q1-2020").selectAll("div").data(data).enter()
+    .append("div").attr("class", "col-lg-4 col-sm-6 mb-4")
+    .append("div").attr("class", "card h-100");
+    card.append("img")
+      .attr("src", (d) => d.Thumbnail)
+      .attr("class", "card-img-top");
+    var cardBody = card.append("div").attr("class", "card-body");
+    cardBody.append("h4").text((d) => d.Alumno)
+      .attr("class", "card-title");
+    cardBody.append("p").text((d) => d["Nombre del TP"]).attr("class", "card-text");
+    var links = cardBody.append("div").attr("style", "display: flex;align-items: center; justify-content: space-between;");
+    links.append("a").text("ir al TP").attr("href", (d) => d["Link al TP"]);
+    links.append("a").text("Github").attr("href", (d) => d.Github);
+  // alumno
+  // github
+  // link_al_tp
+  // nombre_del_tp
+})
+
+</script>
+    
+</body>
+</html>
