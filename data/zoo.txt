@@ -1,4 +1,3 @@
-text
 A Tour through the Visualization Zoo
 A survey of powerful visualization techniques, from the obvious to the obscure
 Jeffrey Heer, Michael Bostock, and Vadim Ogievetsky, Stanford University
