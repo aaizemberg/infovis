@@ -1,10 +1,12 @@
 <!doctype html>
 <meta charset="utf-8">
-<script src="//d3plus.org/js/d3.js"></script>
-<script src="//d3plus.org/js/d3plus.js"></script>
+
+<script src="d3plus.full.min.js"></script>
+
 <div id="viz"></div> 
 <script>
-  d3.csv("data.csv", function(data) {
+  d3.csv('https://docs.google.com/spreadsheets/u/0/d/16Of_N-r9tbW_C_okG0y7JfhXTX364xNJwTAU4_4KEcI/export?format=csv&id=16Of_N-r9tbW_C_okG0y7JfhXTX364xNJwTAU4_4KEcI&gid=1349450577', function(data) {
+  // d3.csv("data.csv", function(data) {
     // console.log( data[0] );
     // countries=co,ec,gt,cl,pe,mx,py,ar&types=ley,proyecto
     var url_string = window.location.href;
