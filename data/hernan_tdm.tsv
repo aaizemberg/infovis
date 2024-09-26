@@ -1,72 +1,70 @@
 Marca	Goma	Esponja	Dureza	Tipo	Velocidad	Efecto	Precio
-Butterfly	Dignics 05	2.1	40º	OFF+	13.5	12	42000
-Butterfly	Dignics 09C	2.1	44º	OFF+	13	13	42000
-Butterfly	Tenergy 64	2.1	36°	OFF+	13.5	10.5	35000
-Butterfly	Tenergy 64 FX	2.1	32º	OFF+	13.5	10.5	35000
-Butterfly	Tenergy 80Roja	2.1	36º	OFF+	13.25	11.25	31500
-Butterfly	Tenergy 80 Negra	2.1	36º	OFF+	13.25	11.25	35000
-Butterfly	Tenergy 80 FX	2.1	32º	OFF+	13.25	11.25	35000
-Butterfly	Tenergy 25	2.1	36º	OFF+	13.25	11	35000
-Butterfly	Tenergy 25 FX	2.1	32º	OFF+	13.25	11	35000
-Butterfly	Tenergy 19	2.1	36º	OFF+	13.2	11.7	35000
-Butterfly	Tenergy 05 Hard	2.1	43º	OFF+	13	11.5	31500
-Butterfly	Tenergy 05	2.1	36º	OFF+	13	11.5	35000
-Butterfly	Tenergy 05 FX	2.1	32º	OFF+	13	11.5	35000
-Butterfly	Rozena	2.1	35º	OFF+	13	10.8	21700
-Butterfly	Spin Art	2.1	48º	OFF+	11.9	11.5	29800
-Butterfly	Aibiss	2.1	50º	OFF	10.5	11	17900
-Butterfly	Sriver-L	2.1 - Max	38º	OFF	10	8	14000
-Butterfly	Sriver-EL	2.1 - Max	35º	OFF	10	8	14000
-Butterfly	Sriver-FX	2.1 - Max	33º	OFF	10	8	14000
-Butterfly	Tackifire-Drive	2.1	38º	OFF-	9	9.25	16500
-Butterfly	Tackiness-Drive	2.1	38º	OFF-	8.5	9	15800
-Butterfly	Flextra	2.1	32º	ALL	8.25	8.75	9100
-Butterfly	Tackiness-Chop II	1.9	41º	DEF	7.5	10	20000
-Butterfly	Tackiness-Chop	1.5 - 1.9	32º	DEF	6.5	10	15800
-Butterfly	Impartial XS	2.1	30º	Cortos	12.2	7.9	24500
-Butterfly	Impartial XB	2.1	30º	Cortos	11.9	6.7	24500
-Butterfly	Raystorm	2.1 - Max	34º	Cortos	9.75	7	22800
-Butterfly	Challenger Attack	1.9	35º	Cortos	9.5	6.5	16800
-Butterfly	Challenger AttackRoja	2.1	35º	Cortos	9.5	6.5	16800
-Butterfly	Orthodox-DX	s/e	-	Cortos	6	4.25	9500
-Butterfly	Super-Anti Negra	1.5	25º	Anti	4	3	14000
-Butterfly	Super-AntiRoja	1.9	25º	Anti	4	3	14000
-Butterfly	Super-Anti Negra	1.9	25º	Anti	4	3	12300
-Butterfly	Feint-OX	s/e	-	Largos	4.5	3.5	12600
-Butterfly	Feint-Soft Roja	1.1	25º	Largos	5.5	3.5	14000
-Butterfly	Feint-Soft	1.5	25º	Largos	5.5	3.5	14000
-Butterfly	Feint-Long IIRoja	0.5	38º	Largos	6.25	3.25	12300
-Butterfly	Feint-Long II	OX-0.5-1.1	38º	Largos	6.25	3.25	14000
-Butterfly	Feint-Long III	OX-0.5-1.1	25º	Largos	6	4	15100
-Butterfly	Ilius S	0.5  1.1	45º	Largos	6.5	4.25	16800
-Butterfly	Ilius B	0.5 - 1.1	48º	Largos	6.75	4	16800
-DHS	Gold Arc 8 Hard (Germany)	Max	50º	OFF+	12	10	21000
-DHS	Gold Arc 8 Mid (Germany)	Max	47.5º	OFF+	12	10	21000
-DHS	Tin Arc 5 Hard	2.1	37º	OFF+	11	9.5	14000
-DHS	Tin Arc 5 Mid	2.1	35º	OFF+	11	9.5	14000
-DHS	Tin Arc 5 Soft	2.1	33º	OFF+	11	9.5	14000
-DHS	Hurricane 8 Hard	2.2	40º	OFF+	10.5	10	14000
-DHS	Hurricane 8 soft	2.2	38º	OFF+	12.5	10	14000
-DHS	Hurricane 3 NEO National Esponja Azu Negra	2.15	40º	OFF+	12	11	31500
-DHS	Hurricane 3 NEO Provincial Esponja Azul Negra	2.15	40º	OFF+	11.5	10.5	22800
-DHS	Hurricane 3 NEO Provincial Esponja Naranja Negra	2.15	40º	OFF+	11	10.5	17500
-DHS	Hurricane 3 NEO Hard	2.1	41º	OFF+	10	10	9800
-DHS	Hurricane 3 NEO Hard	2.15  2.2	40º	OFF+	10	10	9800
-DHS	Hurricane 3 NEO Mid	2.15  2.2	39º	OFF+	10	10	9800
-DHS	Hurricane 3 NEO MidRoja	2.2	38º	OFF+	12	10	9800
-DHS	Hurricane 3 NEO Soft	2.2	35º	OFF+	12	10	9800
-DHS	Hurricane 3-50 Soft	2.1	35º	OFF+	11	11	12300
-DHS	PF4-50	2.1	35º	ALL+	8.5	9.5	7000
-DHS	PF4	2.1	40º	ALL	8	10	6300
-DHS	6512	2.1	38º	ALL	8	9	5300
-DHS	Dragonow	2.2	37º	Cortos	11	6	7700
-DHS	Sharping	2.15	39º	Cortos	11	7	7700
-DHS	651	2.2	38º	Cortos	10	5	6300
-DHS	652	2.2	38º	Cortos	9.5	6	6300
-DHS	652 Negra	2	38º	Cortos	9.5	6	6300
-DHS	874	2	37º	Cortos	10	7	6300
-DHS	C7 OX	s/e	-	Largos	5.5	4.5	6300
-DHS	C7	1	38º	Largos	5.5	4.5	6300
-DHS	C-8 OX	s/e	-	Largos	4	5	6300
-DHS	C-8	1	40º	Largos	4	5	6300
-DHS	Cloud & Fog 3 Negra	1	38º	Lasgos	5	4	6300
+BUTTERFLY	Dignics 05	2.1	40º	OFF+	13.5	12.0	165200
+BUTTERFLY	Dignics 09C	2.1	44º	OFF+	13.0	13.0	165200
+BUTTERFLY	Tenergy 64	2.1	36°	OFF+	13.5	10.5	138600
+BUTTERFLY	Tenergy 64 FX	2.1	32º	OFF+	13.5	10.5	138600
+BUTTERFLY	Tenergy 80	2.1	36º	OFF+	13.3	11.3	138600
+BUTTERFLY	Tenergy 80 FX	2.1	32º	OFF+	13.3	11.3	138600
+BUTTERFLY	Tenergy 25	2.1	36º	OFF+	13.3	11.0	138600
+BUTTERFLY	Tenergy 25 FX	2.1	32º	OFF+	13.3	11.0	138600
+BUTTERFLY	Tenergy 19	2.1	36º	OFF+	13.2	11.7	138600
+BUTTERFLY	Tenergy 05 Hard	2.1	43º	OFF+	13.0	11.5	138600
+BUTTERFLY	Tenergy 05	2.1	36º	OFF+	13.0	11.5	138600
+BUTTERFLY	Tenergy 05 FX	2.1	32º	OFF+	13.0	11.5	138600
+BUTTERFLY	Rozena	2.1	35º	OFF+	13.0	10.8	84000
+BUTTERFLY	Glayzer	2.1	38º	OFF+	12.8	11.3	100800
+BUTTERFLY	Glayzer 09C	2.1	42º	OFF+	12.0	12.3	100800
+BUTTERFLY	Spin Art	2.1	48º	OFF+	11.9	11.5	138600
+BUTTERFLY	Aibiss	2.1	50º	OFF	10.5	11.0	84000
+BUTTERFLY	Sriver-L	2.1 - Max	38º	OFF	10.0	8.0	65800
+BUTTERFLY	Sriver-EL	2.1 - Max	35º	OFF	10.0	8.0	65800
+BUTTERFLY	Sriver-FX	2.1 - Max	33º	OFF	10.0	8.0	65800
+BUTTERFLY	Tackifire-Drive	2.1	38º	OFF-	9.0	9.3	72800
+BUTTERFLY	Tackiness-Drive (color rojo)	2.1	38º	OFF-	8.5	9.0	70000
+BUTTERFLY	Flextra	2.1	32º	ALL	8.3	8.8	44800
+BUTTERFLY	Tackiness-Chop II	1.9	41º	DEF	7.5	10.0	84000
+BUTTERFLY	Tackiness-Chop	1.5 - 1.9	32º	DEF	6.5	10.0	70000
+BUTTERFLY	Impartial XS	2.1	30º	Cortos	12.2	7.9	102200
+BUTTERFLY	Impartial XB	2.1	30º	Cortos	11.9	6.7	102200
+BUTTERFLY	Raystorm	2.1 - Max	34º	Cortos	9.8	7.0	91000
+BUTTERFLY	Challenger Attack	1.9 - 2.1	35º	Cortos	9.5	6.5	74200
+BUTTERFLY	Orthodox-DX	s/e	-	Cortos	6.0	4.3	36400
+BUTTERFLY	Super-Anti	1.9	25º	Anti	4.0	3.0	63000
+BUTTERFLY	Feint-OX	s/e	-	Largos	4.5	3.5	56000
+BUTTERFLY	Feint-Soft (color Rojo)	1.1	25º	Largos	5.5	3.5	67200
+BUTTERFLY	Feint-Soft	1.5	25º	Largos	5.5	3.5	67200
+BUTTERFLY	Feint-Long II (color Rojo) empaque antiguo	0.5	38º	Largos	6.3	3.3	58800
+BUTTERFLY	Feint-Long II	OX-0.5-1.1	38º	Largos	6.3	3.3	63000
+BUTTERFLY	Feint-Long III	OX-0.5-1.1	25º	Largos	6.0	4.0	70000
+BUTTERFLY	Ilius S	0.5 – 1.1	45º	Largos	6.5	4.3	72800
+BUTTERFLY	Ilius B	0.5 - 1.1	48º	Largos	6.8	4.0	72800
+DHS	Gold Arc 8 Hard (Germany)	Max	50º	OFF+	12.5	10.0	63000
+DHS	Gold Arc 8 Mid (Germany)	Max	47.5º	OFF+	12.5	10.0	63000
+DHS	Tin Arc 5 Hard	2.1	37º	OFF+	11.0	9.5	42000
+DHS	Tin Arc 5 Mid	2.1	35º	OFF+	11.0	9.5	42000
+DHS	Tin Arc 5 Soft	2.1	33º	OFF+	11.0	9.5	42000
+DHS	Hurricane 9 Pink (color rosa)	2.15	39º	OFF+	12.0	10.0	56000
+DHS	Hurricane 9 Green (color verde)	2.15	38º	OFF+	12.0	10.0	56000
+DHS	Hurricane 9 Violet (color violeta)	2.15	37º	OFF+	12.0	10.0	56000
+DHS	Hurricane 8 Hard	2.2	40º	OFF+	12.0	10.0	49000
+DHS	Hurricane 8 soft	2.2	38º	OFF+	12.0	10.0	49000
+DHS	Hurricane 3 NEO Provincial	2.15	40º	OFF+	11.5	10.5	63000
+DHS	Esponja Azul (color Negro)	2.15	40º	OFF+	11.5	10.5	63000
+DHS	Hurricane 3 NEO Provincial	2.15	40º	OFF+	11.0	10.5	56000
+DHS	Esponja Naranja (color Negro)	2.15	40º	OFF+	11.0	10.5	56000
+DHS	Hurricane 3 NEO Hard	2.1	41º	OFF+	10.0	10.0	39200
+DHS	Hurricane 3 NEO Hard	2.15 – 2.2	40º	OFF+	10.0	10.0	39200
+DHS	Hurricane 3 NEO Mid	2.2	39º	OFF+	10.0	10.0	39200
+DHS	Hurricane 3-50 Soft	2.1	35º	OFF+	10.5	10.0	42000
+DHS	6512	2.1	38º	ALL	8.0	9.0	21000
+DHS	Dragonow	2.2	37º	Cortos	11.0	6.0	30800
+DHS	Sharping	2.15	39º	Cortos	11.0	7.0	30800
+DHS	651	2.2	38º	Cortos	10.0	5.0	25200
+DHS	652	2.2	38º	Cortos	9.5	6.0	25200
+DHS	874	2.0	37º	Cortos	10.0	7.0	25200
+DHS	C7 OX	s/e	-	Largos	5.5	4.5	25200
+DHS	C7 (color negro)	1.0	38º	Largos	5.5	4.5	25200
+DHS	C-8 OX (color negro)	s/e	-	Largos	4.0	5.0	25200
+DHS	C-8	1.0	40º	Largos	4.0	5.0	25200
+DHS	Cloud & Fog 3 OX (color negro)	s/e	-	Largos	5.0	4.0	30800
+DHS	Cloud & Fog 3	1.0	38º	Largos	5.0	4.0	30800
