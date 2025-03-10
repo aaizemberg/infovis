@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>barras horizontales</title>
+        <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    </head>
+    <body>
+        <div id="barras"></div>
+
+        <script>
+            const data = [
+                { name: "Kicillofok", followers: 1.4, pp: "✌️" },
+                { name: "JuanGrabois", followers: 0.43, pp: "✌️" },
+                { name: "CFKArgentina", followers: 6.1, pp: "✌️" },
+                { name: "wadodecorrido", followers: 0.508, pp: "✌️" },
+                { name: "RossiAgustinOk", followers: 0.288, pp: "✌️" },
+                { name: "alferdez", followers: 2.2, pp: "✌️" },
+                { name: "JMilei", followers: 3.8, pp: "🕊" },
+            ].sort((a, b) => b.followers - a.followers);
+
+            const width = 800;
+            const height = 500;
+            const margin = { top: 20, right: 20, bottom: 40, left: 150 };
+
+            const svg = d3.select("div#barras").append("svg").attr("width", width).attr("height", height);
+
+            var xScale = d3
+                .scaleLinear()
+                .domain([0, d3.max(data, (d) => d.followers)])
+                .range([margin.left, width - margin.right]);
+
+            const yScale = d3
+                .scaleBand()
+                .domain(data.map((d) => d.name))
+                .range([margin.top, height - margin.bottom])
+                .padding(0.1);
+
+            const colorScale = d3.scaleOrdinal().domain(["✌️", "🕊"]).range(["lightblue", "#6C4C99"]);
+
+            svg.selectAll("rect")
+                .data(data)
+                .enter()
+                .append("rect")
+                .attr("x", margin.left)
+                .attr("y", (d) => yScale(d.name))
+                .attr("width", (d) => xScale(d.followers) - margin.left)
+                .attr("height", yScale.bandwidth())
+                .attr("fill", (d) => colorScale(d.pp));
+
+            svg.selectAll("text")
+                .data(data)
+                .enter()
+                .append("text")
+                .attr("x", (d) => xScale(d.followers) + 5)
+                .attr("y", (d) => yScale(d.name) + yScale.bandwidth() / 2)
+                .attr("dy", "0.35em")
+                .text((d) => d.followers + "M")
+                .style("fill", "black")
+                .style("font-size", "14px");
+
+            const xAxis = d3.axisBottom(xScale).ticks(6);
+            const yAxis = d3.axisLeft(yScale);
+
+            svg.append("g")
+                .attr("transform", `translate(0,${height - margin.bottom})`)
+                .call(xAxis);
+
+            svg.append("g").attr("transform", `translate(${margin.left},0)`).call(yAxis);
+        </script>
+    </body>
+</html>
