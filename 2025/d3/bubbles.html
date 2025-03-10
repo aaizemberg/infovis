@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>d3.js</title>
+        <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    </head>
+    <body>
+        <div id="viz"></div>
+
+        <script>
+            const _data = [
+                { name: "Kicillof", followers: 1.4, pp: "✌️" },
+                { name: "Juan Grabois", followers: 0.43, pp: "✌️" },
+                { name: "CFK", followers: 6.1, pp: "✌️" },
+                { name: "wadodecorrido", followers: 0.508, pp: "✌️" },
+                { name: "RossiAgustin", followers: 0.288, pp: "✌️" },
+                { name: "alferdez", followers: 2.2, pp: "✌️" },
+                { name: "JMilei", followers: 3.8, pp: "🕊" },
+            ].sort((a, b) => b.followers - a.followers);
+
+            const data = [
+                { name: "CFKArgentina", followers: 6.1, pp: "✌️" },
+                { name: "JMilei", followers: 3.8, pp: "🕊" },
+            ].sort((a, b) => b.followers - a.followers);
+
+            const width = 800;
+            const height = 500;
+
+            const svg = d3.select("div#viz").append("svg").attr("width", width).attr("height", height);
+
+            const maxFollowers = d3.max(data, (d) => d.followers);
+
+            //const radiusScale = d3.scaleLinear()    // no deberías usar una escala lineal
+            const radiusScale = d3.scaleSqrt().domain([0, maxFollowers]).range([0, 125]);
+
+            const colorScale = d3.scaleOrdinal().domain(["✌️", "🕊"]).range(["lightblue", "#6C4C99"]);
+
+            const simulation = d3
+                .forceSimulation(data)
+                .force("x", d3.forceX(width / 2).strength(1))
+                .force("y", d3.forceY(height / 2).strength(1))
+                .force(
+                    "collide",
+                    d3.forceCollide((d) => radiusScale(d.followers) + 2)
+                )
+                .on("tick", ticked);
+
+            const nodes = svg
+                .selectAll("circle")
+                .data(data)
+                .enter()
+                .append("circle")
+                .attr("r", (d) => radiusScale(d.followers))
+                .attr("fill", (d) => colorScale(d.pp));
+
+            const labels = svg
+                .selectAll("text")
+                .data(data)
+                .enter()
+                .append("text")
+                .attr("text-anchor", "middle")
+                .attr("dy", "0.35em")
+                .attr("fill", "black")
+                .style("font-size", "20px")
+                .text((d) => d.name);
+
+            function ticked() {
+                nodes.attr("cx", (d) => d.x).attr("cy", (d) => d.y);
+                labels.attr("x", (d) => d.x).attr("y", (d) => d.y);
+            }
+        </script>
+    </body>
+</html>
