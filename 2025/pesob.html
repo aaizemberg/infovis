@@ -1,11 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>Peso B</title>
+  <title>La evolución de mi peso</title>
+
+  <!-- Pico.css -->
+  <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+
+  <!-- Estilos opcionales para centrar el contenido -->
+  <style>
+    body {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+    h1 {
+      text-align: center;
+    }
+    #observablehq-peso_plot-9776eb5e {
+      margin-top: 2rem;
+    }
+  </style>
 </head>
 <body>
-  <iframe width="100%" height="503" frameborder="0" src="https://observablehq.com/embed/b35ba8dd0e3c9e2c@51?cells=peso_plot"></iframe> 
+
+  <main>
+    <article>
+      <div id="observablehq-peso_plot-9776eb5e"></div>
+    </article>
+  </main>
+  
+  <script type="module">
+    import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+    import define from "https://api.observablehq.com/d/b35ba8dd0e3c9e2c.js?v=4";
+    new Runtime().module(define, name => {
+      if (name === "peso_plot") return new Inspector(document.querySelector("#observablehq-peso_plot-9776eb5e"));
+    });
+  </script>
+  
 </body>
 </html>
