@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Makeover Monday 2020-W13</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Indie+Flower&display=swap" rel="stylesheet">
+
+    <style>
+        text,div#note {
+            font-family: 'Indie Flower', cursive;
+        }
+        
+        circle.hombres {
+            fill: steelblue;
+        }
+        
+        circle.mujeres {
+            fill: plum;
+        }
+
+        footer p {
+            /* margin: 2px 0; */
+            margin: 0;
+            line-height: 1.4;
+        }
+      </style>
+
+</head>
+
+<body>
+  <div id='vis'></div>
+
+  <div id="note">
+    <div><span style="color:steelblue;font-weight:bold">Men</span> like spicy or meaty topping.</div>
+    <div>Instead, <span style="color:plum;font-weight:bold">women</span> prefer the vegetarian options.</div>
+  </div>
+  
+  <hr width=320 align="left" color="grey">
+
+  <footer>
+    <p>Author: Ariel Aizemberg</p>
+    <p>Source: <a href="https://makeovermonday.vercel.app/">makeovermonday</a> 2020-W13</p>
+  </footer>
+
+<script>
+  const data = [
+    {"topping":"Mushrooms","total":65,"male":63,"female":68},
+    {"topping":"Onion","total":62,"male":62,"female":63},
+    {"topping":"Ham","total":61,"male":66,"female":56},
+    {"topping":"Peppers","total":60,"male":63,"female":57},
+    {"topping":"Chicken","total":56,"male":60,"female":52},
+    {"topping":"Pepperoni","total":56,"male":66,"female":46},
+    {"topping":"Tomato","total":51,"male":49,"female":54},
+    {"topping":"Bacon","total":49,"male":56,"female":43},
+    {"topping":"Pineapple","total":42,"male":40,"female":44},
+    {"topping":"Sweetcorn","total":42,"male":38,"female":46},
+    {"topping":"Beef","total":36,"male":47,"female":26},
+    {"topping":"Olives","total":33,"male":33,"female":32},
+    {"topping":"Chillies","total":31,"male":42,"female":22},
+    {"topping":"Jalapenos","total":30,"male":39,"female":21},
+    {"topping":"Spinach","total":26,"male":20,"female":32},
+    {"topping":"Pork","total":25,"male":34,"female":17},
+    {"topping":"Tuna","total":22,"male":23,"female":21},
+    {"topping":"Anchovies","total":18,"male":21,"female":15},
+    {"topping":"something else","total":11,"male":12,"female":10}
+  ]; 
+
+  const padding = 150;
+  const width = 270;
+  const height = 315;
+
+  const svg = d3.select("div#vis").append("svg").attr("width", width).attr("height", height);
+  svg.append("rect").attr("width", width).attr("height", height)
+
+  svg.selectAll('text').data(data).join("text")
+            .attr("x", 10)
+            .attr("y", (d, i) =>  (i + 1) * 16)
+            .text((d, i) => i +1 + ". " + d.topping)
+            .attr("fill", (d) => ((d.male > d.female) ? 'steelblue' : 'plum'))
+
+  svg.selectAll('line').data(data).join('line')
+            .attr("x1", (d) => padding + 1.5 * d3.min([d.male, d.female]))
+            .attr("y1", (d, i) => 12 + (i * 16))
+            .attr("x2", (d) => padding + 1.5 * d3.max([d.male, d.female]))
+            .attr("y2", (d, i) => 12 + (i * 16))
+            .attr("stroke", (d) => ((d.male > d.female) ? 'steelblue' : 'plum'))
+            .attr("stroke-width", 3)
+            .append("title")
+            .text( (d) => 'average ' + d.total + '%');
+
+  svg.selectAll('circle.hombres').data(data).join('circle')
+            .attr("class", "hombres")
+            .attr("cx", (d) => padding + d.male * 1.5)
+            .attr("cy", (d, i) => 12 + (i * 16))
+            .attr("r", (d) => ((d.male > d.female) ? 4 : 3))
+            .append("title")
+            .text( (d) => 'male ' + d.male + '%');
+
+  svg.selectAll('circle.mujeres').data(data).join('circle')
+            .attr("class", "mujeres")
+            .attr("cx", (d) => padding + (d.female * 1.5))
+            .attr("cy", (d, i) => 12 + (i * 16))
+            .attr("r", (d) => ((d.female > d.male) ? 4 : 3))
+            .append("title")
+            .text( (d) => 'female ' + d.female + '%');
+</script>
+
+</body>
+</html>
